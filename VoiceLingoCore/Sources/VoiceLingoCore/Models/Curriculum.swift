@@ -1,16 +1,16 @@
 import Foundation
 
-struct Curriculum: Codable {
-    let language: String
-    let voiceLocale: String
-    let recognizerLocale: String
-    let levels: [Level]
+public struct Curriculum: Codable {
+    public let language: String
+    public let voiceLocale: String
+    public let recognizerLocale: String
+    public let levels: [Level]
 
     enum CodingKeys: String, CodingKey {
         case language, voiceLocale, recognizerLocale, levels
     }
 
-    init(
+    public init(
         language: String,
         voiceLocale: String,
         recognizerLocale: String,

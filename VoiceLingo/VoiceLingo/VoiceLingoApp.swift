@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import VoiceLingoCore
 
 @main
 struct VoiceLingoApp: App {
@@ -25,7 +26,7 @@ struct VoiceLingoApp: App {
         do {
             try audioSession.setCategory(
                 .playAndRecord,
-                options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP]
+                options: [.defaultToSpeaker, .allowBluetoothHFP]
             )
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {

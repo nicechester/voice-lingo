@@ -1,7 +1,8 @@
 import Speech
 import AVFoundation
 
-class SpeechRecognitionService {
+#if os(iOS)
+public final class SpeechRecognitionService: @unchecked Sendable {
     static let shared = SpeechRecognitionService()
 
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "es-MX"))
@@ -11,15 +12,15 @@ class SpeechRecognitionService {
     private var currentLocale: String = "es-MX"
     private var lastRecognizedText: String = ""
 
-    private init() {
+    public init() {
         requestMicrophonePermission()
     }
 
-    func setLocale(_ locale: String) {
+    public func setLocale(_ locale: String) {
         currentLocale = locale
     }
 
-    func requestMicrophonePermission() {
+    public func requestMicrophonePermission() {
         SFSpeechRecognizer.requestAuthorization { authorizationStatus in
             switch authorizationStatus {
             case .authorized:
@@ -36,7 +37,7 @@ class SpeechRecognitionService {
         }
     }
 
-    func recognize(timeout: TimeInterval = 5.0, onResult: @escaping (String) -> Void, onError: @escaping (Error) -> Void) {
+    public func recognize(timeout: TimeInterval = 5.0, onResult: @escaping @Sendable (String) -> Void, onError: @escaping @Sendable (Error) -> Void) {
         guard let speechRecognizer = speechRecognizer, speechRecognizer.isAvailable else {
             onError(SpeechRecognitionError.recognizerUnavailable)
             return
@@ -104,7 +105,7 @@ class SpeechRecognitionService {
         }
     }
 
-    func stopRecognition() {
+    public func stopRecognition() {
         audioEngine.inputNode.removeTap(onBus: 0)
         recognitionRequest?.endAudio()
         audioEngine.stop()
@@ -117,24 +118,27 @@ class SpeechRecognitionService {
         }
     }
 
-    func cancelRecognition() {
+    public func cancelRecognition() {
         recognitionTask?.cancel()
         recognitionTask = nil
         stopRecognition()
     }
 
-    func isRecognizing() -> Bool {
+    public func isRecognizing() -> Bool {
         recognitionTask?.state == .running
     }
 }
 
-enum SpeechRecognitionError: LocalizedError {
+#endif
+
+#if os(iOS)
+public enum SpeechRecognitionError: LocalizedError {
     case recognizerUnavailable
     case requestInitializationFailed
     case audioSessionError
     case permissionDenied
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .recognizerUnavailable:
             return "Speech recognizer is not available"
@@ -147,3 +151,4 @@ enum SpeechRecognitionError: LocalizedError {
         }
     }
 }
+#endif

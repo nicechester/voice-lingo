@@ -1,16 +1,16 @@
 import Foundation
 
-struct Lesson: Codable, Identifiable {
-    let id: String
-    let title: String
-    let grammarNote: String?
-    let phrases: [Phrase]
+public struct Lesson: Codable, Identifiable {
+    public let id: String
+    public let title: String
+    public let grammarNote: String?
+    public let phrases: [Phrase]
 
     enum CodingKeys: String, CodingKey {
         case id, title, grammarNote, phrases
     }
 
-    init(
+    public init(
         id: String,
         title: String,
         grammarNote: String? = nil,
@@ -23,16 +23,16 @@ struct Lesson: Codable, Identifiable {
     }
 }
 
-struct Level: Codable, Identifiable {
-    let id: String
-    let title: String
-    let lessons: [Lesson]
+public struct Level: Codable, Identifiable {
+    public let id: String
+    public let title: String
+    public let lessons: [Lesson]
 
     enum CodingKeys: String, CodingKey {
         case id, title, lessons
     }
 
-    init(
+    public init(
         id: String,
         title: String,
         lessons: [Lesson]

@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		459845DE30228CCA00C9943D /* VoiceLingoCore in Frameworks */ = {isa = PBXBuildFile; productRef = 459845DD30228CCA00C9943D /* VoiceLingoCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4598446E30225B5200C9943D /* VoiceLingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceLingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459845DB30228C5900C9943D /* VoiceLingoCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = VoiceLingoCore; path = ../VoiceLingoCore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459845DE30228CCA00C9943D /* VoiceLingoCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +38,9 @@
 		4598446530225B5200C9943D = {
 			isa = PBXGroup;
 			children = (
+				459845DB30228C5900C9943D /* VoiceLingoCore */,
 				4598447030225B5200C9943D /* VoiceLingo */,
+				459845DC30228CCA00C9943D /* Frameworks */,
 				4598446F30225B5200C9943D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +51,13 @@
 				4598446E30225B5200C9943D /* VoiceLingo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		459845DC30228CCA00C9943D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +80,7 @@
 			);
 			name = VoiceLingo;
 			packageProductDependencies = (
+				459845DD30228CCA00C9943D /* VoiceLingoCore */,
 			);
 			productName = VoiceLingo;
 			productReference = 4598446E30225B5200C9943D /* VoiceLingo.app */;
@@ -256,6 +272,8 @@
 				DEVELOPMENT_TEAM = K92B539W6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VoiceLingo needs microphone access to record your pronunciation for language learning.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "VoiceLingo uses speech recognition to evaluate your pronunciation and provide feedback.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -270,6 +288,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.nicechester.VoiceLingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -289,6 +311,8 @@
 				DEVELOPMENT_TEAM = K92B539W6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VoiceLingo needs microphone access to record your pronunciation for language learning.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "VoiceLingo uses speech recognition to evaluate your pronunciation and provide feedback.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +327,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.nicechester.VoiceLingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -334,6 +362,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		459845DD30228CCA00C9943D /* VoiceLingoCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = VoiceLingoCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4598446630225B5200C9943D /* Project object */;
 }
