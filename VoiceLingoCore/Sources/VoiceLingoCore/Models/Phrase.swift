@@ -1,23 +1,23 @@
 import Foundation
 
-struct Phrase: Codable, Identifiable {
-    let id: UUID
-    let target: String
-    let native: String
-    let phonetic: String
+public struct Phrase: Codable, Identifiable {
+    public let id: UUID
+    public let target: String
+    public let native: String
+    public let phonetic: String
 
     enum CodingKeys: String, CodingKey {
         case target, native, phonetic
     }
 
-    init(target: String, native: String, phonetic: String) {
+    public init(target: String, native: String, phonetic: String) {
         self.id = UUID()
         self.target = target
         self.native = native
         self.phonetic = phonetic
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         target = try container.decode(String.self, forKey: .target)
         native = try container.decode(String.self, forKey: .native)
@@ -25,7 +25,7 @@ struct Phrase: Codable, Identifiable {
         self.id = UUID()
     }
 
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(target, forKey: .target)
         try container.encode(native, forKey: .native)

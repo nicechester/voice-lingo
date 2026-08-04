@@ -1,20 +1,20 @@
 import Foundation
 
-struct Language: Codable, Identifiable {
-    let id: String
-    let code: String
-    let name: String
-    let nativeName: String
-    let locale: String
-    let voiceLocale: String
-    let recognizerLocale: String
-    let flag: String
+public struct Language: Codable, Identifiable {
+    public let id: String
+    public let code: String
+    public let name: String
+    public let nativeName: String
+    public let locale: String
+    public let voiceLocale: String
+    public let recognizerLocale: String
+    public let flag: String
 
     enum CodingKeys: String, CodingKey {
         case code, name, nativeName, locale, voiceLocale, recognizerLocale, flag
     }
 
-    init(
+    public init(
         code: String,
         name: String,
         nativeName: String,
@@ -33,7 +33,7 @@ struct Language: Codable, Identifiable {
         self.flag = flag
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         code = try container.decode(String.self, forKey: .code)
         name = try container.decode(String.self, forKey: .name)
@@ -45,7 +45,7 @@ struct Language: Codable, Identifiable {
         self.id = code
     }
 
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(code, forKey: .code)
         try container.encode(name, forKey: .name)
