@@ -1,0 +1,147 @@
+{
+  "language": "es",
+  "voiceLocale": "es-MX",
+  "recognizerLocale": "es-MX",
+  "levels": [
+    {
+      "id": "A1",
+      "title": "Beginner",
+      "lessons": [
+        {
+          "id": "A1-L1",
+          "title": "Greetings",
+          "grammarNote": "Use 'buenos' for masculine/neutral greetings, 'buenas' for feminine. Time of day matters: buenos días (morning), buenas tardes (afternoon), buenas noches (evening/night).",
+          "phrases": [
+            {
+              "target": "Buenos días",
+              "native": "Good morning",
+              "phonetic": "BWEH-nos DEE-as"
+            },
+            {
+              "target": "Buenas tardes",
+              "native": "Good afternoon",
+              "phonetic": "BWEH-nas TAR-des"
+            },
+            {
+              "target": "Buenas noches",
+              "native": "Good evening / Good night",
+              "phonetic": "BWEH-nas NOH-ches"
+            },
+            {
+              "target": "¿Cómo estás?",
+              "native": "How are you? (informal)",
+              "phonetic": "KOH-moh es-TAHS"
+            },
+            {
+              "target": "Estoy bien",
+              "native": "I am well",
+              "phonetic": "es-TOY bee-EN"
+            },
+            {
+              "target": "Estoy bien, gracias",
+              "native": "I am well, thank you",
+              "phonetic": "es-TOY bee-EN, GRAH-see-as"
+            },
+            {
+              "target": "¿Y tú?",
+              "native": "And you? (informal)",
+              "phonetic": "ee TOO"
+            },
+            {
+              "target": "Mucho gusto",
+              "native": "Nice to meet you / Pleased to meet you",
+              "phonetic": "MOO-choh GOOS-toh"
+            },
+            {
+              "target": "Encantado",
+              "native": "Delighted / Enchanted (masculine)",
+              "phonetic": "en-can-TAH-doh"
+            },
+            {
+              "target": "Encantada",
+              "native": "Delighted / Enchanted (feminine)",
+              "phonetic": "en-can-TAH-dah"
+            },
+            {
+              "target": "¿Cuál es tu nombre?",
+              "native": "What is your name? (informal)",
+              "phonetic": "KWAL es too NOHM-breh"
+            },
+            {
+              "target": "Me llamo Juan",
+              "native": "My name is Juan",
+              "phonetic": "meh YAH-moh HWAN"
+            }
+          ]
+        },
+        {
+          "id": "A1-L2",
+          "title": "Basic Phrases",
+          "grammarNote": "Essential polite phrases for everyday interaction. 'Por favor' (please) should be used frequently. 'Disculpe' is used to get attention, while 'Lo siento' is used to apologize.",
+          "phrases": [
+            {
+              "target": "Por favor",
+              "native": "Please",
+              "phonetic": "por fah-VOR"
+            },
+            {
+              "target": "Gracias",
+              "native": "Thank you",
+              "phonetic": "GRAH-see-as"
+            },
+            {
+              "target": "Muchas gracias",
+              "native": "Thank you very much",
+              "phonetic": "MOO-chas GRAH-see-as"
+            },
+            {
+              "target": "De nada",
+              "native": "You're welcome",
+              "phonetic": "deh NAH-dah"
+            },
+            {
+              "target": "No hay de qué",
+              "native": "You're welcome (alternative)",
+              "phonetic": "noh AHY deh KEH"
+            },
+            {
+              "target": "Disculpe",
+              "native": "Excuse me (formal) / Pardon me",
+              "phonetic": "dees-KOOL-peh"
+            },
+            {
+              "target": "Disculpa",
+              "native": "Excuse me (informal)",
+              "phonetic": "dees-KOOL-pah"
+            },
+            {
+              "target": "Lo siento",
+              "native": "I'm sorry",
+              "phonetic": "loh see-EN-toh"
+            },
+            {
+              "target": "Adiós",
+              "native": "Goodbye",
+              "phonetic": "ah-dee-OHS"
+            },
+            {
+              "target": "Hasta luego",
+              "native": "See you later",
+              "phonetic": "AHS-tah loo-EH-goh"
+            },
+            {
+              "target": "Hasta pronto",
+              "native": "See you soon",
+              "phonetic": "AHS-tah PROHN-toh"
+            },
+            {
+              "target": "Buenas noches",
+              "native": "Good night / Goodbye (evening)",
+              "phonetic": "BWEH-nas NOH-ches"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
