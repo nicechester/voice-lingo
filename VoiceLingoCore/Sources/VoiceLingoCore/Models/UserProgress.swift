@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class UserProgress {
+public final class UserProgress {
     public var languageCode: String
     public var currentLevel: String
     public var unlockedLevels: [String]
@@ -61,7 +61,7 @@ final class UserProgress {
 }
 
 @Model
-final class PhraseProgress {
+public final class PhraseProgress {
     public var phraseId: String
     public var correctCount: Int
     public var incorrectCount: Int

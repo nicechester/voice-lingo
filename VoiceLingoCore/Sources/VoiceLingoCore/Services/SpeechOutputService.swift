@@ -2,7 +2,7 @@ import AVFoundation
 
 #if os(iOS)
 public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @unchecked Sendable {
-    static let shared = SpeechOutputService()
+    public static let shared = SpeechOutputService()
 
     private let synthesizer = AVSpeechSynthesizer()
     private let audioSession = AVAudioSession.sharedInstance()
@@ -13,6 +13,10 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
     override init() {
         super.init()
         synthesizer.delegate = self
+    }
+
+    public func setLocale(_ locale: String) {
+        self.currentLocale = locale
     }
 
     public func configure(locale: String, speechRate: Float = 0.5, pitch: Float = 1.0) {

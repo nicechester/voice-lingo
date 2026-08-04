@@ -1,7 +1,7 @@
 import Foundation
 
 public final class PronunciationEvaluator: @unchecked Sendable {
-    static let shared = PronunciationEvaluator()
+    public static let shared = PronunciationEvaluator()
 
     private let levenshteinThreshold = 2
     private var phraseDatabase: [String: Phrase] = [:]

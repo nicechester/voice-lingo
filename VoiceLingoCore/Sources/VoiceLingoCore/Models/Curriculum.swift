@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Curriculum: Codable {
+public struct Curriculum: Codable, Sendable {
     public let language: String
     public let voiceLocale: String
     public let recognizerLocale: String
