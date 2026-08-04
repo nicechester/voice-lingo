@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Lesson: Codable, Identifiable {
+public struct Lesson: Codable, Identifiable, Sendable {
     public let id: String
     public let title: String
     public let grammarNote: String?
@@ -23,7 +23,7 @@ public struct Lesson: Codable, Identifiable {
     }
 }
 
-public struct Level: Codable, Identifiable {
+public struct Level: Codable, Identifiable, Sendable {
     public let id: String
     public let title: String
     public let lessons: [Lesson]

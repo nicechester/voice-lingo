@@ -3,7 +3,7 @@ import AVFoundation
 
 #if os(iOS)
 public final class SpeechRecognitionService: @unchecked Sendable {
-    static let shared = SpeechRecognitionService()
+    public static let shared = SpeechRecognitionService()
 
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "es-MX"))
     private let audioEngine = AVAudioEngine()

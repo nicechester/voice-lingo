@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Phrase: Codable, Identifiable {
+public struct Phrase: Codable, Identifiable, Sendable {
     public let id: UUID
     public let target: String
     public let native: String
