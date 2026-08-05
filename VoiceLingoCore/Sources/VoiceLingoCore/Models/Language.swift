@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Language: Codable, Identifiable {
+public struct Language: Codable, Identifiable, Sendable {
     public let id: String
     public let code: String
     public let name: String
@@ -55,4 +55,8 @@ public struct Language: Codable, Identifiable {
         try container.encode(recognizerLocale, forKey: .recognizerLocale)
         try container.encode(flag, forKey: .flag)
     }
+
+    public static let supportedLanguages: [Language] = [
+        .init(code: "es", name: "Spanish", nativeName: "Español", locale: "es-MX", voiceLocale: "es-MX", recognizerLocale: "es-MX", flag: "🇪🇸")
+    ]
 }

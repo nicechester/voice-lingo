@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 import VoiceLingoCore
 
 struct ContentView: View {
+    @Query private var userProgress: [UserProgress]
+
     var body: some View {
-        VStack {
-            Text("VoiceLingo")
-                .font(.title)
-            Text("Learning Spanish through voice")
-                .font(.subheadline)
+        if userProgress.isEmpty {
+            LanguagePickerView()
+        } else {
+            HomeView()
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: UserProgress.self, inMemory: true)
 }
