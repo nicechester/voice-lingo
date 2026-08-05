@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 import AVFoundation
 import VoiceLingoCore
 
@@ -19,6 +20,7 @@ struct VoiceLingoApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: UserProgress.self)
     }
 
     private func configureAudioSession() {
