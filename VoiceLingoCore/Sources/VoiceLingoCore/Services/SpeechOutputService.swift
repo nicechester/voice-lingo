@@ -5,10 +5,10 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
     public static let shared = SpeechOutputService()
 
     private let synthesizer = AVSpeechSynthesizer()
-    private let audioSession = AVAudioSession.sharedInstance()
     private var currentLocale: String = "es-MX"
     private var speechRate: Float = 0.5
     private var pitchMultiplier: Float = 1.0
+    private var completionsByUtterance: [AVSpeechUtterance: @Sendable () -> Void] = [:]
 
     override init() {
         super.init()
@@ -25,53 +25,35 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
         self.pitchMultiplier = max(0.5, min(2.0, pitch))
     }
 
-    public func speak(_ text: String, completion: (@Sendable () -> Void)? = nil) {
-        do {
-            try audioSession.setCategory(
-                .playAndRecord,
-                options: [.defaultToSpeaker, .allowBluetoothA2DP]
-            )
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        } catch {
-            print("Failed to activate audio session: \(error)")
-        }
-
+    public func speak(_ text: String, locale: String? = nil, suspendRouter: Bool = true, completion: (@Sendable () -> Void)? = nil) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: currentLocale)
+        utterance.voice = AVSpeechSynthesisVoice(language: locale ?? currentLocale)
         utterance.rate = speechRate
         utterance.pitchMultiplier = pitchMultiplier
-
+        if suspendRouter { VoiceCommandRouter.shared.suspend() }
+        if let completion { completionsByUtterance[utterance] = completion }
         synthesizer.speak(utterance)
-
-        if let completion = completion {
-            completion()
-        }
     }
 
-    public func speakSlowly(_ text: String, completion: (@Sendable () -> Void)? = nil) {
-        let slowRate = max(0.1, speechRate * 0.6)
+    public func speakSlowly(_ text: String, locale: String? = nil, suspendRouter: Bool = true, completion: (@Sendable () -> Void)? = nil) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: currentLocale)
-        utterance.rate = slowRate
+        utterance.voice = AVSpeechSynthesisVoice(language: locale ?? currentLocale)
+        utterance.rate = max(0.1, speechRate * 0.6)
         utterance.pitchMultiplier = pitchMultiplier
-
+        if suspendRouter { VoiceCommandRouter.shared.suspend() }
+        if let completion { completionsByUtterance[utterance] = completion }
         synthesizer.speak(utterance)
-
-        if let completion = completion {
-            completion()
-        }
     }
 
     public func stop() {
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
         }
+        completionsByUtterance.removeAll()
     }
 
     public func pause() {
-        if synthesizer.isSpeaking {
-            synthesizer.pauseSpeaking(at: .word)
-        }
+        if synthesizer.isSpeaking { synthesizer.pauseSpeaking(at: .word) }
     }
 
     public func resume() {
@@ -83,12 +65,13 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
     }
 
     nonisolated public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        let completion = completionsByUtterance.removeValue(forKey: utterance)
+        let stillSpeaking = synthesizer.isSpeaking
         DispatchQueue.main.async {
-            do {
-                try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-            } catch {
-                print("Failed to deactivate audio session: \(error)")
+            if !stillSpeaking {
+                VoiceCommandRouter.shared.resume()
             }
+            completion?()
         }
     }
 }

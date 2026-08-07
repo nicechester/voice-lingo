@@ -1,7 +1,20 @@
 import Foundation
 import Combine
 import SwiftData
+import OSLog
 import VoiceLingoCore
+
+private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "VoiceLingo", category: "Session")
+private let tsFormatter: DateFormatter = {
+    let f = DateFormatter()
+    f.dateFormat = "HH:mm:ss.SSS"
+    return f
+}()
+
+func sessionLog(_ message: String) {
+    let ts = tsFormatter.string(from: Date())
+    logger.info("[\(ts, privacy: .public)] \(message, privacy: .public)")
+}
 
 public enum SessionState: Equatable {
     case idle
@@ -53,6 +66,7 @@ public final class SessionViewModel: ObservableObject {
 
     public func startSession(language: String, levelId: String, lessonId: String) {
         isSessionActive = true
+        voiceCommandRouter.suspend()
         currentState = .idle
         currentPhase = .warmup
         sessionScore = 0
@@ -99,8 +113,9 @@ public final class SessionViewModel: ObservableObject {
     public func stopSession() {
         isSessionActive = false
         currentState = .idle
+        speechOutputService.stop()
         speechRecognitionService.stopRecognition()
-        voiceCommandRouter.stopListening()
+        voiceCommandRouter.resume()
         statusMessage = "Session ended"
     }
 
@@ -115,45 +130,56 @@ public final class SessionViewModel: ObservableObject {
         let phrase = currentPhrases[currentPhrasIndex]
         attemptCount = 0
         phraseCount = "\(currentPhrasIndex + 1)/\(currentPhrases.count)"
-
-        statusMessage = "Get ready..."
         currentState = .speakingPrompt
+        sessionLog("[SPEAK] Phrase \(currentPhrasIndex + 1)/\(currentPhrases.count): \"Phrase \(currentPhrasIndex + 1). Listen and repeat.\"")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.speakPhrase(phrase)
+        speechOutputService.speak("Phrase \(currentPhrasIndex + 1). Listen and repeat.", locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in self?.speakPhrase(phrase) }
         }
     }
 
     private func speakPhrase(_ phrase: Phrase) {
-        statusMessage = "Listen..."
-        speechOutputService.speak(phrase.target)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(phrase.target.count) * 0.05 + 1.0) { [weak self] in
-            self?.awaitUserResponse(for: phrase)
+        statusMessage = phrase.native
+        sessionLog("[SPEAK] Target: \"\(phrase.target)\" (\(phrase.native))")
+        speechOutputService.speak(phrase.target) { [weak self] in
+            Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
         }
     }
 
     private func awaitUserResponse(for phrase: Phrase) {
         currentState = .awaitingResponse
-        statusMessage = "Your turn... Speaking..."
-
-        speechRecognitionService.recognize(timeout: 5.0) { [weak self] recognizedText in
-            Task { @MainActor in
-                self?.evaluateResponse(recognizedText, against: phrase)
-            }
-        } onError: { [weak self] error in
-            Task { @MainActor in
-                self?.handleRecognitionError(error, phrase: phrase)
+        statusMessage = "Your turn"
+        sessionLog("[SPEAK] \"Your turn.\"")
+        speechOutputService.speak("Your turn.", locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                sessionLog("[LISTEN] Waiting 1s before opening mic...")
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                sessionLog("[LISTEN] Mic open, waiting for speech (timeout: 7s)")
+                self.speechRecognitionService.recognize(timeout: 7.0) { [weak self] recognizedText in
+                    Task { @MainActor in
+                        sessionLog("[LISTEN] Recognized: \"\(recognizedText)\"")
+                        self?.evaluateResponse(recognizedText, against: phrase)
+                    }
+                } onError: { [weak self] error in
+                    Task { @MainActor in
+                        sessionLog("[LISTEN] Error: \(error.localizedDescription)")
+                        self?.handleRecognitionError(error, phrase: phrase)
+                    }
+                }
             }
         }
     }
 
     private func evaluateResponse(_ recognizedText: String, against phrase: Phrase) {
+        speechRecognitionService.stopRecognition()
         currentState = .evaluating
         statusMessage = "Checking..."
         attemptCount += 1
+        sessionLog("[EVAL] Attempt \(attemptCount): recognized=\"\(recognizedText)\" target=\"\(phrase.target)\"")
 
         let isCorrect = pronunciationEvaluator.evaluate(recognized: recognizedText, target: phrase.target)
+        sessionLog("[EVAL] Result: \(isCorrect ? "CORRECT" : "WRONG")")
         phraseScores[phrase.id] = (attempts: attemptCount, correct: isCorrect)
 
         if isCorrect {
@@ -171,43 +197,58 @@ public final class SessionViewModel: ObservableObject {
         if correct {
             statusMessage = "Correct!"
             sessionScore += 10
-            speechOutputService.speak("Correct! Well done.")
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-                self?.currentPhrasIndex += 1
-                self?.startNextPhrase()
+            sessionLog("[SPEAK] \"Correct! Well done.\"")
+            speechOutputService.speak("Correct! Well done.", locale: "en-US") { [weak self] in
+                Task { @MainActor [weak self] in
+                    self?.currentPhrasIndex += 1
+                    self?.startNextPhrase()
+                }
             }
         } else {
-            statusMessage = "Try again... Attempt \(attempt) of 3"
-            speechOutputService.speak("Not quite. \(phrase.phonetic)")
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-                self?.awaitUserResponse(for: phrase)
+            statusMessage = "Try again"
+            sessionLog("[SPEAK] \"Not quite. Try again. \(phrase.target)\"")
+            speechOutputService.speak("Not quite. Try again.", locale: "en-US") { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self else { return }
+                    self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
+                        Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
+                    }
+                }
             }
         }
     }
 
     private func revealAnswer(phrase: Phrase) {
         currentState = .feedback
-        statusMessage = "Moving on..."
-        speechOutputService.speak("The answer is: \(phrase.target)")
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-            self?.currentPhrasIndex += 1
-            self?.startNextPhrase()
+        statusMessage = phrase.native
+        speechOutputService.speak("The answer is.", locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in
+                self?.speechOutputService.speak(phrase.target) { [weak self] in
+                    Task { @MainActor [weak self] in
+                        self?.currentPhrasIndex += 1
+                        self?.startNextPhrase()
+                    }
+                }
+            }
         }
     }
 
     private func handleRecognitionError(_ error: Error, phrase: Phrase) {
+        speechRecognitionService.stopRecognition()
         attemptCount += 1
-        statusMessage = "Didn't catch that. Try again."
-
-        if attemptCount < 3 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-                self?.awaitUserResponse(for: phrase)
+        statusMessage = "Didn't catch that"
+        sessionLog("[SPEAK] \"Didn't catch that. Try again. \(phrase.target)\" (attempt \(attemptCount)/3)")
+        speechOutputService.speak("Didn't catch that. Try again.", locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                if self.attemptCount < 3 {
+                    self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
+                        Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
+                    }
+                } else {
+                    self.revealAnswer(phrase: phrase)
+                }
             }
-        } else {
-            revealAnswer(phrase: phrase)
         }
     }
 
@@ -220,14 +261,19 @@ public final class SessionViewModel: ObservableObject {
 
     private func setupVoiceCommandHandling() {
         voiceCommandRouter.startListening { [weak self] command in
+            guard let self, self.isSessionActive else { return }
             switch command {
             case .repeat:
-                self?.repeatPhrase()
+                self.repeatPhrase()
             case .skip:
-                self?.currentPhrasIndex += 1
-                self?.startNextPhrase()
+                self.speechOutputService.stop()
+                self.speechRecognitionService.stopRecognition()
+                self.currentPhrasIndex += 1
+                self.startNextPhrase()
+            case .stop:
+                self.speechOutputService.stop()
             case .help:
-                self?.speechOutputService.speak("Say the phrase you hear. You have 3 attempts.")
+                self.speechOutputService.speak("Say the phrase you hear. You have 3 attempts.")
             default:
                 break
             }

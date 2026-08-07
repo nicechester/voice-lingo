@@ -5,19 +5,20 @@ import AVFoundation
 public final class SpeechRecognitionService: @unchecked Sendable {
     public static let shared = SpeechRecognitionService()
 
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "es-MX"))
+    private var speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale(identifier: "es-MX"))
     private let audioEngine = AVAudioEngine()
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private var currentLocale: String = "es-MX"
     private var lastRecognizedText: String = ""
-
+    private var isTapInstalled = false
     public init() {
         requestMicrophonePermission()
     }
 
     public func setLocale(_ locale: String) {
         currentLocale = locale
+        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: locale))
     }
 
     public func requestMicrophonePermission() {
@@ -43,61 +44,61 @@ public final class SpeechRecognitionService: @unchecked Sendable {
             return
         }
 
-        if recognitionTask != nil {
-            recognitionTask?.cancel()
-            recognitionTask = nil
+        stopRecognition()
+        lastRecognizedText = ""
+
+        var finished = false
+        func finish(result: String?, error: Error?) {
+            guard !finished else { return }
+            finished = true
+            self.stopRecognition()
+            if let result { onResult(result) }
+            else if let error { onError(error) }
         }
 
         do {
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            try audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.allowBluetoothA2DP, .duckOthers])
+            try audioSession.setActive(true)
 
             recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-
             guard let recognitionRequest = recognitionRequest else {
                 onError(SpeechRecognitionError.requestInitializationFailed)
                 return
             }
-
             recognitionRequest.shouldReportPartialResults = true
 
-            if let inputNode = audioEngine.inputNode as AVAudioInputNode? {
-                let recordingFormat = inputNode.outputFormat(forBus: 0)
+            let inputNode = audioEngine.inputNode
+            let recordingFormat = inputNode.outputFormat(forBus: 0)
+            if !isTapInstalled {
                 inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
                     recognitionRequest.append(buffer)
                 }
+                isTapInstalled = true
+            }
 
-                audioEngine.prepare()
-                try audioEngine.start()
+            audioEngine.prepare()
+            try audioEngine.start()
 
-                recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
-                    var isFinal = false
-
-                    if let result = result {
-                        isFinal = result.isFinal
-                        let recognizedText = result.bestTranscription.formattedString
-                        self.lastRecognizedText = recognizedText
-                        onResult(recognizedText)
-
-                        if isFinal {
-                            self.stopRecognition()
-                        }
-                    }
-
-                    if let error = error {
-                        self.stopRecognition()
-                        onError(error)
+            recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+                if let result {
+                    self.lastRecognizedText = result.bestTranscription.formattedString
+                    if result.isFinal {
+                        finish(result: self.lastRecognizedText, error: nil)
                     }
                 }
+                if let error {
+                    let nsError = error as NSError
+                    if nsError.code == 1110 { return }
+                    finish(result: self.lastRecognizedText.isEmpty ? nil : self.lastRecognizedText, error: self.lastRecognizedText.isEmpty ? error : nil)
+                }
+            }
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
-                    if self.recognitionTask != nil {
-                        self.stopRecognition()
-                        if !self.lastRecognizedText.isEmpty {
-                            onResult(self.lastRecognizedText)
-                        }
-                    }
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeout) {
+                if self.lastRecognizedText.isEmpty {
+                    finish(result: nil, error: SpeechRecognitionError.noSpeechDetected)
+                } else {
+                    finish(result: self.lastRecognizedText, error: nil)
                 }
             }
         } catch {
@@ -106,21 +107,20 @@ public final class SpeechRecognitionService: @unchecked Sendable {
     }
 
     public func stopRecognition() {
-        audioEngine.inputNode.removeTap(onBus: 0)
+        if isTapInstalled {
+            audioEngine.inputNode.removeTap(onBus: 0)
+            isTapInstalled = false
+        }
         recognitionRequest?.endAudio()
-        audioEngine.stop()
-
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setActive(false, options: .notifyOthersOnDeactivation)
-        } catch {
-            print("Failed to deactivate audio session: \(error)")
+        recognitionRequest = nil
+        recognitionTask?.cancel()
+        recognitionTask = nil
+        if audioEngine.isRunning {
+            audioEngine.stop()
         }
     }
 
     public func cancelRecognition() {
-        recognitionTask?.cancel()
-        recognitionTask = nil
         stopRecognition()
     }
 
@@ -137,17 +137,15 @@ public enum SpeechRecognitionError: LocalizedError {
     case requestInitializationFailed
     case audioSessionError
     case permissionDenied
+    case noSpeechDetected
 
     public var errorDescription: String? {
         switch self {
-        case .recognizerUnavailable:
-            return "Speech recognizer is not available"
-        case .requestInitializationFailed:
-            return "Failed to initialize speech recognition request"
-        case .audioSessionError:
-            return "Failed to configure audio session"
-        case .permissionDenied:
-            return "Microphone permission denied"
+        case .recognizerUnavailable: return "Speech recognizer is not available"
+        case .requestInitializationFailed: return "Failed to initialize speech recognition request"
+        case .audioSessionError: return "Failed to configure audio session"
+        case .permissionDenied: return "Microphone permission denied"
+        case .noSpeechDetected: return "No speech detected"
         }
     }
 }
