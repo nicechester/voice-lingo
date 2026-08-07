@@ -15,20 +15,22 @@ struct VoiceLingoApp: App {
     init() {
         configureAudioSession()
     }
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.dark)
         }
         .modelContainer(for: UserProgress.self)
     }
-
+    
     private func configureAudioSession() {
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(
                 .playAndRecord,
-                options: [.defaultToSpeaker, .allowBluetoothHFP]
+                mode: .default,
+                options: [.defaultToSpeaker, .allowBluetoothHFP, .allowBluetoothA2DP]
             )
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
