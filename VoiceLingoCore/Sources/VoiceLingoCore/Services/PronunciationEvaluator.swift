@@ -14,16 +14,88 @@ public final class PronunciationEvaluator: @unchecked Sendable {
         }
     }
 
-    public func evaluate(recognized: String, target: String) -> Bool {
-        let normalizedRecognized = normalize(recognized)
-        let normalizedTarget = normalize(target)
+    // MARK: - Multi-candidate evaluation
 
-        if normalizedRecognized == normalizedTarget {
-            return true
+    /// The result of comparing recognized speech against a set of acceptable answers.
+    public struct CandidateMatch: Equatable, Sendable {
+        /// The acceptable answer that scored best (original, un-normalized text).
+        public let candidate: String
+        /// 0.0-1.0 similarity against that candidate.
+        public let accuracy: Double
+        /// Levenshtein distance against that candidate, after normalization.
+        public let distance: Int
+        /// True if the distance was within the threshold for that candidate's length.
+        public let isAcceptable: Bool
+    }
+
+    /// Compares recognized speech against a finite, pre-authored set of acceptable answers
+    /// and returns the best-scoring one.
+    ///
+    /// This is fuzzy string matching over a closed set — NOT comprehension. The app can only
+    /// ever "accept" a string that a human already wrote into a content file.
+    ///
+    /// - Parameters:
+    ///   - recognized: Raw text from SFSpeechRecognizer.
+    ///   - candidates: The full set of acceptable answers (e.g. `DialogueTurn.hints`).
+    ///   - allowSubstring: If true, a candidate contained anywhere inside the recognized text
+    ///     counts as an exact match. Use for conversational turns where the learner may add
+    ///     filler ("um, estoy bien, gracias profesora"). Leave false for pronunciation drills,
+    ///     where we want the learner to produce the phrase and nothing else.
+    /// - Returns: The best match, or nil if `candidates` is empty.
+    public func bestMatch(
+        recognized: String,
+        candidates: [String],
+        allowSubstring: Bool = false
+    ) -> CandidateMatch? {
+        guard !candidates.isEmpty else { return nil }
+        let r = normalize(recognized)
+
+        var best: CandidateMatch?
+        for candidate in candidates {
+            let c = normalize(candidate)
+
+            if r == c || (allowSubstring && !c.isEmpty && r.contains(c)) {
+                return CandidateMatch(candidate: candidate, accuracy: 1.0,
+                                      distance: 0, isAcceptable: true)
+            }
+
+            let distance = levenshteinDistance(r, c)
+            let maxLength = max(r.count, c.count)
+            let accuracy = maxLength > 0 ? max(0.0, 1.0 - Double(distance) / Double(maxLength)) : 1.0
+            let match = CandidateMatch(
+                candidate: candidate,
+                accuracy: accuracy,
+                distance: distance,
+                isAcceptable: distance <= threshold(forLength: c.count)
+            )
+            if best == nil || match.accuracy > best!.accuracy { best = match }
         }
+        return best
+    }
 
-        let distance = levenshteinDistance(normalizedRecognized, normalizedTarget)
-        return distance <= levenshteinThreshold
+    /// Convenience: true if any candidate is an acceptable match.
+    public func evaluate(
+        recognized: String,
+        candidates: [String],
+        allowSubstring: Bool = false
+    ) -> Bool {
+        bestMatch(recognized: recognized,
+                  candidates: candidates,
+                  allowSubstring: allowSubstring)?.isAcceptable ?? false
+    }
+
+    /// Edit-distance budget scaled to the length of the expected answer.
+    ///
+    /// A fixed budget of 2 is right for short drill phrases ("Buenos días") but far too strict
+    /// for full dialogue lines ("Cuando era niño, vivía en un pueblo pequeño", 43 chars), where
+    /// two recognizer slips are near-certain. Threshold only departs from 2 above ~30 chars,
+    /// so existing drill behaviour and existing tests are unchanged.
+    private func threshold(forLength length: Int) -> Int {
+        max(levenshteinThreshold, length / 10)
+    }
+
+    public func evaluate(recognized: String, target: String) -> Bool {
+        evaluate(recognized: recognized, candidates: [target], allowSubstring: false)
     }
 
     public func getAccuracy(recognized: String, target: String) -> Double {
@@ -65,10 +137,14 @@ public final class PronunciationEvaluator: @unchecked Sendable {
     }
 
     private func normalize(_ text: String) -> String {
-        text
+        let folded = text
             .lowercased()
-            .folding(options: .diacriticInsensitive, locale: .current)
-            .trimmingCharacters(in: .whitespaces)
+            .folding(options: .diacriticInsensitive, locale: Locale(identifier: "en_US_POSIX"))
+        let stripped = folded.unicodeScalars
+            .filter { !CharacterSet.punctuationCharacters.contains($0) }
+        return String(String.UnicodeScalarView(stripped))
+            .split(separator: " ", omittingEmptySubsequences: true)
+            .joined(separator: " ")
     }
 
     private func levenshteinDistance(_ s1: String, _ s2: String) -> Int {

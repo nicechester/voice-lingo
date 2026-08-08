@@ -1,0 +1,72 @@
+{
+  "language": "es",
+  "pools": {
+    "sessionOpen": [
+      { "text": "Alright — fifteen minutes, let's build on what you've got.", "locale": "en-US" },
+      { "text": "Good to see you. Short one today, same as always.", "locale": "en-US" },
+      { "text": "Let's get into it. Fifteen minutes, one small piece at a time.", "locale": "en-US" },
+      { "text": "Ready when you are. We'll keep it short.", "locale": "en-US" }
+    ],
+    "praise": [
+      { "text": "Exacto.", "locale": "es-MX" },
+      { "text": "Muy bien.", "locale": "es-MX" },
+      { "text": "Perfecto.", "locale": "es-MX" },
+      { "text": "That's it — clean.", "locale": "en-US" },
+      { "text": "Yep, that's the one.", "locale": "en-US" },
+      { "text": "Bien. No hesitation on that.", "locale": "en-US" }
+    ],
+    "gentleCorrection": [
+      { "text": "Close — listen once more.", "locale": "en-US" },
+      { "text": "Almost. Here it is again.", "locale": "en-US" },
+      { "text": "Not quite — let's hear it one more time.", "locale": "en-US" },
+      { "text": "You're near it. Try again after me.", "locale": "en-US" },
+      { "text": "Casi. Otra vez.", "locale": "es-MX" }
+    ],
+    "transition": [
+      { "text": "Okay, next piece.", "locale": "en-US" },
+      { "text": "Good. Moving on.", "locale": "en-US" },
+      { "text": "One more thing and then we put it together.", "locale": "en-US" },
+      { "text": "Bueno — siguiente.", "locale": "es-MX" }
+    ],
+    "timeRemaining": [
+      { "text": "We're about {minutes} minutes in.", "locale": "en-US" },
+      { "text": "About {minutes} minutes down — let's do a quick check.", "locale": "en-US" },
+      { "text": "Casi se acaba el tiempo. Around {minutes} minutes.", "locale": "en-US" }
+    ],
+    "revealAnswer": [
+      { "text": "Here's how it goes:", "locale": "en-US" },
+      { "text": "The answer is:", "locale": "en-US" },
+      { "text": "Listen — this is the one:", "locale": "en-US" }
+    ],
+    "dialogueIntro": [
+      { "text": "Let's put it together. Pretend we've never met.", "locale": "en-US" },
+      { "text": "Full conversation now, start to finish.", "locale": "en-US" },
+      { "text": "Okay — real exchange. I'll go first.", "locale": "en-US" }
+    ],
+    "learnerTurnCue": [
+      { "text": "Your turn.", "locale": "en-US" },
+      { "text": "Go ahead — answer me.", "locale": "en-US" },
+      { "text": "You respond.", "locale": "en-US" }
+    ],
+    "echoResponse": [
+      { "text": "¡Qué bien! {recognized}.", "locale": "es-MX" },
+      { "text": "Bien — {recognized}.", "locale": "es-MX" },
+      { "text": "Got it. {recognized}.", "locale": "en-US" }
+    ],
+    "quizIntro": [
+      { "text": "Quick check before we finish.", "locale": "en-US" },
+      { "text": "Let's see what stuck.", "locale": "en-US" },
+      { "text": "Fast recap — no repeating after me this time.", "locale": "en-US" }
+    ],
+    "sessionClose": [
+      { "text": "Bien hecho. Same time tomorrow?", "locale": "en-US" },
+      { "text": "That's time. Say one of these to a real person this week.", "locale": "en-US" },
+      { "text": "Perfecto. Tomorrow we build on this.", "locale": "en-US" }
+    ]
+  },
+  "slots": {
+    "name": ["Marisol", "Roberto", "Alejandra", "Diego", "Lucía"],
+    "city": ["México", "Chicago", "Los Ángeles", "Madrid", "Bogotá"],
+    "timeOfDay": ["Buenos días", "Buenas tardes", "Buenas noches"]
+  }
+}

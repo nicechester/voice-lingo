@@ -74,3 +74,18 @@ public struct Phrase: Codable, Identifiable, Sendable {
         try container.encodeIfPresent(grammarNote, forKey: .grammarNote)
     }
 }
+
+public extension Phrase {
+    /// A stable, persistence-safe identifier for this phrase.
+    ///
+    /// `Phrase.id` is a fresh UUID generated at decode time and is NOT stable across app
+    /// launches — it must never be used as an SRS key. This key is derived from the lesson
+    /// it belongs to plus the normalized target text, both of which are stable content.
+    func progressKey(inLesson lessonId: String) -> String {
+        let normalizedTarget = target
+            .lowercased()
+            .folding(options: .diacriticInsensitive, locale: Locale(identifier: "en_US_POSIX"))
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        return "\(lessonId)#\(normalizedTarget)"
+    }
+}

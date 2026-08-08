@@ -248,6 +248,26 @@ final class CurriculumLoaderTests: XCTestCase {
         XCTAssertFalse(a1Level?.lessons.isEmpty ?? true)
     }
 
+    // MARK: - Stable Phrase Key Tests
+
+    func testProgressKeyIsStableAcrossDecodes() throws {
+        // Load A1-L1 twice, clearing cache between loads
+        let lesson1 = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let firstPhrase1 = lesson1.phrases.first
+        let key1 = firstPhrase1?.progressKey(inLesson: "A1-L1")
+
+        loader.clearCache()
+
+        let lesson2 = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let firstPhrase2 = lesson2.phrases.first
+        let key2 = firstPhrase2?.progressKey(inLesson: "A1-L1")
+
+        XCTAssertEqual(key1, key2,
+                       "Progress key must be identical across decodes")
+        XCTAssertNotEqual(firstPhrase1?.id, firstPhrase2?.id,
+                          "UUID should differ between decodes (proving it's not stable)")
+    }
+
     // MARK: - Singleton Pattern Tests
 
     func testSharedInstanceExists() {
@@ -268,5 +288,27 @@ final class CurriculumLoaderTests: XCTestCase {
         _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
         let cached = CurriculumLoader.shared.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
         XCTAssertNotNil(cached)
+    }
+
+    // MARK: - Dialogue Content Integrity
+
+    func testDialogueContentIntegrity() throws {
+        let manifest = try loader.loadManifest(for: "es")
+        for level in manifest.levels {
+            for lesson in level.lessons {
+                let loadedLesson = try loader.loadLesson(language: "es", levelId: level.id, lessonId: lesson.id)
+                guard let dialogue = loadedLesson.dialogue else { continue }
+
+                for (index, turn) in dialogue.turns.enumerated() {
+                    if turn.speaker == .learner {
+                        XCTAssertFalse(turn.hints?.isEmpty ?? true,
+                                       "Learner turn \(index) in \(lesson.id) must have non-empty hints")
+                    } else if turn.speaker == .npc {
+                        XCTAssertFalse(turn.line?.isEmpty ?? true,
+                                       "NPC turn \(index) in \(lesson.id) must have non-empty line")
+                    }
+                }
+            }
+        }
     }
 }
