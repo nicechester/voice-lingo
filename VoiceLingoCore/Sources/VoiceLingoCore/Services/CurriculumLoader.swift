@@ -5,6 +5,7 @@ public class CurriculumLoader {
 
     private var manifestCache: [String: CurriculumManifest] = [:]
     private var lessonCache: [String: Lesson] = [:]   // key: "\(language)/\(levelId)/\(lessonId)"
+    private var speechBankCache: [String: SpeechBank] = [:]
     private let decoder = JSONDecoder()
     private let cacheLock = NSLock()
 
@@ -92,20 +93,37 @@ public class CurriculumLoader {
         return lessonCache[cacheKey]
     }
 
-    /// Clears all cached manifests and lessons.
+    /// Loads `Content/{language}/speech-bank.json`, or nil if the language has no bank.
+    ///
+    /// Returns nil rather than throwing: the bank is a presentation nicety, and a missing or
+    /// malformed bank must degrade to the app's built-in fallback strings, never to a crash
+    /// or a silent session.
+    public func loadSpeechBank(for language: String) -> SpeechBank? {
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+
+        if let cached = speechBankCache[language] { return cached }
+        guard let bank = try? loadSpeechBankFromFile(language: language) else { return nil }
+        speechBankCache[language] = bank
+        return bank
+    }
+
+    /// Clears all cached manifests, lessons, and speech banks.
     public func clearCache() {
         cacheLock.lock()
         defer { cacheLock.unlock() }
         manifestCache.removeAll()
         lessonCache.removeAll()
+        speechBankCache.removeAll()
     }
 
-    /// Clears the cache for a specific language (manifest + all lessons for that language).
+    /// Clears the cache for a specific language (manifest + all lessons + speech bank for that language).
     /// - Parameter language: Language code
     public func clearCache(for language: String) {
         cacheLock.lock()
         defer { cacheLock.unlock() }
         manifestCache.removeValue(forKey: language)
+        speechBankCache.removeValue(forKey: language)
         // Remove all lesson cache keys that start with this language
         let keysToRemove = lessonCache.keys.filter { $0.hasPrefix("\(language)/") }
         keysToRemove.forEach { lessonCache.removeValue(forKey: $0) }
@@ -195,5 +213,51 @@ public class CurriculumLoader {
         }
 
         throw CurriculumError.lessonNotFound(language: language, levelId: levelId, lessonId: lessonId)
+    }
+
+    private func loadSpeechBankFromFile(language: String) throws -> SpeechBank {
+        let bundle = Bundle.module
+
+        // Try to load from language-specific subdirectory first
+        if let url = bundle.url(
+            forResource: "speech-bank",
+            withExtension: "json",
+            subdirectory: "Content/\(language)"
+        ), url.path.contains("/Content/\(language)/") {
+            do {
+                let data = try Data(contentsOf: url)
+                let bank = try decoder.decode(SpeechBank.self, from: data)
+                if bank.language == language {
+                    return bank
+                }
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
+        }
+
+        // Fallback for SwiftPM bundle flattening: SPM flattens all Content/ resources
+        // to the bundle root, so look up the resource by name directly. Since speech-bank.json
+        // is language-scoped but flattens to the bundle root, verify the decoded bank
+        // actually matches the requested language before accepting it.
+        if let url = bundle.url(
+            forResource: "speech-bank",
+            withExtension: "json"
+        ), url.path.contains("/speech-bank.json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let bank = try decoder.decode(SpeechBank.self, from: data)
+                if bank.language == language {
+                    return bank
+                }
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
+        }
+
+        throw CurriculumError.unknownError(language: language)
     }
 }

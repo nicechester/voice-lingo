@@ -45,12 +45,11 @@ public final class UserProgress {
         if let progress = progress {
             if correct {
                 progress.correctCount += 1
-                progress.interval *= 2
                 totalXP += 10
             } else {
                 progress.incorrectCount += 1
-                progress.interval = 1
             }
+            progress.updateInterval(correct: correct)
             progress.lastAttempt = Date()
         }
     }

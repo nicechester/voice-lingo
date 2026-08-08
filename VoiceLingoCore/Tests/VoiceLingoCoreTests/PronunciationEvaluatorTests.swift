@@ -189,4 +189,57 @@ class PronunciationEvaluatorTests: XCTestCase {
         let incorrectFeedback = evaluator.getFeedback(recognized: "Adiós", target: "Buenos días")
         XCTAssertTrue(incorrectFeedback.feedbackMessage.contains("Intenta"))
     }
+
+    // MARK: - Multi-Candidate Evaluation
+
+    func testMatchesAnyCandidate() {
+        let hints = ["Estoy bien", "Estoy bien, gracias"]
+        XCTAssertTrue(evaluator.evaluate(recognized: "estoy bien gracias", candidates: hints),
+                      "Should match the second candidate")
+        XCTAssertTrue(evaluator.evaluate(recognized: "Estoy bien", candidates: hints),
+                      "Should match the first candidate")
+    }
+
+    func testRejectsWhenNoCandidateMatches() {
+        XCTAssertFalse(
+            evaluator.evaluate(recognized: "buenas noches", candidates: ["Estoy bien", "Muy bien"]),
+            "An answer unrelated to every candidate must be rejected")
+    }
+
+    func testEmptyCandidateListIsNeverAMatch() {
+        XCTAssertFalse(evaluator.evaluate(recognized: "cualquier cosa", candidates: []),
+                       "No candidates means nothing can be accepted")
+        XCTAssertNil(evaluator.bestMatch(recognized: "hola", candidates: []),
+                     "bestMatch must be nil for an empty candidate set")
+    }
+
+    func testBestMatchReturnsHighestScoringCandidate() {
+        let match = evaluator.bestMatch(recognized: "estoy bien gracias",
+                                        candidates: ["Muy bien", "Estoy bien, gracias"])
+        XCTAssertEqual(match?.candidate, "Estoy bien, gracias",
+                       "Should report the closest candidate, not the first")
+        XCTAssertTrue(match?.isAcceptable ?? false)
+    }
+
+    func testAllowSubstringAcceptsConversationalFiller() {
+        let hints = ["Estoy bien"]
+        XCTAssertFalse(evaluator.evaluate(recognized: "pues estoy bien gracias profesora",
+                                          candidates: hints, allowSubstring: false),
+                       "Drill mode must not accept a padded answer")
+        XCTAssertTrue(evaluator.evaluate(recognized: "pues estoy bien gracias profesora",
+                                         candidates: hints, allowSubstring: true),
+                      "Dialogue mode should accept the phrase inside natural filler")
+    }
+
+    func testLongAnswersGetAProportionalThreshold() {
+        let hint = "Cuando era niño, vivía en un pueblo pequeño"
+        XCTAssertTrue(evaluator.evaluate(recognized: "cuando era nino vivia en un publo pequeno",
+                                         candidates: [hint]),
+                      "A long dialogue line should tolerate more than two recognizer slips")
+    }
+
+    func testPunctuationIsIgnored() {
+        XCTAssertTrue(evaluator.evaluate(recognized: "como estas", candidates: ["¿Cómo estás?"]),
+                      "Spanish punctuation the recognizer never emits must not cost edit budget")
+    }
 }
