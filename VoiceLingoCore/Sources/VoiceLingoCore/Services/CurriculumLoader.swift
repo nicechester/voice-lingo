@@ -3,102 +3,197 @@ import Foundation
 public class CurriculumLoader {
     public nonisolated(unsafe) static let shared = CurriculumLoader()
 
-    private var cache: [String: Curriculum] = [:]
+    private var manifestCache: [String: CurriculumManifest] = [:]
+    private var lessonCache: [String: Lesson] = [:]   // key: "\(language)/\(levelId)/\(lessonId)"
     private let decoder = JSONDecoder()
     private let cacheLock = NSLock()
 
     private init() {}
 
     public enum CurriculumError: LocalizedError {
-        case fileNotFound(language: String)
-        case invalidJSON(language: String)
+        case manifestNotFound(language: String)
+        case lessonNotFound(language: String, levelId: String, lessonId: String)
         case decodingFailed(language: String, underlying: Error)
         case unknownError(language: String)
 
         public var errorDescription: String? {
             switch self {
-            case .fileNotFound(let language):
-                return "Curriculum file not found for language: \(language)"
-            case .invalidJSON(let language):
-                return "Invalid JSON in curriculum file for language: \(language)"
+            case .manifestNotFound(let language):
+                return "Curriculum manifest not found for language: \(language)"
+            case .lessonNotFound(let language, let levelId, let lessonId):
+                return "Lesson not found: \(language)/\(levelId)/\(lessonId)"
             case .decodingFailed(let language, let error):
-                return "Failed to decode curriculum for language \(language): \(error.localizedDescription)"
+                return "Failed to decode curriculum content for language \(language): \(error.localizedDescription)"
             case .unknownError(let language):
                 return "Unknown error loading curriculum for language: \(language)"
             }
         }
     }
 
-    /// Loads a curriculum for the specified language code.
+    /// Loads a curriculum manifest for the specified language code.
     /// Results are cached for subsequent calls.
     /// - Parameter language: Language code (e.g., "es" for Spanish)
-    /// - Returns: Curriculum object
+    /// - Returns: CurriculumManifest object
     /// - Throws: CurriculumError if loading or parsing fails
-    public func loadCurriculum(for language: String) throws -> Curriculum {
+    public func loadManifest(for language: String) throws -> CurriculumManifest {
         cacheLock.lock()
         defer { cacheLock.unlock() }
 
-        if let cached = cache[language] {
+        if let cached = manifestCache[language] {
             return cached
         }
 
-        let curriculum = try loadFromFile(language: language)
-        cache[language] = curriculum
-        return curriculum
+        let manifest = try loadManifestFromFile(language: language)
+        manifestCache[language] = manifest
+        return manifest
     }
 
-    /// Retrieves a cached curriculum without attempting to reload.
+    /// Retrieves a cached manifest without attempting to reload.
     /// - Parameter language: Language code
-    /// - Returns: Cached curriculum, or nil if not loaded
-    public func getCachedCurriculum(for language: String) -> Curriculum? {
+    /// - Returns: Cached manifest, or nil if not loaded
+    public func getCachedManifest(for language: String) -> CurriculumManifest? {
         cacheLock.lock()
         defer { cacheLock.unlock() }
-        return cache[language]
+        return manifestCache[language]
     }
 
-    /// Clears the curriculum cache.
+    /// Loads a lesson for the specified language, level, and lesson IDs.
+    /// Results are cached for subsequent calls.
+    /// - Parameters:
+    ///   - language: Language code
+    ///   - levelId: Level identifier
+    ///   - lessonId: Lesson identifier
+    /// - Returns: Lesson object
+    /// - Throws: CurriculumError if loading or parsing fails
+    public func loadLesson(language: String, levelId: String, lessonId: String) throws -> Lesson {
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+
+        let cacheKey = "\(language)/\(levelId)/\(lessonId)"
+        if let cached = lessonCache[cacheKey] {
+            return cached
+        }
+
+        let lesson = try loadLessonFromFile(language: language, levelId: levelId, lessonId: lessonId)
+        lessonCache[cacheKey] = lesson
+        return lesson
+    }
+
+    /// Retrieves a cached lesson without attempting to reload.
+    /// - Parameters:
+    ///   - language: Language code
+    ///   - levelId: Level identifier
+    ///   - lessonId: Lesson identifier
+    /// - Returns: Cached lesson, or nil if not loaded
+    public func getCachedLesson(language: String, levelId: String, lessonId: String) -> Lesson? {
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+        let cacheKey = "\(language)/\(levelId)/\(lessonId)"
+        return lessonCache[cacheKey]
+    }
+
+    /// Clears all cached manifests and lessons.
     public func clearCache() {
         cacheLock.lock()
         defer { cacheLock.unlock() }
-        cache.removeAll()
+        manifestCache.removeAll()
+        lessonCache.removeAll()
     }
 
-    /// Clears the cache for a specific language.
+    /// Clears the cache for a specific language (manifest + all lessons for that language).
     /// - Parameter language: Language code
     public func clearCache(for language: String) {
         cacheLock.lock()
         defer { cacheLock.unlock() }
-        cache.removeValue(forKey: language)
+        manifestCache.removeValue(forKey: language)
+        // Remove all lesson cache keys that start with this language
+        let keysToRemove = lessonCache.keys.filter { $0.hasPrefix("\(language)/") }
+        keysToRemove.forEach { lessonCache.removeValue(forKey: $0) }
     }
 
     // MARK: - Private
 
-    private func loadFromFile(language: String) throws -> Curriculum {
+    private func loadManifestFromFile(language: String) throws -> CurriculumManifest {
         let bundle = Bundle.module
 
-        guard let url = bundle.url(
-            forResource: "curriculum",
+        // Try to load from language-specific subdirectory first
+        if let url = bundle.url(
+            forResource: "manifest",
             withExtension: "json",
             subdirectory: "Content/\(language)"
-        ) ?? bundle.url(
-            forResource: "curriculum",
+        ), url.path.contains("/Content/\(language)/") {
+            do {
+                let data = try Data(contentsOf: url)
+                let manifest = try decoder.decode(CurriculumManifest.self, from: data)
+                return manifest
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
+        }
+
+        // Fallback for SwiftPM bundle flattening: SPM flattens all Content/ resources
+        // to the bundle root, so look up the resource by name directly. Since manifest.json
+        // is not language-scoped in the flattened bundle, verify the decoded manifest
+        // actually matches the requested language before returning it.
+        if let url = bundle.url(
+            forResource: "manifest",
             withExtension: "json"
-        ) else {
-            throw CurriculumError.fileNotFound(language: language)
+        ), url.path.contains("/manifest.json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let manifest = try decoder.decode(CurriculumManifest.self, from: data)
+                if manifest.language == language {
+                    return manifest
+                }
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
         }
 
-        if language != "es" && url.path.contains("/Content/") == false {
-            throw CurriculumError.fileNotFound(language: language)
+        throw CurriculumError.manifestNotFound(language: language)
+    }
+
+    private func loadLessonFromFile(language: String, levelId: String, lessonId: String) throws -> Lesson {
+        let bundle = Bundle.module
+
+        // Try to load from language/level-specific subdirectory first
+        if let url = bundle.url(
+            forResource: lessonId,
+            withExtension: "json",
+            subdirectory: "Content/\(language)/\(levelId)"
+        ), url.path.contains("/Content/\(language)/\(levelId)/") {
+            do {
+                let data = try Data(contentsOf: url)
+                let lesson = try decoder.decode(Lesson.self, from: data)
+                return lesson
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
         }
 
-        do {
-            let data = try Data(contentsOf: url)
-            let curriculum = try decoder.decode(Curriculum.self, from: data)
-            return curriculum
-        } catch let error as DecodingError {
-            throw CurriculumError.decodingFailed(language: language, underlying: error)
-        } catch {
-            throw CurriculumError.unknownError(language: language)
+        // Fallback for SwiftPM bundle flattening: SPM flattens all Content/ resources
+        // to the bundle root, so look up the resource by name directly.
+        if let url = bundle.url(
+            forResource: lessonId,
+            withExtension: "json"
+        ), url.path.contains("/\(lessonId).json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let lesson = try decoder.decode(Lesson.self, from: data)
+                return lesson
+            } catch let error as DecodingError {
+                throw CurriculumError.decodingFailed(language: language, underlying: error)
+            } catch {
+                throw CurriculumError.unknownError(language: language)
+            }
         }
+
+        throw CurriculumError.lessonNotFound(language: language, levelId: levelId, lessonId: lessonId)
     }
 }

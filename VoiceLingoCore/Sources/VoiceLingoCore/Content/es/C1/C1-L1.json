@@ -1,0 +1,415 @@
+{
+  "id": "C1-L1",
+  "title": "The Past, Reconsidered",
+  "grammarNote": "This lesson covers compound past structures for reflecting on decisions after the fact: the pluperfect indicative (había hecho) for 'the earlier of two pasts,' and the pluperfect subjunctive (hubiera hecho) used both in regret expressions (ojalá hubiera) and in the 'si' clause of the third conditional. The third conditional pairs 'si + hubiera + participio' (or the formal 'de + haber + participio') with the conditional perfect 'habría + participio' to describe hypothetical past outcomes that never occurred, alongside near-synonymous regret phrases like 'debí haber' and 'tendría que haber.'",
+  "phrases": [
+    {
+      "target": "Si hubiera sabido eso antes, habría actuado de otra manera.",
+      "native": "If I had known that before, I would have acted differently.",
+      "phonetic": "see oo-BYEH-rah sah-BEE-doh EH-soh AHN-tes, ah-BREE-ah ahk-too-AH-doh deh OH-trah mah-NEH-rah",
+      "syllables": [
+        "see",
+        "oo",
+        "BYEH",
+        "rah",
+        "sah",
+        "BEE",
+        "doh",
+        "EH",
+        "soh",
+        "AHN",
+        "tes",
+        "ah",
+        "BREE",
+        "ah",
+        "ahk",
+        "too",
+        "AH",
+        "doh",
+        "deh",
+        "OH",
+        "trah",
+        "mah",
+        "NEH",
+        "rah"
+      ],
+      "vocabularyIntro": "'Si hubiera sabido' (pluperfect subjunctive: si + hubiera + participio) and 'habría actuado' (conditional perfect: habría + participio) together form the third conditional, used for a hypothetical outcome about the past that never happened.",
+      "exampleSentence": {
+        "target": "Si hubiera sabido que el vuelo se retrasaría, habría salido más tarde.",
+        "native": "If I had known the flight would be delayed, I would have left later."
+      },
+      "grammarNote": "The third conditional pairs the pluperfect subjunctive (hubiera + past participle) in the 'si' clause with the conditional perfect (habría + past participle) in the result clause to describe a hypothetical outcome that never occurred.",
+      "memoryHook": "Both halves use 'haber': hubiera (subjunctive helper) for the impossible condition, habría (conditional helper) for the impossible result.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: If I had known that before, I would have acted differently.",
+          "answer": "Si hubiera sabido eso antes, habría actuado de otra manera."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Si hubiera sabido eso antes, ___ actuado de otra manera.",
+          "answer": "habría"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué habrías hecho si hubieras sabido la verdad a tiempo?",
+          "answer": "Habría actuado de otra manera."
+        }
+      ]
+    },
+    {
+      "target": "Cuando llegamos a la reunión, el cliente ya había cancelado el contrato.",
+      "native": "By the time we arrived at the meeting, the client had already canceled the contract.",
+      "phonetic": "KWAN-doh yeh-GAH-mos ah lah reh-oo-nee-OHN, el klee-EN-teh yah ah-BEE-ah kan-seh-LAH-doh el kon-TRAH-toh",
+      "syllables": [
+        "KWAN",
+        "doh",
+        "yeh",
+        "GAH",
+        "mos",
+        "ah",
+        "lah",
+        "reh",
+        "oo",
+        "nee",
+        "OHN",
+        "el",
+        "klee",
+        "EN",
+        "teh",
+        "yah",
+        "ah",
+        "BEE",
+        "ah",
+        "kan",
+        "seh",
+        "LAH",
+        "doh",
+        "el",
+        "kon",
+        "TRAH",
+        "toh"
+      ],
+      "vocabularyIntro": "'Había cancelado' is the pluperfect indicative (había + participio) — it marks an action completed before another past action ('llegamos').",
+      "exampleSentence": {
+        "target": "Cuando revisamos los números, el equipo ya había tomado la decisión.",
+        "native": "When we reviewed the numbers, the team had already made the decision."
+      },
+      "grammarNote": "The pluperfect indicative (había + past participle) situates one past event before another past event — it establishes 'the earlier of two pasts.'",
+      "memoryHook": "'Había' + participle = 'had done' — the extra step back in time from the simple past.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: By the time we arrived at the meeting, the client had already canceled the contract.",
+          "answer": "Cuando llegamos a la reunión, el cliente ya había cancelado el contrato."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Cuando llegamos a la reunión, el cliente ya ___ cancelado el contrato.",
+          "answer": "había"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué había pasado antes de que llegaran a la reunión?",
+          "answer": "El cliente ya había cancelado el contrato."
+        }
+      ]
+    },
+    {
+      "target": "Ojalá hubiera revisado el informe antes de enviarlo.",
+      "native": "I wish I had reviewed the report before sending it.",
+      "phonetic": "oh-hah-LAH oo-BYEH-rah reh-vee-SAH-doh el een-FOR-meh AHN-tes deh en-vee-AHR-loh",
+      "syllables": [
+        "oh",
+        "hah",
+        "LAH",
+        "oo",
+        "BYEH",
+        "rah",
+        "reh",
+        "vee",
+        "SAH",
+        "doh",
+        "el",
+        "een",
+        "FOR",
+        "meh",
+        "AHN",
+        "tes",
+        "deh",
+        "en",
+        "vee",
+        "AHR",
+        "loh"
+      ],
+      "vocabularyIntro": "'Ojalá' + pluperfect subjunctive (hubiera + participio) expresses regret about something that didn't happen in the past — 'I wish I had...'",
+      "exampleSentence": {
+        "target": "Ojalá hubiera hablado con ella antes de la decisión.",
+        "native": "I wish I had spoken with her before the decision."
+      },
+      "grammarNote": "'Ojalá' always triggers the subjunctive; with the pluperfect subjunctive it expresses regret over an unchangeable past.",
+      "memoryHook": "'Ojalá' comes from Arabic 'law šā' allāh' ('if God wills') — think of it as wishing you could rewrite the past.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I wish I had reviewed the report before sending it.",
+          "answer": "Ojalá hubiera revisado el informe antes de enviarlo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ojalá ___ revisado el informe antes de enviarlo.",
+          "answer": "hubiera"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué te hubiera gustado hacer antes de enviar el informe?",
+          "answer": "Ojalá hubiera revisado el informe antes de enviarlo."
+        }
+      ]
+    },
+    {
+      "target": "Debí haber consultado con el equipo antes de decidir solo.",
+      "native": "I should have consulted with the team before deciding alone.",
+      "phonetic": "deh-BEE ah-BEHR kon-sool-TAH-doh kon el eh-KEE-poh AHN-tes deh deh-see-DEER SOH-loh",
+      "syllables": [
+        "deh",
+        "BEE",
+        "ah",
+        "BEHR",
+        "kon",
+        "sool",
+        "TAH",
+        "doh",
+        "kon",
+        "el",
+        "eh",
+        "KEE",
+        "poh",
+        "AHN",
+        "tes",
+        "deh",
+        "deh",
+        "see",
+        "DEER",
+        "SOH",
+        "loh"
+      ],
+      "vocabularyIntro": "'Debí haber' + participio (or the equivalent 'tendría que haber' + participio) expresses self-directed regret or criticism — 'I should have...'",
+      "exampleSentence": {
+        "target": "Tendría que haber avisado antes del cambio.",
+        "native": "I should have given notice before the change."
+      },
+      "grammarNote": "'Debí haber' uses the preterite of 'deber' + haber + participle; 'tendría que haber' uses the conditional of 'tener que' + haber + participle — both are near-synonyms for 'should have.'",
+      "memoryHook": "'Debí' sounds like 'duty' — a duty you didn't fulfill in the past.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I should have consulted with the team before deciding alone.",
+          "answer": "Debí haber consultado con el equipo antes de decidir solo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Debí haber ___ con el equipo antes de decidir solo.",
+          "answer": "consultado"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué debiste haber hecho antes de decidir solo?",
+          "answer": "Debí haber consultado con el equipo."
+        }
+      ]
+    },
+    {
+      "target": "De haber sabido los riesgos, no habríamos aprobado el proyecto.",
+      "native": "Had we known the risks, we wouldn't have approved the project.",
+      "phonetic": "deh ah-BEHR sah-BEE-doh los ree-EHS-gohs, noh ah-BREE-ah-mohs ah-proh-BAH-doh el proh-YEHK-toh",
+      "syllables": [
+        "deh",
+        "ah",
+        "BEHR",
+        "sah",
+        "BEE",
+        "doh",
+        "los",
+        "ree",
+        "EHS",
+        "gohs",
+        "noh",
+        "ah",
+        "BREE",
+        "ah",
+        "mohs",
+        "ah",
+        "proh",
+        "BAH",
+        "doh",
+        "el",
+        "proh",
+        "YEHK",
+        "toh"
+      ],
+      "vocabularyIntro": "'De + haber + participio' is a formal alternative to 'si + hubiera + participio' for past-unreal conditions — common in written and professional Spanish.",
+      "exampleSentence": {
+        "target": "De haber tenido más tiempo, habríamos revisado cada detalle.",
+        "native": "Had we had more time, we would have reviewed every detail."
+      },
+      "grammarNote": "This 'de + infinitivo compuesto' construction is a more formal substitute for the 'si' clause in third conditionals; the result clause still uses the conditional perfect.",
+      "memoryHook": "Think of 'de' here as short for 'si' — 'de haber sabido' = 'of having known' = 'had we known.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Had we known the risks, we wouldn't have approved the project.",
+          "answer": "De haber sabido los riesgos, no habríamos aprobado el proyecto."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "De haber sabido los riesgos, no ___ aprobado el proyecto.",
+          "answer": "habríamos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué habría pasado de haber sabido los riesgos a tiempo?",
+          "answer": "No habríamos aprobado el proyecto."
+        }
+      ]
+    },
+    {
+      "target": "No fue solo mi culpa; todos deberíamos haber revisado los datos.",
+      "native": "It wasn't just my fault; we all should have reviewed the data.",
+      "phonetic": "noh fweh SOH-loh mee KOOL-pah TOH-dohs deh-beh-REE-ah-mos ah-BEHR reh-vee-SAH-doh lohs DAH-tohs",
+      "syllables": [
+        "noh",
+        "fweh",
+        "SOH",
+        "loh",
+        "mee",
+        "KOOL",
+        "pah",
+        "TOH",
+        "dohs",
+        "deh",
+        "beh",
+        "REE",
+        "ah",
+        "mos",
+        "ah",
+        "BEHR",
+        "reh",
+        "vee",
+        "SAH",
+        "doh",
+        "lohs",
+        "DAH",
+        "tohs"
+      ],
+      "vocabularyIntro": "'Deberíamos haber' (conditional of deber + haber + participio) shares blame across a group — a softer, more diplomatic way to admit a collective mistake.",
+      "exampleSentence": {
+        "target": "Todos deberíamos haber comunicado el problema a tiempo.",
+        "native": "We should all have communicated the problem in time."
+      },
+      "grammarNote": "'Deberíamos haber' + participle spreads responsibility across 'nosotros,' softening individual blame while still acknowledging a mistake.",
+      "memoryHook": "'Deberíamos' = 'we should' + 'haber' + participle turns individual regret into shared responsibility.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It wasn't just my fault; we all should have reviewed the data.",
+          "answer": "No fue solo mi culpa; todos deberíamos haber revisado los datos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "No fue solo mi culpa; todos deberíamos haber ___ los datos.",
+          "answer": "revisado"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿De quién fue la culpa según él?",
+          "answer": "No fue solo su culpa; todos deberían haber revisado los datos."
+        }
+      ]
+    },
+    {
+      "target": "Nunca imaginé que el proyecto fracasaría de esa manera.",
+      "native": "I never imagined the project would fail that way.",
+      "phonetic": "NOON-kah ee-mah-hee-NEH keh el proh-YEHK-toh frah-kah-sah-REE-ah deh EH-sah mah-NEH-rah"
+    },
+    {
+      "target": "Con el tiempo, entendí que había subestimado los riesgos.",
+      "native": "Over time, I understood that I had underestimated the risks.",
+      "phonetic": "kon el TYEM-poh, en-ten-DEE keh ah-BEE-ah soo-behs-tee-MAH-doh lohs ree-EHS-gohs"
+    },
+    {
+      "target": "Hubiéramos podido evitar el error si hubiéramos hablado antes.",
+      "native": "We could have avoided the error if we had talked earlier.",
+      "phonetic": "oo-BYEH-rah-mos poh-DEE-doh eh-vee-TAHR el eh-RROR see oo-BYEH-rah-mos ah-BLAH-doh AHN-tes"
+    },
+    {
+      "target": "Reconozco que me equivoqué al no pedir más información.",
+      "native": "I acknowledge that I was wrong not to ask for more information.",
+      "phonetic": "reh-koh-NOHS-koh keh meh eh-kee-voh-KEH al noh peh-DEER mahs een-for-mah-see-OHN"
+    },
+    {
+      "target": "A partir de ahora, vamos a documentar cada decisión importante.",
+      "native": "From now on, we're going to document every important decision.",
+      "phonetic": "ah par-TEER deh ah-OH-rah, VAH-mos ah doh-koo-men-TAHR KAH-dah deh-see-see-OHN eem-por-TAHN-teh"
+    }
+  ],
+  "dialogue": {
+    "id": "C1-L1-D1",
+    "scenario": "Two colleagues review why a project failed and reflect on what they would have done differently.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Ya revisamos las cifras del proyecto. Antes de la reunión con el cliente, el equipo ya había detectado un problema con el presupuesto.",
+        "native": "We've already reviewed the project's numbers. Before the meeting with the client, the team had already detected a problem with the budget."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_regret_lack_of_review",
+        "hints": [
+          "Ojalá hubiera revisado el informe antes de enviarlo",
+          "Debí haber consultado con el equipo"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo. Pero, dime, ¿qué habrías hecho tú de haber sabido lo del presupuesto a tiempo?",
+        "native": "I understand. But tell me, what would you have done had you known about the budget in time?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "state_third_conditional_alternative",
+        "hints": [
+          "Si hubiera sabido eso antes, habría actuado de otra manera",
+          "De haber sabido los riesgos, no habríamos aprobado el proyecto"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Yo tampoco vi venir el problema. Para cuando hablamos con el cliente, ya había cancelado el contrato.",
+        "native": "I didn't see the problem coming either. By the time we talked to the client, they had already canceled the contract."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "acknowledge_prior_event",
+        "hints": [
+          "Cuando llegamos a la reunión, el cliente ya había cancelado el contrato",
+          "Nunca imaginé que el proyecto fracasaría de esa manera"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Bueno, no fue culpa de una sola persona. ¿Qué aprendimos de todo esto?",
+        "native": "Well, it wasn't one person's fault. What did we learn from all this?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "accept_shared_responsibility",
+        "hints": [
+          "No fue solo mi culpa; todos deberíamos haber revisado los datos",
+          "A partir de ahora, vamos a documentar cada decisión importante"
+        ]
+      }
+    ]
+  }
+}

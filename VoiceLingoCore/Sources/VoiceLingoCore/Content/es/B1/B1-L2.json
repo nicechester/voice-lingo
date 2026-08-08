@@ -1,0 +1,221 @@
+{
+  "id": "B1-L2",
+  "title": "Travel Trouble",
+  "grammarNote": "The simple future (hablaré, será, habrá, podré, tendré) states what will happen, and contrasts with the near-future 'voy a...' which implies an existing plan. The conditional (podría, sería) softens requests and hypotheticals, and phrases like 'el problema es que' and 'me temo que' frame a complaint politely.",
+  "phrases": [
+    {
+      "target": "Me temo que hay un problema con mi reservación",
+      "native": "I'm afraid there's a problem with my reservation",
+      "phonetic": "meh TEH-moh keh AHY oon proh-BLEH-mah kon mee reh-ser-vah-see-OHN",
+      "syllables": ["meh", "TEH", "moh", "keh", "AHY", "oon", "proh", "BLEH", "mah", "kon", "mee", "reh", "ser", "vah", "see", "OHN"],
+      "vocabularyIntro": "'Me temo que' (I'm afraid that) is a soft, polite way to introduce bad news or a complaint, common in service settings.",
+      "exampleSentence": {
+        "target": "Buenas tardes. Me temo que hay un problema con mi reservación.",
+        "native": "Good afternoon. I'm afraid there's a problem with my reservation."
+      },
+      "grammarNote": "'Temo' is present tense, but the whole frame softens the statement much like 'I fear' does in English — useful for opening a complaint gently.",
+      "memoryHook": "'Temo' sounds like 'temo(r)', fear — you fear the bad news you're about to deliver.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm afraid there's a problem with my reservation",
+          "answer": "Me temo que hay un problema con mi reservación"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me temo que hay un ___ con mi reservación.",
+          "answer": "problema"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le temes que haya con la reservación?",
+          "answer": "Me temo que hay un problema"
+        }
+      ]
+    },
+    {
+      "target": "El problema es que no aparece mi reservación en el sistema",
+      "native": "The problem is that my reservation doesn't appear in the system",
+      "phonetic": "el proh-BLEH-mah es keh noh ah-pah-REH-seh mee reh-ser-vah-see-OHN en el sees-TEH-mah",
+      "syllables": ["el", "proh", "BLEH", "mah", "es", "keh", "noh", "ah", "pah", "REH", "seh", "mee", "reh", "ser", "vah", "see", "OHN", "en", "el", "sees", "TEH", "mah"],
+      "vocabularyIntro": "'El problema es que...' names the specific issue clearly after softening the complaint — pairs naturally with 'me temo que'.",
+      "exampleSentence": {
+        "target": "El problema es que no aparece mi reservación en el sistema.",
+        "native": "The problem is that my reservation doesn't appear in the system."
+      },
+      "grammarNote": "'Es que' introduces an explanatory clause; it's a fixed frame for pinpointing the exact cause of trouble.",
+      "memoryHook": "Think 'the problem IS that' — direct and factual, no softening needed once you've already opened politely.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The problem is that my reservation doesn't appear in the system",
+          "answer": "El problema es que no aparece mi reservación en el sistema"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El problema es que no aparece mi reservación en el ___.",
+          "answer": "sistema"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuál es el problema exactamente?",
+          "answer": "No aparece mi reservación en el sistema"
+        }
+      ]
+    },
+    {
+      "target": "¿Podría ofrecerme una habitación similar?",
+      "native": "Could you offer me a similar room?",
+      "phonetic": "poh-DREE-ah oh-freh-SEHR-meh OO-nah ah-bee-tah-see-OHN see-mee-LAR",
+      "syllables": ["poh", "DREE", "ah", "oh", "freh", "SEHR", "meh", "OO", "nah", "ah", "bee", "tah", "see", "OHN", "see", "mee", "LAR"],
+      "vocabularyIntro": "'Podría' is the conditional of 'poder', used to make a polite, softened request instead of a blunt command.",
+      "exampleSentence": {
+        "target": "¿Podría ofrecerme una habitación similar en otro piso?",
+        "native": "Could you offer me a similar room on another floor?"
+      },
+      "grammarNote": "The conditional 'podría' distances the request from a direct demand, similar to English 'could' vs. 'can'.",
+      "memoryHook": "'Podría' looks like 'poder' (to be able) plus '-ía' — the '-ía' ending softens it into a polite maybe.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Could you offer me a similar room?",
+          "answer": "¿Podría ofrecerme una habitación similar?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿___ ofrecerme una habitación similar?",
+          "answer": "Podría"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le pides al recepcionista si no hay tu habitación?",
+          "answer": "Podría ofrecerme una habitación similar"
+        }
+      ]
+    },
+    {
+      "target": "Mañana llegaré temprano al aeropuerto por si acaso",
+      "native": "Tomorrow I will arrive early at the airport just in case",
+      "phonetic": "mah-NYAH-nah yeh-gah-REH tem-PRAH-noh al ah-eh-roh-PWEHR-toh por see ah-KAH-soh",
+      "syllables": ["mah", "NYAH", "nah", "yeh", "gah", "REH", "tem", "PRAH", "noh", "al", "ah", "eh", "roh", "PWEHR", "toh", "por", "see", "ah", "KAH", "soh"],
+      "vocabularyIntro": "'Llegaré' is the simple future of 'llegar' (-é ending), stating a firm plan for tomorrow rather than a decision made just now.",
+      "exampleSentence": {
+        "target": "Mañana llegaré temprano al aeropuerto por si acaso hay retrasos.",
+        "native": "Tomorrow I will arrive early at the airport just in case there are delays."
+      },
+      "grammarNote": "Contrast the simple future 'llegaré' (a firm resolution about tomorrow) with 'voy a llegar', which would suggest a plan already decided moments ago.",
+      "memoryHook": "The '-é' ending on 'llegaré' sounds like 'ay' — a confident 'I WILL arrive, no matter what'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Tomorrow I will arrive early at the airport just in case",
+          "answer": "Mañana llegaré temprano al aeropuerto por si acaso"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Mañana ___ temprano al aeropuerto.",
+          "answer": "llegaré"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿A qué hora llegarás al aeropuerto mañana?",
+          "answer": "Llegaré temprano"
+        }
+      ]
+    },
+    {
+      "target": "El vuelo saldrá con dos horas de retraso",
+      "native": "The flight will leave two hours late",
+      "phonetic": "el VWEH-loh sal-DRAH kon dohs OH-ras deh reh-TRAH-soh",
+      "syllables": ["el", "VWEH", "loh", "sal", "DRAH", "kon", "dohs", "OH", "ras", "deh", "reh", "TRAH", "soh"]
+    },
+    {
+      "target": "Habrá una alternativa si cancelan el vuelo",
+      "native": "There will be an alternative if they cancel the flight",
+      "phonetic": "ah-BRAH OO-nah al-ter-nah-TEE-vah see kan-SEH-lan el VWEH-loh",
+      "syllables": ["ah", "BRAH", "OO", "nah", "al", "ter", "nah", "TEE", "vah", "see", "kan", "SEH", "lan", "el", "VWEH", "loh"]
+    },
+    {
+      "target": "No podré recoger mi maleta hasta mañana",
+      "native": "I won't be able to pick up my suitcase until tomorrow",
+      "phonetic": "noh poh-DREH reh-koh-HEHR mee mah-LEH-tah AS-tah mah-NYAH-nah",
+      "syllables": ["noh", "poh", "DREH", "reh", "koh", "HEHR", "mee", "mah", "LEH", "tah", "AS", "tah", "mah", "NYAH", "nah"]
+    },
+    {
+      "target": "¿Sería posible cambiar la fecha de mi vuelo?",
+      "native": "Would it be possible to change the date of my flight?",
+      "phonetic": "seh-REE-ah poh-SEE-bleh kam-bee-AR lah FEH-chah deh mee VWEH-loh",
+      "syllables": ["seh", "REE", "ah", "poh", "SEE", "bleh", "kam", "bee", "AR", "lah", "FEH", "chah", "deh", "mee", "VWEH", "loh"]
+    },
+    {
+      "target": "Tendré que cancelar la reservación del hotel",
+      "native": "I will have to cancel the hotel reservation",
+      "phonetic": "ten-DREH keh kan-seh-LAR lah reh-ser-vah-see-OHN del oh-TEL",
+      "syllables": ["ten", "DREH", "keh", "kan", "seh", "LAR", "lah", "reh", "ser", "vah", "see", "OHN", "del", "oh", "TEL"]
+    },
+    {
+      "target": "¿Me podría confirmar qué pasará con mi equipaje?",
+      "native": "Could you confirm for me what will happen with my luggage?",
+      "phonetic": "meh poh-DREE-ah kon-feer-MAR keh pah-sah-RAH kon mee eh-kee-PAH-heh",
+      "syllables": ["meh", "poh", "DREE", "ah", "kon", "feer", "MAR", "keh", "pah", "sah", "RAH", "kon", "mee", "eh", "kee", "PAH", "heh"]
+    },
+    {
+      "target": "Le agradecería mucho si me ayuda con esto",
+      "native": "I would appreciate it a lot if you help me with this",
+      "phonetic": "leh ah-grah-deh-seh-REE-ah MOO-choh see meh ah-YOO-dah kon ES-toh",
+      "syllables": ["leh", "ah", "grah", "deh", "seh", "REE", "ah", "MOO", "choh", "see", "meh", "ah", "YOO", "dah", "kon", "ES", "toh"]
+    },
+    {
+      "target": "¿Qué pasará ahora con mi vuelo de conexión?",
+      "native": "What will happen now with my connecting flight?",
+      "phonetic": "keh pah-sah-RAH ah-OH-rah kon mee VWEH-loh deh koh-nek-see-OHN",
+      "syllables": ["keh", "pah", "sah", "RAH", "ah", "OH", "rah", "kon", "mee", "VWEH", "loh", "deh", "koh", "nek", "see", "OHN"]
+    }
+  ],
+  "dialogue": {
+    "id": "B1-L2-D1",
+    "scenario": "The learner arrives at a hotel front desk in Mexico and discovers the reservation is missing from the system.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas tardes, bienvenido. ¿Tiene su nombre de reservación?",
+        "native": "Good afternoon, welcome. Do you have your reservation name?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "raise_reservation_problem",
+        "hints": ["Me temo que hay un problema con mi reservación"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ay, no veo nada aquí. ¿Puede explicarme qué pasa?",
+        "native": "Oh, I don't see anything here. Can you explain what's going on?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "explain_missing_booking",
+        "hints": ["El problema es que no aparece mi reservación en el sistema"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo, disculpe la molestia. Déjeme ver qué puedo hacer.",
+        "native": "I understand, sorry for the inconvenience. Let me see what I can do."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "request_alternative_room",
+        "hints": ["¿Podría ofrecerme una habitación similar?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Sí, tengo una disponible en el tercer piso. ¿Le parece bien?",
+        "native": "Yes, I have one available on the third floor. Does that work for you?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "confirm_next_steps",
+        "hints": ["Le agradecería mucho si me ayuda con esto"]
+      }
+    ]
+  }
+}

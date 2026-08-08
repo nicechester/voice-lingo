@@ -1,0 +1,215 @@
+{
+  "id": "B1-L4",
+  "title": "Work and Experience",
+  "grammarNote": "The present perfect (he trabajado, ¿alguna vez has...?, todavía no he...) links past experience to the present moment, while the preterite is reserved for a specific, dated event. This lesson also sustains formal 'usted' register throughout and introduces 'hace + tiempo + que' to mark how long ago something started.",
+  "phrases": [
+    {
+      "target": "He trabajado en marketing durante cinco años",
+      "native": "I have worked in marketing for five years",
+      "phonetic": "eh trah-bah-HAH-doh en MAR-keh-teeng doo-RAN-teh SEEN-koh AH-nyos",
+      "syllables": ["eh", "trah", "bah", "HAH", "doh", "en", "MAR", "keh", "teeng", "doo", "RAN", "teh", "SEEN", "koh", "AH", "nyos"],
+      "vocabularyIntro": "The present perfect 'he trabajado' connects a span of past work directly to the present — you're still building on that experience now.",
+      "exampleSentence": {
+        "target": "He trabajado en marketing durante cinco años en total.",
+        "native": "I have worked in marketing for five years in total."
+      },
+      "grammarNote": "Present perfect ('he trabajado') describes an ongoing or cumulative experience relevant to now, unlike the preterite, which would pin the work to a closed, dated period.",
+      "memoryHook": "'He' + past participle is your 'accumulated experience so far' marker — like a running tally.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I have worked in marketing for five years",
+          "answer": "He trabajado en marketing durante cinco años"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "He ___ en marketing durante cinco años.",
+          "answer": "trabajado"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuánto tiempo ha trabajado en marketing?",
+          "answer": "He trabajado durante cinco años"
+        }
+      ]
+    },
+    {
+      "target": "¿Alguna vez ha liderado un equipo grande?",
+      "native": "Have you ever led a large team?",
+      "phonetic": "al-GOO-nah ves ah lee-deh-RAH-doh oon eh-KEE-poh GRAN-deh",
+      "syllables": ["al", "GOO", "nah", "ves", "ah", "lee", "deh", "RAH", "doh", "oon", "eh", "KEE", "poh", "GRAN", "deh"],
+      "vocabularyIntro": "'¿Alguna vez ha...?' (Have you ever...?) is the standard present-perfect question for probing lifetime experience in a formal interview.",
+      "exampleSentence": {
+        "target": "¿Alguna vez ha liderado un equipo grande en su puesto anterior?",
+        "native": "Have you ever led a large team in your previous position?"
+      },
+      "grammarNote": "'Ha liderado' uses formal 'usted' conjugation of the present perfect, appropriate throughout this interview register.",
+      "memoryHook": "'Alguna vez' (ever, at some point) is the built-in trigger word for present perfect questions.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Have you ever led a large team?",
+          "answer": "¿Alguna vez ha liderado un equipo grande?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Alguna vez ha ___ un equipo grande?",
+          "answer": "liderado"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le preguntan sobre liderar equipos en una entrevista?",
+          "answer": "Alguna vez ha liderado un equipo grande"
+        }
+      ]
+    },
+    {
+      "target": "El año pasado lideré un proyecto muy grande",
+      "native": "Last year I led a very big project",
+      "phonetic": "el AH-nyoh pah-SAH-doh lee-deh-REH oon proh-YEK-toh MOO-ee GRAN-deh",
+      "syllables": ["el", "AH", "nyoh", "pah", "SAH", "doh", "lee", "deh", "REH", "oon", "proh", "YEK", "toh", "MOO", "ee", "GRAN", "deh"],
+      "vocabularyIntro": "'Lideré' is preterite — used here to give a concrete, dated example that answers the general present-perfect question with specifics.",
+      "exampleSentence": {
+        "target": "El año pasado lideré un proyecto muy grande para un cliente internacional.",
+        "native": "Last year I led a very big project for an international client."
+      },
+      "grammarNote": "Once you've claimed general experience with the present perfect ('he liderado equipos'), switch to the preterite ('lideré') to cite one specific, closed instance — this is the key usage boundary of the lesson.",
+      "memoryHook": "'El año pasado' (last year) anchors the action to one dated point, pulling you out of the perfect and into the preterite.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Last year I led a very big project",
+          "answer": "El año pasado lideré un proyecto muy grande"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El año pasado ___ un proyecto muy grande.",
+          "answer": "lideré"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué hizo el año pasado?",
+          "answer": "Lideré un proyecto muy grande"
+        }
+      ]
+    },
+    {
+      "target": "Todavía no he trabajado en una empresa internacional",
+      "native": "I haven't worked at an international company yet",
+      "phonetic": "toh-dah-VEE-ah noh eh trah-bah-HAH-doh en OO-nah em-PREH-sah een-ter-nah-see-oh-NAL",
+      "syllables": ["toh", "dah", "VEE", "ah", "noh", "eh", "trah", "bah", "HAH", "doh", "en", "OO", "nah", "em", "PREH", "sah", "een", "ter", "nah", "see", "oh", "NAL"],
+      "vocabularyIntro": "'Todavía no he...' (I haven't ... yet) marks a gap in experience up to this present moment, leaving the door open for the future.",
+      "exampleSentence": {
+        "target": "Todavía no he trabajado en una empresa internacional, pero me interesa mucho.",
+        "native": "I haven't worked at an international company yet, but it interests me a lot."
+      },
+      "grammarNote": "'Todavía no he + participio' keeps the experience gap open-ended, contrasting with a preterite negative like 'no trabajé', which would close it to one specific occasion.",
+      "memoryHook": "'Todavía' (still/yet) plus negative present perfect signals 'the door is still open for this to happen'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I haven't worked at an international company yet",
+          "answer": "Todavía no he trabajado en una empresa internacional"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Todavía no he trabajado en una empresa ___.",
+          "answer": "internacional"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Ha trabajado en una empresa internacional?",
+          "answer": "Todavía no he trabajado en una empresa internacional"
+        }
+      ]
+    },
+    {
+      "target": "Hace tres años que trabajo en atención al cliente",
+      "native": "I've been working in customer service for three years",
+      "phonetic": "AH-seh tres AH-nyos keh trah-BAH-hoh en ah-ten-see-OHN al klee-EN-teh",
+      "syllables": ["AH", "seh", "tres", "AH", "nyos", "keh", "trah", "BAH", "hoh", "en", "ah", "ten", "see", "OHN", "al", "klee", "EN", "teh"]
+    },
+    {
+      "target": "Mi mayor fortaleza es la comunicación con clientes",
+      "native": "My greatest strength is communication with clients",
+      "phonetic": "mee mah-YOR for-tah-LEH-sah es lah koh-moo-nee-kah-see-OHN kon klee-EN-tes",
+      "syllables": ["mee", "mah", "YOR", "for", "tah", "LEH", "sah", "es", "lah", "koh", "moo", "nee", "kah", "see", "OHN", "kon", "klee", "EN", "tes"]
+    },
+    {
+      "target": "Creo que mi mayor debilidad es la impaciencia",
+      "native": "I think my greatest weakness is impatience",
+      "phonetic": "KREH-oh keh mee mah-YOR deh-bee-lee-DAD es lah eem-pah-see-EN-see-ah",
+      "syllables": ["KREH", "oh", "keh", "mee", "mah", "YOR", "deh", "bee", "lee", "DAD", "es", "lah", "eem", "pah", "see", "EN", "see", "ah"]
+    },
+    {
+      "target": "Mis responsabilidades incluían capacitar al personal nuevo",
+      "native": "My responsibilities included training new staff",
+      "phonetic": "mees res-pon-sah-bee-lee-DAH-des een-kloo-EE-an kah-pah-see-TAR al per-soh-NAL NWEH-voh",
+      "syllables": ["mees", "res", "pon", "sah", "bee", "lee", "DAH", "des", "een", "kloo", "EE", "an", "kah", "pah", "see", "TAR", "al", "per", "soh", "NAL", "NWEH", "voh"]
+    },
+    {
+      "target": "¿Cuáles son las responsabilidades principales del puesto?",
+      "native": "What are the main responsibilities of the position?",
+      "phonetic": "KWAH-les son las res-pon-sah-bee-lee-DAH-des preen-see-PAH-les del PWES-toh",
+      "syllables": ["KWAH", "les", "son", "las", "res", "pon", "sah", "bee", "lee", "DAH", "des", "preen", "see", "PAH", "les", "del", "PWES", "toh"]
+    },
+    {
+      "target": "¿Cómo es el equipo con el que trabajaría?",
+      "native": "What is the team like that I would work with?",
+      "phonetic": "KOH-moh es el eh-KEE-poh kon el keh trah-bah-hah-REE-ah",
+      "syllables": ["KOH", "moh", "es", "el", "eh", "KEE", "poh", "kon", "el", "keh", "trah", "bah", "hah", "REE", "ah"]
+    },
+    {
+      "target": "Estoy muy interesado en aportar mi experiencia a esta empresa",
+      "native": "I am very interested in contributing my experience to this company",
+      "phonetic": "es-TOY MOO-ee een-teh-reh-SAH-doh en ah-por-TAR mee eks-peh-ree-EN-see-ah ah ES-tah em-PREH-sah",
+      "syllables": ["es", "TOY", "MOO", "ee", "een", "teh", "reh", "SAH", "doh", "en", "ah", "por", "TAR", "mee", "eks", "peh", "ree", "EN", "see", "ah", "ah", "ES", "tah", "em", "PREH", "sah"]
+    }
+  ],
+  "dialogue": {
+    "id": "B1-L4-D1",
+    "scenario": "The learner is being interviewed for a job at a company in Mexico City.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenos días. Cuénteme sobre su experiencia profesional.",
+        "native": "Good morning. Tell me about your professional experience."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_work_experience",
+        "hints": ["He trabajado en marketing durante cinco años", "Hace tres años que trabajo en atención al cliente"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Muy interesante. ¿Alguna vez ha liderado un equipo grande?",
+        "native": "Very interesting. Have you ever led a large team?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "give_concrete_past_example",
+        "hints": ["El año pasado lideré un proyecto muy grande"]
+      },
+      {
+        "speaker": "npc",
+        "line": "¿Y cuál diría que es su mayor fortaleza y su mayor debilidad?",
+        "native": "And what would you say is your greatest strength and your greatest weakness?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_strengths_weaknesses",
+        "hints": ["Mi mayor fortaleza es la comunicación con clientes", "Creo que mi mayor debilidad es la impaciencia"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Perfecto. ¿Tiene alguna pregunta para nosotros?",
+        "native": "Perfect. Do you have any question for us?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_about_team",
+        "hints": ["¿Cómo es el equipo con el que trabajaría?"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "id": "B2-L4",
+  "title": "Making the Case",
+  "grammarNote": "Formal argumentation relies on contrastive and causal connectors — 'sin embargo' and 'no obstante' (however), 'en cambio' (on the other hand), 'por lo tanto' (therefore), and 'debido a' (due to) — to link reasons and conclusions smoothly. The concessive 'aunque' splits its meaning by mood: 'aunque es caro' (indicative) states a known fact ('even though it is expensive'), while 'aunque sea caro' (subjunctive) concedes a hypothetical ('even if it turns out to be expensive'). Hedges like 'en principio' and 'hasta cierto punto' soften a claim without abandoning it.",
+  "phrases": [
+    {
+      "target": "Propongo que trabajemos desde casa dos días",
+      "native": "I propose that we work from home two days",
+      "phonetic": "pro-PON-go keh tra-bah-HEH-mos DES-deh KAH-sah dos DEE-as",
+      "syllables": ["pro-PON-go", "keh", "tra-bah-HEH-mos", "DES-deh", "KAH-sah", "dos", "DEE-as"],
+      "vocabularyIntro": "'Proponer que' is the standard formal-register verb for opening a proposal in a meeting; it triggers the subjunctive like other will/suggestion verbs.",
+      "exampleSentence": {
+        "target": "Propongo que trabajemos desde casa dos días por semana.",
+        "native": "I propose that we work from home two days a week."
+      },
+      "grammarNote": "'Trabajemos' is the regular -ar subjunctive of 'trabajar' in the nosotros form, following the -emos pattern.",
+      "memoryHook": "Think of 'proponer' as 'pro' (forward) + 'poner' (to put) — you're putting an idea forward for the group.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I propose that we work from home two days",
+          "answer": "Propongo que trabajemos desde casa dos días"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Propongo que ___ desde casa dos días.",
+          "answer": "trabajemos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué propones para mejorar el horario del equipo?",
+          "answer": "Propongo que trabajemos desde casa dos días"
+        }
+      ]
+    },
+    {
+      "target": "Aunque es caro, ahorra tiempo de traslado",
+      "native": "Although it's expensive, it saves commute time",
+      "phonetic": "ah-OON-keh es KAH-ro, ah-OR-rah TYEM-poh deh tras-lah-DOH",
+      "syllables": ["ah-OON-keh", "es", "KAH-ro", "ah-OR-rah", "TYEM-poh", "deh", "tras-lah-DOH"],
+      "vocabularyIntro": "'Aunque' with the indicative ('es caro') states a fact the speaker accepts as true, not a hypothetical.",
+      "exampleSentence": {
+        "target": "Aunque es caro instalar el sistema, ahorra tiempo de traslado.",
+        "native": "Although it's expensive to install the system, it saves commute time."
+      },
+      "grammarNote": "Compare 'aunque es caro' (indicative, known fact) with 'aunque sea caro' (subjunctive, conceded hypothetical) — same connector, different commitment to the truth.",
+      "memoryHook": "When 'aunque' is followed by a plain present-tense fact, think 'even though, and I know it for sure'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Although it's expensive, it saves commute time",
+          "answer": "Aunque es caro, ahorra tiempo de traslado"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Aunque es caro, ___ tiempo de traslado.",
+          "answer": "ahorra"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Vale la pena el gasto aunque sea costoso?",
+          "answer": "Aunque es caro, ahorra tiempo de traslado"
+        }
+      ]
+    },
+    {
+      "target": "Aunque sea caro, deberíamos intentarlo",
+      "native": "Even if it turns out to be expensive, we should try it",
+      "phonetic": "ah-OON-keh SEH-ah KAH-ro, deh-beh-REE-ah-mos een-ten-TAR-lo",
+      "syllables": ["ah-OON-keh", "SEH-ah", "KAH-ro", "deh-beh-REE-ah-mos", "een-ten-TAR-lo"],
+      "vocabularyIntro": "'Aunque' with the subjunctive ('sea caro') concedes a hypothetical the speaker isn't sure of, softening the objection.",
+      "exampleSentence": {
+        "target": "Aunque sea caro al principio, deberíamos intentarlo este trimestre.",
+        "native": "Even if it turns out to be expensive at first, we should try it this quarter."
+      },
+      "grammarNote": "'Sea' signals the concession is hypothetical, not confirmed; this is the same irregular subjunctive of 'ser' from earlier lessons.",
+      "memoryHook": "When 'aunque' is followed by the subjunctive, think 'even if it should turn out to be...' — the outcome is still uncertain.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Even if it turns out to be expensive, we should try it",
+          "answer": "Aunque sea caro, deberíamos intentarlo"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Aunque ___ caro, deberíamos intentarlo.",
+          "answer": "sea"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Deberíamos intentarlo aunque cueste mucho?",
+          "answer": "Aunque sea caro, deberíamos intentarlo"
+        }
+      ]
+    },
+    {
+      "target": "Entiendo tu punto; sin embargo, hay otra opción",
+      "native": "I understand your point; however, there's another option",
+      "phonetic": "en-tee-EN-doh too POON-toh; seen em-BAR-go, ai OH-trah op-see-ON",
+      "syllables": ["en-tee-EN-doh", "too", "POON-toh", "seen", "em-BAR-go", "ai", "OH-trah", "op-see-ON"],
+      "vocabularyIntro": "'Sin embargo' (however) is the most common formal-register contrastive connector, used to acknowledge a point before countering it courteously.",
+      "exampleSentence": {
+        "target": "Entiendo tu punto sobre el costo; sin embargo, hay otra opción más barata.",
+        "native": "I understand your point about the cost; however, there's another, cheaper option."
+      },
+      "grammarNote": "'Sin embargo' can open a new sentence or follow a semicolon; it never takes the subjunctive itself, only the connector between two independent clauses.",
+      "memoryHook": "Literally 'without embargo/blockage' — the conversation isn't blocked, it just turns in another direction.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I understand your point; however, there's another option",
+          "answer": "Entiendo tu punto; sin embargo, hay otra opción"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Entiendo tu punto; sin embargo, hay otra ___.",
+          "answer": "opción"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Estás de acuerdo con mi objeción sobre el costo?",
+          "answer": "Entiendo tu punto; sin embargo, hay otra opción"
+        }
+      ]
+    },
+    {
+      "target": "Debido a los resultados, propongo un cambio",
+      "native": "Due to the results, I propose a change",
+      "phonetic": "deh-BEE-doh ah los reh-sool-TAH-dos, pro-PON-go oon KAM-bee-oh"
+    },
+    {
+      "target": "Por lo tanto, deberíamos hacer una prueba",
+      "native": "Therefore, we should run a trial",
+      "phonetic": "por lo TAN-toh, deh-beh-REE-ah-mos ah-SEHR OO-nah PRWEH-bah"
+    },
+    {
+      "target": "En cambio, el equipo remoto es más flexible",
+      "native": "On the other hand, the remote team is more flexible",
+      "phonetic": "en KAM-bee-oh, el eh-KEE-po reh-MOH-to es mahs flek-SEE-bleh"
+    },
+    {
+      "target": "En principio, la idea me parece buena",
+      "native": "In principle, the idea seems good to me",
+      "phonetic": "en preen-SEE-pee-oh, lah ee-DEH-ah meh pah-REH-seh BWEH-nah"
+    },
+    {
+      "target": "Hasta cierto punto, tienes razón",
+      "native": "Up to a point, you're right",
+      "phonetic": "AS-tah see-EHR-toh POON-toh, TYEH-nes rah-SON"
+    },
+    {
+      "target": "No obstante, hay que considerar el presupuesto",
+      "native": "Nevertheless, we have to consider the budget",
+      "phonetic": "no obs-TAN-teh, ai keh kon-see-deh-RAR el preh-soo-PWES-toh"
+    },
+    {
+      "target": "Coincido en que la propuesta tiene sentido",
+      "native": "I agree that the proposal makes sense",
+      "phonetic": "koh-een-SEE-doh en keh lah pro-PWES-tah TYEH-neh sen-TEE-doh"
+    },
+    {
+      "target": "Podríamos revisar esto en un mes",
+      "native": "We could review this in a month",
+      "phonetic": "po-DREE-ah-mos reh-vee-SAR ES-toh en oon mes"
+    }
+  ],
+  "dialogue": {
+    "id": "B2-L4-D1",
+    "scenario": "The learner presents a hybrid-work proposal at a cooperative team meeting.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Adelante, te escuchamos. ¿Cuál es tu propuesta para el equipo?",
+        "native": "Go ahead, we're listening. What's your proposal for the team?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "present_proposal",
+        "hints": ["Propongo que trabajemos desde casa dos días"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo la idea, pero me preocupa que perdamos comunicación en persona.",
+        "native": "I understand the idea, but I'm worried we'll lose in-person communication."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "concede_point",
+        "hints": ["Aunque es caro, ahorra tiempo de traslado"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Es un buen punto. Pero, ¿y el costo de mantener dos espacios de trabajo?",
+        "native": "That's a good point. But what about the cost of maintaining two workspaces?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "rebut_objection",
+        "hints": ["Entiendo tu punto; sin embargo, hay otra opción"]
+      },
+      {
+        "speaker": "npc",
+        "line": "De acuerdo, me convence. ¿Cuándo podríamos revisar los resultados?",
+        "native": "Agreed, you've convinced me. When could we review the results?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "propose_followup",
+        "hints": ["Podríamos revisar esto en un mes"]
+      }
+    ]
+  }
+}

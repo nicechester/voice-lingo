@@ -1,0 +1,217 @@
+{
+  "id": "B2-L5",
+  "title": "Mexican Everyday Idioms",
+  "grammarNote": "This lesson introduces no new tense; it focuses on high-frequency Mexican colloquialisms and verb+preposition idiomatic chunks used in casual, everyday speech. Register matters as much as meaning here — many of these expressions are warm and friendly among peers but out of place with elders, strangers, or in professional settings, so each phrase notes exactly where it fits.",
+  "phrases": [
+    {
+      "target": "¿Qué onda?",
+      "native": "What's up? / How's it going?",
+      "phonetic": "keh OHN-dah",
+      "syllables": ["keh", "OHN-dah"],
+      "vocabularyIntro": "Very informal, used among friends and peers of similar age — avoid with elders, strangers, or in any business setting, where 'buenos días' or '¿cómo estás?' is expected.",
+      "exampleSentence": {
+        "target": "¿Qué onda, cómo te ha ido?",
+        "native": "What's up, how has it been going?"
+      },
+      "grammarNote": "'Onda' literally means 'wave' or 'vibe'; '¿qué onda?' is fixed and doesn't conjugate like a normal question.",
+      "memoryHook": "Think of catching someone's 'wave' or 'vibe' — '¿qué onda?' is asking what wave they're riding today.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: What's up?",
+          "answer": "¿Qué onda?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Qué ___, cómo te ha ido?",
+          "answer": "onda"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cómo saludas informalmente a un amigo?",
+          "answer": "¿Qué onda?"
+        }
+      ]
+    },
+    {
+      "target": "No manches, ¿en serio?",
+      "native": "No way, seriously?",
+      "phonetic": "no MAN-ches, en SEH-ree-oh",
+      "syllables": ["no", "MAN-ches", "en", "SEH-ree-oh"],
+      "vocabularyIntro": "Informal, used to react with surprise among friends and family — it's a softened, non-vulgar alternative to a much stronger expression, but still avoid it with elders or in business settings.",
+      "exampleSentence": {
+        "target": "No manches, ¿en serio ganaste el premio?",
+        "native": "No way, seriously, did you win the prize?"
+      },
+      "grammarNote": "'Manches' comes from 'manchar' (to stain), but here it's purely idiomatic and has nothing to do with stains.",
+      "memoryHook": "Picture someone dropping their jaw so hard it 'stains' the floor — that's the surprise behind 'no manches'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: No way, seriously?",
+          "answer": "No manches, ¿en serio?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "No ___, ¿en serio?",
+          "answer": "manches"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cómo reaccionas si un amigo te da una noticia increíble?",
+          "answer": "No manches, ¿en serio?"
+        }
+      ]
+    },
+    {
+      "target": "Sale, nos vemos ahorita",
+      "native": "Okay, see you in a bit",
+      "phonetic": "SAH-leh, nos BEH-mos ah-oh-REE-tah",
+      "syllables": ["SAH-leh", "nos", "BEH-mos", "ah-oh-REE-tah"],
+      "vocabularyIntro": "'Sale' as 'okay/deal' is informal and common among friends in Mexico; 'ahorita' (a diminutive of 'ahora') means 'in a little bit' — both are casual and unsuited for formal writing or business correspondence.",
+      "exampleSentence": {
+        "target": "Sale, nos vemos ahorita en tu casa.",
+        "native": "Okay, see you in a bit at your place."
+      },
+      "grammarNote": "'Ahorita' can mean 'right now' or 'in a little while' depending on tone and context — a quirk unique to Mexican Spanish.",
+      "memoryHook": "Think of 'sale' as closing a deal with a handshake — 'it's settled, see you ahorita'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Okay, see you in a bit",
+          "answer": "Sale, nos vemos ahorita"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Sale, nos vemos ___.",
+          "answer": "ahorita"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿A qué hora nos vemos, ahorita o más tarde?",
+          "answer": "Sale, nos vemos ahorita"
+        }
+      ]
+    },
+    {
+      "target": "Ya merito llego, échame aguas",
+      "native": "I'm almost there, keep a lookout for me",
+      "phonetic": "yah meh-REE-toh YEH-goh, EH-chah-meh AH-gwas",
+      "syllables": ["yah", "meh-REE-toh", "YEH-goh", "EH-chah-meh", "AH-gwas"],
+      "vocabularyIntro": "'Ya merito' (almost there/almost time) and 'echar aguas' (to keep watch/give a heads-up) are both informal, everyday Mexican expressions used among friends — inappropriate in formal or professional contexts.",
+      "exampleSentence": {
+        "target": "Ya merito llego a la carne asada, échame aguas si llega mi jefe.",
+        "native": "I'm almost at the cookout, keep a lookout if my boss shows up."
+      },
+      "grammarNote": "'Echar aguas' literally means 'to throw waters' but idiomatically means 'to watch out' or 'give a warning' — it doesn't relate to water at all.",
+      "memoryHook": "Picture someone tossing water to warn others of danger ahead — that's the origin image behind 'echar aguas'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm almost there, keep a lookout for me",
+          "answer": "Ya merito llego, échame aguas"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ya merito llego, échame ___.",
+          "answer": "aguas"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Ya vas a llegar a la fiesta?",
+          "answer": "Ya merito llego, échame aguas"
+        }
+      ]
+    },
+    {
+      "target": "Está padrísimo tu carro nuevo",
+      "native": "Your new car is awesome",
+      "phonetic": "es-TAH pah-DREE-see-moh too KAH-rro NWEH-vo",
+      "syllables": ["es-TAH", "pah-DREE-see-moh", "too", "KAH-rro", "NWEH-vo"],
+      "vocabularyIntro": "'Padrísimo' (super cool/awesome) is a friendly Mexican superlative built from 'padre' (cool) — informal and warm among friends, but too casual for formal writing."
+    },
+    {
+      "target": "Ándale, vámonos ya",
+      "native": "Come on, let's go already",
+      "phonetic": "AN-dah-leh, BAH-mo-nos yah",
+      "syllables": ["AN-dah-leh", "BAH-mo-nos", "yah"],
+      "vocabularyIntro": "'Ándale' (come on/hurry up/go ahead) is an all-purpose informal exclamation heard constantly in Mexico — casual among friends, not used in formal speech."
+    },
+    {
+      "target": "Me di cuenta de que ya es tarde",
+      "native": "I realized it's already late",
+      "phonetic": "meh dee KWEN-tah deh keh yah es TAR-deh"
+    },
+    {
+      "target": "Quedamos de vernos a las ocho",
+      "native": "We agreed to meet at eight",
+      "phonetic": "keh-DAH-mos deh BEHR-nos ah lahs OH-cho"
+    },
+    {
+      "target": "No me dejes dando el avión",
+      "native": "Don't stand me up / leave me hanging",
+      "phonetic": "no meh DEH-hes DAN-doh el ah-vee-ON"
+    },
+    {
+      "target": "Ahorita te marco por teléfono",
+      "native": "I'll call you in a bit",
+      "phonetic": "ah-oh-REE-tah teh MAR-koh por teh-LEH-fo-no"
+    },
+    {
+      "target": "Ya me tengo que ir, al rato platicamos",
+      "native": "I have to go now, we'll talk later",
+      "phonetic": "yah meh TEN-goh keh eer, al RAH-toh plah-tee-KAH-mos"
+    },
+    {
+      "target": "Está bien padre esta carne asada",
+      "native": "This cookout is really great",
+      "phonetic": "es-TAH bee-EN PAH-dreh ES-tah KAR-neh ah-SAH-dah"
+    }
+  ],
+  "dialogue": {
+    "id": "B2-L5-D1",
+    "scenario": "Casual chat with friends at a carne asada get-together.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "¡Qué onda! Ya llegaste, qué bueno.",
+        "native": "What's up! You made it, awesome."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "informal_greeting",
+        "hints": ["¿Qué onda?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Oye, ¿ya viste el carro nuevo de Beto? Se lo compró ayer.",
+        "native": "Hey, did you see Beto's new car? He bought it yesterday."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "react_surprise",
+        "hints": ["No manches, ¿en serio?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Sí, está padrísimo. Bueno, ¿nos vemos otro rato para seguir platicando?",
+        "native": "Yeah, it's awesome. Okay, shall we meet up later to keep chatting?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "agree_to_plan",
+        "hints": ["Sale, nos vemos ahorita"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Va. Oye, ¿ya te vas? Apenas empezamos la carne asada.",
+        "native": "Deal. Hey, are you leaving already? We just started the cookout."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "excuse_oneself",
+        "hints": ["Ya me tengo que ir, al rato platicamos"]
+      }
+    ]
+  }
+}

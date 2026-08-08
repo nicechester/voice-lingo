@@ -1,0 +1,217 @@
+{
+  "id": "B2-L1",
+  "title": "Wishes and Requests",
+  "grammarNote": "The present subjunctive appears in the second clause after verbs of will, request, or emotion (querer que, pedir que, esperar que, alegrar que, ojalá que) when the subject changes — compare 'quiero ir' (same subject, infinitive) with 'quiero que vayas' (different subject, subjunctive). Regular endings: -ar verbs take -e/-es/-e/-emos/-en (hable, hables, hable, hablemos, hablen); -er/-ir verbs take -a/-as/-a/-amos/-an (coma, comas, coma, comamos, coman). Key irregulars to memorize: sea (ser), vaya (ir), tenga (tener), haga (hacer), pueda (poder).",
+  "phrases": [
+    {
+      "target": "Quiero que vengas a la fiesta",
+      "native": "I want you to come to the party",
+      "phonetic": "kee-EH-ro keh VEN-gas ah lah FYES-tah",
+      "syllables": ["KYE-ro", "keh", "VEN-gas", "ah", "lah", "FYES-tah"],
+      "vocabularyIntro": "'Querer que' triggers the subjunctive whenever the wisher and the doer are different people — here 'yo quiero' but 'tú vengas'.",
+      "exampleSentence": {
+        "target": "Quiero que vengas temprano a la fiesta.",
+        "native": "I want you to come early to the party."
+      },
+      "grammarNote": "Contrast: 'quiero venir' (I want to come, same subject, infinitive) vs. 'quiero que vengas' (I want you to come, different subject, subjunctive of venir).",
+      "memoryHook": "Picture yourself pointing at a friend and saying 'quiero QUE tú vengas' — the 'que' is the pivot where the subject changes.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I want you to come to the party",
+          "answer": "Quiero que vengas a la fiesta"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Quiero ___ vengas a la fiesta.",
+          "answer": "que"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué quieres que yo haga esta noche?",
+          "answer": "Quiero que vengas a la fiesta"
+        }
+      ]
+    },
+    {
+      "target": "Te pido que traigas el pastel",
+      "native": "I'm asking you to bring the cake",
+      "phonetic": "teh PEE-doh keh TRY-gas el pas-TEL",
+      "syllables": ["teh", "PEE-doh", "keh", "TRY-gas", "el", "pas-TEL"],
+      "vocabularyIntro": "'Pedir que' (to ask/request that) is one of the clearest request triggers for the subjunctive; 'traigas' is the irregular subjunctive of 'traer'.",
+      "exampleSentence": {
+        "target": "Te pido que traigas el pastel a las seis.",
+        "native": "I'm asking you to bring the cake at six."
+      },
+      "grammarNote": "'Traer' has an irregular subjunctive stem 'traig-': traiga, traigas, traiga, traigamos, traigan.",
+      "memoryHook": "Think 'traigas' sounds like 'try-gas' — 'try to bring the gas... I mean the cake'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm asking you to bring the cake",
+          "answer": "Te pido que traigas el pastel"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Te pido que ___ el pastel.",
+          "answer": "traigas"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le pides a tu amigo que haga?",
+          "answer": "Te pido que traigas el pastel"
+        }
+      ]
+    },
+    {
+      "target": "Espero que todo salga bien",
+      "native": "I hope everything goes well",
+      "phonetic": "es-PEH-ro keh TOH-doh SAHL-gah bee-EN",
+      "syllables": ["es-PEH-ro", "keh", "TOH-doh", "SAHL-gah", "bee-EN"],
+      "vocabularyIntro": "'Esperar que' (to hope that) is an emotion trigger for the subjunctive; 'salga' is the irregular subjunctive of 'salir'.",
+      "exampleSentence": {
+        "target": "Espero que todo salga bien en la fiesta.",
+        "native": "I hope everything goes well at the party."
+      },
+      "grammarNote": "'Salir' forms its subjunctive from the stem 'salg-': salga, salgas, salga, salgamos, salgan.",
+      "memoryHook": "Link 'salga' to 'salga el sol' — 'may the sun come out' — a classic hopeful subjunctive.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I hope everything goes well",
+          "answer": "Espero que todo salga bien"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Espero que todo ___ bien.",
+          "answer": "salga"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué esperas para la fiesta de esta noche?",
+          "answer": "Espero que todo salga bien"
+        }
+      ]
+    },
+    {
+      "target": "Ojalá que ella pueda venir",
+      "native": "I hope she can come",
+      "phonetic": "oh-hah-LAH keh EH-yah PWEH-dah beh-NEER",
+      "syllables": ["oh-hah-LAH", "keh", "EH-yah", "PWEH-dah", "beh-NEER"],
+      "vocabularyIntro": "'Ojalá' comes from Arabic 'law šā' allāh' (God willing) and always takes the subjunctive, with or without 'que'.",
+      "exampleSentence": {
+        "target": "Ojalá que ella pueda venir a la fiesta.",
+        "native": "I hope she can come to the party."
+      },
+      "grammarNote": "'Poder' has the irregular subjunctive stem 'pued-' with a vowel shift: pueda, puedas, pueda, podamos, puedan.",
+      "memoryHook": "'Ojalá' sounds like 'oh, holla!' — an excited wish shouted out loud.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I hope she can come",
+          "answer": "Ojalá que ella pueda venir"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ojalá que ella ___ venir.",
+          "answer": "pueda"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué esperas de tu amiga para la fiesta?",
+          "answer": "Ojalá que ella pueda venir"
+        }
+      ]
+    },
+    {
+      "target": "Me alegra que estés aquí",
+      "native": "I'm glad you're here",
+      "phonetic": "meh ah-LEH-grah keh es-TES ah-KEE",
+      "syllables": ["meh", "ah-LEH-grah", "keh", "es-TES", "ah-KEE"],
+      "vocabularyIntro": "'Alegrarse que' / 'me alegra que' expresses emotion and always requires the subjunctive in the second clause."
+    },
+    {
+      "target": "Quiero que seas feliz",
+      "native": "I want you to be happy",
+      "phonetic": "kee-EH-ro keh SEH-as feh-LEES",
+      "syllables": ["KYE-ro", "keh", "SEH-as", "feh-LEES"],
+      "vocabularyIntro": "'Sea' is the irregular subjunctive of 'ser', one of the five essential irregulars for this lesson."
+    },
+    {
+      "target": "Espero que tengas un buen viaje",
+      "native": "I hope you have a good trip",
+      "phonetic": "es-PEH-ro keh TEN-gas oon bwen bee-AH-heh"
+    },
+    {
+      "target": "Quiero que hagas la lista de invitados",
+      "native": "I want you to make the guest list",
+      "phonetic": "kee-EH-ro keh AH-gas lah LEES-tah deh een-vee-TAH-dos"
+    },
+    {
+      "target": "Te pido que vayas por las bebidas",
+      "native": "I'm asking you to go get the drinks",
+      "phonetic": "teh PEE-doh keh BAH-yas por lahs beh-BEE-das"
+    },
+    {
+      "target": "Felicidades, que tengas un gran día",
+      "native": "Congratulations, may you have a great day",
+      "phonetic": "feh-lee-see-DAH-des, keh TEN-gas oon grahn DEE-ah"
+    },
+    {
+      "target": "Espero que le guste el regalo",
+      "native": "I hope she likes the gift",
+      "phonetic": "es-PEH-ro keh leh GOOS-teh el reh-GAH-loh"
+    },
+    {
+      "target": "Ojalá que no llueva esta noche",
+      "native": "I hope it doesn't rain tonight",
+      "phonetic": "oh-hah-LAH keh noh YWEH-vah ES-tah NOH-cheh"
+    }
+  ],
+  "dialogue": {
+    "id": "B2-L1-D1",
+    "scenario": "The learner calls two friends to organize a surprise birthday party.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "¡Hola! ¿Ya está todo listo para la fiesta de Ana?",
+        "native": "Hi! Is everything ready for Ana's party?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "assign_task_cake",
+        "hints": ["Te pido que traigas el pastel"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Claro, yo traigo el pastel. ¿Y quién compra las bebidas?",
+        "native": "Sure, I'll bring the cake. And who's buying the drinks?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "assign_task_drinks",
+        "hints": ["Te pido que vayas por las bebidas"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Perfecto. Oye, ¿va a venir Marta también?",
+        "native": "Perfect. Hey, is Marta coming too?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_wish_attendance",
+        "hints": ["Ojalá que ella pueda venir"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Yo también espero que sí. ¿Algo más antes de la fiesta?",
+        "native": "I hope so too. Anything else before the party?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_general_wish",
+        "hints": ["Espero que todo salga bien"]
+      }
+    ]
+  }
+}

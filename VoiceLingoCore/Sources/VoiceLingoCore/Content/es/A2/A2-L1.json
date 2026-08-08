@@ -1,0 +1,223 @@
+{
+  "id": "A2-L1",
+  "title": "At the Market",
+  "grammarNote": "This lesson covers demonstratives (este/esta/estos/ese/aquel) agreeing in gender and number with the noun they modify, plus querer and poder used as everyday request verbs when shopping. It also introduces quantities (un kilo, medio kilo, una docena) and the singular/plural contrast between ¿cuánto cuesta? and ¿cuánto cuestan?.",
+  "phrases": [
+    {
+      "target": "¿Cuánto cuesta este mango?",
+      "native": "How much does this mango cost?",
+      "phonetic": "KWAN-toh KWES-tah ES-teh MAHN-goh",
+      "syllables": ["KWAN", "toh", "KWES", "tah", "ES", "teh", "MAHN", "goh"],
+      "vocabularyIntro": "'Este' is the masculine singular demonstrative ('this'), used for something close to the speaker; it agrees in gender and number with the noun it modifies.",
+      "exampleSentence": {
+        "target": "Este mango está muy dulce.",
+        "native": "This mango is very sweet."
+      },
+      "grammarNote": "'Cuesta' is the singular form of costar, used because 'mango' is singular; the demonstrative 'este' must match masculine singular nouns like 'mango'.",
+      "memoryHook": "Picture pointing at 'this' mango right ESTE (here) at your feet — este = 'this here'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: How much does this mango cost?",
+          "answer": "¿Cuánto cuesta este mango?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Cuánto cuesta ___ mango?",
+          "answer": "este"
+        },
+        {
+          "type": "qa",
+          "prompt": "Estás en el mercado y quieres saber el precio de un mango. ¿Qué preguntas?",
+          "answer": "¿Cuánto cuesta este mango?"
+        }
+      ]
+    },
+    {
+      "target": "¿Cuánto cuestan estos tomates?",
+      "native": "How much do these tomatoes cost?",
+      "phonetic": "KWAN-toh KWES-tan ES-tos toh-MAH-tes",
+      "syllables": ["KWAN", "toh", "KWES", "tan", "ES", "tos", "toh", "MAH", "tes"],
+      "vocabularyIntro": "'Cuestan' is the plural form of costar, and 'estos' is the masculine plural demonstrative — both must agree with the plural noun 'tomates'.",
+      "exampleSentence": {
+        "target": "Estos tomates cuestan quince pesos el kilo.",
+        "native": "These tomatoes cost fifteen pesos a kilo."
+      },
+      "grammarNote": "Use 'cuesta' with singular nouns and 'cuestan' with plural nouns; 'estos' (not 'este') matches the plural noun 'tomates'.",
+      "memoryHook": "Add an 'n' for más de uno — cuestan has an 'n' like 'niños' (kids, plural).",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: How much do these tomatoes cost?",
+          "answer": "¿Cuánto cuestan estos tomates?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Cuánto ___ estos tomates?",
+          "answer": "cuestan"
+        },
+        {
+          "type": "qa",
+          "prompt": "Ves varios tomates juntos en el puesto y quieres saber el precio de todos. ¿Qué preguntas?",
+          "answer": "¿Cuánto cuestan estos tomates?"
+        }
+      ]
+    },
+    {
+      "target": "Quiero un kilo de mangos",
+      "native": "I want a kilo of mangoes",
+      "phonetic": "kee-EH-roh oon KEE-loh deh MAHN-gos",
+      "syllables": ["kee", "EH", "roh", "oon", "KEE", "loh", "deh", "MAHN", "gos"],
+      "vocabularyIntro": "'Quiero' (from querer) is the most direct way to state what you want when shopping; 'un kilo de' + noun is the standard way to order produce by weight.",
+      "exampleSentence": {
+        "target": "Quiero un kilo de mangos, por favor.",
+        "native": "I want a kilo of mangoes, please."
+      },
+      "grammarNote": "'Querer' is an irregular e→ie stem-changing verb: quiero, quieres, quiere, queremos, quieren.",
+      "memoryHook": "Quiero sounds like 'key-AIR-oh' — the 'key' unlocks what you want.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I want a kilo of mangoes",
+          "answer": "Quiero un kilo de mangos"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ un kilo de mangos, por favor.",
+          "answer": "Quiero"
+        },
+        {
+          "type": "qa",
+          "prompt": "Estás en el puesto de frutas y quieres un kilo de mangos. ¿Qué le dices al marchante?",
+          "answer": "Quiero un kilo de mangos"
+        }
+      ]
+    },
+    {
+      "target": "¿Me puede dar medio kilo?",
+      "native": "Can you give me half a kilo?",
+      "phonetic": "meh PWEH-deh dar MEH-dee-oh KEE-loh",
+      "syllables": ["meh", "PWEH", "deh", "dar", "MEH", "dee", "oh", "KEE", "loh"],
+      "vocabularyIntro": "'¿Me puede dar...?' uses poder (can/to be able) plus the indirect object 'me' to make a polite request; 'medio kilo' means half a kilo.",
+      "exampleSentence": {
+        "target": "¿Me puede dar medio kilo de tomates?",
+        "native": "Can you give me half a kilo of tomatoes?"
+      },
+      "grammarNote": "'Puede' is the usted form of poder (o→ue stem-changing verb), keeping the request formal and polite when addressing a vendor.",
+      "memoryHook": "Medio kilo = half of a full kilo, like cutting a KEE-loh in half with a MEH (halfway mark).",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Can you give me half a kilo?",
+          "answer": "¿Me puede dar medio kilo?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Me ___ dar medio kilo?",
+          "answer": "puede"
+        },
+        {
+          "type": "qa",
+          "prompt": "Solo necesitas la mitad de un kilo de fruta. ¿Qué le pides al marchante?",
+          "answer": "¿Me puede dar medio kilo?"
+        }
+      ]
+    },
+    {
+      "target": "Necesito una docena de huevos",
+      "native": "I need a dozen eggs",
+      "phonetic": "neh-seh-SEE-toh OO-nah doh-SEH-nah deh WEH-vos"
+    },
+    {
+      "target": "Esa fruta se ve muy fresca",
+      "native": "That fruit looks very fresh",
+      "phonetic": "EH-sah FROO-tah seh veh mwee FRES-kah"
+    },
+    {
+      "target": "Aquellos plátanos están baratos",
+      "native": "Those plantains over there are cheap",
+      "phonetic": "ah-KEH-yos PLAH-tah-nos es-TAN bah-RAH-tos"
+    },
+    {
+      "target": "¿Me puede dar un poco más?",
+      "native": "Can you give me a little more?",
+      "phonetic": "meh PWEH-deh dar oon POH-koh mahs"
+    },
+    {
+      "target": "Un poco menos, por favor",
+      "native": "A little less, please",
+      "phonetic": "oon POH-koh MEH-nos, por fah-VOR"
+    },
+    {
+      "target": "Doscientos pesos, por favor",
+      "native": "Two hundred pesos, please",
+      "phonetic": "dos-see-EN-tos PEH-sos, por fah-VOR"
+    },
+    {
+      "target": "Aquí tiene quinientos pesos",
+      "native": "Here's five hundred pesos",
+      "phonetic": "ah-KEE tee-EH-neh kee-nee-EN-tos PEH-sos"
+    },
+    {
+      "target": "¿Me da el cambio, por favor?",
+      "native": "Could you give me the change, please?",
+      "phonetic": "meh dah el KAHM-bee-oh, por fah-VOR"
+    }
+  ],
+  "dialogue": {
+    "id": "A2-L1-D1",
+    "scenario": "You buy mangos and tomatoes from a vendor at a Mexican market, negotiate the quantity, and pay.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas, joven. ¿Qué va a llevar hoy?",
+        "native": "Hello there. What will you have today?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_price_mango",
+        "hints": ["¿Cuánto cuesta este mango?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Cuesta treinta pesos el kilo.",
+        "native": "It costs thirty pesos a kilo."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "order_mangoes",
+        "hints": ["Quiero un kilo de mangos"]
+      },
+      {
+        "speaker": "npc",
+        "line": "¿Algo más?",
+        "native": "Anything else?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_price_tomatoes",
+        "hints": ["¿Cuánto cuestan estos tomates?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Cuestan quince pesos el kilo. ¿Cuánto quiere?",
+        "native": "They cost fifteen pesos a kilo. How much do you want?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "request_half_kilo",
+        "hints": ["¿Me puede dar medio kilo?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Aquí tiene. Son doscientos pesos en total.",
+        "native": "Here you go. That's two hundred pesos total."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "pay_and_get_change",
+        "hints": ["Aquí tiene quinientos pesos", "¿Me da el cambio, por favor?"]
+      }
+    ]
+  }
+}

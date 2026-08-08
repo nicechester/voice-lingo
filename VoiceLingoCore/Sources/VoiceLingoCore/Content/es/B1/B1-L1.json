@@ -1,0 +1,245 @@
+{
+  "id": "B1-L1",
+  "title": "Growing Up",
+  "grammarNote": "The imperfect tense (era, tenía, íbamos, jugaba) describes habitual actions, ongoing states, ages, and background scenery in the past — 'what things were like' or 'what used to happen.' The preterite marks a single completed event, often one that interrupts the imperfect backdrop, frequently signaled by 'mientras... cuando...' or 'de repente.'",
+  "phrases": [
+    {
+      "target": "Cuando era niño, vivía en un pueblo pequeño",
+      "native": "When I was a kid, I lived in a small town",
+      "phonetic": "KWAN-doh EH-rah NEE-nyoh, vee-VEE-ah en oon PWEH-bloh peh-KEH-nyoh",
+      "syllables": ["KWAN", "doh", "EH", "rah", "NEE", "nyoh", "vee", "VEE", "ah", "en", "oon", "PWEH", "bloh", "peh", "KEH", "nyoh"],
+      "vocabularyIntro": "'Era' (imperfect of 'ser') sets up background description — age, identity, ongoing state — rather than a single finished event.",
+      "exampleSentence": {
+        "target": "Cuando era niño, vivía en un pueblo pequeño cerca de Guadalajara.",
+        "native": "When I was a kid, I lived in a small town near Guadalajara."
+      },
+      "grammarNote": "'Era' and 'vivía' are both imperfect: they paint a lasting state of childhood, not a one-time occurrence.",
+      "memoryHook": "'Era' sounds like 'era' (an age/period) in English — a whole stretch of time, not a single moment.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: When I was a kid, I lived in a small town",
+          "answer": "Cuando era niño, vivía en un pueblo pequeño"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Cuando ___ niño, vivía en un pueblo pequeño.",
+          "answer": "era"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Dónde vivías cuando eras niño?",
+          "answer": "Vivía en un pueblo pequeño"
+        }
+      ]
+    },
+    {
+      "target": "Tenía ocho años cuando aprendí a nadar",
+      "native": "I was eight years old when I learned to swim",
+      "phonetic": "teh-NEE-ah OH-choh AH-nyos KWAN-doh ah-pren-DEE ah nah-DAR",
+      "syllables": ["teh", "NEE", "ah", "OH", "choh", "AH", "nyos", "KWAN", "doh", "ah", "pren", "DEE", "ah", "nah", "DAR"],
+      "vocabularyIntro": "'Tenía... años' is the standard way to state age in the past; 'aprendí' marks the single completed event of learning.",
+      "exampleSentence": {
+        "target": "Tenía ocho años cuando aprendí a nadar en el río.",
+        "native": "I was eight years old when I learned to swim in the river."
+      },
+      "grammarNote": "Age is always expressed with the imperfect ('tenía'), while the specific moment of achievement takes the preterite ('aprendí').",
+      "memoryHook": "Picture an eight-year-old frozen mid-dive: the age (imperfect) is the freeze-frame, the dive (preterite) is the splash.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I was eight years old when I learned to swim",
+          "answer": "Tenía ocho años cuando aprendí a nadar"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Tenía ocho años cuando ___ a nadar.",
+          "answer": "aprendí"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuántos años tenías cuando aprendiste a nadar?",
+          "answer": "Tenía ocho años"
+        }
+      ]
+    },
+    {
+      "target": "Íbamos todos los veranos a la casa de mis abuelos",
+      "native": "We used to go every summer to my grandparents' house",
+      "phonetic": "EE-bah-mos TOH-dohs los veh-RAH-nos ah lah KAH-sah deh mees ah-BWEH-los",
+      "syllables": ["EE", "bah", "mos", "TOH", "dohs", "los", "veh", "RAH", "nos", "ah", "lah", "KAH", "sah", "deh", "mees", "ah", "BWEH", "los"],
+      "vocabularyIntro": "'Íbamos' (imperfect of 'ir') expresses a repeated, habitual trip — something that happened again and again, not a single visit.",
+      "exampleSentence": {
+        "target": "Íbamos todos los veranos a la casa de mis abuelos en Oaxaca.",
+        "native": "We used to go every summer to my grandparents' house in Oaxaca."
+      },
+      "grammarNote": "Contrast this habitual 'íbamos todos los veranos' with the single-event preterite 'fui el verano pasado' (I went last summer) — same verb, opposite aspect.",
+      "memoryHook": "'Todos los veranos' (every summer) is the giveaway word for imperfect — routines love the imperfect.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: We used to go every summer to my grandparents' house",
+          "answer": "Íbamos todos los veranos a la casa de mis abuelos"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ todos los veranos a la casa de mis abuelos.",
+          "answer": "Íbamos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Adónde iban todos los veranos?",
+          "answer": "Íbamos a la casa de mis abuelos"
+        }
+      ]
+    },
+    {
+      "target": "Pero fui solo una vez el verano pasado",
+      "native": "But I only went once last summer",
+      "phonetic": "PEH-roh FWEE SOH-loh OO-nah VES el veh-RAH-noh pah-SAH-doh",
+      "syllables": ["PEH", "roh", "FWEE", "SOH", "loh", "OO", "nah", "VES", "el", "veh", "RAH", "noh", "pah", "SAH", "doh"],
+      "vocabularyIntro": "'Fui' (preterite of 'ir') marks a single, completed trip with a specific, limited timeframe — 'el verano pasado' (last summer).",
+      "exampleSentence": {
+        "target": "Antes íbamos todos los veranos, pero fui solo una vez el verano pasado.",
+        "native": "We used to go every summer before, but I only went once last summer."
+      },
+      "grammarNote": "This phrase is the direct preterite counterpart to 'íbamos': one specific, finished trip instead of a repeated habit.",
+      "memoryHook": "'Una vez' (one time) locks the action into the preterite — a single countable event.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: But I only went once last summer",
+          "answer": "Pero fui solo una vez el verano pasado"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Pero ___ solo una vez el verano pasado.",
+          "answer": "fui"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuántas veces fuiste el verano pasado?",
+          "answer": "Fui solo una vez"
+        }
+      ]
+    },
+    {
+      "target": "Mientras jugábamos en la calle, empezó a llover",
+      "native": "While we were playing in the street, it started to rain",
+      "phonetic": "mee-EN-tras hoo-GAH-bah-mos en lah KAH-yeh, em-peh-SOH ah yoh-VEHR",
+      "syllables": ["mee", "EN", "tras", "hoo", "GAH", "bah", "mos", "en", "lah", "KAH", "yeh", "em", "peh", "SOH", "ah", "yoh", "VEHR"],
+      "vocabularyIntro": "'Mientras' (while) introduces an ongoing imperfect background action; the preterite 'empezó' names the sudden interrupting event.",
+      "exampleSentence": {
+        "target": "Mientras jugábamos en la calle, empezó a llover de repente.",
+        "native": "While we were playing in the street, it suddenly started to rain."
+      },
+      "grammarNote": "This is the classic pattern: imperfect background ('jugábamos') + preterite interruption ('empezó'), linked by 'mientras'.",
+      "memoryHook": "'Mientras' means 'while' — a while is a stretch, so the verb after it stretches too (imperfect).",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: While we were playing in the street, it started to rain",
+          "answer": "Mientras jugábamos en la calle, empezó a llover"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Mientras jugábamos en la calle, ___ a llover.",
+          "answer": "empezó"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué pasó mientras jugaban en la calle?",
+          "answer": "Empezó a llover"
+        }
+      ]
+    },
+    {
+      "target": "De repente, mi abuela nos llamó para cenar",
+      "native": "Suddenly, my grandmother called us for dinner",
+      "phonetic": "deh reh-PEN-teh, mee ah-BWEH-lah nos yah-MOH PAH-rah seh-NAR",
+      "syllables": ["deh", "reh", "PEN", "teh", "mee", "ah", "BWEH", "lah", "nos", "yah", "MOH", "PAH", "rah", "seh", "NAR"]
+    },
+    {
+      "target": "Todos los domingos comíamos en casa de la abuela",
+      "native": "Every Sunday we used to eat at grandma's house",
+      "phonetic": "TOH-dohs los doh-MEEN-gos koh-MEE-ah-mos en KAH-sah deh lah ah-BWEH-lah",
+      "syllables": ["TOH", "dohs", "los", "doh", "MEEN", "gos", "koh", "MEE", "ah", "mos", "en", "KAH", "sah", "deh", "lah", "ah", "BWEH", "lah"]
+    },
+    {
+      "target": "Cuando yo era chico, no había teléfonos celulares",
+      "native": "When I was little, there were no cell phones",
+      "phonetic": "KWAN-doh yoh EH-rah CHEE-koh, noh ah-BEE-ah teh-LEH-foh-nos seh-loo-LAH-res",
+      "syllables": ["KWAN", "doh", "yoh", "EH", "rah", "CHEE", "koh", "noh", "ah", "BEE", "ah", "teh", "LEH", "foh", "nos", "seh", "loo", "LAH", "res"]
+    },
+    {
+      "target": "Mi mamá siempre nos preparaba tamales en diciembre",
+      "native": "My mom always used to make us tamales in December",
+      "phonetic": "mee mah-MAH see-EM-preh nos preh-pah-RAH-bah tah-MAH-les en dee-see-EM-breh",
+      "syllables": ["mee", "mah", "MAH", "see", "EM", "preh", "nos", "preh", "pah", "RAH", "bah", "tah", "MAH", "les", "en", "dee", "see", "EM", "breh"]
+    },
+    {
+      "target": "Un día, se nos rompió la piñata antes de tiempo",
+      "native": "One day, the piñata broke on us before it was time",
+      "phonetic": "oon DEE-ah, seh nos rrom-pee-OH lah pee-NYAH-tah AN-tes deh tee-EM-poh",
+      "syllables": ["oon", "DEE", "ah", "seh", "nos", "rrom", "pee", "OH", "lah", "pee", "NYAH", "tah", "AN", "tes", "deh", "tee", "EM", "poh"]
+    },
+    {
+      "target": "Mientras esperábamos el autobús, vimos un accidente",
+      "native": "While we were waiting for the bus, we saw an accident",
+      "phonetic": "mee-EN-tras es-peh-RAH-bah-mos el ow-toh-BOOS, VEE-mos oon ak-see-DEN-teh",
+      "syllables": ["mee", "EN", "tras", "es", "peh", "RAH", "bah", "mos", "el", "ow", "toh", "BOOS", "VEE", "mos", "oon", "ak", "see", "DEN", "teh"]
+    },
+    {
+      "target": "Crecí en un pueblo, pero ahora vivo en la ciudad",
+      "native": "I grew up in a town, but now I live in the city",
+      "phonetic": "kreh-SEE en oon PWEH-bloh, PEH-roh ah-OH-rah VEE-voh en lah see-oo-DAD",
+      "syllables": ["kreh", "SEE", "en", "oon", "PWEH", "bloh", "PEH", "roh", "ah", "OH", "rah", "VEE", "voh", "en", "lah", "see", "oo", "DAD"]
+    }
+  ],
+  "dialogue": {
+    "id": "B1-L1-D1",
+    "scenario": "Two friends are catching up and comparing where they grew up.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Oye, nunca me habías contado. ¿Dónde creciste tú?",
+        "native": "Hey, you never told me. Where did you grow up?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_childhood_home",
+        "hints": ["Cuando era niño, vivía en un pueblo pequeño", "Crecí en un pueblo, pero ahora vivo en la ciudad"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Qué bonito. ¿Tenían alguna costumbre familiar de niños?",
+        "native": "How nice. Did you have any family custom as kids?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_habitual_custom",
+        "hints": ["Íbamos todos los veranos a la casa de mis abuelos", "Todos los domingos comíamos en casa de la abuela"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Suena muy familiar. ¿Y pasó algo curioso alguna vez durante esos veranos?",
+        "native": "Sounds very familiar. And did anything funny ever happen during those summers?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "recount_interrupting_event",
+        "hints": ["Mientras jugábamos en la calle, empezó a llover", "De repente, mi abuela nos llamó para cenar"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ja, típico. ¿Y tú solías ir tan seguido como antes?",
+        "native": "Ha, typical. And did you used to go as often as before?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "contrast_habit_with_single_event",
+        "hints": ["Pero fui solo una vez el verano pasado"]
+      }
+    ]
+  }
+}

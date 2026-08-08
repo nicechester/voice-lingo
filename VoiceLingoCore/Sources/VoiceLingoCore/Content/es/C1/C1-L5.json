@@ -1,0 +1,375 @@
+{
+  "id": "C1-L5",
+  "title": "Regional Voices",
+  "grammarNote": "This lesson raises awareness of lexical variation across the Spanish-speaking world, anchored in Mexican Spanish (es-MX): work/job sets (chamba vs. curro vs. laburo), chatting verbs (platicar vs. charlar), vehicle and drink terms (carro/coche/auto, jugo/zumo), plus Mexican pragmatic markers (¿mande?, órale, sale y vale) and pragmatic diminutives (ahorita, tantito, un cafecito). It also builds receptive-only recognition of voseo (vos tenés) and peninsular vosotros forms, which learners should understand when they hear them but are not expected to produce.",
+  "phrases": [
+    {
+      "target": "Ando buscando chamba desde hace dos meses.",
+      "native": "I've been looking for work for two months.",
+      "phonetic": "AHN-doh boos-KAHN-doh CHAM-bah DES-deh AH-seh dohs MEH-ses",
+      "syllables": [
+        "AHN",
+        "doh",
+        "boos",
+        "KAHN",
+        "doh",
+        "CHAM",
+        "bah",
+        "DES",
+        "deh",
+        "AH",
+        "seh",
+        "dohs",
+        "MEH",
+        "ses"
+      ],
+      "vocabularyIntro": "'Chamba' is the everyday Mexican word for 'job/work' — informal but extremely common in Mexico. Spain typically uses 'curro,' and much of South America (especially the Río de la Plata region) uses 'laburo' for the same idea; all three mean 'job' but are regionally specific and shouldn't be mixed.",
+      "exampleSentence": {
+        "target": "Por fin conseguí chamba en una empresa nueva.",
+        "native": "I finally got a job at a new company."
+      },
+      "grammarNote": "'Chamba' functions as a regular feminine noun ('la chamba') and also gives rise to the verb 'chambear' ('to work') in Mexican Spanish.",
+      "memoryHook": "Picture a busy 'champ' at work — 'chamba' rhymes with 'champ-a' and means the daily grind.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I've been looking for work for two months.",
+          "answer": "Ando buscando chamba desde hace dos meses."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ando buscando ___ desde hace dos meses.",
+          "answer": "chamba"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué está buscando desde hace dos meses?",
+          "answer": "Anda buscando chamba."
+        }
+      ]
+    },
+    {
+      "target": "Oye, ¿podemos platicar un rato después de la junta?",
+      "native": "Hey, can we chat for a bit after the meeting?",
+      "phonetic": "OH-yeh, poh-DEH-mos plah-tee-KAHR oon RAH-toh des-PWES deh lah HOON-tah",
+      "syllables": [
+        "OH",
+        "yeh",
+        "poh",
+        "DEH",
+        "mos",
+        "plah",
+        "tee",
+        "KAHR",
+        "oon",
+        "RAH",
+        "toh",
+        "des",
+        "PWES",
+        "deh",
+        "lah",
+        "HOON",
+        "tah"
+      ],
+      "vocabularyIntro": "'Platicar' is the standard Mexican verb for 'to chat/talk informally,' used constantly in daily life; 'charlar' means the same thing and is understood everywhere, but is more strongly associated with Spain and other regions.",
+      "exampleSentence": {
+        "target": "Nos quedamos platicando hasta muy tarde.",
+        "native": "We ended up chatting until very late."
+      },
+      "grammarNote": "'Platicar' conjugates as a regular -ar verb (platico, platicas, platica...) and is interchangeable with 'hablar' or 'charlar' in casual Mexican speech.",
+      "memoryHook": "'Plática' (the noun) sounds like 'plot-ica' — imagine friends plotting out a friendly chat.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Hey, can we chat for a bit after the meeting?",
+          "answer": "Oye, ¿podemos platicar un rato después de la junta?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Oye, ¿podemos ___ un rato después de la junta?",
+          "answer": "platicar"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le propone hacer después de la junta?",
+          "answer": "Le propone platicar un rato."
+        }
+      ]
+    },
+    {
+      "target": "Dejé el carro en el estacionamiento de la oficina.",
+      "native": "I left the car in the office parking lot.",
+      "phonetic": "deh-HEH el KAH-rroh en el es-tah-syoh-nah-MYEN-toh deh lah oh-fee-SEE-nah",
+      "syllables": [
+        "deh",
+        "HEH",
+        "el",
+        "KAH",
+        "rroh",
+        "en",
+        "el",
+        "es",
+        "tah",
+        "syoh",
+        "nah",
+        "MYEN",
+        "toh",
+        "deh",
+        "lah",
+        "oh",
+        "fee",
+        "SEE",
+        "nah"
+      ],
+      "vocabularyIntro": "'Carro' is the everyday word for 'car' in Mexico (and much of the Caribbean/Andean region); 'coche' also works in Mexico but is the primary word in Spain, while 'auto' is more common in the Río de la Plata area — all three are understood everywhere but carry regional flavor.",
+      "exampleSentence": {
+        "target": "¿Trajiste tu carro o vinimos en taxi?",
+        "native": "Did you bring your car, or did we come by taxi?"
+      },
+      "grammarNote": "'Carro' is a regular masculine noun ('el carro') with no irregularities — the regional variation is purely lexical, not grammatical.",
+      "memoryHook": "'Carro' sounds like 'carriage' — the modern-day version of a horse-drawn carriage.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I left the car in the office parking lot.",
+          "answer": "Dejé el carro en el estacionamiento de la oficina."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Dejé el ___ en el estacionamiento de la oficina.",
+          "answer": "carro"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Dónde dejó el carro?",
+          "answer": "Lo dejó en el estacionamiento de la oficina."
+        }
+      ]
+    },
+    {
+      "target": "¿Me traes un jugo de naranja, por favor?",
+      "native": "Can you bring me an orange juice, please?",
+      "phonetic": "meh TRAH-es oon HOO-goh deh nah-RAHN-hah, por fah-VOR",
+      "syllables": [
+        "meh",
+        "TRAH",
+        "es",
+        "oon",
+        "HOO",
+        "goh",
+        "deh",
+        "nah",
+        "RAHN",
+        "hah",
+        "por",
+        "fah",
+        "VOR"
+      ],
+      "vocabularyIntro": "'Jugo' is the word for 'juice' throughout Latin America, including Mexico; 'zumo' is the word used in Spain for the same drink — both mean exactly the same thing, just split along a Spain/Latin America line.",
+      "exampleSentence": {
+        "target": "En esta fonda hacen un jugo de fruta buenísimo.",
+        "native": "At this diner they make a really good fruit juice."
+      },
+      "grammarNote": "'Jugo' is a regular masculine noun ('el jugo') with no grammatical quirks; only the regional vocabulary choice (jugo vs. zumo) differs.",
+      "memoryHook": "'Jugo' sounds like 'juice-oh' — the '-oh' just tacks Spanish onto the English word you already know.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Can you bring me an orange juice, please?",
+          "answer": "¿Me traes un jugo de naranja, por favor?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Me traes un ___ de naranja, por favor?",
+          "answer": "jugo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le pide que le traiga?",
+          "answer": "Le pide un jugo de naranja."
+        }
+      ]
+    },
+    {
+      "target": "¿Mande? No escuché bien lo que dijiste.",
+      "native": "Sorry, what? I didn't hear well what you said.",
+      "phonetic": "MAHN-deh, noh es-koo-CHEH byen loh keh dee-HEES-teh",
+      "syllables": [
+        "MAHN",
+        "deh",
+        "noh",
+        "es",
+        "koo",
+        "CHEH",
+        "byen",
+        "loh",
+        "keh",
+        "dee",
+        "HEES",
+        "teh"
+      ],
+      "vocabularyIntro": "'¿Mande?' is a distinctly Mexican way of politely asking someone to repeat themselves or answering when called — it comes from 'mande usted' ('command [me], sir/ma'am') and sounds far more courteous than a blunt '¿qué?'",
+      "exampleSentence": {
+        "target": "—¡Rosa! —¿Mande?",
+        "native": "—Rosa! —Yes? / What is it?"
+      },
+      "grammarNote": "'¿Mande?' historically comes from the imperative of 'mandar' ('to command') addressed formally, though today it's a fixed idiomatic response rather than a literal command.",
+      "memoryHook": "Think of it as answering 'at your command?' — a small echo of old-fashioned courtesy still alive in Mexican speech.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Sorry, what? I didn't hear well what you said.",
+          "answer": "¿Mande? No escuché bien lo que dijiste."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿___? No escuché bien lo que dijiste.",
+          "answer": "Mande"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dice cuando no escucha bien algo?",
+          "answer": "Dice '¿Mande?'"
+        }
+      ]
+    },
+    {
+      "target": "Ahorita te marco, dame tantito para terminar esto.",
+      "native": "I'll call you right now, give me just a little bit to finish this.",
+      "phonetic": "ah-oh-REE-tah teh MAR-koh, DAH-meh tan-TEE-toh PAH-rah tehr-mee-NAHR EH-stoh",
+      "syllables": [
+        "ah",
+        "oh",
+        "REE",
+        "tah",
+        "teh",
+        "MAR",
+        "koh",
+        "DAH",
+        "meh",
+        "tan",
+        "TEE",
+        "toh",
+        "PAH",
+        "rah",
+        "tehr",
+        "mee",
+        "NAHR",
+        "EH",
+        "stoh"
+      ],
+      "vocabularyIntro": "'Ahorita' (from 'ahora,' 'now') and 'tantito' (from 'tanto,' 'so much') are classic Mexican diminutives that soften time expressions — 'ahorita' can mean anywhere from 'right now' to 'in a little while' depending on tone, and 'tantito' means 'just a little bit.'",
+      "exampleSentence": {
+        "target": "Espérame tantito, ahorita salgo.",
+        "native": "Wait for me just a bit, I'm coming out right now."
+      },
+      "grammarNote": "The '-ito/-ita' diminutive suffix in Mexican Spanish often softens tone or shows affection rather than literally indicating small size — a key feature of MX pragmatics.",
+      "memoryHook": "'Ahorita' = 'ahora' + '-ita' — a smaller, gentler, friendlier 'now.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'll call you right now, give me just a little bit to finish this.",
+          "answer": "Ahorita te marco, dame tantito para terminar esto."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ te marco, dame tantito para terminar esto.",
+          "answer": "Ahorita"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le pide antes de llamarle?",
+          "answer": "Le pide tantito para terminar."
+        }
+      ]
+    },
+    {
+      "target": "Órale, qué buena noticia, ¡felicidades!",
+      "native": "Wow, what great news, congratulations!",
+      "phonetic": "OH-rah-leh, keh BWEH-nah noh-TEE-syah, feh-lee-see-DAH-des"
+    },
+    {
+      "target": "Sale y vale, nos vemos a las diez entonces.",
+      "native": "Alright, sounds good, we'll see each other at ten then.",
+      "phonetic": "SAH-leh ee VAH-leh, nohs VEH-mos ah lahs dyes en-TON-ses"
+    },
+    {
+      "target": "¿Nos tomamos un cafecito antes de la llamada?",
+      "native": "Shall we grab a little coffee before the call?",
+      "phonetic": "nohs toh-MAH-mos oon kah-feh-SEE-toh AHN-tes deh lah yah-MAH-dah"
+    },
+    {
+      "target": "Perdón, no te entendí bien esa palabra que usaste.",
+      "native": "Sorry, I didn't quite understand that word you used.",
+      "phonetic": "pehr-DOHN, noh teh en-ten-DEE byen EH-sah pah-LAH-brah keh oo-SAS-teh"
+    },
+    {
+      "target": "Aquí en México le decimos chamba al trabajo.",
+      "native": "Here in Mexico we call work 'chamba.'",
+      "phonetic": "ah-KEE en MEH-hee-koh leh deh-SEE-mos CHAM-bah al trah-BAH-hoh"
+    },
+    {
+      "target": "Cada país tiene su propia manera de decir las cosas.",
+      "native": "Every country has its own way of saying things.",
+      "phonetic": "KAH-dah pah-EES TYEH-neh soo PROH-pyah mah-NEH-rah deh deh-SEER lahs KOH-sahs"
+    }
+  ],
+  "dialogue": {
+    "id": "C1-L5-D1",
+    "scenario": "On a video call, Mexican, Spanish, and Argentine colleagues run into a regionalism that causes confusion.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Hola a todos, ¿vosotros ya empezasteis con el curro de esta semana?",
+        "native": "Hi everyone, have you all already started this week's work?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "request_clarification",
+        "hints": [
+          "¿Mande? No escuché bien lo que dijiste",
+          "Perdón, no te entendí bien esa palabra que usaste"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ah, perdón, preguntaba si ya empezaron el curro, el trabajo de esta semana.",
+        "native": "Oh sorry, I was asking if you'd already started the curro, this week's work."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "offer_mx_equivalent",
+        "hints": [
+          "Aquí en México le decimos chamba al trabajo",
+          "Ando buscando chamba desde hace dos meses"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Jaja, buenísimo. Yo igual ando con mucho laburo, ¿vos tenés algo urgente hoy?",
+        "native": "Haha, great. I'm also swamped with a lot of work — do you have anything urgent today?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "clarify_understanding",
+        "hints": [
+          "Cada país tiene su propia manera de decir las cosas",
+          "Ahorita te marco, dame tantito para terminar esto"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Bueno, entonces, ¿nos tomamos un café rápido antes de seguir con la reunión?",
+        "native": "Well then, shall we grab a quick coffee before continuing the meeting?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "agree_with_mx_flavor",
+        "hints": [
+          "¿Nos tomamos un cafecito antes de la llamada?",
+          "Sale y vale, nos vemos a las diez entonces"
+        ]
+      }
+    ]
+  }
+}

@@ -22,7 +22,7 @@ The entire UX is audio-driven: the app speaks, the user responds, the app evalua
 ## Key Features
 
 ### 1. Multi-Language Support
-- Each language is a self-contained content bundle (`/Content/{lang-code}/curriculum.json`)
+- Each language is a self-contained content bundle (`/Content/{lang-code}/manifest.json` + per-lesson files)
 - Language selection on first launch (or from settings)
 - AVSpeechSynthesizer locale and SFSpeechRecognizer locale are driven by the selected language
 - MVP ships with Spanish (`es-MX`) only; additional languages are additive content drops
@@ -95,15 +95,17 @@ VoiceLingo/
 │   └── VoiceLingoApp.swift                # Entry point, audio session setup
 ├── Models/
 │   ├── Language.swift                     # Language metadata (code, name, locale, flag)
-│   ├── Lesson.swift                       # Level, phrases, grammar notes
-│   ├── Phrase.swift                       # Target text, phonetic hint, native translation
+│   ├── CurriculumManifest.swift           # Lightweight index: LevelSummary, LessonSummary (titles only)
+│   ├── Lesson.swift                       # Full lesson: phrases, grammar note, dialogue, practice items
+│   ├── Phrase.swift                       # Target/native/phonetic + explanation & practice fields
+│   ├── DialogueScenario.swift             # Scripted conversation-practice turns for a lesson
 │   └── UserProgress.swift                 # SwiftData: scores, unlocked levels, per language
 ├── Services/
 │   ├── SpeechOutputService.swift          # AVSpeechSynthesizer wrapper (locale-aware)
 │   ├── SpeechRecognitionService.swift     # SFSpeechRecognizer wrapper (locale-aware)
 │   ├── PronunciationEvaluator.swift       # Compare recognized vs. target text
 │   ├── VoiceCommandRouter.swift           # Always-on listener → app commands (start, review, …)
-│   └── CurriculumLoader.swift            # Loads curriculum.json for selected language
+│   └── CurriculumLoader.swift            # Loads manifest.json (index) + per-lesson JSON on demand, cached
 ├── ViewModels/
 │   └── SessionViewModel.swift             # Session state machine
 ├── Views/
@@ -112,7 +114,10 @@ VoiceLingo/
 │   └── SessionView.swift                 # Active session — waveform + status text only
 └── Content/
     └── es/                                # Spanish content bundle (MVP)
-        └── curriculum.json
+        ├── manifest.json                  # Language + level/lesson index (lightweight, no phrase content)
+        └── A1/
+            ├── A1-L1.json                 # Full lesson: phrases, explanations, practice items, dialogue
+            └── A1-L2.json
     └── fr/                                # French (future)
     └── ja/                                # Japanese (future)
 ```
@@ -135,9 +140,22 @@ idle → speaking_prompt → awaiting_response → evaluating → feedback → [
 
 ---
 
-## Content Schema (`Content/{lang}/curriculum.json`)
+## Content Schema (`Content/{lang}/`)
 
-The schema is identical across all languages. Language-specific fields use the target language's ISO code as the key.
+Curriculum content is core to this app and is split into multiple files per language so that:
+- The home screen (level/lesson list) can load a **lightweight manifest** without paying the
+  cost of parsing every phrase's explanation, practice items, and dialogue script.
+- An active session loads **exactly one lesson file** — the one the learner is doing right now.
+- Content stays reviewable/authorable per lesson instead of one ever-growing JSON blob.
+
+```
+Content/{lang}/
+  manifest.json          # language + level/lesson titles only — no phrase content
+  {levelId}/
+    {lessonId}.json       # full lesson: phrases, explanations, practice items, dialogue
+```
+
+### Manifest (`Content/es/manifest.json`)
 
 ```json
 {
@@ -149,28 +167,73 @@ The schema is identical across all languages. Language-specific fields use the t
       "id": "A1",
       "title": "Beginner",
       "lessons": [
-        {
-          "id": "A1-L1",
-          "title": "Greetings",
-          "grammarNote": "Use 'buenos' for masculine/neutral, 'buenas' for feminine nouns.",
-          "phrases": [
-            {
-              "target": "Buenos días",
-              "native": "Good morning",
-              "phonetic": "BWEH-nos DEE-as"
-            },
-            {
-              "target": "¿Cómo estás?",
-              "native": "How are you?",
-              "phonetic": "KOH-moh es-TAHS"
-            }
-          ]
-        }
+        { "id": "A1-L1", "title": "Greetings" },
+        { "id": "A1-L2", "title": "Basic Phrases" }
       ]
     }
   ]
 }
 ```
+
+### Lesson file (`Content/es/A1/A1-L1.json`)
+
+Each phrase carries its listen-and-repeat fields plus optional pre-practice explanation and
+practice-mode fields; a lesson may also carry a scripted conversation-practice `dialogue`. All
+new fields are optional so lessons can be authored incrementally.
+
+```json
+{
+  "id": "A1-L1",
+  "title": "Greetings",
+  "grammarNote": "Use 'buenos' for masculine/neutral, 'buenas' for feminine nouns.",
+  "phrases": [
+    {
+      "target": "Buenos días",
+      "native": "Good morning",
+      "phonetic": "BWEH-nos DEE-as",
+      "syllables": ["BWEH", "nos", "DEE", "as"],
+      "vocabularyIntro": "'Buenos días' literally means 'good days' — used as a morning greeting until roughly noon.",
+      "exampleSentence": {
+        "target": "Buenos días, señora García.",
+        "native": "Good morning, Mrs. García."
+      },
+      "grammarNote": "'Buenos' agrees with the plural masculine noun 'días'; never say 'buena día'.",
+      "memoryHook": "Think 'BWAY-nos' like 'way' + 'nos' (us) — 'our good day begins'.",
+      "practiceItems": [
+        { "type": "translation", "prompt": "Translate: Good morning", "answer": "Buenos días" },
+        { "type": "fillBlank", "prompt": "Buenos ___, señor.", "answer": "días" },
+        { "type": "qa", "prompt": "¿Qué dices a las 8 de la mañana?", "answer": "Buenos días" }
+      ]
+    },
+    {
+      "target": "¿Cómo estás?",
+      "native": "How are you?",
+      "phonetic": "KOH-moh es-TAHS"
+    }
+  ],
+  "dialogue": {
+    "id": "A1-L1-D1",
+    "scenario": "You run into a coworker in the morning at the office.",
+    "turns": [
+      { "speaker": "npc", "line": "Buenos días. ¿Cómo estás?", "native": "Good morning. How are you?" },
+      { "speaker": "learner", "expectedIntent": "greeting_response", "hints": ["Estoy bien", "Estoy bien, gracias"] },
+      { "speaker": "npc", "line": "Mucho gusto. ¿Cuál es tu nombre?", "native": "Nice to meet you. What is your name?" },
+      { "speaker": "learner", "expectedIntent": "state_name", "hints": ["Me llamo Juan"] }
+    ]
+  }
+}
+```
+
+`dialogue.turns[].expectedIntent`/`hints` are scripted data only — per the AI Usage Policy below,
+there is no runtime intent-matching; this data is a placeholder for future evaluation logic.
+
+### Loading strategy
+
+- `CurriculumLoader.loadManifest(for language:)` — loads and caches `manifest.json`; used by
+  `HomeViewModel` to render the level/lesson list and unlock status.
+- `CurriculumLoader.loadLesson(language:levelId:lessonId:)` — loads and caches exactly one lesson
+  file; used by `SessionViewModel.startSession` when a lesson begins. `voiceLocale`/`recognizerLocale`
+  are sourced from the manifest, not duplicated per lesson.
 
 ---
 

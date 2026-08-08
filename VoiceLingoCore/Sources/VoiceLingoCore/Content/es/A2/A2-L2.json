@@ -1,0 +1,248 @@
+{
+  "id": "A2-L2",
+  "title": "Ordering Food",
+  "grammarNote": "This lesson covers polite request formulas — quisiera, me gustaría, and ¿me trae...? — used as fixed lexical chunks when ordering. It also introduces the indirect object pronouns me/le/nos and the prepositional phrases para mí/para él, all common when ordering food and asking for the check in Mexico.",
+  "phrases": [
+    {
+      "target": "Quisiera una agua fresca de horchata",
+      "native": "I would like a horchata agua fresca",
+      "phonetic": "kee-see-EH-rah OO-nah AH-gwah FRES-kah deh or-CHAH-tah",
+      "syllables": ["kee", "see", "EH", "rah", "OO", "nah", "AH", "gwah", "FRES", "kah", "deh", "or", "CHAH", "tah"],
+      "vocabularyIntro": "'Quisiera' is the polite conditional form of querer, used to soften a request — much more courteous than 'quiero' when ordering food or drinks.",
+      "exampleSentence": {
+        "target": "Quisiera una agua fresca de horchata, por favor.",
+        "native": "I would like a horchata agua fresca, please."
+      },
+      "grammarNote": "'Quisiera' comes from the imperfect subjunctive of querer but functions as a fixed polite formula meaning 'I would like'; it doesn't change to sound more or less polite, it just softens the request itself.",
+      "memoryHook": "Quisiera sounds like 'key-see-AIR-ah' — turn the key gently, quietly asking rather than demanding.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I would like a horchata agua fresca",
+          "answer": "Quisiera una agua fresca de horchata"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ una agua fresca de horchata, por favor.",
+          "answer": "Quisiera"
+        },
+        {
+          "type": "qa",
+          "prompt": "Estás en la taquería y quieres pedir una bebida de manera cortés. ¿Qué dices?",
+          "answer": "Quisiera una agua fresca de horchata"
+        }
+      ]
+    },
+    {
+      "target": "Me gustaría probar los tacos al pastor",
+      "native": "I would like to try the al pastor tacos",
+      "phonetic": "meh goos-tah-REE-ah proh-BAR los TAH-kos al pas-TOR",
+      "syllables": ["meh", "goos", "tah", "REE", "ah", "proh", "BAR", "los", "TAH", "kos", "al", "pas", "TOR"],
+      "vocabularyIntro": "'Me gustaría' + infinitive is another polite way to express a wish, literally 'it would please me to...'; 'al pastor' describes marinated pork tacos cooked on a vertical spit.",
+      "exampleSentence": {
+        "target": "Me gustaría probar los tacos al pastor con salsa verde.",
+        "native": "I would like to try the al pastor tacos with green salsa."
+      },
+      "grammarNote": "'Gustaría' agrees with the thing liked, not the person; 'me' marks who is doing the liking — this is the same structure as 'me gusta', just in the conditional.",
+      "memoryHook": "Gustaría sounds like 'gusto' (pleasure) + 'ría' (would) — 'it would be my pleasure'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I would like to try the al pastor tacos",
+          "answer": "Me gustaría probar los tacos al pastor"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me ___ probar los tacos al pastor.",
+          "answer": "gustaría"
+        },
+        {
+          "type": "qa",
+          "prompt": "Nunca has probado los tacos al pastor y quieres pedirlos cortésmente. ¿Qué dices?",
+          "answer": "Me gustaría probar los tacos al pastor"
+        }
+      ]
+    },
+    {
+      "target": "¿Me trae una salsa verde, por favor?",
+      "native": "Could you bring me a green salsa, please?",
+      "phonetic": "meh TRAH-eh OO-nah SAHL-sah VER-deh, por fah-VOR",
+      "syllables": ["meh", "TRAH", "eh", "OO", "nah", "SAHL", "sah", "VER", "deh", "por", "fah", "VOR"],
+      "vocabularyIntro": "'¿Me trae...?' uses the present tense of traer (to bring) with the indirect object pronoun 'me' as a quick, polite way to request an item at the table.",
+      "exampleSentence": {
+        "target": "¿Me trae una salsa verde y unas tortillas, por favor?",
+        "native": "Could you bring me a green salsa and some tortillas, please?"
+      },
+      "grammarNote": "The indirect object pronoun 'me' always goes before the conjugated verb 'trae'; questions like this stay in the present tense rather than the imperative, to sound extra polite.",
+      "memoryHook": "Me trae = 'bring ME' — picture the waiter delivering the salsa straight to you.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Could you bring me a green salsa, please?",
+          "answer": "¿Me trae una salsa verde, por favor?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿___ trae una salsa verde, por favor?",
+          "answer": "Me"
+        },
+        {
+          "type": "qa",
+          "prompt": "Quieres que el mesero te traiga salsa verde a la mesa. ¿Qué le preguntas?",
+          "answer": "¿Me trae una salsa verde, por favor?"
+        }
+      ]
+    },
+    {
+      "target": "Esto es para mí y esto es para él",
+      "native": "This is for me and this is for him",
+      "phonetic": "ES-toh es PAH-rah mee ee ES-toh es PAH-rah el",
+      "syllables": ["ES", "toh", "es", "PAH", "rah", "mee", "ee", "ES", "toh", "es", "PAH", "rah", "el"],
+      "vocabularyIntro": "'Para mí' and 'para él' use the preposition 'para' with a prepositional pronoun to clarify who ordered which dish when the waiter serves the table.",
+      "exampleSentence": {
+        "target": "El taco de pastor es para mí y la quesadilla es para él.",
+        "native": "The al pastor taco is for me and the quesadilla is for him."
+      },
+      "grammarNote": "After 'para', personal pronouns switch to their prepositional forms: 'mí' (not 'yo') takes a written accent to distinguish it from the possessive 'mi', while 'él' stays the same as the subject pronoun.",
+      "memoryHook": "Mí with an accent points AT me — the little accent mark is like an arrow pointing to yourself.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: This is for me and this is for him",
+          "answer": "Esto es para mí y esto es para él"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Esto es para ___ y esto es para él.",
+          "answer": "mí"
+        },
+        {
+          "type": "qa",
+          "prompt": "El mesero no sabe de quién es cada plato en la mesa. ¿Cómo le explicas?",
+          "answer": "Esto es para mí y esto es para él"
+        }
+      ]
+    },
+    {
+      "target": "¿Nos puede traer la cuenta, por favor?",
+      "native": "Could you bring us the check, please?",
+      "phonetic": "nos PWEH-deh trah-ER lah KWEN-tah, por fah-VOR",
+      "syllables": ["nos", "PWEH", "deh", "trah", "ER", "lah", "KWEN", "tah", "por", "fah", "VOR"],
+      "vocabularyIntro": "'Nos' is the indirect object pronoun for 'us', paired with 'poder' + 'traer' to politely ask the waiter to bring something to the whole table.",
+      "exampleSentence": {
+        "target": "Ya terminamos. ¿Nos puede traer la cuenta, por favor?",
+        "native": "We're finished. Could you bring us the check, please?"
+      },
+      "grammarNote": "'Nos' replaces 'a nosotros' and attaches before the conjugated verb 'puede', just like 'me' does for a single person — the object pronoun always precedes the verb in this construction.",
+      "memoryHook": "Nos = 'us' — think of 'nosotros' shortened, asking the waiter to bring it TO US.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Could you bring us the check, please?",
+          "answer": "¿Nos puede traer la cuenta, por favor?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿___ puede traer la cuenta, por favor?",
+          "answer": "Nos"
+        },
+        {
+          "type": "qa",
+          "prompt": "Tú y tus amigos terminaron de comer y quieren pagar. ¿Qué le dicen al mesero?",
+          "answer": "¿Nos puede traer la cuenta, por favor?"
+        }
+      ]
+    },
+    {
+      "target": "¿Qué lleva este platillo?",
+      "native": "What does this dish contain?",
+      "phonetic": "keh YEH-vah ES-teh plah-TEE-yoh"
+    },
+    {
+      "target": "Soy alérgico al cacahuate",
+      "native": "I'm allergic to peanuts",
+      "phonetic": "soy ah-LER-hee-koh al kah-kah-WAH-teh"
+    },
+    {
+      "target": "¿Tiene alguna opción sin picante?",
+      "native": "Do you have an option without spice?",
+      "phonetic": "tee-EH-neh al-GOO-nah op-see-ON seen pee-KAN-teh"
+    },
+    {
+      "target": "Sin picante, por favor",
+      "native": "Without spice, please",
+      "phonetic": "seen pee-KAN-teh, por fah-VOR"
+    },
+    {
+      "target": "¿Le puedo pedir un jugo de naranja?",
+      "native": "May I ask you for an orange juice?",
+      "phonetic": "leh PWEH-doh peh-DEER oon HOO-goh deh nah-RAN-hah"
+    },
+    {
+      "target": "La cuenta, por favor",
+      "native": "The check, please",
+      "phonetic": "lah KWEN-tah, por fah-VOR"
+    },
+    {
+      "target": "Vamos a pagar por separado",
+      "native": "Let's pay separately",
+      "phonetic": "VAH-mos ah pah-GAR por seh-pah-RAH-doh"
+    }
+  ],
+  "dialogue": {
+    "id": "A2-L2-D1",
+    "scenario": "A waiter takes your drink and food order at a taquería, and you flag a food allergy before asking for the check.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas tardes, bienvenidos. ¿Qué le gustaría tomar?",
+        "native": "Good afternoon, welcome. What would you like to drink?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "order_drink",
+        "hints": ["Quisiera una agua fresca de horchata"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Muy bien. ¿Y de comer?",
+        "native": "Very good. And to eat?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "order_food",
+        "hints": ["Me gustaría probar los tacos al pastor"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Buena elección. ¿Algo más?",
+        "native": "Good choice. Anything else?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_ingredients",
+        "hints": ["¿Qué lleva este platillo?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Lleva cacahuate en la salsa.",
+        "native": "It has peanut in the sauce."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "flag_allergy",
+        "hints": ["Soy alérgico al cacahuate"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entendido, le traigo otra salsa sin cacahuate. ¿Falta algo más?",
+        "native": "Understood, I'll bring you another salsa without peanut. Anything else?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "request_check",
+        "hints": ["¿Nos puede traer la cuenta, por favor?"]
+      }
+    ]
+  }
+}

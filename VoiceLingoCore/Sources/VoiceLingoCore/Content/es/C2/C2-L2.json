@@ -1,0 +1,263 @@
+{
+  "id": "C2-L2",
+  "title": "Humor and Wordplay",
+  "grammarNote": "This lesson explores how humor works in Mexican Spanish: puns that hinge on a word's double meaning, irony signaled by markers like 'sí, cómo no' and the tag '¿no?', and the playful subversion of well-known refranes. It also covers the discourse markers Mexican Spanish speakers use to time an anecdote for a punchline, such as 'resulta que' and 'total que'.",
+  "phrases": [
+    {
+      "target": "¿Qué onda? Cuéntame algo bueno.",
+      "native": "What's up? Tell me something good.",
+      "phonetic": "keh OHN-dah, KWEN-tah-meh AHL-goh BWEH-noh"
+    },
+    {
+      "target": "Sí, cómo no, seguro llegas a tiempo.",
+      "native": "Yeah, sure, I bet you're on time.",
+      "phonetic": "see, KOH-moh no, seh-GOO-roh YEH-gahs ah tee-EM-poh",
+      "syllables": ["see", "KOH", "moh", "no", "seh", "GOO", "roh", "YEH", "gahs", "ah", "tee", "EM", "poh"],
+      "vocabularyIntro": "'Sí, cómo no' literally means 'yes, how not [would I]' but is almost always sarcastic — a way of saying 'yeah, right' or 'as if' while sounding polite on the surface.",
+      "exampleSentence": {
+        "target": "¿Vas a estudiar toda la noche? — Sí, cómo no.",
+        "native": "Are you going to study all night? — Yeah, right."
+      },
+      "grammarNote": "The tone of voice carries the irony; grammatically the sentence is a plain affirmation, but context flips its meaning to the opposite.",
+      "memoryHook": "Picture rolling your eyes while saying 'of course' — that eye-roll is baked into 'sí, cómo no'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Yeah, sure, I bet you're on time.",
+          "answer": "Sí, cómo no, seguro llegas a tiempo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Sí, cómo ___, seguro llegas a tiempo.",
+          "answer": "no"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices sarcásticamente para mostrar que no le crees a alguien?",
+          "answer": "Sí, cómo no"
+        }
+      ]
+    },
+    {
+      "target": "¿Por qué el libro de matemáticas está triste? Porque tiene demasiados problemas.",
+      "native": "Why is the math book sad? Because it has too many problems.",
+      "phonetic": "por-KEH el LEE-broh deh mah-teh-MAH-tee-kahs es-TAH TREES-teh, POR-keh tee-EH-neh deh-mah-see-AH-dohs proh-BLEH-mahs",
+      "syllables": ["por", "KEH", "el", "LEE", "broh", "deh", "mah", "teh", "MAH", "tee", "kahs", "es", "TAH", "TREES", "teh", "POR", "keh", "tee", "EH", "neh", "deh", "mah", "see", "AH", "dohs", "proh", "BLEH", "mahs"],
+      "vocabularyIntro": "The pun rests on 'problemas', which means both 'math problems' (as in exercises) and 'personal troubles' — the book is sad not because of homework, but because 'problemas' can mean both at once.",
+      "exampleSentence": {
+        "target": "Ese chiste tiene demasiados problemas... como el libro de matemáticas.",
+        "native": "That joke has too many problems... just like the math book."
+      },
+      "grammarNote": "No special grammar here — the humor is purely lexical, hinging on the double meaning of a single noun.",
+      "memoryHook": "Whenever a word can mean two unrelated things, check if a joke is hiding in the gap — here it's 'problemas'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Why is the math book sad? Because it has too many problems.",
+          "answer": "¿Por qué el libro de matemáticas está triste? Porque tiene demasiados problemas."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Por qué el libro de matemáticas está triste? Porque tiene demasiados ___.",
+          "answer": "problemas"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Por qué está triste el libro de matemáticas?",
+          "answer": "Porque tiene demasiados problemas"
+        }
+      ]
+    },
+    {
+      "target": "Ajá, y yo me lo creo todo.",
+      "native": "Uh-huh, and I believe every bit of it.",
+      "phonetic": "ah-HAH, ee yoh meh loh KREH-oh TOH-doh"
+    },
+    {
+      "target": "O sea, ¿en serio no vas a venir?",
+      "native": "I mean, seriously, you're not coming?",
+      "phonetic": "oh SEH-ah, en SEH-ree-oh no vahs ah veh-NEER"
+    },
+    {
+      "target": "Llegaste tarde otra vez, ¿no?",
+      "native": "You were late again, weren't you?",
+      "phonetic": "yeh-GAHS-teh TAR-deh OH-trah ves, no",
+      "syllables": ["yeh", "GAHS", "teh", "TAR", "deh", "OH", "trah", "ves", "no"],
+      "vocabularyIntro": "The tag '¿no?' at the end turns a statement into a rhetorical check-in, but here it's used ironically — the speaker already knows the answer and is teasing, not really asking.",
+      "exampleSentence": {
+        "target": "Otra vez se te quemó la comida, ¿no?",
+        "native": "You burned the food again, didn't you?"
+      },
+      "grammarNote": "'¿No?' as a tag doesn't invert word order like an English tag question ('isn't it?'); it simply attaches to the end of a statement, inviting the listener to confirm what's already obvious.",
+      "memoryHook": "Think of '¿no?' as a wink at the end of a sentence — the speaker isn't really asking, just teasing.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: You were late again, weren't you?",
+          "answer": "Llegaste tarde otra vez, ¿no?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Llegaste tarde otra vez, ¿___?",
+          "answer": "no"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué palabra agregas al final de una frase para invitar a que confirmen algo obvio, en tono burlón?",
+          "answer": "¿no?"
+        }
+      ]
+    },
+    {
+      "target": "Camarón que se duerme, se lo lleva la corriente... por eso yo ni pestañeo.",
+      "native": "The shrimp that falls asleep gets carried away by the current... that's why I don't even blink.",
+      "phonetic": "kah-mah-ROHN keh seh doo-EHR-meh, seh loh YEH-vah lah koh-ree-EHN-teh... por EH-soh yoh nee pes-tah-NYEH-oh",
+      "syllables": ["kah", "mah", "ROHN", "keh", "seh", "doo", "EHR", "meh", "seh", "loh", "YEH", "vah", "lah", "koh", "ree", "EHN", "teh", "por", "EH", "soh", "yoh", "nee", "pes", "tah", "NYEH", "oh"],
+      "vocabularyIntro": "'Camarón que se duerme, se lo lleva la corriente' is a well-known refrán meaning 'you snooze, you lose'. Adding '...por eso yo ni pestañeo' (that's why I don't even blink) is a playful personal twist that exaggerates the lesson into an absurd, joking boast.",
+      "exampleSentence": {
+        "target": "Camarón que se duerme, se lo lleva la corriente, así que llegué una hora antes.",
+        "native": "You snooze, you lose, so I showed up an hour early."
+      },
+      "grammarNote": "The subversion works by tacking a personal, exaggerated consequence onto a fixed traditional refrán, which listeners recognize and expect to end neutrally.",
+      "memoryHook": "Picture a sleepy shrimp swept away by a river current — and you, wide-eyed, refusing to blink so it doesn't happen to you.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The shrimp that falls asleep gets carried away by the current... that's why I don't even blink.",
+          "answer": "Camarón que se duerme, se lo lleva la corriente... por eso yo ni pestañeo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Camarón que se duerme, se lo lleva la ___.",
+          "answer": "corriente"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué refrán usas para decir que hay que estar alerta o pierdes tu oportunidad?",
+          "answer": "Camarón que se duerme, se lo lleva la corriente"
+        }
+      ]
+    },
+    {
+      "target": "El que madruga, Dios lo ayuda... pero el que no madruga, duerme mejor.",
+      "native": "The early bird gets God's help... but the one who doesn't get up early sleeps better.",
+      "phonetic": "el keh mah-DROO-gah, dee-OHS loh ah-YOO-dah... PEH-roh el keh no mah-DROO-gah, doo-EHR-meh meh-HOR",
+      "syllables": ["el", "keh", "mah", "DROO", "gah", "dee", "OHS", "loh", "ah", "YOO", "dah", "PEH", "roh", "el", "keh", "no", "mah", "DROO", "gah", "doo", "EHR", "meh", "meh", "HOR"],
+      "vocabularyIntro": "'El que madruga, Dios lo ayuda' is a classic refrán praising early risers. The added twist '...pero el que no madruga, duerme mejor' undercuts the moral with a lazy, relatable punchline — a common comic structure of setting up a proverb only to subvert it.",
+      "exampleSentence": {
+        "target": "El que madruga, Dios lo ayuda, pero yo prefiero dormir mejor.",
+        "native": "The early bird gets God's help, but I'd rather sleep better."
+      },
+      "grammarNote": "Subversion humor typically preserves the original refrán word-for-word, then appends a contrasting clause with 'pero' to flip the expected conclusion.",
+      "memoryHook": "The proverb praises early risers — the joke rewards the ones who stay in bed instead.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The early bird gets God's help... but the one who doesn't get up early sleeps better.",
+          "answer": "El que madruga, Dios lo ayuda... pero el que no madruga, duerme mejor."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El que madruga, Dios lo ___.",
+          "answer": "ayuda"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué refrán se usa (y a veces se subvierte) para hablar de levantarse temprano?",
+          "answer": "El que madruga, Dios lo ayuda"
+        }
+      ]
+    },
+    {
+      "target": "Ese refrán nunca falla.",
+      "native": "That saying never fails.",
+      "phonetic": "EH-seh reh-FRAHN NOON-kah FAH-yah"
+    },
+    {
+      "target": "Resulta que llegamos tarde, y total que ni siquiera nos dejaron entrar.",
+      "native": "So it turns out we arrived late, and in the end they didn't even let us in.",
+      "phonetic": "reh-SOOL-tah keh yeh-GAH-mohs TAR-deh, ee toh-TAHL keh nee see-KEE-eh-rah nohs deh-HAH-rohn en-TRAR",
+      "syllables": ["reh", "SOOL", "tah", "keh", "yeh", "GAH", "mohs", "TAR", "deh", "ee", "toh", "TAHL", "keh", "nee", "see", "KEE", "eh", "rah", "nohs", "deh", "HAH", "rohn", "en", "TRAR"],
+      "vocabularyIntro": "'Resulta que' (it turns out that) sets up the twist in an anecdote, while 'total que' (so, in the end) signals the punchline is coming — both are classic verbal timing devices Mexican Spanish speakers use to build up a story before landing the joke.",
+      "exampleSentence": {
+        "target": "Resulta que perdimos las llaves, y total que dormimos en el carro.",
+        "native": "So it turns out we lost the keys, and in the end we slept in the car."
+      },
+      "grammarNote": "Both markers are impersonal, subjectless expressions ('resulta que...', 'total que...') that frame what follows as a narrative development rather than a plain fact.",
+      "memoryHook": "'Resulta que' = 'plot twist incoming'; 'total que' = 'and here's the punchline'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: So it turns out we arrived late, and in the end they didn't even let us in.",
+          "answer": "Resulta que llegamos tarde, y total que ni siquiera nos dejaron entrar."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Resulta que llegamos tarde, y ___ que ni siquiera nos dejaron entrar.",
+          "answer": "total"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frases usas para anunciar el giro y el remate de una anécdota?",
+          "answer": "Resulta que... total que"
+        }
+      ]
+    },
+    {
+      "target": "Y ahí es cuando me dio la risa.",
+      "native": "And that's when I burst out laughing.",
+      "phonetic": "ee ah-EE es KWAHN-doh meh dee-OH lah REE-sah"
+    },
+    {
+      "target": "Ese es el mejor chiste que he escuchado.",
+      "native": "That's the best joke I've heard.",
+      "phonetic": "EH-seh es el meh-HOR CHEES-teh keh eh es-koo-CHAH-doh"
+    }
+  ],
+  "dialogue": {
+    "id": "C2-L2-D1",
+    "scenario": "You trade jokes and a refrán with friends during casual banter (cotorreo).",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Camarón que se duerme, se lo lleva la corriente, ¿eh? Por eso llegué temprano hoy.",
+        "native": "The shrimp that falls asleep gets carried away by the current, right? That's why I got here early today."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "trade_refran",
+        "hints": ["El que madruga, Dios lo ayuda... pero el que no madruga, duerme mejor."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Sí, cómo no, seguro llegas a tiempo.",
+        "native": "Yeah, sure, I bet you're always on time."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "recognize_irony",
+        "hints": ["Ajá, y yo me lo creo todo.", "Llegaste tarde otra vez, ¿no?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Bueno ya, cuéntame qué te pasó ayer.",
+        "native": "Okay fine, tell me what happened to you yesterday."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "tell_anecdote",
+        "hints": ["Resulta que llegamos tarde, y total que ni siquiera nos dejaron entrar."]
+      },
+      {
+        "speaker": "npc",
+        "line": "No lo puedo creer, ¿y luego?",
+        "native": "I can't believe it, and then?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "land_punchline",
+        "hints": ["Y ahí es cuando me dio la risa.", "Ese es el mejor chiste que he escuchado."]
+      }
+    ]
+  }
+}

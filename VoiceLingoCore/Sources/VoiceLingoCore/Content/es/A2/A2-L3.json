@@ -1,0 +1,238 @@
+{
+  "id": "A2-L3",
+  "title": "Getting Around",
+  "grammarNote": "This lesson covers usted affirmative imperatives for giving directions (siga, dé vuelta, tome, baje, cruce), prepositions of place (enfrente de, a la derecha de, entre, hasta), and the use of estar (never ser) for location. It's built around asking for and following directions on foot, by Metro, and by camión in Mexico City.",
+  "phrases": [
+    {
+      "target": "Siga derecho dos cuadras",
+      "native": "Go straight two blocks",
+      "phonetic": "SEE-gah deh-REH-choh dos KWAH-dras",
+      "syllables": ["SEE", "gah", "deh", "REH", "choh", "dos", "KWAH", "dras"],
+      "vocabularyIntro": "'Siga' is the usted affirmative imperative of seguir (to continue/follow), the standard polite command for giving directions to a stranger.",
+      "exampleSentence": {
+        "target": "Siga derecho dos cuadras y va a ver la plaza.",
+        "native": "Go straight two blocks and you'll see the plaza."
+      },
+      "grammarNote": "Usted commands use the same form as the usted present subjunctive: seguir → siga (e→i stem change), dropping the -o and adding -a for -ir verbs.",
+      "memoryHook": "Siga sounds like 'see-ga' — SEE where you're GOing and keep moving straight.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Go straight two blocks",
+          "answer": "Siga derecho dos cuadras"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ derecho dos cuadras.",
+          "answer": "Siga"
+        },
+        {
+          "type": "qa",
+          "prompt": "Un turista te pide indicaciones y debe caminar derecho por dos cuadras. ¿Qué le dices?",
+          "answer": "Siga derecho dos cuadras"
+        }
+      ]
+    },
+    {
+      "target": "Dé vuelta a la derecha",
+      "native": "Turn right",
+      "phonetic": "deh VWEL-tah ah lah deh-REH-chah",
+      "syllables": ["deh", "VWEL", "tah", "ah", "lah", "deh", "REH", "chah"],
+      "vocabularyIntro": "'Dé vuelta' is the usted imperative of dar + vuelta ('give a turn'), the standard phrase for telling someone to turn at an intersection.",
+      "exampleSentence": {
+        "target": "En el semáforo, dé vuelta a la derecha.",
+        "native": "At the traffic light, turn right."
+      },
+      "grammarNote": "'Dé' is the irregular usted imperative of dar, written with an accent to distinguish it from the preposition 'de'; it's always followed by 'vuelta' plus a direction.",
+      "memoryHook": "Dé vuelta = 'give a turn' — picture handing the wheel a little turn to the right.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Turn right",
+          "answer": "Dé vuelta a la derecha"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "En el semáforo, ___ vuelta a la derecha.",
+          "answer": "dé"
+        },
+        {
+          "type": "qa",
+          "prompt": "Le explicas a alguien que debe girar hacia la derecha en el semáforo. ¿Qué le dices?",
+          "answer": "Dé vuelta a la derecha"
+        }
+      ]
+    },
+    {
+      "target": "Tome el camión número diez",
+      "native": "Take bus number ten",
+      "phonetic": "TOH-meh el kah-mee-ON NOO-meh-roh dee-EHS",
+      "syllables": ["TOH", "meh", "el", "kah", "mee", "ON", "NOO", "meh", "roh", "dee", "EHS"],
+      "vocabularyIntro": "'Tome' is the usted imperative of tomar (to take), used both for taking transportation and for physically taking an object; 'camión' is the common Mexican word for a city bus.",
+      "exampleSentence": {
+        "target": "Tome el camión número diez hasta el centro.",
+        "native": "Take bus number ten to downtown."
+      },
+      "grammarNote": "'Tomar' is a regular -ar verb, so the usted imperative simply swaps the -ar ending for -e: tomar → tome.",
+      "memoryHook": "Tome sounds like 'toe-may' — TOE the line and get on the right bus.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Take bus number ten",
+          "answer": "Tome el camión número diez"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ el camión número diez.",
+          "answer": "Tome"
+        },
+        {
+          "type": "qa",
+          "prompt": "Necesitas decirle a alguien qué camión debe abordar para llegar al centro. ¿Qué le dices?",
+          "answer": "Tome el camión número diez"
+        }
+      ]
+    },
+    {
+      "target": "Baje en la siguiente parada",
+      "native": "Get off at the next stop",
+      "phonetic": "BAH-heh en lah see-GYEN-teh pah-RAH-dah",
+      "syllables": ["BAH", "heh", "en", "lah", "see", "GYEN", "teh", "pah", "RAH", "dah"],
+      "vocabularyIntro": "'Baje' is the usted imperative of bajar (to get off/descend), commonly used on buses and the Metro to tell a passenger where to disembark.",
+      "exampleSentence": {
+        "target": "Baje en la siguiente parada y camine dos cuadras.",
+        "native": "Get off at the next stop and walk two blocks."
+      },
+      "grammarNote": "'Bajar' is a regular -ar verb; its usted imperative follows the same pattern as tomar → tome, swapping -ar for -e: bajar → baje.",
+      "memoryHook": "Baje sounds like 'bah-hey' — say 'hey, I'm getting off' as you step down.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Get off at the next stop",
+          "answer": "Baje en la siguiente parada"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ en la siguiente parada.",
+          "answer": "Baje"
+        },
+        {
+          "type": "qa",
+          "prompt": "Le indicas a un pasajero en qué parada debe descender del camión. ¿Qué le dices?",
+          "answer": "Baje en la siguiente parada"
+        }
+      ]
+    },
+    {
+      "target": "Cruce la calle con cuidado",
+      "native": "Cross the street carefully",
+      "phonetic": "KROO-seh lah KAH-yeh kon kwee-DAH-doh"
+    },
+    {
+      "target": "El museo está enfrente de la estación",
+      "native": "The museum is in front of the station",
+      "phonetic": "el moo-SEH-oh es-TAH en-FREN-teh deh lah es-tah-see-ON",
+      "syllables": ["el", "moo", "SEH", "oh", "es", "TAH", "en", "FREN", "teh", "deh", "lah", "es", "tah", "see", "ON"],
+      "vocabularyIntro": "'Estar' (not ser) is used with location, and 'enfrente de' means 'in front of' or 'across from' — a common preposition of place for giving directions.",
+      "exampleSentence": {
+        "target": "El museo está enfrente de la estación del Metro.",
+        "native": "The museum is in front of the Metro station."
+      },
+      "grammarNote": "Location always takes estar, never ser: 'el museo está' (is located), not 'el museo es'. 'Enfrente de' requires 'de' before the noun it refers to.",
+      "memoryHook": "Enfrente sounds like 'in front' — en-FRENT-e, picture standing right in front.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The museum is in front of the station",
+          "answer": "El museo está enfrente de la estación"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El museo ___ enfrente de la estación.",
+          "answer": "está"
+        },
+        {
+          "type": "qa",
+          "prompt": "Alguien te pregunta dónde está el museo en relación con la estación del Metro. ¿Qué le dices?",
+          "answer": "El museo está enfrente de la estación"
+        }
+      ]
+    },
+    {
+      "target": "La estación está entre el museo y el parque",
+      "native": "The station is between the museum and the park",
+      "phonetic": "lah es-tah-see-ON es-TAH EN-treh el moo-SEH-oh ee el PAR-keh"
+    },
+    {
+      "target": "¿Dónde queda el Museo de Antropología?",
+      "native": "Where is the Museum of Anthropology located?",
+      "phonetic": "DON-deh KEH-dah el moo-SEH-oh deh an-troh-poh-loh-HEE-ah"
+    },
+    {
+      "target": "¿Está lejos de aquí?",
+      "native": "Is it far from here?",
+      "phonetic": "es-TAH LEH-hos deh ah-KEE"
+    },
+    {
+      "target": "Tome el Metro hasta la estación Chapultepec",
+      "native": "Take the Metro to Chapultepec station",
+      "phonetic": "TOH-meh el MEH-troh AS-tah lah es-tah-see-ON chah-pool-teh-PEK"
+    },
+    {
+      "target": "¿Cuánto se hace en camión?",
+      "native": "How long does it take by bus?",
+      "phonetic": "KWAN-toh seh AH-seh en kah-mee-ON"
+    },
+    {
+      "target": "A la derecha del semáforo hay una farmacia",
+      "native": "To the right of the traffic light there's a pharmacy",
+      "phonetic": "ah lah deh-REH-chah del seh-MAH-foh-roh ai OO-nah far-MAH-see-ah"
+    }
+  ],
+  "dialogue": {
+    "id": "A2-L3-D1",
+    "scenario": "You ask a stranger how to reach the Museo Nacional de Antropología in Mexico City.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas, ¿en qué le puedo ayudar?",
+        "native": "Hello, how can I help you?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_location",
+        "hints": ["¿Dónde queda el Museo de Antropología?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Siga derecho dos cuadras y dé vuelta a la derecha.",
+        "native": "Go straight two blocks and turn right."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "confirm_route",
+        "hints": ["Siga derecho dos cuadras", "Dé vuelta a la derecha"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Así es. Luego cruce la calle y tome el camión número diez.",
+        "native": "That's right. Then cross the street and take bus number ten."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "confirm_route_continued",
+        "hints": ["Cruce la calle con cuidado", "Tome el camión número diez"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Baje en la siguiente parada; el museo está enfrente de la estación.",
+        "native": "Get off at the next stop; the museum is in front of the station."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_distance_time",
+        "hints": ["¿Está lejos de aquí?", "¿Cuánto se hace en camión?"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "B2-L2",
+  "title": "Doubt and Possibility",
+  "grammarNote": "Expressions of doubt, denial, and impersonal possibility (no creo que, dudo que, no es cierto que, es posible/probable que) trigger the subjunctive, while expressions of certainty (creo que, es obvio que, estoy seguro de que) take the indicative — the speaker's confidence level decides the mood. Adverbs like 'quizá' and 'tal vez' also commonly pair with the subjunctive when the outcome feels uncertain.",
+  "phrases": [
+    {
+      "target": "No creo que el lanzamiento sea a tiempo",
+      "native": "I don't think the launch will be on time",
+      "phonetic": "no CREH-oh keh el lahn-sah-mee-EN-toh SEH-ah ah TYEM-poh",
+      "syllables": ["no", "CREH-oh", "keh", "el", "lahn-sah-mee-EN-toh", "SEH-ah", "ah", "TYEM-poh"],
+      "vocabularyIntro": "'No creer que' (to not believe that) is a doubt/denial trigger, even though the affirmative 'creo que' takes the indicative.",
+      "exampleSentence": {
+        "target": "No creo que el lanzamiento sea a tiempo este mes.",
+        "native": "I don't think the launch will be on time this month."
+      },
+      "grammarNote": "Contrast: 'creo que es a tiempo' (indicative, I believe it) vs. 'no creo que sea a tiempo' (subjunctive, doubt/denial flips the mood).",
+      "memoryHook": "Remember: negating 'creer' negates your certainty too, so the verb switches into the subjunctive 'sea'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I don't think the launch will be on time",
+          "answer": "No creo que el lanzamiento sea a tiempo"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "No creo que el lanzamiento ___ a tiempo.",
+          "answer": "sea"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Crees que el lanzamiento será a tiempo?",
+          "answer": "No creo que el lanzamiento sea a tiempo"
+        }
+      ]
+    },
+    {
+      "target": "Dudo que el cliente firme hoy",
+      "native": "I doubt the client will sign today",
+      "phonetic": "DOO-doh keh el klee-EN-teh FEER-meh oy",
+      "syllables": ["DOO-doh", "keh", "el", "klee-EN-teh", "FEER-meh", "oy"],
+      "vocabularyIntro": "'Dudar que' (to doubt that) is a direct doubt trigger and always takes the subjunctive.",
+      "exampleSentence": {
+        "target": "Dudo que el cliente firme el contrato hoy.",
+        "native": "I doubt the client will sign the contract today."
+      },
+      "grammarNote": "'Firme' is the regular -ar subjunctive of 'firmar' (firme, firmes, firme, firmemos, firmen).",
+      "memoryHook": "Picture a firm handshake that never happens — 'dudo que firme' means the signature is in doubt.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I doubt the client will sign today",
+          "answer": "Dudo que el cliente firme hoy"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Dudo que el cliente ___ hoy.",
+          "answer": "firme"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Firmará el cliente el contrato hoy?",
+          "answer": "Dudo que el cliente firme hoy"
+        }
+      ]
+    },
+    {
+      "target": "Es posible que lleguemos tarde",
+      "native": "It's possible we'll arrive late",
+      "phonetic": "es po-SEE-bleh keh yeh-GEH-mos TAR-deh",
+      "syllables": ["es", "po-SEE-bleh", "keh", "yeh-GEH-mos", "TAR-deh"],
+      "vocabularyIntro": "'Es posible/probable que' is an impersonal expression of possibility that always requires the subjunctive.",
+      "exampleSentence": {
+        "target": "Es posible que lleguemos tarde a la reunión.",
+        "native": "It's possible we'll arrive late to the meeting."
+      },
+      "grammarNote": "'Lleguemos' is the regular -ar subjunctive of 'llegar' in the nosotros form, ending in -emos.",
+      "memoryHook": "Think 'es posible' opens a door of uncertainty, so the verb steps into the subjunctive 'lleguemos'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's possible we'll arrive late",
+          "answer": "Es posible que lleguemos tarde"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Es posible que ___ tarde.",
+          "answer": "lleguemos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Van a llegar a tiempo a la reunión?",
+          "answer": "Es posible que lleguemos tarde"
+        }
+      ]
+    },
+    {
+      "target": "Estoy seguro de que va a llover",
+      "native": "I'm sure it's going to rain",
+      "phonetic": "es-TOY seh-GOO-roh deh keh vah ah yoh-VEHR",
+      "syllables": ["es-TOY", "seh-GOO-roh", "deh", "keh", "vah", "ah", "yoh-VEHR"],
+      "vocabularyIntro": "'Estoy seguro de que' (I'm sure that) expresses certainty, so it keeps the indicative — a useful contrast phrase for this lesson.",
+      "exampleSentence": {
+        "target": "Estoy seguro de que va a llover por la tarde.",
+        "native": "I'm sure it's going to rain in the afternoon."
+      },
+      "grammarNote": "Because 'estoy seguro de que' expresses certainty rather than doubt, the verb stays in the indicative ('va'), unlike 'dudo que' or 'es posible que'.",
+      "memoryHook": "'Seguro' sounds like 'secure' — feeling secure about a fact keeps you in the indicative.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm sure it's going to rain",
+          "answer": "Estoy seguro de que va a llover"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Estoy seguro de que ___ a llover.",
+          "answer": "va"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Crees que va a llover hoy?",
+          "answer": "Estoy seguro de que va a llover"
+        }
+      ]
+    },
+    {
+      "target": "Es obvio que el equipo está cansado",
+      "native": "It's obvious the team is tired",
+      "phonetic": "es OB-bee-oh keh el eh-KEE-poh es-TAH kan-SAH-doh",
+      "syllables": ["es", "OB-bee-oh", "keh", "el", "eh-KEE-poh", "es-TAH", "kan-SAH-doh"],
+      "vocabularyIntro": "'Es obvio que' expresses a self-evident fact, so it takes the indicative, unlike impersonal doubt expressions such as 'es posible que'."
+    },
+    {
+      "target": "No es cierto que el proyecto esté cancelado",
+      "native": "It's not true that the project is canceled",
+      "phonetic": "no es see-EHR-toh keh el pro-YEK-toh es-TEH kan-seh-LAH-doh",
+      "syllables": ["no", "es", "see-EHR-toh", "keh", "el", "pro-YEK-toh", "es-TEH", "kan-seh-LAH-doh"],
+      "vocabularyIntro": "'No es cierto que' (it's not true that) denies a claim, so it takes the subjunctive despite the affirmative sounding factual."
+    },
+    {
+      "target": "Quizá terminemos el reporte a tiempo",
+      "native": "Maybe we'll finish the report on time",
+      "phonetic": "kee-SAH ter-mee-NEH-mos el reh-POR-teh ah TYEM-poh"
+    },
+    {
+      "target": "Tal vez el jefe cambie la fecha",
+      "native": "Maybe the boss will change the date",
+      "phonetic": "tal ves el HEH-feh KAM-bee-eh lah FEH-cha"
+    },
+    {
+      "target": "Es probable que haya un retraso",
+      "native": "It's probable there will be a delay",
+      "phonetic": "es pro-BAH-bleh keh AH-yah oon reh-TRAH-so"
+    },
+    {
+      "target": "Creo que todo va a funcionar",
+      "native": "I think everything is going to work out",
+      "phonetic": "KREH-oh keh TOH-doh vah ah foon-see-oh-NAR"
+    },
+    {
+      "target": "No dudo que ella hará un buen trabajo",
+      "native": "I don't doubt she will do a good job",
+      "phonetic": "no DOO-doh keh EH-yah ah-RAH oon bwen tra-BAH-ho"
+    },
+    {
+      "target": "Preparemos un plan B por si acaso",
+      "native": "Let's prepare a plan B just in case",
+      "phonetic": "preh-pah-REH-mos oon plahn beh por see ah-KAH-so"
+    }
+  ],
+  "dialogue": {
+    "id": "B2-L2-D1",
+    "scenario": "Two colleagues speculate about whether a product launch will happen on time.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "¿Tú crees que vamos a terminar todo antes del lanzamiento?",
+        "native": "Do you think we're going to finish everything before the launch?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_doubt_timing",
+        "hints": ["No creo que el lanzamiento sea a tiempo"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Yo también tengo mis dudas. Pero el equipo ha trabajado muy duro, ¿no crees?",
+        "native": "I also have my doubts. But the team has worked really hard, don't you think?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_certainty_effort",
+        "hints": ["Creo que todo va a funcionar"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ojalá. ¿Y el cliente ya firmó el contrato?",
+        "native": "Hopefully. And did the client already sign the contract?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_doubt_client",
+        "hints": ["Dudo que el cliente firme hoy"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Bueno, ¿entonces qué hacemos si algo sale mal?",
+        "native": "Okay, so what do we do if something goes wrong?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "propose_contingency",
+        "hints": ["Preparemos un plan B por si acaso"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "A1-L2",
+  "title": "Basic Phrases",
+  "grammarNote": "Essential polite phrases for everyday interaction. 'Por favor' (please) should be used frequently. 'Disculpe' is used to get attention, while 'Lo siento' is used to apologize.",
+  "phrases": [
+    {
+      "target": "Por favor",
+      "native": "Please",
+      "phonetic": "por fah-VOR"
+    },
+    {
+      "target": "Gracias",
+      "native": "Thank you",
+      "phonetic": "GRAH-see-as"
+    },
+    {
+      "target": "Muchas gracias",
+      "native": "Thank you very much",
+      "phonetic": "MOO-chas GRAH-see-as"
+    },
+    {
+      "target": "De nada",
+      "native": "You're welcome",
+      "phonetic": "deh NAH-dah"
+    },
+    {
+      "target": "No hay de qué",
+      "native": "You're welcome (alternative)",
+      "phonetic": "noh AHY deh KEH"
+    },
+    {
+      "target": "Disculpe",
+      "native": "Excuse me (formal) / Pardon me",
+      "phonetic": "dees-KOOL-peh"
+    },
+    {
+      "target": "Disculpa",
+      "native": "Excuse me (informal)",
+      "phonetic": "dees-KOOL-pah"
+    },
+    {
+      "target": "Lo siento",
+      "native": "I'm sorry",
+      "phonetic": "loh see-EN-toh"
+    },
+    {
+      "target": "Adiós",
+      "native": "Goodbye",
+      "phonetic": "ah-dee-OHS"
+    },
+    {
+      "target": "Hasta luego",
+      "native": "See you later",
+      "phonetic": "AHS-tah loo-EH-goh"
+    },
+    {
+      "target": "Hasta pronto",
+      "native": "See you soon",
+      "phonetic": "AHS-tah PROHN-toh"
+    },
+    {
+      "target": "Buenas noches",
+      "native": "Good night / Goodbye (evening)",
+      "phonetic": "BWEH-nas NOH-ches"
+    }
+  ]
+}
