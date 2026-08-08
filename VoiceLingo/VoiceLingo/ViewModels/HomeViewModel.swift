@@ -50,11 +50,11 @@ final class HomeViewModel: ObservableObject {
         self.currentLanguageCode = languageCode
 
         do {
-            let curriculum = try curriculumLoader.loadCurriculum(for: languageCode)
+            let manifest = try curriculumLoader.loadManifest(for: languageCode)
             var items: [LevelDisplayItem] = []
 
             for (levelId, levelTitle) in Self.cefrOrder {
-                if let level = curriculum.levels.first(where: { $0.id == levelId }) {
+                if let level = manifest.levels.first(where: { $0.id == levelId }) {
                     let firstLessonId = level.lessons.first?.id
                     let isUnlocked = progress?.unlockedLevels.contains(levelId) ?? false
                     let scorePercent = Int((progress?.levelScores[levelId] ?? 0) * 100)

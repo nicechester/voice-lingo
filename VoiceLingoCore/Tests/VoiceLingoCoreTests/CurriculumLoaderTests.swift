@@ -15,19 +15,19 @@ final class CurriculumLoaderTests: XCTestCase {
         super.tearDown()
     }
 
-    // MARK: - Load Curriculum Tests
+    // MARK: - Manifest Loading Tests
 
-    func testLoadSpanishCurriculum() throws {
-        let curriculum = try loader.loadCurriculum(for: "es")
-        XCTAssertEqual(curriculum.language, "es")
-        XCTAssertEqual(curriculum.voiceLocale, "es-MX")
-        XCTAssertEqual(curriculum.recognizerLocale, "es-MX")
-        XCTAssertFalse(curriculum.levels.isEmpty)
+    func testLoadSpanishManifest() throws {
+        let manifest = try loader.loadManifest(for: "es")
+        XCTAssertEqual(manifest.language, "es")
+        XCTAssertFalse(manifest.voiceLocale.isEmpty)
+        XCTAssertFalse(manifest.recognizerLocale.isEmpty)
+        XCTAssertFalse(manifest.levels.isEmpty)
     }
 
-    func testLoadedCurriculumHasValidLevels() throws {
-        let curriculum = try loader.loadCurriculum(for: "es")
-        let levels = curriculum.levels
+    func testLoadedManifestHasValidLevels() throws {
+        let manifest = try loader.loadManifest(for: "es")
+        let levels = manifest.levels
 
         XCTAssertGreaterThan(levels.count, 0)
 
@@ -39,94 +39,213 @@ final class CurriculumLoaderTests: XCTestCase {
             for lesson in level.lessons {
                 XCTAssertFalse(lesson.id.isEmpty)
                 XCTAssertFalse(lesson.title.isEmpty)
-                XCTAssertFalse(lesson.phrases.isEmpty)
+            }
+        }
+    }
 
-                for phrase in lesson.phrases {
-                    XCTAssertFalse(phrase.target.isEmpty)
-                    XCTAssertFalse(phrase.native.isEmpty)
-                    XCTAssertFalse(phrase.phonetic.isEmpty)
+    func testManifestCaching() throws {
+        let manifest1 = try loader.loadManifest(for: "es")
+        let manifest2 = try loader.loadManifest(for: "es")
+
+        XCTAssertEqual(manifest1.language, manifest2.language)
+        XCTAssertEqual(manifest1.levels.count, manifest2.levels.count)
+    }
+
+    func testGetCachedManifestBeforeLoad() {
+        let cached = loader.getCachedManifest(for: "es")
+        XCTAssertNil(cached)
+    }
+
+    func testGetCachedManifestAfterLoad() throws {
+        _ = try loader.loadManifest(for: "es")
+        let cached = loader.getCachedManifest(for: "es")
+        XCTAssertNotNil(cached)
+        XCTAssertEqual(cached?.language, "es")
+    }
+
+    // MARK: - Lesson Loading Tests
+
+    func testLoadSpanishLesson() throws {
+        let lesson = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        XCTAssertEqual(lesson.id, "A1-L1")
+        XCTAssertEqual(lesson.title, "Greetings")
+        XCTAssertFalse(lesson.phrases.isEmpty)
+    }
+
+    func testLoadedLessonHasValidPhrases() throws {
+        let lesson = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let phrases = lesson.phrases
+
+        XCTAssertGreaterThan(phrases.count, 0)
+
+        for phrase in phrases {
+            XCTAssertFalse(phrase.target.isEmpty)
+            XCTAssertFalse(phrase.native.isEmpty)
+            XCTAssertFalse(phrase.phonetic.isEmpty)
+        }
+    }
+
+    func testBuenosDiasEnhancedFields() throws {
+        let lesson = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        guard let phrase = lesson.phrases.first(where: { $0.target == "Buenos días" }) else {
+            XCTFail("Buenos días phrase not found")
+            return
+        }
+
+        XCTAssertNotNil(phrase.exampleSentence)
+        XCTAssertNotNil(phrase.syllables)
+        XCTAssertFalse(phrase.syllables?.isEmpty ?? true)
+        XCTAssertNotNil(phrase.grammarNote)
+        XCTAssertNotNil(phrase.memoryHook)
+        XCTAssertNotNil(phrase.vocabularyIntro)
+        XCTAssertNotNil(phrase.practiceItems)
+        XCTAssertFalse(phrase.practiceItems?.isEmpty ?? true)
+    }
+
+    func testA1L2BackwardCompatibility() throws {
+        let lesson = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L2")
+        let phrases = lesson.phrases
+
+        // All phrases should have basic fields
+        for phrase in phrases {
+            XCTAssertFalse(phrase.target.isEmpty)
+            XCTAssertFalse(phrase.native.isEmpty)
+            XCTAssertFalse(phrase.phonetic.isEmpty)
+
+            // Optional new fields should be nil for A1-L2
+            XCTAssertNil(phrase.exampleSentence)
+            XCTAssertNil(phrase.syllables)
+            XCTAssertNil(phrase.grammarNote)
+        }
+    }
+
+    func testLessonCaching() throws {
+        let lesson1 = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let lesson2 = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+
+        XCTAssertEqual(lesson1.id, lesson2.id)
+        XCTAssertEqual(lesson1.phrases.count, lesson2.phrases.count)
+    }
+
+    func testGetCachedLessonBeforeLoad() {
+        let cached = loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        XCTAssertNil(cached)
+    }
+
+    func testGetCachedLessonAfterLoad() throws {
+        _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let cached = loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        XCTAssertNotNil(cached)
+        XCTAssertEqual(cached?.id, "A1-L1")
+    }
+
+    func testLessonDialogue() throws {
+        let lesson = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        XCTAssertNotNil(lesson.dialogue)
+        XCTAssertGreaterThan(lesson.dialogue?.turns.count ?? 0, 0)
+        if let firstTurn = lesson.dialogue?.turns.first {
+            XCTAssertEqual(firstTurn.speaker, .npc)
+        }
+    }
+
+    // MARK: - Manifest Integrity Tests
+
+    func testAllManifestLessonsLoadAndAreUnique() throws {
+        let manifest = try loader.loadManifest(for: "es")
+        var seenLessonIds = Set<String>()
+
+        for level in manifest.levels {
+            for lesson in level.lessons {
+                // Assert lesson ID is unique
+                if seenLessonIds.contains(lesson.id) {
+                    XCTFail("Duplicate lesson ID found: \(lesson.id)")
+                }
+                seenLessonIds.insert(lesson.id)
+
+                // Load the lesson and assert it doesn't throw
+                do {
+                    let loadedLesson = try loader.loadLesson(language: "es", levelId: level.id, lessonId: lesson.id)
+
+                    // Assert the loaded lesson's id matches the manifest
+                    XCTAssertEqual(loadedLesson.id, lesson.id)
+
+                    // Assert the lesson has at least 10 phrases
+                    XCTAssertGreaterThanOrEqual(loadedLesson.phrases.count, 10)
+                } catch {
+                    XCTFail("Failed to load lesson \(lesson.id) from level \(level.id): \(error)")
                 }
             }
         }
     }
 
-    func testCurriculumCaching() throws {
-        let curriculum1 = try loader.loadCurriculum(for: "es")
-        let curriculum2 = try loader.loadCurriculum(for: "es")
-
-        XCTAssertEqual(curriculum1.language, curriculum2.language)
-        XCTAssertEqual(curriculum1.levels.count, curriculum2.levels.count)
-    }
-
-    func testGetCachedCurriculumBeforeLoad() {
-        let cached = loader.getCachedCurriculum(for: "es")
-        XCTAssertNil(cached)
-    }
-
-    func testGetCachedCurriculumAfterLoad() throws {
-        _ = try loader.loadCurriculum(for: "es")
-        let cached = loader.getCachedCurriculum(for: "es")
-        XCTAssertNotNil(cached)
-        XCTAssertEqual(cached?.language, "es")
-    }
-
     // MARK: - Error Handling Tests
 
-    func testLoadNonexistentLanguage() {
+    func testLoadNonexistentLanguageManifest() {
         XCTAssertThrowsError(
-            try loader.loadCurriculum(for: "xyz"),
-            "Should throw fileNotFound error for non-existent language"
+            try loader.loadManifest(for: "xyz"),
+            "Should throw manifestNotFound error for non-existent language"
         ) { error in
-            if case CurriculumLoader.CurriculumError.fileNotFound = error {
+            if case CurriculumLoader.CurriculumError.manifestNotFound = error {
                 XCTAssert(true)
             } else {
-                XCTFail("Expected fileNotFound error, got \(error)")
+                XCTFail("Expected manifestNotFound error, got \(error)")
+            }
+        }
+    }
+
+    func testLoadNonexistentLesson() {
+        XCTAssertThrowsError(
+            try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L99"),
+            "Should throw lessonNotFound error for non-existent lesson"
+        ) { error in
+            if case CurriculumLoader.CurriculumError.lessonNotFound = error {
+                XCTAssert(true)
+            } else {
+                XCTFail("Expected lessonNotFound error, got \(error)")
             }
         }
     }
 
     // MARK: - Cache Management Tests
 
-    func testClearCache() throws {
-        _ = try loader.loadCurriculum(for: "es")
-        XCTAssertNotNil(loader.getCachedCurriculum(for: "es"))
+    func testClearAllCache() throws {
+        _ = try loader.loadManifest(for: "es")
+        _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+
+        XCTAssertNotNil(loader.getCachedManifest(for: "es"))
+        XCTAssertNotNil(loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1"))
 
         loader.clearCache()
-        XCTAssertNil(loader.getCachedCurriculum(for: "es"))
+
+        XCTAssertNil(loader.getCachedManifest(for: "es"))
+        XCTAssertNil(loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1"))
     }
 
     func testClearCacheForSpecificLanguage() throws {
-        _ = try loader.loadCurriculum(for: "es")
+        _ = try loader.loadManifest(for: "es")
+        _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L2")
+
         loader.clearCache(for: "es")
-        XCTAssertNil(loader.getCachedCurriculum(for: "es"))
+
+        XCTAssertNil(loader.getCachedManifest(for: "es"))
+        XCTAssertNil(loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1"))
+        XCTAssertNil(loader.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L2"))
     }
 
     // MARK: - Data Integrity Tests
 
     func testSpanishA1LevelExists() throws {
-        let curriculum = try loader.loadCurriculum(for: "es")
-        let a1Level = curriculum.levels.first { $0.id == "A1" }
+        let manifest = try loader.loadManifest(for: "es")
+        let a1Level = manifest.levels.first { $0.id == "A1" }
         XCTAssertNotNil(a1Level)
     }
 
     func testSpanishA1HasValidLessons() throws {
-        let curriculum = try loader.loadCurriculum(for: "es")
-        let a1Level = curriculum.levels.first { $0.id == "A1" }
+        let manifest = try loader.loadManifest(for: "es")
+        let a1Level = manifest.levels.first { $0.id == "A1" }
         XCTAssertNotNil(a1Level)
         XCTAssertFalse(a1Level?.lessons.isEmpty ?? true)
-    }
-
-    func testPhrasesHaveAllRequiredFields() throws {
-        let curriculum = try loader.loadCurriculum(for: "es")
-        let phrase = curriculum.levels
-            .flatMap { $0.lessons }
-            .flatMap { $0.phrases }
-            .first
-
-        XCTAssertNotNil(phrase)
-        XCTAssertFalse(phrase?.target.isEmpty ?? true)
-        XCTAssertFalse(phrase?.native.isEmpty ?? true)
-        XCTAssertFalse(phrase?.phonetic.isEmpty ?? true)
     }
 
     // MARK: - Singleton Pattern Tests
@@ -137,10 +256,17 @@ final class CurriculumLoaderTests: XCTestCase {
         XCTAssertTrue(loader1 === loader2)
     }
 
-    func testSharedInstanceCache() throws {
+    func testSharedInstanceManifestCache() throws {
         loader.clearCache()
-        _ = try loader.loadCurriculum(for: "es")
-        let cached = CurriculumLoader.shared.getCachedCurriculum(for: "es")
+        _ = try loader.loadManifest(for: "es")
+        let cached = CurriculumLoader.shared.getCachedManifest(for: "es")
+        XCTAssertNotNil(cached)
+    }
+
+    func testSharedInstanceLessonCache() throws {
+        loader.clearCache()
+        _ = try loader.loadLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
+        let cached = CurriculumLoader.shared.getCachedLesson(language: "es", levelId: "A1", lessonId: "A1-L1")
         XCTAssertNotNil(cached)
     }
 }

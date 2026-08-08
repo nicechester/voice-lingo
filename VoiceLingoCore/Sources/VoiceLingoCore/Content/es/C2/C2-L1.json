@@ -1,0 +1,263 @@
+{
+  "id": "C2-L1",
+  "title": "Rhetoric and Persuasion",
+  "grammarNote": "This lesson covers the elevated register used in Mexican Spanish public speaking: rhetorical questions, anaphora and tricolon for rhythmic emphasis, and fronting a phrase before the verb for dramatic effect (Difícil fue el camino...). It also introduces fixed subjunctive formulas like sea cual sea and cueste lo que cueste, along with elevated vocabulary such as ineludible and de suma importancia.",
+  "phrases": [
+    {
+      "target": "Quiero decir unas palabras.",
+      "native": "I'd like to say a few words.",
+      "phonetic": "kee-EH-roh deh-SEER OO-nas pah-LAH-brahs"
+    },
+    {
+      "target": "No cabe duda de que hoy es un día especial.",
+      "native": "There is no doubt that today is a special day.",
+      "phonetic": "no KAH-beh DOO-dah deh keh oy es oon DEE-ah es-peh-see-AHL",
+      "syllables": ["no", "KAH", "beh", "DOO", "dah", "deh", "keh", "oy", "es", "oon", "DEE", "ah", "es", "peh", "see", "AHL"],
+      "vocabularyIntro": "'No cabe duda' (literally 'there is no room for doubt') is a fixed formula used to state something with total confidence — a staple of formal speeches and toasts.",
+      "exampleSentence": {
+        "target": "No cabe duda de que esta empresa llegará muy lejos.",
+        "native": "There is no doubt that this company will go very far."
+      },
+      "grammarNote": "'Cabe' is the third-person present of 'caber' (to fit); the idiom uses it figuratively — doubt 'doesn't fit' anywhere.",
+      "memoryHook": "Picture doubt as a suitcase that simply won't fit — 'no cabe duda', there's no room for it.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: There is no doubt that today is a special day.",
+          "answer": "No cabe duda de que hoy es un día especial."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "No cabe ___ de que hoy es un día especial.",
+          "answer": "duda"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices para expresar que algo es totalmente seguro?",
+          "answer": "No cabe duda"
+        }
+      ]
+    },
+    {
+      "target": "Difícil fue el camino, pero aquí estamos.",
+      "native": "The road was difficult, but here we are.",
+      "phonetic": "dee-FEE-seel fweh el kah-MEE-noh, PEH-roh ah-KEE es-TAH-mos",
+      "syllables": ["dee", "FEE", "seel", "fweh", "el", "kah", "MEE", "noh", "PEH", "roh", "ah", "KEE", "es", "TAH", "mos"],
+      "vocabularyIntro": "Fronting the adjective 'difícil' before the verb 'fue' (instead of the neutral 'El camino fue difícil') throws dramatic weight onto the hardship, a classic oratorical technique.",
+      "exampleSentence": {
+        "target": "Larga fue la espera, pero el resultado valió la pena.",
+        "native": "The wait was long, but the result was worth it."
+      },
+      "grammarNote": "In neutral Spanish, the subject comes before the predicate adjective; fronting the adjective for emphasis is common in formal or rhetorical speech but would sound unnatural in casual conversation.",
+      "memoryHook": "Think of a speaker throwing the hard part ('difícil') out first, like leading with the punch.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The road was difficult, but here we are.",
+          "answer": "Difícil fue el camino, pero aquí estamos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ fue el camino, pero aquí estamos.",
+          "answer": "Difícil"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices para resaltar que algo fue complicado antes de lograrlo?",
+          "answer": "Difícil fue el camino, pero aquí estamos."
+        }
+      ]
+    },
+    {
+      "target": "Sea cual sea el reto, siempre supiste enfrentarlo.",
+      "native": "Whatever the challenge might be, you always knew how to face it.",
+      "phonetic": "SEH-ah kwahl SEH-ah el REH-toh, see-EM-preh soo-PEES-teh en-fren-TAR-loh",
+      "syllables": ["SEH", "ah", "kwahl", "SEH", "ah", "el", "REH", "toh", "see", "EM", "preh", "soo", "PEES", "teh", "en", "fren", "TAR", "loh"],
+      "vocabularyIntro": "'Sea cual sea' (literally 'be whatever it may be') is a fixed present-subjunctive formula meaning 'whatever ... may be' — used to sound confident and unconditional in formal speech.",
+      "exampleSentence": {
+        "target": "Sea cual sea la decisión, la respetaremos.",
+        "native": "Whatever the decision may be, we will respect it."
+      },
+      "grammarNote": "This construction repeats the subjunctive verb 'sea' around 'cual', creating a fixed, unchangeable formula — it doesn't inflect for other subjects.",
+      "memoryHook": "Say it twice for emphasis: 'sea... sea' — 'be it... be it', whatever it turns out to be.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Whatever the challenge might be, you always knew how to face it.",
+          "answer": "Sea cual sea el reto, siempre supiste enfrentarlo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ cual sea el reto, siempre supiste enfrentarlo.",
+          "answer": "Sea"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para decir 'sin importar cuál sea'?",
+          "answer": "Sea cual sea"
+        }
+      ]
+    },
+    {
+      "target": "Pase lo que pase, contarás con nuestro apoyo.",
+      "native": "Whatever happens, you will have our support.",
+      "phonetic": "PAH-seh loh keh PAH-seh, kon-tah-RAHS kon NWES-troh ah-POH-yoh",
+      "syllables": ["PAH", "seh", "loh", "keh", "PAH", "seh", "kon", "tah", "RAHS", "kon", "NWES", "troh", "ah", "POH", "yoh"],
+      "vocabularyIntro": "'Pase lo que pase' (literally 'let happen what may happen') is another fixed subjunctive formula, this one meaning 'no matter what happens' or 'come what may'.",
+      "exampleSentence": {
+        "target": "Pase lo que pase, seguiremos adelante.",
+        "native": "Whatever happens, we will keep moving forward."
+      },
+      "grammarNote": "Built the same way as 'sea cual sea': the present subjunctive of 'pasar' repeated around the relative 'lo que', producing an unconditional formula.",
+      "memoryHook": "Think of the English 'come what may' — 'pase lo que pase' is its Spanish twin.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Whatever happens, you will have our support.",
+          "answer": "Pase lo que pase, contarás con nuestro apoyo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Pase lo que ___, contarás con nuestro apoyo.",
+          "answer": "pase"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices para prometer tu apoyo sin condiciones?",
+          "answer": "Pase lo que pase"
+        }
+      ]
+    },
+    {
+      "target": "¿Quién no recuerda tu primer día aquí?",
+      "native": "Who doesn't remember your first day here?",
+      "phonetic": "kee-EN no reh-KWEHR-dah too pree-MEHR DEE-ah ah-KEE",
+      "syllables": ["kee", "EN", "no", "reh", "KWEHR", "dah", "too", "pree", "MEHR", "DEE", "ah", "ah", "KEE"],
+      "vocabularyIntro": "This is a rhetorical question — it isn't really asking for information; the speaker assumes everyone remembers and uses the question to make the audience recall the moment together.",
+      "exampleSentence": {
+        "target": "¿Quién no ha soñado con este momento?",
+        "native": "Who hasn't dreamed of this moment?"
+      },
+      "grammarNote": "Rhetorical questions in Mexican Spanish speeches often use 'quién no...' to imply universal agreement, functioning almost like a statement rather than a real question.",
+      "memoryHook": "'Quién no' basically means 'everybody' — nobody is expected to raise their hand.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Who doesn't remember your first day here?",
+          "answer": "¿Quién no recuerda tu primer día aquí?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿___ no recuerda tu primer día aquí?",
+          "answer": "Quién"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué tipo de pregunta da por hecho que todos están de acuerdo, en vez de pedir información?",
+          "answer": "Una pregunta retórica"
+        }
+      ]
+    },
+    {
+      "target": "Es de suma importancia reconocer tu esfuerzo.",
+      "native": "It's of the utmost importance to recognize your effort.",
+      "phonetic": "es deh SOO-mah eem-por-TAHN-see-ah reh-koh-noh-SEHR too es-FWEHR-soh"
+    },
+    {
+      "target": "Cueste lo que cueste, seguiremos este camino juntos.",
+      "native": "Whatever it costs, we will continue on this path together.",
+      "phonetic": "KWES-teh loh keh KWES-teh, seh-gee-REH-mos ES-teh kah-MEE-noh HOON-tohs"
+    },
+    {
+      "target": "Enfrentamos retos ineludibles, y siempre salimos adelante.",
+      "native": "We faced unavoidable challenges, and we always came out ahead.",
+      "phonetic": "en-fren-TAH-mos REH-tohs ee-neh-loo-DEE-bles, ee see-EM-preh sah-LEE-mos ah-deh-LAHN-teh"
+    },
+    {
+      "target": "Levantemos la copa por los éxitos venideros.",
+      "native": "Let's raise our glasses to the successes to come.",
+      "phonetic": "leh-vahn-TEH-mos lah KOH-pah por lohs EK-see-tohs veh-nee-DEH-rohs"
+    },
+    {
+      "target": "Haya quien lo dude, pero tu legado es innegable.",
+      "native": "Let there be those who doubt it, but your legacy is undeniable.",
+      "phonetic": "AH-yah kee-EN loh DOO-deh, PEH-roh too leh-GAH-doh es een-neh-GAH-bleh",
+      "syllables": ["AH", "yah", "kee", "EN", "loh", "DOO", "deh", "PEH", "roh", "too", "leh", "GAH", "doh", "es", "een", "neh", "GAH", "bleh"],
+      "vocabularyIntro": "'Haya quien lo dude' (literally 'let there be whoever doubts it') uses the present subjunctive 'haya' to concede that some skeptic might exist, right before dismissing that doubt — a stylized way to preempt criticism.",
+      "exampleSentence": {
+        "target": "Haya quien lo dude, pero los resultados hablan por sí solos.",
+        "native": "Let there be those who doubt it, but the results speak for themselves."
+      },
+      "grammarNote": "'Haya' is the present subjunctive of 'haber' (there to be); this formula concedes a hypothetical objection before overriding it with 'pero'.",
+      "memoryHook": "Think 'let there be doubters' — you're granting them existence just to brush them aside.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Let there be those who doubt it, but your legacy is undeniable.",
+          "answer": "Haya quien lo dude, pero tu legado es innegable."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ quien lo dude, pero tu legado es innegable.",
+          "answer": "Haya"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para admitir que alguien podría dudar, antes de refutarlo?",
+          "answer": "Haya quien lo dude"
+        }
+      ]
+    },
+    {
+      "target": "Brindemos por la amistad, por el esfuerzo y por el futuro.",
+      "native": "Let's toast to friendship, to effort, and to the future.",
+      "phonetic": "breen-DEH-mos por lah ah-mees-TAHD, por el es-FWEHR-soh ee por el foo-TOO-roh"
+    }
+  ],
+  "dialogue": {
+    "id": "C2-L1-D1",
+    "scenario": "You deliver a short toast at a colleague's farewell party and are interrupted by a friendly heckle.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Todos guardemos silencio — nuestro colega quiere decir unas palabras.",
+        "native": "Let's all quiet down — our colleague wants to say a few words."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "open_toast",
+        "hints": ["Quiero decir unas palabras.", "No cabe duda de que hoy es un día especial."]
+      },
+      {
+        "speaker": "npc",
+        "line": "¡Ya bájale, orador!",
+        "native": "Tone it down, mister orator!"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "recover_with_flourish",
+        "hints": ["¿Quién no recuerda tu primer día aquí?", "Difícil fue el camino, pero aquí estamos."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Jaja, tienes razón. Continúa, por favor.",
+        "native": "Haha, you're right. Please continue."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "affirm_commitment",
+        "hints": ["Sea cual sea el reto, siempre supiste enfrentarlo.", "Pase lo que pase, contarás con nuestro apoyo."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Eso significa mucho para todos nosotros.",
+        "native": "That means a lot to all of us."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "closing_toast",
+        "hints": ["Haya quien lo dude, pero tu legado es innegable.", "Brindemos por la amistad, por el esfuerzo y por el futuro."]
+      }
+    ]
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "id": "C1-L3",
+  "title": "Abstract and Professional Topics",
+  "grammarNote": "This lesson covers impersonal and passive constructions used to discuss data and processes without naming an agent: impersonal 'se' with verbs of prediction ('se prevé que,' 'se espera que,' + subjunctive), the fixed phrase 'se llevó a cabo,' the true passive 'fue implementado por' (with agent), and the hedging formula 'cabe señalar que.' It pairs these with precise quantification and trend language — percentages spoken as words ('aumentó un doce por ciento'), 'se redujo a la mitad,' 'en torno a,' and 'a largo plazo' — for discussing abstract, data-driven topics like the economy, technology, or policy.",
+  "phrases": [
+    {
+      "target": "Se prevé que la automatización afecte a uno de cada cinco empleos en la próxima década.",
+      "native": "It's predicted that automation will affect one in five jobs in the next decade.",
+      "phonetic": "seh preh-VEH keh lah ah-oo-toh-mah-tee-sah-see-OHN ah-FEK-teh ah OO-noh deh KAH-dah SEEN-koh em-PLEH-ohs en lah PROHK-see-mah DEH-kah-dah",
+      "syllables": [
+        "seh",
+        "preh",
+        "VEH",
+        "keh",
+        "lah",
+        "ah",
+        "oo",
+        "toh",
+        "mah",
+        "tee",
+        "sah",
+        "see",
+        "OHN",
+        "ah",
+        "FEK",
+        "teh",
+        "ah",
+        "OO",
+        "noh",
+        "deh",
+        "KAH",
+        "dah",
+        "SEEN",
+        "koh",
+        "em",
+        "PLEH",
+        "ohs",
+        "en",
+        "lah",
+        "PROHK",
+        "see",
+        "mah",
+        "DEH",
+        "kah",
+        "dah"
+      ],
+      "vocabularyIntro": "'Se prevé que' ('it's projected/predicted that') is an impersonal construction with 'se' — it removes the subject doing the predicting and takes the subjunctive because it expresses an uncertain future outcome.",
+      "exampleSentence": {
+        "target": "Se prevé que la demanda crezca en torno a un ocho por ciento.",
+        "native": "Demand is projected to grow by around eight percent."
+      },
+      "grammarNote": "Impersonal 'se' + verb of prediction/uncertainty (se prevé, se espera, se estima) removes the agent and requires the subjunctive in the following clause, since the outcome is not yet a fact.",
+      "memoryHook": "'Se prevé' sounds like 'see + preview' — you're previewing an uncertain future.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's predicted that automation will affect one in five jobs in the next decade.",
+          "answer": "Se prevé que la automatización afecte a uno de cada cinco empleos en la próxima década."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Se prevé que la automatización ___ a uno de cada cinco empleos.",
+          "answer": "afecte"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué se prevé sobre el impacto de la automatización en el empleo?",
+          "answer": "Se prevé que afecte a uno de cada cinco empleos en la próxima década."
+        }
+      ]
+    },
+    {
+      "target": "El estudio se llevó a cabo en quince países durante dos años.",
+      "native": "The study was carried out in fifteen countries over two years.",
+      "phonetic": "el es-TOO-dyoh seh yeh-VOH ah KAH-boh en KEEN-seh pah-EE-ses doo-RAN-teh dohs AH-nyohs",
+      "syllables": [
+        "el",
+        "es",
+        "TOO",
+        "dyoh",
+        "seh",
+        "yeh",
+        "VOH",
+        "ah",
+        "KAH",
+        "boh",
+        "en",
+        "KEEN",
+        "seh",
+        "pah",
+        "EE",
+        "ses",
+        "doo",
+        "RAN",
+        "teh",
+        "dohs",
+        "AH",
+        "nyohs"
+      ],
+      "vocabularyIntro": "'Llevarse a cabo' means 'to be carried out / to take place' — 'se llevó a cabo' is the standard impersonal way to report that an event or process happened, without naming who organized it.",
+      "exampleSentence": {
+        "target": "La conferencia se llevó a cabo sin ningún inconveniente.",
+        "native": "The conference was carried out without any issues."
+      },
+      "grammarNote": "'Se llevó a cabo' is a fixed reflexive-impersonal phrase (not a true grammatical passive) that reports completed events formally, similar to 'tuvo lugar.'",
+      "memoryHook": "'Llevar a cabo' literally means 'to carry to the end' — picture carrying a task all the way to completion.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The study was carried out in fifteen countries over two years.",
+          "answer": "El estudio se llevó a cabo en quince países durante dos años."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El estudio se llevó a ___ en quince países durante dos años.",
+          "answer": "cabo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Dónde se llevó a cabo el estudio?",
+          "answer": "Se llevó a cabo en quince países."
+        }
+      ]
+    },
+    {
+      "target": "El nuevo sistema fue implementado por un equipo de ingenieros locales.",
+      "native": "The new system was implemented by a team of local engineers.",
+      "phonetic": "el NWEH-voh sees-TEH-mah fweh eem-plem-en-TAH-doh por oon eh-KEE-poh deh een-hen-YEH-ros loh-KAH-les",
+      "syllables": [
+        "el",
+        "NWEH",
+        "voh",
+        "sees",
+        "TEH",
+        "mah",
+        "fweh",
+        "eem",
+        "plem",
+        "en",
+        "TAH",
+        "doh",
+        "por",
+        "oon",
+        "eh",
+        "KEE",
+        "poh",
+        "deh",
+        "een",
+        "hen",
+        "YEH",
+        "ros",
+        "loh",
+        "KAH",
+        "les"
+      ],
+      "vocabularyIntro": "'Fue implementado por' is a true passive voice construction (ser + participio + por + agente) — used when the agent performing the action is specified and worth mentioning.",
+      "exampleSentence": {
+        "target": "El plan fue aprobado por la junta directiva.",
+        "native": "The plan was approved by the board of directors."
+      },
+      "grammarNote": "The passive with 'ser' (fue implementado, fue aprobado) names the agent with 'por'; contrast this with impersonal 'se' constructions, which omit the agent entirely.",
+      "memoryHook": "'Ser + participio + por + agente' — the passive 'sandwich' with the doer named at the end.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The new system was implemented by a team of local engineers.",
+          "answer": "El nuevo sistema fue implementado por un equipo de ingenieros locales."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El nuevo sistema fue implementado ___ un equipo de ingenieros locales.",
+          "answer": "por"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Quién implementó el nuevo sistema?",
+          "answer": "Fue implementado por un equipo de ingenieros locales."
+        }
+      ]
+    },
+    {
+      "target": "Cabe señalar que estos datos varían mucho según la región.",
+      "native": "It's worth noting that this data varies a lot depending on the region.",
+      "phonetic": "KAH-beh seh-nyah-LAHR keh EHS-tohs DAH-tos VAH-ree-ahn MOO-choh seh-GOON lah reh-hee-OHN",
+      "syllables": [
+        "KAH",
+        "beh",
+        "seh",
+        "nyah",
+        "LAHR",
+        "keh",
+        "EHS",
+        "tohs",
+        "DAH",
+        "tos",
+        "VAH",
+        "ree",
+        "ahn",
+        "MOO",
+        "choh",
+        "seh",
+        "GOON",
+        "lah",
+        "reh",
+        "hee",
+        "OHN"
+      ],
+      "vocabularyIntro": "'Cabe señalar que' means 'it's worth pointing out that' — a formal hedge used to add a qualifying detail without undermining the main point.",
+      "exampleSentence": {
+        "target": "Cabe señalar que el informe aún no incluye las cifras finales.",
+        "native": "It's worth noting that the report doesn't yet include the final figures."
+      },
+      "grammarNote": "'Cabe' here comes from 'caber' used impersonally ('it fits/is fitting to...'); 'cabe señalar/destacar/mencionar que' is a standard hedging formula in reports and panels.",
+      "memoryHook": "'Cabe' = 'fits' — think 'it fits to mention that...'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's worth noting that this data varies a lot depending on the region.",
+          "answer": "Cabe señalar que estos datos varían mucho según la región."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Cabe ___ que estos datos varían mucho según la región.",
+          "answer": "señalar"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué cabe señalar sobre estos datos?",
+          "answer": "Cabe señalar que varían mucho según la región."
+        }
+      ]
+    },
+    {
+      "target": "El uso de inteligencia artificial en la industria aumentó un doce por ciento este año.",
+      "native": "The use of artificial intelligence in industry increased by twelve percent this year.",
+      "phonetic": "el OO-soh deh een-teh-lee-HEN-syah ar-tee-fee-SYAL en lah een-DOOS-tryah ah-oo-men-TOH oon DOH-seh por SYEN-toh EHS-teh AH-nyoh",
+      "syllables": [
+        "el",
+        "OO",
+        "soh",
+        "deh",
+        "een",
+        "teh",
+        "lee",
+        "HEN",
+        "syah",
+        "ar",
+        "tee",
+        "fee",
+        "SYAL",
+        "en",
+        "lah",
+        "een",
+        "DOOS",
+        "tryah",
+        "ah",
+        "oo",
+        "men",
+        "TOH",
+        "oon",
+        "DOH",
+        "seh",
+        "por",
+        "SYEN",
+        "toh",
+        "EHS",
+        "teh",
+        "AH",
+        "nyoh"
+      ],
+      "vocabularyIntro": "Percentages in formal spoken Spanish are said as words ('un doce por ciento') rather than read as symbols — useful vocabulary for reporting statistics aloud.",
+      "exampleSentence": {
+        "target": "La producción se redujo a la mitad en solo tres meses.",
+        "native": "Production was cut in half in just three months."
+      },
+      "grammarNote": "'Aumentó un X por ciento' / 'se redujo a la mitad' are standard fixed phrases for reporting trends; 'en torno a' ('around, approximately') softens an exact figure into an estimate.",
+      "memoryHook": "'Doce por ciento' = 'twelve for [each] hundred' — 'por ciento' literally means 'per hundred.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The use of artificial intelligence in industry increased by twelve percent this year.",
+          "answer": "El uso de inteligencia artificial en la industria aumentó un doce por ciento este año."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El uso de inteligencia artificial en la industria aumentó un doce por ___ este año.",
+          "answer": "ciento"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuánto aumentó el uso de inteligencia artificial este año?",
+          "answer": "Aumentó un doce por ciento."
+        }
+      ]
+    },
+    {
+      "target": "A largo plazo, se espera que los costos se reduzcan en torno a un veinte por ciento.",
+      "native": "In the long term, costs are expected to decrease by around twenty percent.",
+      "phonetic": "ah LAR-goh PLAH-soh, seh es-PEH-rah keh lohs KOHS-tohs seh reh-DOOS-kahn en TOR-noh ah oon VEIN-teh por SYEN-toh",
+      "syllables": [
+        "ah",
+        "LAR",
+        "goh",
+        "PLAH",
+        "soh",
+        "seh",
+        "es",
+        "PEH",
+        "rah",
+        "keh",
+        "lohs",
+        "KOHS",
+        "tohs",
+        "seh",
+        "reh",
+        "DOOS",
+        "kahn",
+        "en",
+        "TOR",
+        "noh",
+        "ah",
+        "oon",
+        "VEIN",
+        "teh",
+        "por",
+        "SYEN",
+        "toh"
+      ],
+      "vocabularyIntro": "'A largo plazo' means 'in/over the long term' (contrast 'a corto plazo,' short term); 'en torno a' means 'around/in the vicinity of' and softens a statistic into an estimate.",
+      "exampleSentence": {
+        "target": "A corto plazo, los resultados en torno a un cinco por ciento son razonables.",
+        "native": "In the short term, results around five percent are reasonable."
+      },
+      "grammarNote": "'Se espera que' triggers the subjunctive (se reduzcan) just like 'se prevé que,' since it also expresses an uncertain future outcome; 'en torno a' functions as a hedge before a number.",
+      "memoryHook": "'Plazo' = 'term/timeframe' — 'largo plazo' is a long timeframe, 'corto plazo' a short one.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: In the long term, costs are expected to decrease by around twenty percent.",
+          "answer": "A largo plazo, se espera que los costos se reduzcan en torno a un veinte por ciento."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "A largo plazo, se espera que los costos se ___ en torno a un veinte por ciento.",
+          "answer": "reduzcan"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué se espera que pase con los costos a largo plazo?",
+          "answer": "Se espera que se reduzcan en torno a un veinte por ciento."
+        }
+      ]
+    },
+    {
+      "target": "Según el informe, el desempleo se mantuvo estable durante el último trimestre.",
+      "native": "According to the report, unemployment remained stable during the last quarter.",
+      "phonetic": "seh-GOON el een-FOR-meh, el des-em-PLEH-oh seh man-TOO-voh es-TAH-bleh doo-RAN-teh el OOL-tee-moh tree-MES-treh"
+    },
+    {
+      "target": "Este sector fue uno de los más afectados por la crisis.",
+      "native": "This sector was one of the most affected by the crisis.",
+      "phonetic": "EHS-teh sek-TOR fweh OO-noh deh lohs mahs ah-fek-TAH-dohs por lah KREE-sees"
+    },
+    {
+      "target": "Se estima que la mitad de los trabajadores necesitará capacitarse de nuevo.",
+      "native": "It's estimated that half of workers will need to retrain.",
+      "phonetic": "seh es-TEE-mah keh lah mee-TAHD deh lohs trah-bah-hah-DOH-res neh-seh-see-tah-RAH kah-pah-see-TAHR-seh deh NWEH-voh"
+    },
+    {
+      "target": "Los expertos coinciden en que la brecha digital sigue creciendo.",
+      "native": "Experts agree that the digital divide keeps growing.",
+      "phonetic": "lohs eks-PEHR-tos koh-een-SEE-den en keh lah BREH-chah dee-hee-TAL SEE-geh kreh-see-EN-doh"
+    },
+    {
+      "target": "El gobierno anunció una inversión en torno a los dos mil millones de pesos.",
+      "native": "The government announced an investment of around two billion pesos.",
+      "phonetic": "el goh-BYEHR-noh ah-noon-SYOH OO-nah een-vehr-see-OHN en TOR-noh ah lohs dohs meel mee-YOH-nes deh PEH-sohs"
+    },
+    {
+      "target": "Aunque los datos son alentadores, es necesario seguir monitoreando la situación.",
+      "native": "Although the data is encouraging, it's necessary to keep monitoring the situation.",
+      "phonetic": "AH-oon-keh lohs DAH-tohs sohn ah-len-tah-DOH-res, es neh-seh-SAH-ryoh seh-GEER moh-nee-toh-REH-ando lah see-too-ah-see-OHN"
+    }
+  ],
+  "dialogue": {
+    "id": "C1-L3-D1",
+    "scenario": "The learner joins a cooperative panel discussion on automation and employment, building on other panelists' points.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Bienvenidos al panel de hoy sobre automatización y empleo. Empecemos con los datos más recientes.",
+        "native": "Welcome to today's panel on automation and employment. Let's start with the most recent data."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "cite_statistic",
+        "hints": [
+          "El uso de inteligencia artificial en la industria aumentó un doce por ciento este año",
+          "Se estima que la mitad de los trabajadores necesitará capacitarse de nuevo"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Interesante. Y en cuanto al futuro, ¿qué proyecciones existen?",
+        "native": "Interesting. And regarding the future, what projections exist?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "state_impersonal_projection",
+        "hints": [
+          "Se prevé que la automatización afecte a uno de cada cinco empleos en la próxima década",
+          "A largo plazo, se espera que los costos se reduzcan en torno a un veinte por ciento"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Coincido con eso. Aunque, claro, no todos los sectores se verán igual.",
+        "native": "I agree with that. Although, of course, not every sector will be affected equally."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "qualify_claim",
+        "hints": [
+          "Cabe señalar que estos datos varían mucho según la región",
+          "Este sector fue uno de los más afectados por la crisis"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Muy buen punto. ¿Alguna conclusión final antes de cerrar?",
+        "native": "Very good point. Any final conclusion before we close?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "close_with_caution",
+        "hints": [
+          "Aunque los datos son alentadores, es necesario seguir monitoreando la situación",
+          "Los expertos coinciden en que la brecha digital sigue creciendo"
+        ]
+      }
+    ]
+  }
+}

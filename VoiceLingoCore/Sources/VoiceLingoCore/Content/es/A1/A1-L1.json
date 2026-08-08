@@ -1,0 +1,118 @@
+{
+  "id": "A1-L1",
+  "title": "Greetings",
+  "grammarNote": "Use 'buenos' for masculine/neutral greetings, 'buenas' for feminine. Time of day matters: buenos días (morning), buenas tardes (afternoon), buenas noches (evening/night).",
+  "phrases": [
+    {
+      "target": "Buenos días",
+      "native": "Good morning",
+      "phonetic": "BWEH-nos DEE-as",
+      "syllables": ["BWEH", "nos", "DEE", "as"],
+      "vocabularyIntro": "'Buenos días' literally means 'good days' — used as a morning greeting until roughly noon.",
+      "exampleSentence": {
+        "target": "Buenos días, señora García.",
+        "native": "Good morning, Mrs. García."
+      },
+      "grammarNote": "'Buenos' agrees with the plural masculine noun 'días'; never say 'buena día'.",
+      "memoryHook": "Think of it as 'way' plus 'nos', meaning 'us' — 'our good day begins'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Good morning",
+          "answer": "Buenos días"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Buenos ___, señor.",
+          "answer": "días"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices a las 8 de la mañana?",
+          "answer": "Buenos días"
+        }
+      ]
+    },
+    {
+      "target": "Buenas tardes",
+      "native": "Good afternoon",
+      "phonetic": "BWEH-nas TAR-des"
+    },
+    {
+      "target": "Buenas noches",
+      "native": "Good evening / Good night",
+      "phonetic": "BWEH-nas NOH-ches"
+    },
+    {
+      "target": "¿Cómo estás?",
+      "native": "How are you? (informal)",
+      "phonetic": "KOH-moh es-TAHS"
+    },
+    {
+      "target": "Estoy bien",
+      "native": "I am well",
+      "phonetic": "es-TOY bee-EN"
+    },
+    {
+      "target": "Estoy bien, gracias",
+      "native": "I am well, thank you",
+      "phonetic": "es-TOY bee-EN, GRAH-see-as"
+    },
+    {
+      "target": "¿Y tú?",
+      "native": "And you? (informal)",
+      "phonetic": "ee TOO"
+    },
+    {
+      "target": "Mucho gusto",
+      "native": "Nice to meet you / Pleased to meet you",
+      "phonetic": "MOO-choh GOOS-toh"
+    },
+    {
+      "target": "Encantado",
+      "native": "Delighted / Enchanted (masculine)",
+      "phonetic": "en-can-TAH-doh"
+    },
+    {
+      "target": "Encantada",
+      "native": "Delighted / Enchanted (feminine)",
+      "phonetic": "en-can-TAH-dah"
+    },
+    {
+      "target": "¿Cuál es tu nombre?",
+      "native": "What is your name? (informal)",
+      "phonetic": "KWAL es too NOHM-breh"
+    },
+    {
+      "target": "Me llamo Juan",
+      "native": "My name is Juan",
+      "phonetic": "meh YAH-moh HWAN"
+    }
+  ],
+  "dialogue": {
+    "id": "A1-L1-D1",
+    "scenario": "You run into a coworker in the morning at the office.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenos días. ¿Cómo estás?",
+        "native": "Good morning. How are you?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "greeting_response",
+        "hints": ["Estoy bien", "Estoy bien, gracias"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Mucho gusto. ¿Cuál es tu nombre?",
+        "native": "Nice to meet you. What is your name?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "state_name",
+        "hints": ["Me llamo Juan"]
+      }
+    ]
+  }
+}

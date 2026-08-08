@@ -1,0 +1,159 @@
+VoiceLingo — Sample Lesson Manuscript
+Level: A1 (Beginner)
+Topic: Greetings, introducing yourself, saying where you're from
+Format assumption: audio-only, hands-free interaction (e.g. driving) — the
+student cannot look at a screen, so nothing in this lesson depends on
+visuals, text, or gestures. Everything must work by ear alone.
+Session length: ~15 minutes, one short lesson per day.
+Student: Alex (this is Alex's 2nd daily session; day 1 covered greetings
+and giving your name).
+
+---
+
+TEACHER: ¡Hola, Alex! Quick thing first — did you say "buenos días" to
+anyone this week, like I asked?
+
+STUDENT: I did, actually. Said it to my barista yesterday morning.
+
+TEACHER: ¿Y qué dijo?
+
+STUDENT: She just said it back and smiled, I think she thought it was a
+little random.
+
+TEACHER: That counts! Okay — since it's morning for you right now, greet
+me properly.
+
+STUDENT: Buenos días, profesora. ¿Cómo estás?
+
+TEACHER: Estoy muy bien, gracias. ¿Y tú?
+
+STUDENT: Estoy bien también.
+
+TEACHER: Bien. And if I don't know you yet?
+
+STUDENT: Um — me llamo Alex. Mucho gusto.
+
+TEACHER: Encantada. — Good, that's automatic now, I didn't even have to
+prompt you for "cómo te llamas." Today we're adding one thing on top of
+that: where you're from. Ready?
+
+STUDENT: Ready.
+
+TEACHER: The question is "¿De dónde eres?" — "Where are you from?" Say it
+back to me.
+
+STUDENT: ¿De dónde eres?
+
+TEACHER: Bien. And to answer, you say "Soy de" plus the place. Soy de
+México. Now you — where are you from?
+
+STUDENT: Soy de... Chicago.
+
+TEACHER: Soy de Chicago. Perfecto, city names mostly don't change. If
+someone asks your country, same pattern — soy de los Estados Unidos.
+
+STUDENT: Soy de los Estados Unidos.
+
+TEACHER: Muy bien. Now — quick trap, listen closely. If I ask YOU, I say
+"¿de dónde ERES?" — with an S, because I'm asking about "tú." But if I'm
+telling you about someone else, like my friend, I'd say "¿de dónde ES?" —
+no S. "Eres" is you, "es" is he or she. Don't worry about producing that
+part yet, just recognize it when you hear it. ¿De dónde es tu papá?
+
+STUDENT: Uh... he's from Ireland — is de Irlanda?
+
+TEACHER: ¡Sí! Es de Irlanda. You didn't need "eres" there, good instinct.
+
+STUDENT: Okay that makes more sense now.
+
+TEACHER: Good. Let's put it all together — full conversation, like we're
+strangers meeting. I'll start.
+
+TEACHER: ¡Buenas tardes!
+
+STUDENT: ¡Buenas tardes! ¿Cómo estás?
+
+TEACHER: Estoy bien, gracias. ¿Y tú?
+
+STUDENT: Estoy bien también. Me llamo Alex.
+
+TEACHER: Mucho gusto, Alex. Me llamo Marisol.
+
+STUDENT: Encantado. ¿De dónde eres?
+
+TEACHER: Soy de México. ¿Y tú, de dónde eres?
+
+STUDENT: Soy de Chicago, en los Estados Unidos.
+
+TEACHER: ¡Qué bien! — Notice you added "en los Estados Unidos" on your
+own, I didn't teach you that connector, that was just you being
+resourceful.
+
+STUDENT: I panicked and it came out, honestly.
+
+TEACHER: That's usually how it works. Okay, we're at about ten minutes —
+let's do that same conversation one more time, but I want you to change
+something. Different time of day, different city, make up a name if you
+want.
+
+TEACHER: ¡Buenos días!
+
+STUDENT: ¡Buenos días! ¿Cómo estás?
+
+TEACHER: Estoy bien. Me llamo Marisol, ¿cómo te llamas?
+
+STUDENT: Me llamo... Roberto. Mucho gusto.
+
+TEACHER: Encantada, Roberto. ¿De dónde eres?
+
+STUDENT: Soy de Los Ángeles.
+
+TEACHER: Perfecto. See how none of that took you long to produce that
+time? That's the goal every day — not new grammar rules, just less
+hesitation.
+
+STUDENT: Yeah, it's coming faster.
+
+TEACHER: Bueno, casi se acaba el tiempo — we're almost out of time. Quick
+recap: how do you ask where someone's from?
+
+STUDENT: ¿De dónde eres?
+
+TEACHER: ¿Y cómo respondes?
+
+STUDENT: Soy de... wherever I'm from.
+
+TEACHER: Exacto. For tomorrow — I want you to actually introduce yourself
+to someone this week using all of it: greeting, name, and where you're
+from, real person, doesn't matter who. Same time tomorrow?
+
+STUDENT: Same time works.
+
+TEACHER: Perfecto. ¡Buenas noches, Alex! Bien hecho hoy.
+
+STUDENT: Buenas noches, profesora. Thanks.
+
+---
+
+Notes for future lesson design:
+
+- Every teacher line must be understandable by ear alone — no reliance on
+  spelling, punctuation cues (¿ ¡), or seeing text on screen.
+- New material introduced per session: exactly one question/answer pair
+  ("¿De dónde eres?" / "Soy de...") plus one passive-recognition-only
+  point (eres vs. es) — small enough to fit a 15-minute session without
+  cramming.
+- Repetition comes from replaying the same roleplay with one variable
+  changed (time of day, name, city), not from introducing new content
+  twice.
+- The teacher tracks elapsed time out loud ("we're at about ten minutes,"
+  "casi se acaba el tiempo") since there's no visible progress bar or
+  timer for the student to check.
+- The teacher notices and rewards language the student produces outside
+  the lesson's own scripted vocabulary (e.g. "en los Estados Unidos" or
+  "también"), rather than only accepting the expected phrase.
+- Correction happens by continuing the conversation and letting the
+  correct form resurface naturally, not by stopping to say "wrong, try
+  again."
+- Homework is one small, concrete, real-world action tied to today's
+  content, not a review packet.

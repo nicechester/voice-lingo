@@ -1,0 +1,243 @@
+{
+  "id": "A2-L5",
+  "title": "Last Weekend",
+  "grammarNote": "This lesson covers the regular preterite (-ar/-er/-ir) plus the high-frequency irregulars fui, hice, tuve, estuve, and fue, along with past time markers (ayer, anoche, el fin de semana pasado, hace dos días) and sequencing connectors (primero, luego, después, al final). Every action described is a single, completed past event.",
+  "phrases": [
+    {
+      "target": "El fin de semana pasado fui a la playa",
+      "native": "Last weekend I went to the beach",
+      "phonetic": "el feen deh seh-MAH-nah pah-SAH-doh fwee ah lah PLAH-yah",
+      "syllables": ["el", "feen", "deh", "seh", "MAH", "nah", "pah", "SAH", "doh", "fwee", "ah", "lah", "PLAH", "yah"],
+      "vocabularyIntro": "'Fui' is the irregular preterite of ir (to go), identical in form to the preterite of ser; 'el fin de semana pasado' means 'last weekend'.",
+      "exampleSentence": {
+        "target": "El fin de semana pasado fui a la playa con mi familia.",
+        "native": "Last weekend I went to the beach with my family."
+      },
+      "grammarNote": "'Fui' shares its form between ir and ser in the preterite — context tells you which verb is meant; here 'a la playa' signals movement, so it's from ir.",
+      "memoryHook": "Fui sounds like 'phooey' — 'phooey, I already went (fui) there and I'm back'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Last weekend I went to the beach",
+          "answer": "El fin de semana pasado fui a la playa"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El fin de semana pasado ___ a la playa.",
+          "answer": "fui"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Adónde fuiste el fin de semana pasado?",
+          "answer": "El fin de semana pasado fui a la playa"
+        }
+      ]
+    },
+    {
+      "target": "Primero desayuné con mi familia",
+      "native": "First I had breakfast with my family",
+      "phonetic": "pree-MEH-roh deh-sah-yoo-NEH kon mee fah-MEE-lee-ah",
+      "syllables": ["pree", "MEH", "roh", "deh", "sah", "yoo", "NEH", "kon", "mee", "fah", "MEE", "lee", "ah"],
+      "vocabularyIntro": "'Desayuné' is the regular preterite of desayunar (-ar verb) for 'yo'; 'primero' ('first') introduces the first event in a sequence of past actions.",
+      "exampleSentence": {
+        "target": "Primero desayuné con mi familia y luego salimos.",
+        "native": "First I had breakfast with my family and then we went out."
+      },
+      "grammarNote": "Regular -ar preterite for 'yo' ends in -é: desayunar → desayuné, just like hablar → hablé or caminar → caminé.",
+      "memoryHook": "Desayuné ends in -é like café — pair your morning coffee with the memory of that -é ending.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: First I had breakfast with my family",
+          "answer": "Primero desayuné con mi familia"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Primero ___ con mi familia.",
+          "answer": "desayuné"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué hiciste primero el sábado por la mañana?",
+          "answer": "Primero desayuné con mi familia"
+        }
+      ]
+    },
+    {
+      "target": "Luego hice unas compras",
+      "native": "Then I did some shopping",
+      "phonetic": "LWEH-goh EE-seh OO-nas KOHM-pras",
+      "syllables": ["LWEH", "goh", "EE", "seh", "OO", "nas", "KOHM", "pras"],
+      "vocabularyIntro": "'Hice' is the irregular preterite of hacer (to do/make) for 'yo'; 'luego' ('then/next') moves the story to the second event.",
+      "exampleSentence": {
+        "target": "Luego hice unas compras en el mercado.",
+        "native": "Then I did some shopping at the market."
+      },
+      "grammarNote": "'Hacer' is irregular in the preterite: hice, hiciste, hizo, hicimos, hicieron — no accent on 'hice', unlike the regular -é endings.",
+      "memoryHook": "Hice sounds like 'ee-seh' — 'easy', it was easy, I already did (hice) it.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Then I did some shopping",
+          "answer": "Luego hice unas compras"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Luego ___ unas compras.",
+          "answer": "hice"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué hiciste después de desayunar?",
+          "answer": "Luego hice unas compras"
+        }
+      ]
+    },
+    {
+      "target": "Después comí tacos con mis amigos",
+      "native": "Afterward I ate tacos with my friends",
+      "phonetic": "des-PWES koh-MEE TAH-kos kon mees ah-MEE-gos",
+      "syllables": ["des", "PWES", "koh", "MEE", "TAH", "kos", "kon", "mees", "ah", "MEE", "gos"],
+      "vocabularyIntro": "'Comí' is the regular preterite of comer (-er verb) for 'yo'; 'después' ('afterward') signals the next step in the sequence.",
+      "exampleSentence": {
+        "target": "Después comí tacos con mis amigos en la calle.",
+        "native": "Afterward I ate tacos with my friends on the street."
+      },
+      "grammarNote": "Regular -er preterite for 'yo' ends in -í: comer → comí, the same pattern -ir verbs use, like salir → salí.",
+      "memoryHook": "Comí rhymes with 'so me' — 'so, me' ate all the tacos already.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Afterward I ate tacos with my friends",
+          "answer": "Después comí tacos con mis amigos"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Después ___ tacos con mis amigos.",
+          "answer": "comí"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué comiste con tus amigos ese día?",
+          "answer": "Después comí tacos con mis amigos"
+        }
+      ]
+    },
+    {
+      "target": "Al final estuve muy cansado",
+      "native": "In the end I was very tired",
+      "phonetic": "al fee-NAL es-TOO-veh mwee kan-SAH-doh",
+      "syllables": ["al", "fee", "NAL", "es", "TOO", "veh", "mwee", "kan", "SAH", "doh"],
+      "vocabularyIntro": "'Estuve' is the irregular preterite of estar for 'yo', used here for a temporary state; 'al final' ('in the end/finally') closes the sequence of events.",
+      "exampleSentence": {
+        "target": "Al final estuve muy cansado, pero feliz.",
+        "native": "In the end I was very tired, but happy."
+      },
+      "grammarNote": "'Estar' is irregular in the preterite: estuve, estuviste, estuvo, estuvimos, estuvieron — no written accents, unlike the regular -í/-é endings.",
+      "memoryHook": "Estuve sounds like 'es-TOO-vay' — 'it was too much', so I ended up exhausted.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: In the end I was very tired",
+          "answer": "Al final estuve muy cansado"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Al final ___ muy cansado.",
+          "answer": "estuve"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cómo te sentiste al final del fin de semana?",
+          "answer": "Al final estuve muy cansado"
+        }
+      ]
+    },
+    {
+      "target": "Anoche cociné para mis amigos",
+      "native": "Last night I cooked for my friends",
+      "phonetic": "ah-NOH-cheh koh-see-NEH PAH-rah mees ah-MEE-gos"
+    },
+    {
+      "target": "Tuve mucho trabajo ayer",
+      "native": "I had a lot of work yesterday",
+      "phonetic": "TOO-veh MOO-choh trah-BAH-hoh ah-YER"
+    },
+    {
+      "target": "Fue un fin de semana increíble",
+      "native": "It was an incredible weekend",
+      "phonetic": "fweh oon feen deh seh-MAH-nah een-kreh-EE-bleh"
+    },
+    {
+      "target": "Hace dos días llamé a mi mamá",
+      "native": "Two days ago I called my mom",
+      "phonetic": "AH-seh dos DEE-as yah-MEH ah mee mah-MAH"
+    },
+    {
+      "target": "Caminamos por el centro ayer",
+      "native": "We walked downtown yesterday",
+      "phonetic": "kah-mee-NAH-mos por el SEN-troh ah-YER"
+    },
+    {
+      "target": "Mis amigos y yo bailamos toda la noche",
+      "native": "My friends and I danced all night",
+      "phonetic": "mees ah-MEE-gos ee yoh bai-LAH-mos TOH-dah lah NOH-cheh"
+    },
+    {
+      "target": "¿Y tú, qué hiciste?",
+      "native": "And you, what did you do?",
+      "phonetic": "ee TOO, keh ee-SEES-teh"
+    }
+  ],
+  "dialogue": {
+    "id": "A2-L5-D1",
+    "scenario": "On Monday morning, a friend asks what you did over the weekend.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "¡Hola! ¿Qué hiciste el fin de semana pasado?",
+        "native": "Hi! What did you do last weekend?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "narrate_event_1",
+        "hints": ["El fin de semana pasado fui a la playa"]
+      },
+      {
+        "speaker": "npc",
+        "line": "¡Qué bien! ¿Y qué hiciste primero cuando llegaste?",
+        "native": "That's great! And what did you do first when you got there?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "narrate_event_2",
+        "hints": ["Primero desayuné con mi familia"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Se oye rico. ¿Qué más hiciste?",
+        "native": "Sounds nice. What else did you do?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "narrate_event_3",
+        "hints": ["Luego hice unas compras", "Después comí tacos con mis amigos"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Suena como un buen día. ¿Cómo terminó todo?",
+        "native": "Sounds like a good day. How did everything end?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "narrate_conclusion",
+        "hints": ["Al final estuve muy cansado", "¿Y tú, qué hiciste?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Yo me quedé en casa casi todo el tiempo, descansando.",
+        "native": "I stayed home almost the whole time, resting."
+      }
+    ]
+  }
+}

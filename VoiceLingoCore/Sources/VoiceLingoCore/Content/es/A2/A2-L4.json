@@ -1,0 +1,213 @@
+{
+  "id": "A2-L4",
+  "title": "My Daily Routine",
+  "grammarNote": "This lesson covers reflexive verbs (levantarse, bañarse, vestirse, acostarse), telling clock time (son las…, es la una, a las… de la mañana, y media, cuarto para las…), frequency adverbs (siempre, casi nunca, todos los días), the present continuous (estar + -ando/-iendo), and ir a + infinitivo for near-future plans. It's built around describing a typical weekday and agreeing on a time to meet.",
+  "phrases": [
+    {
+      "target": "Me levanto a las seis de la mañana",
+      "native": "I get up at six in the morning",
+      "phonetic": "meh leh-VAN-toh ah las SEH-ees deh lah mah-NYAH-nah",
+      "syllables": ["meh", "leh", "VAN", "toh", "ah", "las", "SEH", "ees", "deh", "lah", "mah", "NYAH", "nah"],
+      "vocabularyIntro": "'Levantarse' is a reflexive verb meaning 'to get (oneself) up'; the pronoun 'me' shows the action happens to the speaker, and 'a las + [hour]' states clock time.",
+      "exampleSentence": {
+        "target": "Me levanto a las seis de la mañana todos los días.",
+        "native": "I get up at six in the morning every day."
+      },
+      "grammarNote": "Reflexive verbs like levantarse pair a reflexive pronoun (me, te, se...) with the conjugated verb: me levanto, te levantas, se levanta.",
+      "memoryHook": "Me levanto sounds like 'lever' — pull the lever on yourself to get UP.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I get up at six in the morning",
+          "answer": "Me levanto a las seis de la mañana"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ levanto a las seis de la mañana.",
+          "answer": "Me"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿A qué hora te levantas normalmente?",
+          "answer": "Me levanto a las seis de la mañana"
+        }
+      ]
+    },
+    {
+      "target": "Me baño todos los días",
+      "native": "I shower every day",
+      "phonetic": "meh BAH-nyoh TOH-dos los DEE-as",
+      "syllables": ["meh", "BAH", "nyoh", "TOH", "dos", "los", "DEE", "as"],
+      "vocabularyIntro": "'Bañarse' is a reflexive verb meaning 'to bathe/shower oneself'; 'todos los días' is a frequency phrase meaning 'every day'.",
+      "exampleSentence": {
+        "target": "Me baño todos los días antes de ir a la chamba.",
+        "native": "I shower every day before going to work."
+      },
+      "grammarNote": "Frequency expressions like 'todos los días' usually go at the end (or beginning) of the sentence and don't change the verb conjugation.",
+      "memoryHook": "Baño sounds like 'bath-no' — no skipping the bath, every single day.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I shower every day",
+          "answer": "Me baño todos los días"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me baño ___ los días.",
+          "answer": "todos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Con qué frecuencia te bañas?",
+          "answer": "Me baño todos los días"
+        }
+      ]
+    },
+    {
+      "target": "Estoy trabajando en un proyecto",
+      "native": "I am working on a project",
+      "phonetic": "es-TOY trah-bah-HAN-doh en oon proh-YEK-toh",
+      "syllables": ["es", "TOY", "trah", "bah", "HAN", "doh", "en", "oon", "proh", "YEK", "toh"],
+      "vocabularyIntro": "The present continuous (estar + gerund) describes an action happening right now; -ar verbs like trabajar form the gerund with -ando: trabajando.",
+      "exampleSentence": {
+        "target": "Ahora mismo estoy trabajando en un proyecto importante.",
+        "native": "Right now I am working on an important project."
+      },
+      "grammarNote": "Present continuous = estar (conjugated) + gerund; -ar verbs take -ando, -er/-ir verbs take -iendo.",
+      "memoryHook": "Trabajando ends in -ando, like 'and-on-going' — the action is ON right now.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I am working on a project",
+          "answer": "Estoy trabajando en un proyecto"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Estoy ___ en un proyecto.",
+          "answer": "trabajando"
+        },
+        {
+          "type": "qa",
+          "prompt": "Tu compañero te pregunta qué estás haciendo en este momento en la oficina. ¿Qué le dices?",
+          "answer": "Estoy trabajando en un proyecto"
+        }
+      ]
+    },
+    {
+      "target": "Voy a salir a las cinco y media",
+      "native": "I'm going to leave at five thirty",
+      "phonetic": "voy ah sah-LEER ah las SEEN-koh ee MEH-dee-ah",
+      "syllables": ["voy", "ah", "sah", "LEER", "ah", "las", "SEEN", "koh", "ee", "MEH", "dee", "ah"],
+      "vocabularyIntro": "'Ir a' + infinitive expresses near-future plans ('I'm going to...'); 'y media' means 'half past' when telling time.",
+      "exampleSentence": {
+        "target": "Voy a salir a las cinco y media de la chamba.",
+        "native": "I'm going to leave work at five thirty."
+      },
+      "grammarNote": "'Ir a + infinitivo' uses the conjugated form of ir (voy, vas, va...) followed directly by the infinitive verb, with no preposition change.",
+      "memoryHook": "Voy a = 'I'm going to' — VOY sounds like 'voyage', you're heading toward that plan.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm going to leave at five thirty",
+          "answer": "Voy a salir a las cinco y media"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Voy a salir a las cinco y ___.",
+          "answer": "media"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿A qué hora piensas salir de la oficina hoy?",
+          "answer": "Voy a salir a las cinco y media"
+        }
+      ]
+    },
+    {
+      "target": "Me visto antes de desayunar",
+      "native": "I get dressed before having breakfast",
+      "phonetic": "meh VEES-toh AN-tes deh deh-sah-yoo-NAR"
+    },
+    {
+      "target": "Me acuesto a las once de la noche",
+      "native": "I go to bed at eleven at night",
+      "phonetic": "meh ah-KWES-toh ah las ON-seh deh lah NOH-cheh"
+    },
+    {
+      "target": "Es la una de la tarde",
+      "native": "It's one in the afternoon",
+      "phonetic": "es lah OO-nah deh lah TAR-deh"
+    },
+    {
+      "target": "Son las cuatro y cuarto",
+      "native": "It's a quarter past four",
+      "phonetic": "son las KWAH-troh ee KWAR-toh"
+    },
+    {
+      "target": "Es cuarto para las ocho",
+      "native": "It's a quarter to eight",
+      "phonetic": "es KWAR-toh PAH-rah las OH-choh"
+    },
+    {
+      "target": "Casi nunca desayuno en casa",
+      "native": "I almost never have breakfast at home",
+      "phonetic": "KAH-see NOON-kah deh-sah-YOO-noh en KAH-sah"
+    },
+    {
+      "target": "Siempre reviso mi correo primero",
+      "native": "I always check my email first",
+      "phonetic": "see-EM-preh reh-VEE-soh mee koh-REH-oh pree-MEH-roh"
+    },
+    {
+      "target": "¿Nos vemos a las seis de la tarde?",
+      "native": "Shall we meet at six in the evening?",
+      "phonetic": "nos VEH-mos ah las SEH-ees deh lah TAR-deh"
+    }
+  ],
+  "dialogue": {
+    "id": "A2-L4-D1",
+    "scenario": "A coworker asks about your morning routine and current task, then you agree on a time to meet later today.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "¿A qué hora te levantas normalmente?",
+        "native": "What time do you normally get up?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_wake_time",
+        "hints": ["Me levanto a las seis de la mañana"]
+      },
+      {
+        "speaker": "npc",
+        "line": "¿Y te bañas por la mañana o por la noche?",
+        "native": "And do you shower in the morning or at night?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_routine",
+        "hints": ["Me baño todos los días"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Oye, ¿qué estás haciendo ahorita?",
+        "native": "Hey, what are you doing right now?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_current_task",
+        "hints": ["Estoy trabajando en un proyecto"]
+      },
+      {
+        "speaker": "npc",
+        "line": "¿Nos vemos a las seis de la tarde para platicar?",
+        "native": "Shall we meet at six in the evening to chat?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "agree_meeting_time",
+        "hints": ["Voy a salir a las cinco y media"]
+      }
+    ]
+  }
+}

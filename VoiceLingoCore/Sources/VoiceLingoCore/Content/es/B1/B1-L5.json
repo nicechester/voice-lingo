@@ -1,0 +1,215 @@
+{
+  "id": "B1-L5",
+  "title": "What Did They Say?",
+  "grammarNote": "Opinion frames like 'creo que', 'me parece que', and 'en mi opinión' introduce a personal view, while agreement markers ('estoy de acuerdo', 'no del todo', 'depende') let you react to someone else's stance. Reported speech backshifts present to imperfect and preterite to pluperfect after 'dijo que', and fixed frames like 'me preguntó si' and 'me pidió que' relay questions and requests (the latter as a memorized subjunctive pattern, not yet formally taught).",
+  "phrases": [
+    {
+      "target": "Ana dijo que no podía venir a la fiesta",
+      "native": "Ana said she couldn't come to the party",
+      "phonetic": "AH-nah dee-HOH keh noh poh-DEE-ah veh-NEER ah lah fee-ES-tah",
+      "syllables": ["AH", "nah", "dee", "HOH", "keh", "noh", "poh", "DEE", "ah", "veh", "NEER", "ah", "lah", "fee", "ES", "tah"],
+      "vocabularyIntro": "In reported speech, a present-tense original ('no puedo venir') backshifts to the imperfect ('no podía venir') after 'dijo que'.",
+      "exampleSentence": {
+        "target": "Ana dijo que no podía venir a la fiesta este sábado.",
+        "native": "Ana said she couldn't come to the party this Saturday."
+      },
+      "grammarNote": "Ana's original words were likely 'no puedo venir' (present); relayed through 'dijo que', it shifts one step back to 'podía' (imperfect).",
+      "memoryHook": "Reported speech is like an echo one step further away — present becomes imperfect, as if fading back in time.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Ana said she couldn't come to the party",
+          "answer": "Ana dijo que no podía venir a la fiesta"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ana dijo que no ___ venir a la fiesta.",
+          "answer": "podía"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dijo Ana sobre la fiesta?",
+          "answer": "Dijo que no podía venir"
+        }
+      ]
+    },
+    {
+      "target": "Me dijo que ya había terminado el proyecto",
+      "native": "He told me he had already finished the project",
+      "phonetic": "meh dee-HOH keh yah ah-BEE-ah ter-mee-NAH-doh el proh-YEK-toh",
+      "syllables": ["meh", "dee", "HOH", "keh", "yah", "ah", "BEE", "ah", "ter", "mee", "NAH", "doh", "el", "proh", "YEK", "toh"],
+      "vocabularyIntro": "A preterite original ('terminé el proyecto') backshifts to the pluperfect ('había terminado') when reported after 'dijo que'.",
+      "exampleSentence": {
+        "target": "Me dijo que ya había terminado el proyecto la semana pasada.",
+        "native": "He told me he had already finished the project last week."
+      },
+      "grammarNote": "The original completed action ('terminé', preterite) moves one step further back to 'había terminado' (pluperfect) inside reported speech.",
+      "memoryHook": "Pluperfect 'había + participio' is the 'even further back' past — reported speech pushes a finished event one layer deeper.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: He told me he had already finished the project",
+          "answer": "Me dijo que ya había terminado el proyecto"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me dijo que ya ___ terminado el proyecto.",
+          "answer": "había"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le dijo sobre el proyecto?",
+          "answer": "Me dijo que ya había terminado el proyecto"
+        }
+      ]
+    },
+    {
+      "target": "Me preguntó si quería ir al concierto con ella",
+      "native": "She asked me if I wanted to go to the concert with her",
+      "phonetic": "meh preh-goon-TOH see keh-REE-ah eer al kon-see-EHR-toh kon EH-yah",
+      "syllables": ["meh", "preh", "goon", "TOH", "see", "keh", "REE", "ah", "eer", "al", "kon", "see", "EHR", "toh", "kon", "EH", "yah"],
+      "vocabularyIntro": "'Me preguntó si...' (She asked me if...) is the fixed frame for relaying a yes/no question someone asked you.",
+      "exampleSentence": {
+        "target": "Me preguntó si quería ir al concierto con ella el viernes.",
+        "native": "She asked me if I wanted to go to the concert with her on Friday."
+      },
+      "grammarNote": "'Si' here means 'if/whether' in an indirect question, not the conditional 'si' (if) — the verb after it still backshifts to imperfect.",
+      "memoryHook": "'Preguntó si' — picture a question mark bending backwards into a statement.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: She asked me if I wanted to go to the concert with her",
+          "answer": "Me preguntó si quería ir al concierto con ella"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me preguntó ___ quería ir al concierto.",
+          "answer": "si"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué te preguntó ella?",
+          "answer": "Me preguntó si quería ir al concierto"
+        }
+      ]
+    },
+    {
+      "target": "Me pidió que la ayudara con la mudanza",
+      "native": "She asked me to help her with the move",
+      "phonetic": "meh pee-dee-OH keh lah ah-yoo-DAH-rah kon lah moo-DAN-sah",
+      "syllables": ["meh", "pee", "dee", "OH", "keh", "lah", "ah", "yoo", "DAH", "rah", "kon", "lah", "moo", "DAN", "sah"],
+      "vocabularyIntro": "'Me pidió que + [verb]' relays a request; here 'ayudara' is a fixed, memorized subjunctive-looking form used only as a set pattern for now.",
+      "exampleSentence": {
+        "target": "Me pidió que la ayudara con la mudanza este fin de semana.",
+        "native": "She asked me to help her with the move this weekend."
+      },
+      "grammarNote": "Treat 'me pidió que la ayudara' as a fixed frame to memorize whole — full subjunctive formation rules come at a later level.",
+      "memoryHook": "'Pidió que' always pulls in this special '-ara/-iera' sounding verb — just learn the whole chunk together.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: She asked me to help her with the move",
+          "answer": "Me pidió que la ayudara con la mudanza"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me pidió que la ayudara con la ___.",
+          "answer": "mudanza"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué te pidió que hicieras?",
+          "answer": "Me pidió que la ayudara con la mudanza"
+        }
+      ]
+    },
+    {
+      "target": "Creo que es una buena idea ir todos juntos",
+      "native": "I think it's a good idea for everyone to go together",
+      "phonetic": "KREH-oh keh es OO-nah BWEH-nah ee-DEH-ah eer TOH-dohs HOON-tos",
+      "syllables": ["KREH", "oh", "keh", "es", "OO", "nah", "BWEH", "nah", "ee", "DEH", "ah", "eer", "TOH", "dohs", "HOON", "tos"]
+    },
+    {
+      "target": "Me parece que deberíamos avisarle antes",
+      "native": "It seems to me that we should let her know first",
+      "phonetic": "meh pah-REH-seh keh deh-beh-REE-ah-mos ah-vee-SAR-leh AN-tes",
+      "syllables": ["meh", "pah", "REH", "seh", "keh", "deh", "beh", "REE", "ah", "mos", "ah", "vee", "SAR", "leh", "AN", "tes"]
+    },
+    {
+      "target": "En mi opinión, deberíamos cambiar la fecha",
+      "native": "In my opinion, we should change the date",
+      "phonetic": "en mee oh-pee-nee-OHN, deh-beh-REE-ah-mos kam-bee-AR lah FEH-chah",
+      "syllables": ["en", "mee", "oh", "pee", "nee", "OHN", "deh", "beh", "REE", "ah", "mos", "kam", "bee", "AR", "lah", "FEH", "chah"]
+    },
+    {
+      "target": "Estoy de acuerdo contigo en ese punto",
+      "native": "I agree with you on that point",
+      "phonetic": "es-TOY deh ah-KWEHR-doh kon-TEE-goh en EH-seh POON-toh",
+      "syllables": ["es", "TOY", "deh", "ah", "KWEHR", "doh", "kon", "TEE", "goh", "en", "EH", "seh", "POON", "toh"]
+    },
+    {
+      "target": "No estoy de acuerdo del todo con eso",
+      "native": "I don't completely agree with that",
+      "phonetic": "noh es-TOY deh ah-KWEHR-doh del TOH-doh kon EH-soh",
+      "syllables": ["noh", "es", "TOY", "deh", "ah", "KWEHR", "doh", "del", "TOH", "doh", "kon", "EH", "soh"]
+    },
+    {
+      "target": "Depende de lo que digan los demás",
+      "native": "It depends on what the others say",
+      "phonetic": "deh-PEN-deh deh loh keh DEE-gan los deh-MAHS",
+      "syllables": ["deh", "PEN", "deh", "deh", "loh", "keh", "DEE", "gan", "los", "deh", "MAHS"]
+    },
+    {
+      "target": "Según Marta, el plan cambió a última hora",
+      "native": "According to Marta, the plan changed at the last minute",
+      "phonetic": "seh-GOON MAR-tah, el plan kam-bee-OH ah OOL-tee-mah OH-rah",
+      "syllables": ["seh", "GOON", "MAR", "tah", "el", "plan", "kam", "bee", "OH", "ah", "OOL", "tee", "mah", "OH", "rah"]
+    }
+  ],
+  "dialogue": {
+    "id": "B1-L5-D1",
+    "scenario": "The learner tells a friend what a mutual acquaintance said about an upcoming plan and shares an opinion about it.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Oye, ¿sabes algo del plan para el sábado?",
+        "native": "Hey, do you know anything about the plan for Saturday?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "relay_third_party_statement",
+        "hints": ["Ana dijo que no podía venir a la fiesta", "Según Marta, el plan cambió a última hora"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Vaya, ¿y te dijo algo más sobre eso?",
+        "native": "Wow, and did she tell you anything else about that?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "relay_reported_request_or_question",
+        "hints": ["Me preguntó si quería ir al concierto con ella", "Me pidió que la ayudara con la mudanza"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo. ¿Y tú qué opinas de todo esto?",
+        "native": "I see. And what do you think about all this?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "give_opinion",
+        "hints": ["Creo que es una buena idea ir todos juntos", "En mi opinión, deberíamos cambiar la fecha"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Mmm, no sé, yo creo que deberíamos dejarlo como está.",
+        "native": "Hmm, I don't know, I think we should leave it as it is."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "express_disagreement_or_condition",
+        "hints": ["No estoy de acuerdo del todo con eso", "Depende de lo que digan los demás"]
+      }
+    ]
+  }
+}

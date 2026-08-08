@@ -1,0 +1,263 @@
+{
+  "id": "C2-L4",
+  "title": "Reading Between the Lines",
+  "grammarNote": "This lesson focuses on implicature in everyday Mexican Spanish — fixed phrases like 'está difícil' or 'deja lo checo' whose literal wording diverges sharply from their real, softened meaning of 'no'. It also covers the culturally expected shape of an indirect refusal (gratitude plus a vague excuse) used to decline social obligations without causing offense.",
+  "phrases": [
+    {
+      "target": "Oye, te quería invitar a la reunión familiar del sábado.",
+      "native": "Hey, I wanted to invite you to the family gathering on Saturday.",
+      "phonetic": "OY-eh, teh keh-REE-ah een-vee-TAR ah lah reh-oo-nee-OHN fah-mee-lee-AR del SAH-bah-doh"
+    },
+    {
+      "target": "Ahí nos vemos.",
+      "native": "See you there (maybe).",
+      "phonetic": "ah-EE nohs VEH-mohs",
+      "syllables": ["ah", "EE", "nohs", "VEH", "mohs"],
+      "vocabularyIntro": "Literally 'there we'll see each other', this phrase sounds like a casual confirmation but is often used to keep plans vague — it commits to nothing and can quietly signal 'I probably won't make it, but I don't want to say no directly.'",
+      "exampleSentence": {
+        "target": "¿Vienes a la fiesta? — Ahí nos vemos.",
+        "native": "Are you coming to the party? — See you there (maybe)."
+      },
+      "grammarNote": "The first-person plural 'vemos' softens the statement by making it about a mutual, uncertain future encounter rather than a personal commitment.",
+      "memoryHook": "Think of it as 'we'll see' in English — technically an answer, but really no answer at all.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: See you there (maybe).",
+          "answer": "Ahí nos vemos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Ahí nos ___.",
+          "answer": "vemos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices cuando no quieres comprometerte a asistir, pero tampoco quieres decir que no?",
+          "answer": "Ahí nos vemos"
+        }
+      ]
+    },
+    {
+      "target": "Está difícil.",
+      "native": "It's complicated (probably not).",
+      "phonetic": "es-TAH dee-FEE-seel",
+      "syllables": ["es", "TAH", "dee", "FEE", "seel"],
+      "vocabularyIntro": "Literally 'it's difficult', this is one of the most common indirect refusals in Mexican Spanish — the real message is 'no' or 'unlikely', softened so no one has to say the word directly.",
+      "exampleSentence": {
+        "target": "¿Nos prestas la camioneta? — Está difícil.",
+        "native": "Will you lend us the van? — It's complicated (probably not)."
+      },
+      "grammarNote": "Note there's no explicit subject or negation — the vagueness itself is what signals the polite refusal.",
+      "memoryHook": "When something is merely 'difficult' rather than 'impossible', Mexican Spanish speakers usually mean it's not happening.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's complicated (probably not).",
+          "answer": "Está difícil."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Está ___.",
+          "answer": "difícil"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices para negar algo educadamente sin decir 'no' directamente?",
+          "answer": "Está difícil"
+        }
+      ]
+    },
+    {
+      "target": "Deja lo checo.",
+      "native": "Let me check on it.",
+      "phonetic": "DEH-hah loh CHEH-koh",
+      "syllables": ["DEH", "hah", "loh", "CHEH", "koh"],
+      "vocabularyIntro": "'Checar' is a Mexican Spanish borrowing from English 'to check'. Literally 'leave it, I'll check it', this phrase is polite stalling — it postpones an answer indefinitely and often really means the person doesn't plan to follow through.",
+      "exampleSentence": {
+        "target": "¿Puedes ayudarnos el sábado? — Deja lo checo.",
+        "native": "Can you help us on Saturday? — Let me check on it."
+      },
+      "grammarNote": "'Checo' here is the first-person present of 'checar', not related to the demonym 'checo' (Czech) — context makes the meaning clear.",
+      "memoryHook": "'Checo' sounds like 'check-oh' — 'let me check it', a promise to look into something that often never gets revisited.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Let me check on it.",
+          "answer": "Deja lo checo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Deja lo ___.",
+          "answer": "checo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices para posponer una respuesta sin comprometerte?",
+          "answer": "Deja lo checo"
+        }
+      ]
+    },
+    {
+      "target": "Nomás para no dejar.",
+      "native": "Just so as not to leave it undone.",
+      "phonetic": "noh-MAHS PAH-rah no deh-HAR",
+      "syllables": ["noh", "MAHS", "PAH", "rah", "no", "deh", "HAR"],
+      "vocabularyIntro": "Literally 'just so as not to leave [it]', this phrase describes doing something halfheartedly or as a token gesture — going through the motions without real enthusiasm or commitment.",
+      "exampleSentence": {
+        "target": "Fui a la fiesta, nomás para no dejar.",
+        "native": "I went to the party, just to make an appearance."
+      },
+      "grammarNote": "'Dejar' here is used without a direct object, leaving the implied object ('it', the obligation) understood from context.",
+      "memoryHook": "Think of showing up 'just so it isn't left undone' — the minimum effort to say you were there.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Just so as not to leave it undone.",
+          "answer": "Nomás para no dejar."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Fui a la fiesta, nomás para no ___.",
+          "answer": "dejar"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué dices cuando haces algo solo por cumplir, sin muchas ganas?",
+          "answer": "Nomás para no dejar"
+        }
+      ]
+    },
+    {
+      "target": "Es que fíjate que se me complicó el fin de semana.",
+      "native": "It's just that, you see, my weekend got complicated.",
+      "phonetic": "es keh FEE-hah-teh keh seh meh kom-plee-KOH el feen deh seh-MAH-nah",
+      "syllables": ["es", "keh", "FEE", "hah", "teh", "keh", "seh", "meh", "kom", "plee", "KOH", "el", "feen", "deh", "seh", "MAH", "nah"],
+      "vocabularyIntro": "'Es que fíjate que…' (literally 'it's that, notice that…') is a hedging opener used to introduce an excuse or soften bad news — it signals 'I'm about to explain myself' before a refusal.",
+      "exampleSentence": {
+        "target": "Es que fíjate que ya había hecho otro plan.",
+        "native": "It's just that, you see, I'd already made other plans."
+      },
+      "grammarNote": "'Fíjate' is the informal imperative of 'fijarse' (to notice); here it doesn't literally ask the listener to notice anything — it just buys time and softens the coming explanation.",
+      "memoryHook": "Whenever you hear 'es que fíjate que…', brace for an excuse — it's the verbal equivalent of clearing one's throat before bad news.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's just that, you see, my weekend got complicated.",
+          "answer": "Es que fíjate que se me complicó el fin de semana."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Es que fíjate que se me ___ el fin de semana.",
+          "answer": "complicó"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para introducir una excusa con delicadeza?",
+          "answer": "Es que fíjate que"
+        }
+      ]
+    },
+    {
+      "target": "Ojalá se pueda, ya te digo.",
+      "native": "Hopefully it works out, I'll let you know.",
+      "phonetic": "oh-hah-LAH seh PWEH-dah, yah teh DEE-goh"
+    },
+    {
+      "target": "No hay mal que por bien no venga.",
+      "native": "Every cloud has a silver lining.",
+      "phonetic": "no eye mahl keh por bee-EN no VEHN-gah"
+    },
+    {
+      "target": "Muchas gracias por la invitación, pero se me complica ese día.",
+      "native": "Thank you so much for the invitation, but that day is difficult for me.",
+      "phonetic": "MOO-chahs GRAH-see-ahs por lah een-vee-tah-see-OHN, PEH-roh seh meh kom-PLEE-kah EH-seh DEE-ah",
+      "syllables": ["MOO", "chahs", "GRAH", "see", "ahs", "por", "lah", "een", "vee", "tah", "see", "OHN", "PEH", "roh", "seh", "meh", "kom", "PLEE", "kah", "EH", "seh", "DEE", "ah"],
+      "vocabularyIntro": "This is the culturally expected shape of a soft refusal in Mexican Spanish: gratitude first ('muchas gracias'), then a vague excuse ('se me complica') rather than a flat 'no' — declining while preserving the relationship.",
+      "exampleSentence": {
+        "target": "Muchas gracias por la invitación, pero se me complica llegar temprano.",
+        "native": "Thank you so much for the invitation, but it's hard for me to arrive early."
+      },
+      "grammarNote": "'Se me complica' uses the reflexive/impersonal construction to shift responsibility away from the speaker — the day itself is 'complicated', not the speaker's choice.",
+      "memoryHook": "Pair gratitude with a soft excuse and you have the polite refusal formula: thanks + 'but it's complicated'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Thank you so much for the invitation, but that day is difficult for me.",
+          "answer": "Muchas gracias por la invitación, pero se me complica ese día."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Muchas gracias por la invitación, pero se me ___ ese día.",
+          "answer": "complica"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para rechazar una invitación educadamente?",
+          "answer": "Muchas gracias por la invitación, pero se me complica ese día"
+        }
+      ]
+    },
+    {
+      "target": "Mil gracias por pensar en mí.",
+      "native": "Thanks so much for thinking of me.",
+      "phonetic": "meel GRAH-see-ahs por pen-SAR en mee"
+    },
+    {
+      "target": "Cualquier cosa, yo te aviso.",
+      "native": "Anyway, I'll let you know.",
+      "phonetic": "kwahl-kee-EHR KOH-sah, yoh teh ah-VEE-soh"
+    },
+    {
+      "target": "Más vale tarde que nunca.",
+      "native": "Better late than never.",
+      "phonetic": "mahs VAH-leh TAR-deh keh NOON-kah"
+    }
+  ],
+  "dialogue": {
+    "id": "C2-L4-D1",
+    "scenario": "You are invited to a family gathering you need to decline, and must read an earlier indirect refusal correctly.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Fíjate que le pregunté a mi tía si puede hacer el pastel este año y me dijo: 'deja lo checo'.",
+        "native": "So, get this — I asked my aunt if she could make the cake this year and she told me, 'let me check on it.'"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "recognize_indirect_no",
+        "hints": ["Deja lo checo.", "Está difícil."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Oye, por cierto, ¿te late venir a la reunión familiar del sábado?",
+        "native": "Hey, by the way, are you up for coming to the family gathering on Saturday?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "soft_decline",
+        "hints": ["Muchas gracias por la invitación, pero se me complica ese día.", "Mil gracias por pensar en mí."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ándale pues, ojalá se te resuelva.",
+        "native": "All right then, I hope it works out for you."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "leave_door_open",
+        "hints": ["Cualquier cosa, yo te aviso.", "Ojalá se pueda, ya te digo."]
+      },
+      {
+        "speaker": "npc",
+        "line": "No hay problema, nos vemos cuando se pueda.",
+        "native": "No problem, we'll see each other whenever it works out."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "closing_pleasantry",
+        "hints": ["Más vale tarde que nunca.", "Mil gracias por pensar en mí."]
+      }
+    ]
+  }
+}

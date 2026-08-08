@@ -1,0 +1,453 @@
+{
+  "id": "C1-L2",
+  "title": "Structuring an Argument",
+  "grammarNote": "This lesson builds the cohesion machinery of extended discourse: causal and concessive connectors like 'dado que,' 'siempre y cuando,' 'a pesar de que,' 'por más que,' 'en la medida en que,' and 'de ahí que,' several of which require the subjunctive. It also covers relative clauses that carry a preposition before the pronoun (con el que, para la que), 'lo cual' for commenting on a whole prior idea, 'cuyo' for possession, and nominalization with 'lo + adjetivo' (lo interesante es que) for framing a point in formal speech.",
+  "phrases": [
+    {
+      "target": "Antes de continuar, dado que el tiempo es limitado, me enfocaré en los tres puntos más importantes.",
+      "native": "Before continuing, given that time is limited, I'll focus on the three most important points.",
+      "phonetic": "AHN-tes deh kon-tee-noo-AHR, DAH-doh keh el TYEM-poh es lee-mee-TAH-doh, meh en-foh-kah-REH en lohs trehs POON-tohs mahs eem-por-TAHN-tes",
+      "syllables": [
+        "AHN",
+        "tes",
+        "deh",
+        "kon",
+        "tee",
+        "noo",
+        "AHR",
+        "DAH",
+        "doh",
+        "keh",
+        "el",
+        "TYEM",
+        "poh",
+        "es",
+        "lee",
+        "mee",
+        "TAH",
+        "doh",
+        "meh",
+        "en",
+        "foh",
+        "kah",
+        "REH",
+        "en",
+        "lohs",
+        "trehs",
+        "POON",
+        "tohs",
+        "mahs",
+        "eem",
+        "por",
+        "TAHN",
+        "tes"
+      ],
+      "vocabularyIntro": "'Dado que' means 'given that' / 'since' — it introduces a known, factual cause and takes the indicative, unlike some other causal connectors.",
+      "exampleSentence": {
+        "target": "Dado que los resultados son claros, podemos avanzar a la siguiente fase.",
+        "native": "Given that the results are clear, we can move to the next phase."
+      },
+      "grammarNote": "'Dado que' functions like 'ya que' or 'puesto que' — it presents an accepted fact as the reason for what follows and is always followed by the indicative.",
+      "memoryHook": "'Dado' = 'given' (as in 'a given'); 'dado que' = 'given that.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Given that the results are clear, we can move to the next phase.",
+          "answer": "Dado que los resultados son claros, podemos avanzar a la siguiente fase."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ que el tiempo es limitado, me enfocaré en los tres puntos más importantes.",
+          "answer": "Dado"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Por qué te vas a enfocar solo en tres puntos?",
+          "answer": "Dado que el tiempo es limitado."
+        }
+      ]
+    },
+    {
+      "target": "Podemos avanzar con el lanzamiento, siempre y cuando el equipo legal apruebe el contrato.",
+      "native": "We can move forward with the launch, as long as the legal team approves the contract.",
+      "phonetic": "poh-DEH-mos ah-van-SAHR kon el lan-sah-MYEN-toh, SYEM-preh ee KWAN-doh el eh-KEE-poh leh-GAHL ah-PRWEH-beh el kon-TRAH-toh",
+      "syllables": [
+        "poh",
+        "DEH",
+        "mos",
+        "ah",
+        "van",
+        "SAHR",
+        "kon",
+        "el",
+        "lan",
+        "sah",
+        "MYEN",
+        "toh",
+        "SYEM",
+        "preh",
+        "ee",
+        "KWAN",
+        "doh",
+        "el",
+        "eh",
+        "KEE",
+        "poh",
+        "leh",
+        "GAHL",
+        "ah",
+        "PRWEH",
+        "beh",
+        "el",
+        "kon",
+        "TRAH",
+        "toh"
+      ],
+      "vocabularyIntro": "'Siempre y cuando' means 'as long as' / 'provided that' — it sets a required condition and is always followed by the subjunctive.",
+      "exampleSentence": {
+        "target": "Aceptaremos la propuesta, siempre y cuando cumpla con el presupuesto.",
+        "native": "We'll accept the proposal, as long as it meets the budget."
+      },
+      "grammarNote": "'Siempre y cuando' introduces a condition for a future action, functioning like 'con tal de que' — the verb that follows must be in the subjunctive (apruebe, not aprueba).",
+      "memoryHook": "Literally 'always and when' — think 'always, but only when this condition holds.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: We can move forward with the launch, as long as the legal team approves the contract.",
+          "answer": "Podemos avanzar con el lanzamiento, siempre y cuando el equipo legal apruebe el contrato."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Podemos avanzar con el lanzamiento, siempre y cuando el equipo legal ___ el contrato.",
+          "answer": "apruebe"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Bajo qué condición pueden avanzar con el lanzamiento?",
+          "answer": "Siempre y cuando el equipo legal apruebe el contrato."
+        }
+      ]
+    },
+    {
+      "target": "A pesar de que los costos aumentaron, logramos mantenernos dentro del presupuesto.",
+      "native": "Even though costs increased, we managed to stay within budget.",
+      "phonetic": "ah PEH-sar deh keh lohs KOHS-tohs ah-oo-men-TAH-ron, loh-GRAH-mos man-teh-NEHR-nos DEN-troh del preh-soo-PWES-toh",
+      "syllables": [
+        "ah",
+        "PEH",
+        "sar",
+        "deh",
+        "keh",
+        "lohs",
+        "KOHS",
+        "tohs",
+        "ah",
+        "oo",
+        "men",
+        "TAH",
+        "ron",
+        "loh",
+        "GRAH",
+        "mos",
+        "man",
+        "teh",
+        "NEHR",
+        "nos",
+        "DEN",
+        "troh",
+        "del",
+        "preh",
+        "soo",
+        "PWES",
+        "toh"
+      ],
+      "vocabularyIntro": "'A pesar de que' means 'even though' / 'despite the fact that' — with a known fact it takes the indicative (aumentaron); with a hypothetical it would take the subjunctive.",
+      "exampleSentence": {
+        "target": "A pesar de que el mercado está incierto, seguimos invirtiendo.",
+        "native": "Even though the market is uncertain, we keep investing."
+      },
+      "grammarNote": "Like 'aunque,' 'a pesar de que' switches mood depending on whether the concession is a known fact (indicative) or a hypothetical/downplayed one (subjunctive).",
+      "memoryHook": "'A pesar de' literally means 'at the weight of' — imagine the obstacle weighing you down, yet you push through anyway.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Even though costs increased, we managed to stay within budget.",
+          "answer": "A pesar de que los costos aumentaron, logramos mantenernos dentro del presupuesto."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "A pesar de que los costos ___, logramos mantenernos dentro del presupuesto.",
+          "answer": "aumentaron"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué pasó con los costos a pesar de las dificultades?",
+          "answer": "A pesar de que los costos aumentaron, logramos mantenernos dentro del presupuesto."
+        }
+      ]
+    },
+    {
+      "target": "El proyecto con el que trabajamos el año pasado generó excelentes resultados.",
+      "native": "The project we worked on last year generated excellent results.",
+      "phonetic": "el proh-YEHK-toh kon el keh trah-bah-HAH-mos el AH-nyoh pah-SAH-doh heh-neh-ROH ehk-seh-LEN-tes reh-sool-TAH-dohs",
+      "syllables": [
+        "el",
+        "proh",
+        "YEHK",
+        "toh",
+        "kon",
+        "el",
+        "keh",
+        "trah",
+        "bah",
+        "HAH",
+        "mos",
+        "el",
+        "AH",
+        "nyoh",
+        "pah",
+        "SAH",
+        "doh",
+        "heh",
+        "neh",
+        "ROH",
+        "ehk",
+        "seh",
+        "LEN",
+        "tes",
+        "reh",
+        "sool",
+        "TAH",
+        "dohs"
+      ],
+      "vocabularyIntro": "'Con el que' ('with which') is a relative pronoun that carries the preposition from the verb 'trabajar con' — Spanish never strands a preposition at the end of the clause the way English can.",
+      "exampleSentence": {
+        "target": "La empresa para la que trabajo tiene oficinas en cinco países.",
+        "native": "The company I work for has offices in five countries."
+      },
+      "grammarNote": "When a relative clause needs a preposition, Spanish moves it in front of the relative pronoun (con el que, para la que) and matches el/la to the antecedent's gender.",
+      "memoryHook": "Picture the preposition 'stuck' to the front of 'el que/la que' — it can never drift to the end of the sentence.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The project we worked on last year generated excellent results.",
+          "answer": "El proyecto con el que trabajamos el año pasado generó excelentes resultados."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El proyecto ___ el que trabajamos el año pasado generó excelentes resultados.",
+          "answer": "con"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué generó el proyecto con el que trabajaron el año pasado?",
+          "answer": "Generó excelentes resultados."
+        }
+      ]
+    },
+    {
+      "target": "El cliente canceló el pedido, lo cual afectó nuestros ingresos del trimestre.",
+      "native": "The client canceled the order, which affected our quarterly revenue.",
+      "phonetic": "el klee-EN-teh kan-seh-LOH el peh-DEE-doh, loh KWAL ah-fek-TOH nwes-trohs een-GREH-sohs del tree-MES-treh",
+      "syllables": [
+        "el",
+        "klee",
+        "EN",
+        "teh",
+        "kan",
+        "seh",
+        "LOH",
+        "el",
+        "peh",
+        "DEE",
+        "doh",
+        "loh",
+        "KWAL",
+        "ah",
+        "fek",
+        "TOH",
+        "nwes",
+        "trohs",
+        "een",
+        "GREH",
+        "sohs",
+        "del",
+        "tree",
+        "MES",
+        "treh"
+      ],
+      "vocabularyIntro": "'Lo cual' refers back to an entire previous clause or idea (not just a noun), similar to 'which' introducing a comment on the whole preceding statement.",
+      "exampleSentence": {
+        "target": "El sistema falló durante la presentación, lo cual sorprendió a todos.",
+        "native": "The system failed during the presentation, which surprised everyone."
+      },
+      "grammarNote": "Use 'lo cual' (not 'lo que') when the relative clause comments on an entire idea just stated, typically after a comma; 'cuyo/cuya' instead means 'whose' and agrees with the noun that follows it, not the antecedent.",
+      "memoryHook": "'Lo cual' = 'the which' referring to 'that whole situation I just mentioned.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The client canceled the order, which affected our quarterly revenue.",
+          "answer": "El cliente canceló el pedido, lo cual afectó nuestros ingresos del trimestre."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El cliente canceló el pedido, ___ cual afectó nuestros ingresos del trimestre.",
+          "answer": "lo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué efecto tuvo la cancelación del pedido?",
+          "answer": "Lo cual afectó nuestros ingresos del trimestre."
+        }
+      ]
+    },
+    {
+      "target": "Lo interesante es que las ventas crecieron justo en la región con menos inversión.",
+      "native": "The interesting thing is that sales grew exactly in the region with the least investment.",
+      "phonetic": "loh een-teh-reh-SAN-teh es keh lahs VEN-tahs kreh-see-EH-ron HOOS-toh en lah reh-hee-OHN kon MEH-nos een-vehr-see-OHN",
+      "syllables": [
+        "loh",
+        "een",
+        "teh",
+        "reh",
+        "SAN",
+        "teh",
+        "es",
+        "keh",
+        "lahs",
+        "VEN",
+        "tahs",
+        "kreh",
+        "see",
+        "EH",
+        "ron",
+        "HOOS",
+        "toh",
+        "en",
+        "lah",
+        "reh",
+        "hee",
+        "OHN",
+        "kon",
+        "MEH",
+        "nos",
+        "een",
+        "vehr",
+        "see",
+        "OHN"
+      ],
+      "vocabularyIntro": "'Lo + adjetivo' turns an adjective into an abstract noun phrase ('lo interesante' = 'the interesting thing/part') — a common way to open a comment or highlight a point in formal speech.",
+      "exampleSentence": {
+        "target": "Lo importante es que cumplamos con la fecha límite.",
+        "native": "The important thing is that we meet the deadline."
+      },
+      "grammarNote": "'Lo' + masculine singular adjective creates a nominalized abstract concept regardless of what it later refers to; it's frequently followed by 'es que + indicative/subjunctive.'",
+      "memoryHook": "'Lo bueno, lo malo, lo interesante' — 'the good, the bad, the interesting' — 'lo' packages any adjective into 'the ___ thing.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The interesting thing is that sales grew exactly in the region with the least investment.",
+          "answer": "Lo interesante es que las ventas crecieron justo en la región con menos inversión."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ interesante es que las ventas crecieron justo en la región con menos inversión.",
+          "answer": "Lo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué es lo interesante de los resultados de ventas?",
+          "answer": "Que las ventas crecieron justo en la región con menos inversión."
+        }
+      ]
+    },
+    {
+      "target": "En primer lugar, quiero hablarles sobre el desempeño del último trimestre.",
+      "native": "First, I want to talk to you about last quarter's performance.",
+      "phonetic": "en pree-MEHR loo-GAR, kee-EH-roh ah-BLAHR-les SOH-breh el des-em-PEH-nyoh del OOL-tee-moh tree-MES-treh"
+    },
+    {
+      "target": "En segundo lugar, analizaremos los principales desafíos que enfrentamos.",
+      "native": "Second, we'll analyze the main challenges we faced.",
+      "phonetic": "en seh-GOON-doh loo-GAR, ah-nah-lee-sah-REH-mos lohs preen-see-PAH-les des-ah-FEE-ohs keh en-fren-TAH-mos"
+    },
+    {
+      "target": "Por más que insistamos en reducir gastos, la calidad no debe verse afectada.",
+      "native": "No matter how much we insist on cutting costs, quality shouldn't be affected.",
+      "phonetic": "por mahs keh een-sees-TAH-mos en reh-doo-SEER GAS-tohs, lah kah-lee-DAHD noh DEH-beh VEHR-seh ah-fek-TAH-dah"
+    },
+    {
+      "target": "En la medida en que el mercado se estabilice, ajustaremos la estrategia.",
+      "native": "To the extent that the market stabilizes, we'll adjust the strategy.",
+      "phonetic": "en lah meh-DEE-dah en keh el mehr-KAH-doh seh es-tah-bee-LEE-seh, ah-hoos-tah-REH-mos lah es-trah-TEH-hyah"
+    },
+    {
+      "target": "De ahí que hayamos decidido posponer el lanzamiento hasta el próximo mes.",
+      "native": "Hence we decided to postpone the launch until next month.",
+      "phonetic": "deh ah-EE keh ah-YAH-mos deh-see-DEE-doh pohs-poh-NEHR el lan-sah-MYEN-toh AHS-tah el PROHK-see-moh mes"
+    },
+    {
+      "target": "En resumen, cerramos el trimestre con resultados sólidos y buenas perspectivas.",
+      "native": "In summary, we closed the quarter with solid results and good prospects.",
+      "phonetic": "en reh-SOO-men, seh-RRAH-mos el tree-MES-treh kon reh-sool-TAH-dohs SOH-lee-dohs ee BWEH-nahs pehrs-pek-TEE-vahs"
+    }
+  ],
+  "dialogue": {
+    "id": "C1-L2-D1",
+    "scenario": "The learner presents a structured quarterly briefing to a client and fields a clarifying question.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas tardes. Estamos listos para escuchar su análisis del proyecto.",
+        "native": "Good afternoon. We're ready to hear your analysis of the project."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "open_with_signpost",
+        "hints": [
+          "En primer lugar, quiero hablarles sobre el desempeño del último trimestre",
+          "En segundo lugar, analizaremos los principales desafíos que enfrentamos"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Perfecto, adelante. Empecemos con el desempeño.",
+        "native": "Perfect, go ahead. Let's start with performance."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "state_result_despite_obstacle",
+        "hints": [
+          "A pesar de que los costos aumentaron, logramos mantenernos dentro del presupuesto",
+          "El proyecto con el que trabajamos el año pasado generó excelentes resultados"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo. Pero, ¿a qué se debió esa caída en ingresos del trimestre?",
+        "native": "I understand. But what caused that drop in quarterly revenue?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "explain_cause_with_lo_cual",
+        "hints": [
+          "El cliente canceló el pedido, lo cual afectó nuestros ingresos del trimestre",
+          "Lo interesante es que las ventas crecieron justo en la región con menos inversión"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Ya veo. ¿Y cuál es su recomendación final?",
+        "native": "I see. And what's your final recommendation?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "close_with_conditional_recommendation",
+        "hints": [
+          "Podemos avanzar con el lanzamiento, siempre y cuando el equipo legal apruebe el contrato",
+          "En resumen, cerramos el trimestre con resultados sólidos y buenas perspectivas"
+        ]
+      }
+    ]
+  }
+}

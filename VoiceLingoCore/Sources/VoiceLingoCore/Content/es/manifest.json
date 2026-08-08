@@ -1,0 +1,69 @@
+{
+  "language": "es",
+  "voiceLocale": "es-MX",
+  "recognizerLocale": "es-MX",
+  "levels": [
+    {
+      "id": "A1",
+      "title": "Beginner",
+      "lessons": [
+        { "id": "A1-L1", "title": "Greetings" },
+        { "id": "A1-L2", "title": "Basic Phrases" }
+      ]
+    },
+    {
+      "id": "A2",
+      "title": "Elementary",
+      "lessons": [
+        { "id": "A2-L1", "title": "At the Market" },
+        { "id": "A2-L2", "title": "Ordering Food" },
+        { "id": "A2-L3", "title": "Getting Around" },
+        { "id": "A2-L4", "title": "My Daily Routine" },
+        { "id": "A2-L5", "title": "Last Weekend" }
+      ]
+    },
+    {
+      "id": "B1",
+      "title": "Intermediate",
+      "lessons": [
+        { "id": "B1-L1", "title": "Growing Up" },
+        { "id": "B1-L2", "title": "Travel Trouble" },
+        { "id": "B1-L3", "title": "At the Doctor" },
+        { "id": "B1-L4", "title": "Work and Experience" },
+        { "id": "B1-L5", "title": "What Did They Say?" }
+      ]
+    },
+    {
+      "id": "B2",
+      "title": "Upper-Intermediate",
+      "lessons": [
+        { "id": "B2-L1", "title": "Wishes and Requests" },
+        { "id": "B2-L2", "title": "Doubt and Possibility" },
+        { "id": "B2-L3", "title": "If Things Were Different" },
+        { "id": "B2-L4", "title": "Making the Case" },
+        { "id": "B2-L5", "title": "Mexican Everyday Idioms" }
+      ]
+    },
+    {
+      "id": "C1",
+      "title": "Advanced",
+      "lessons": [
+        { "id": "C1-L1", "title": "The Past, Reconsidered" },
+        { "id": "C1-L2", "title": "Structuring an Argument" },
+        { "id": "C1-L3", "title": "Abstract and Professional Topics" },
+        { "id": "C1-L4", "title": "Register and Diplomacy" },
+        { "id": "C1-L5", "title": "Regional Voices" }
+      ]
+    },
+    {
+      "id": "C2",
+      "title": "Proficiency",
+      "lessons": [
+        { "id": "C2-L1", "title": "Rhetoric and Persuasion" },
+        { "id": "C2-L2", "title": "Humor and Wordplay" },
+        { "id": "C2-L3", "title": "The Art of Debate" },
+        { "id": "C2-L4", "title": "Reading Between the Lines" }
+      ]
+    }
+  ]
+}

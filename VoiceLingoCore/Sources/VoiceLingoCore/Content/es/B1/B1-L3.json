@@ -1,0 +1,215 @@
+{
+  "id": "B1-L3",
+  "title": "At the Doctor",
+  "grammarNote": "'Doler' and similar verbs work backwards from English: the body part is the subject and the person takes an indirect object pronoun (me duele la cabeza, me duelen los pies). Duration is expressed with 'desde hace' or 'llevo + time + con...', unplanned mishaps use accidental 'se' (se me torció el tobillo), and advice or obligation is framed with 'tener que', 'deber', and 'hay que'.",
+  "phrases": [
+    {
+      "target": "Me duele la cabeza desde hace tres días",
+      "native": "My head has hurt for three days",
+      "phonetic": "meh DWEH-leh lah kah-BEH-sah DES-deh AH-seh tres DEE-as",
+      "syllables": ["meh", "DWEH", "leh", "lah", "kah", "BEH", "sah", "DES", "deh", "AH", "seh", "tres", "DEE", "as"],
+      "vocabularyIntro": "'Doler' works backwards: the body part ('la cabeza') is the grammatical subject, and 'me' marks who feels the pain.",
+      "exampleSentence": {
+        "target": "Me duele la cabeza desde hace tres días, doctor.",
+        "native": "My head has hurt for three days, doctor."
+      },
+      "grammarNote": "Compare English 'my head hurts' (I am subject) with Spanish 'me duele la cabeza' (la cabeza is subject) — a classic backwards verb like 'gustar'.",
+      "memoryHook": "Think of the head as the one doing the hurting TO you — 'la cabeza duele a mí' shortened to 'me duele la cabeza'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: My head has hurt for three days",
+          "answer": "Me duele la cabeza desde hace tres días"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me duele la ___ desde hace tres días.",
+          "answer": "cabeza"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Desde cuándo le duele la cabeza?",
+          "answer": "Desde hace tres días"
+        }
+      ]
+    },
+    {
+      "target": "Me duelen los pies después de caminar tanto",
+      "native": "My feet hurt after walking so much",
+      "phonetic": "meh DWEH-len los pee-EHS des-PWEHS deh kah-mee-NAR TAN-toh",
+      "syllables": ["meh", "DWEH", "len", "los", "pee", "EHS", "des", "PWEHS", "deh", "kah", "mee", "NAR", "TAN", "toh"],
+      "vocabularyIntro": "'Duelen' (plural) agrees with the plural subject 'los pies' — the verb changes number to match the body part, not the person.",
+      "exampleSentence": {
+        "target": "Me duelen los pies después de caminar tanto por la ciudad.",
+        "native": "My feet hurt after walking so much around the city."
+      },
+      "grammarNote": "Unlike English, the verb 'doler' must agree with the body part: singular 'duele' for one part, plural 'duelen' for more than one.",
+      "memoryHook": "Feet come in pairs, so 'duelen' gets the plural '-en' — pair up the plural with the plural.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: My feet hurt after walking so much",
+          "answer": "Me duelen los pies después de caminar tanto"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me ___ los pies después de caminar tanto.",
+          "answer": "duelen"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le duele después de caminar tanto?",
+          "answer": "Me duelen los pies"
+        }
+      ]
+    },
+    {
+      "target": "Se me torció el tobillo al bajar la escalera",
+      "native": "I twisted my ankle going down the stairs",
+      "phonetic": "seh meh tor-see-OH el toh-BEE-yoh al bah-HAR lah es-kah-LEH-rah",
+      "syllables": ["seh", "meh", "tor", "see", "OH", "el", "toh", "BEE", "yoh", "al", "bah", "HAR", "lah", "es", "kah", "LEH", "rah"],
+      "vocabularyIntro": "The accidental/unplanned 'se' (se me torció) shows the injury happened to you unintentionally, not that you deliberately twisted it.",
+      "exampleSentence": {
+        "target": "Se me torció el tobillo al bajar la escalera esta mañana.",
+        "native": "I twisted my ankle going down the stairs this morning."
+      },
+      "grammarNote": "'Se me torció' distances you from blame — literally 'the ankle got twisted on me', framing it as something that happened, not something you did.",
+      "memoryHook": "'Se me' + verb is your 'oops, it just happened' formula for accidents.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I twisted my ankle going down the stairs",
+          "answer": "Se me torció el tobillo al bajar la escalera"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Se me torció el ___ al bajar la escalera.",
+          "answer": "tobillo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué se le torció al bajar la escalera?",
+          "answer": "Se me torció el tobillo"
+        }
+      ]
+    },
+    {
+      "target": "Llevo dos días con fiebre y tos",
+      "native": "I've had a fever and cough for two days",
+      "phonetic": "YEH-voh dohs DEE-as kon fee-EH-breh ee tohs",
+      "syllables": ["YEH", "voh", "dohs", "DEE", "as", "kon", "fee", "EH", "breh", "ee", "tohs"],
+      "vocabularyIntro": "'Llevo + time + con...' is an alternative to 'desde hace' for expressing how long a condition has lasted, very common in spoken Mexican Spanish.",
+      "exampleSentence": {
+        "target": "Llevo dos días con fiebre y tos que no se me quita.",
+        "native": "I've had a fever and cough for two days that won't go away."
+      },
+      "grammarNote": "'Llevo + [time] + con + [symptom]' literally means 'I carry [time] with [symptom]' — an idiomatic duration frame distinct from 'desde hace'.",
+      "memoryHook": "Picture 'llevar' (to carry) — you've been carrying this fever around for two days.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I've had a fever and cough for two days",
+          "answer": "Llevo dos días con fiebre y tos"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Llevo dos días con fiebre y ___.",
+          "answer": "tos"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cuánto tiempo lleva con fiebre?",
+          "answer": "Llevo dos días con fiebre"
+        }
+      ]
+    },
+    {
+      "target": "Soy alérgico a la penicilina",
+      "native": "I'm allergic to penicillin",
+      "phonetic": "soy ah-LEHR-hee-koh ah lah peh-nee-see-LEE-nah",
+      "syllables": ["soy", "ah", "LEHR", "hee", "koh", "ah", "lah", "peh", "nee", "see", "LEE", "nah"]
+    },
+    {
+      "target": "Tiene que tomar esta pastilla cada ocho horas",
+      "native": "You have to take this pill every eight hours",
+      "phonetic": "tee-EH-neh keh toh-MAR ES-tah pas-TEE-yah KAH-dah OH-choh OH-ras",
+      "syllables": ["tee", "EH", "neh", "keh", "toh", "MAR", "ES", "tah", "pas", "TEE", "yah", "KAH", "dah", "OH", "choh", "OH", "ras"]
+    },
+    {
+      "target": "Debe descansar y tomar mucha agua",
+      "native": "You should rest and drink a lot of water",
+      "phonetic": "DEH-beh des-kan-SAR ee toh-MAR MOO-chah AH-gwah",
+      "syllables": ["DEH", "beh", "des", "kan", "SAR", "ee", "toh", "MAR", "MOO", "chah", "AH", "gwah"]
+    },
+    {
+      "target": "Hay que revisarle la garganta primero",
+      "native": "We need to check your throat first",
+      "phonetic": "AHY keh reh-vee-SAR-leh lah gar-GAN-tah pree-MEH-roh",
+      "syllables": ["AHY", "keh", "reh", "vee", "SAR", "leh", "lah", "gar", "GAN", "tah", "pree", "MEH", "roh"]
+    },
+    {
+      "target": "Me duele el estómago después de comer",
+      "native": "My stomach hurts after eating",
+      "phonetic": "meh DWEH-leh el es-TOH-mah-goh des-PWEHS deh koh-MEHR",
+      "syllables": ["meh", "DWEH", "leh", "el", "es", "TOH", "mah", "goh", "des", "PWEHS", "deh", "koh", "MEHR"]
+    },
+    {
+      "target": "¿Puede repetirme la dosis, por favor?",
+      "native": "Can you repeat the dosage for me, please?",
+      "phonetic": "PWEH-deh reh-peh-TEER-meh lah DOH-sees, por fah-VOR",
+      "syllables": ["PWEH", "deh", "reh", "peh", "TEER", "meh", "lah", "DOH", "sees", "por", "fah", "VOR"]
+    },
+    {
+      "target": "Entonces tomo una pastilla en la mañana y otra en la noche",
+      "native": "So I take one pill in the morning and another at night",
+      "phonetic": "en-TOHN-ses TOH-moh OO-nah pas-TEE-yah en lah mah-NYAH-nah ee OH-trah en lah NOH-cheh",
+      "syllables": ["en", "TOHN", "ses", "TOH", "moh", "OO", "nah", "pas", "TEE", "yah", "en", "lah", "mah", "NYAH", "nah", "ee", "OH", "trah", "en", "lah", "NOH", "cheh"]
+    }
+  ],
+  "dialogue": {
+    "id": "B1-L3-D1",
+    "scenario": "The learner visits a clinic in Mexico and describes symptoms to a doctor.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenos días. Cuénteme, ¿qué le pasa?",
+        "native": "Good morning. Tell me, what's wrong?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "describe_localized_pain",
+        "hints": ["Me duele la cabeza desde hace tres días", "Se me torció el tobillo al bajar la escalera"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo. ¿Desde cuándo tiene estos síntomas?",
+        "native": "I understand. Since when have you had these symptoms?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "state_symptom_duration",
+        "hints": ["Llevo dos días con fiebre y tos"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Muy bien. ¿Es alérgico a algún medicamento?",
+        "native": "Very good. Are you allergic to any medication?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "mention_medication_allergy",
+        "hints": ["Soy alérgico a la penicilina"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Perfecto, le voy a recetar algo distinto. Tiene que tomar esta pastilla cada ocho horas.",
+        "native": "Perfect, I'll prescribe you something different. You have to take this pill every eight hours."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "confirm_dosage",
+        "hints": ["Entonces tomo una pastilla en la mañana y otra en la noche", "¿Puede repetirme la dosis, por favor?"]
+      }
+    ]
+  }
+}

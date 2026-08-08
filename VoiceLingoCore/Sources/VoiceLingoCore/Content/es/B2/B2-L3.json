@@ -1,0 +1,213 @@
+{
+  "id": "B2-L3",
+  "title": "If Things Were Different",
+  "grammarNote": "Present/future-unreal hypotheticals pair a 'si' clause in the imperfect subjunctive (si tuviera, si fuera, si pudiera) with a main clause in the conditional tense (haría, sería, podría, tendría) — 'si tuviera más tiempo, viajaría más'. Advice formulas like 'yo que tú', 'en tu lugar', and 'deberías' offer a softer, more formal way to suggest a course of action than a direct command. This lesson stays entirely in present/future-unreal territory; past-unreal hypotheticals are covered at a later level.",
+  "phrases": [
+    {
+      "target": "Si tuviera más tiempo, viajaría más",
+      "native": "If I had more time, I would travel more",
+      "phonetic": "see too-vee-EH-rah mahs TYEM-poh, bee-ah-hah-REE-ah mahs",
+      "syllables": ["see", "too-vee-EH-rah", "mahs", "TYEM-poh", "bee-ah-hah-REE-ah", "mahs"],
+      "vocabularyIntro": "This is the classic present-unreal hypothetical pattern: 'si' + imperfect subjunctive (tuviera) + conditional (viajaría) for a situation that isn't currently true.",
+      "exampleSentence": {
+        "target": "Si tuviera más tiempo libre, viajaría más seguido.",
+        "native": "If I had more free time, I would travel more often."
+      },
+      "grammarNote": "'Tuviera' is the imperfect subjunctive of 'tener'; the conditional 'viajaría' comes from the infinitive 'viajar' plus the ending '-ía'.",
+      "memoryHook": "Picture yourself with a suitcase you never use — 'si tuviera tiempo' is the wish, 'viajaría' is the dream trip.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: If I had more time, I would travel more",
+          "answer": "Si tuviera más tiempo, viajaría más"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Si ___ más tiempo, viajaría más.",
+          "answer": "tuviera"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué harías si tuvieras más tiempo libre?",
+          "answer": "Si tuviera más tiempo, viajaría más"
+        }
+      ]
+    },
+    {
+      "target": "Yo que tú, hablaría con tu jefe",
+      "native": "If I were you, I would talk to your boss",
+      "phonetic": "yoh keh too, ah-blah-REE-ah kon too HEH-feh",
+      "syllables": ["yoh", "keh", "too", "ah-blah-REE-ah", "kon", "too", "HEH-feh"],
+      "vocabularyIntro": "'Yo que tú' (literally 'I that you') is a fixed advice formula meaning 'if I were you', always followed by the conditional tense.",
+      "exampleSentence": {
+        "target": "Yo que tú, hablaría con tu jefe antes de decidir.",
+        "native": "If I were you, I would talk to your boss before deciding."
+      },
+      "grammarNote": "'Yo que tú' never changes form regardless of who is being advised; only the verb after it shifts into the conditional.",
+      "memoryHook": "Think of stepping into someone's shoes: 'yo que tú' swaps your identity for theirs before giving advice.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: If I were you, I would talk to your boss",
+          "answer": "Yo que tú, hablaría con tu jefe"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Yo que tú, ___ con tu jefe.",
+          "answer": "hablaría"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué me recomiendas hacer con mi jefe?",
+          "answer": "Yo que tú, hablaría con tu jefe"
+        }
+      ]
+    },
+    {
+      "target": "En tu lugar, no aceptaría esa oferta",
+      "native": "In your place, I wouldn't accept that offer",
+      "phonetic": "en too loo-GAR, no ah-sep-tah-REE-ah EH-sah oh-FEHR-tah",
+      "syllables": ["en", "too", "loo-GAR", "no", "ah-sep-tah-REE-ah", "EH-sah", "oh-FEHR-tah"],
+      "vocabularyIntro": "'En tu lugar' (in your place/shoes) works exactly like 'yo que tú' as a softer alternative for giving advice.",
+      "exampleSentence": {
+        "target": "En tu lugar, no aceptaría esa oferta de trabajo.",
+        "native": "In your place, I wouldn't accept that job offer."
+      },
+      "grammarNote": "'Aceptaría' is the regular conditional of 'aceptar', formed by adding '-ía' to the infinitive.",
+      "memoryHook": "'Lugar' means 'place' — imagine literally standing in the other person's place before giving your honest advice.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: In your place, I wouldn't accept that offer",
+          "answer": "En tu lugar, no aceptaría esa oferta"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "En tu lugar, no ___ esa oferta.",
+          "answer": "aceptaría"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Aceptarías esa oferta de trabajo?",
+          "answer": "En tu lugar, no aceptaría esa oferta"
+        }
+      ]
+    },
+    {
+      "target": "Si fuera tú, me mudaría a otra ciudad",
+      "native": "If I were you, I would move to another city",
+      "phonetic": "see FWEH-rah too, meh moo-dah-REE-ah ah OH-trah see-oo-DAHD",
+      "syllables": ["see", "FWEH-rah", "too", "meh", "moo-dah-REE-ah", "ah", "OH-trah", "see-oo-DAHD"],
+      "vocabularyIntro": "'Si fuera tú' is a fuller, more explicit version of 'yo que tú' using the imperfect subjunctive of 'ser' (fuera).",
+      "exampleSentence": {
+        "target": "Si fuera tú, me mudaría a otra ciudad este año.",
+        "native": "If I were you, I would move to another city this year."
+      },
+      "grammarNote": "'Fuera' is the irregular imperfect subjunctive of 'ser'; note it looks identical to the imperfect subjunctive of 'ir'.",
+      "memoryHook": "'Fuera' sounds like 'afuera' (outside) — imagine stepping outside your own life into someone else's to give advice.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: If I were you, I would move to another city",
+          "answer": "Si fuera tú, me mudaría a otra ciudad"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Si ___ tú, me mudaría a otra ciudad.",
+          "answer": "fuera"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué harías tú en mi lugar con la mudanza?",
+          "answer": "Si fuera tú, me mudaría a otra ciudad"
+        }
+      ]
+    },
+    {
+      "target": "Deberías pensarlo con calma",
+      "native": "You should think it over calmly",
+      "phonetic": "deh-beh-REE-as pen-SAR-lo kon KAL-mah"
+    },
+    {
+      "target": "Si pudiera, cambiaría de carrera",
+      "native": "If I could, I would change careers",
+      "phonetic": "see poo-dee-EH-rah, kam-bee-ah-REE-ah deh kah-REH-rah"
+    },
+    {
+      "target": "Con ese sueldo, podría ahorrar más",
+      "native": "With that salary, I could save more",
+      "phonetic": "kon EH-seh SWEL-doh, po-DREE-ah ah-oh-RAR mahs"
+    },
+    {
+      "target": "Sería difícil, pero valdría la pena",
+      "native": "It would be hard, but it would be worth it",
+      "phonetic": "seh-REE-ah dee-FEE-seel, PEH-ro bal-DREE-ah lah PEH-nah"
+    },
+    {
+      "target": "Si ganara la lotería, compraría una casa",
+      "native": "If I won the lottery, I would buy a house",
+      "phonetic": "see gah-NAH-rah lah loh-teh-REE-ah, kom-prah-REE-ah OO-nah KAH-sah"
+    },
+    {
+      "target": "¿Qué harías tú en mi lugar?",
+      "native": "What would you do in my place?",
+      "phonetic": "keh ah-REE-as too en mee loo-GAR"
+    },
+    {
+      "target": "Tendría que hablarlo con mi familia primero",
+      "native": "I would have to talk about it with my family first",
+      "phonetic": "ten-DREE-ah keh ah-BLAR-lo kon mee fah-MEE-lee-ah pree-MEH-ro"
+    },
+    {
+      "target": "Hasta cierto punto, entiendo tu duda",
+      "native": "Up to a point, I understand your doubt",
+      "phonetic": "AS-tah see-EHR-toh POON-toh, en-tee-EN-doh too DOO-dah"
+    }
+  ],
+  "dialogue": {
+    "id": "B2-L3-D1",
+    "scenario": "A friend shares a career dilemma and the learner offers advice.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Me ofrecieron un trabajo en otra ciudad, pero no sé qué hacer.",
+        "native": "They offered me a job in another city, but I don't know what to do."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "ask_clarifying_question",
+        "hints": ["¿Qué harías tú en mi lugar?"]
+      },
+      {
+        "speaker": "npc",
+        "line": "No, esa pregunta es para ti. El sueldo es mejor, pero dejaría a mi familia.",
+        "native": "No, that question is for you. The salary is better, but I'd be leaving my family."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "give_advice",
+        "hints": ["Yo que tú, hablaría con tu jefe"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Tienes razón, debería pensarlo con calma. ¿Y tú qué harías en mi caso?",
+        "native": "You're right, I should think it over calmly. And what would you do in my case?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "share_personal_hypothetical",
+        "hints": ["Si tuviera más tiempo, viajaría más"]
+      },
+      {
+        "speaker": "npc",
+        "line": "Es cierto, quizá deba explorar más opciones antes de decidir.",
+        "native": "That's true, maybe I should explore more options before deciding."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "offer_final_advice",
+        "hints": ["En tu lugar, no aceptaría esa oferta"]
+      }
+    ]
+  }
+}

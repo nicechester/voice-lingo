@@ -1,0 +1,186 @@
+VoiceLingo — Sample Lesson Manuscript
+Level: A1 (Beginner)
+Topic: Greetings and introducing yourself
+Format assumption: audio-only, hands-free interaction (e.g. driving) — the
+student cannot look at a screen, so nothing in this lesson depends on
+visuals, text, or gestures. Everything must work by ear alone.
+Session length: ~15 minutes, one short lesson per day.
+Student: Alex (this is Alex's 1st daily session — first time meeting the
+teacher).
+
+---
+
+TEACHER: ¡Hola! I'm Marisol, I'll be doing these with you every day —
+just fifteen minutes, and we build a little bit each time. Today's short:
+how to greet someone and introduce yourself. That's it. Ready?
+
+STUDENT: Ready.
+
+TEACHER: First thing — Spanish greetings change depending on the time of
+day. Listen: buenos días.
+
+STUDENT: Buenos días.
+
+TEACHER: That's for morning. Buenas tardes — for afternoon.
+
+STUDENT: Buenas tardes.
+
+TEACHER: And buenas noches — evening, or night.
+
+STUDENT: Buenas noches.
+
+TEACHER: Notice "buenos" only goes with "días" — everything else gets
+"buenas." Don't worry about why, just remember that pairing. Quick check —
+what time is it where you are right now?
+
+STUDENT: Like 4pm.
+
+TEACHER: So which greeting?
+
+STUDENT: Buenas tardes.
+
+TEACHER: Exacto. Say it to me like you just picked up the phone and it's
+4pm.
+
+STUDENT: Buenas tardes.
+
+TEACHER: Buenas tardes. ¿Cómo estás? — that means "how are you," casual,
+with someone your age or someone you know. Say it back to me.
+
+STUDENT: ¿Cómo estás?
+
+TEACHER: Estoy bien, gracias. "Estoy bien" — "I'm doing well." Try that
+part on its own.
+
+STUDENT: Estoy bien.
+
+TEACHER: Bien. Now if you want to ask me back — "¿y tú?" — "and you?" All
+together now: I'll ask, you answer and ask back.
+
+TEACHER: ¿Cómo estás?
+
+STUDENT: Estoy bien, gracias. ¿Y tú?
+
+TEACHER: Muy bien, gracias. — Perfecto, that's a real exchange already.
+
+STUDENT: That was faster than I thought it'd be.
+
+TEACHER: That's the idea. Okay, next piece — telling someone your name.
+In Spanish you don't say "I am Alex," you say "me llamo Alex" — literally
+closer to "I call myself Alex," but don't translate it in your head, just
+treat it as one chunk. Say your name with it.
+
+STUDENT: Me llamo Alex.
+
+TEACHER: Bien. And to ask someone else's name: "¿cómo te llamas?" Ask me.
+
+STUDENT: ¿Cómo te llamas?
+
+TEACHER: Me llamo Marisol. ¿Y tú, cómo te llamas?
+
+STUDENT: Me llamo Alex.
+
+TEACHER: One last piece and then we put it all together. After someone
+tells you their name, you can say "mucho gusto" — nice to meet you. Try
+it.
+
+STUDENT: Mucho gusto.
+
+TEACHER: There's also "encantado" — same meaning, a little more formal —
+but that one changes if you're a man or a woman speaking. You'd say
+"encantado."
+
+STUDENT: Encantado.
+
+TEACHER: If I said it, since I'm a woman, I'd say "encantada" — with an
+A. You'll see that -o/-a pattern again later, it's not just this word.
+For now, just yours: encantado.
+
+STUDENT: Encantado.
+
+TEACHER: Okay — full thing, start to finish. Pretend we've never met.
+I'll go first.
+
+TEACHER: ¡Buenos días!
+
+STUDENT: ¡Buenos días! ¿Cómo estás?
+
+TEACHER: Estoy bien, gracias. ¿Y tú?
+
+STUDENT: Estoy bien también.
+
+TEACHER: Oh, "también" — "also" — I didn't teach you that one, where'd
+that come from?
+
+STUDENT: I think I've heard it before somewhere.
+
+TEACHER: Steal it, I don't mind. Keep going, you're doing great.
+
+TEACHER: Me llamo Marisol. ¿Cómo te llamas?
+
+STUDENT: Me llamo Alex. Mucho gusto.
+
+TEACHER: Encantada, Alex.
+
+TEACHER: One more time, but I'll change the time of day on you — try to
+catch it.
+
+TEACHER: ¡Buenas noches!
+
+STUDENT: *(catches it)* — ¡Buenas noches! ¿Cómo estás?
+
+TEACHER: Muy bien, gracias. Me llamo Marisol, ¿cómo te llamas?
+
+STUDENT: Me llamo Alex. Encantado.
+
+TEACHER: Mucho gusto, Alex. — Perfecto. That's a full conversation, no
+hesitation on that second round.
+
+STUDENT: Yeah, that one felt easier.
+
+TEACHER: We're almost at fifteen minutes, so quick recap: the three
+greetings, depending on time of day?
+
+STUDENT: Buenos días, buenas tardes, buenas noches.
+
+TEACHER: ¿Y cómo preguntas el nombre de alguien?
+
+STUDENT: ¿Cómo te llamas?
+
+TEACHER: ¿Y cómo respondes?
+
+STUDENT: Me llamo... Alex.
+
+TEACHER: *(laughs)* Sí, todavía te llamas Alex. For homework — say
+"buenos días" or "buenas tardes" to someone this week, in real life,
+doesn't matter if they understand you or not. Tomorrow we'll build on
+this — asking where someone's from. Same time tomorrow?
+
+STUDENT: Same time works.
+
+TEACHER: Perfecto. ¡Buenas noches, Alex!
+
+STUDENT: Buenas noches, Marisol. Thanks.
+
+---
+
+Notes for future lesson design:
+
+- First-ever session opens with the teacher naming herself and stating
+  the format (15 minutes, daily, cumulative) — there's no prior lesson to
+  reference yet, so rapport has to be built from zero within the same
+  short window as the actual teaching.
+- New material is introduced one small piece at a time (greeting choice,
+  then "cómo estás," then "me llamo," then "mucho gusto"), each
+  immediately looped back into a two-line exchange before moving on —
+  never more than one new chunk sitting unpracticed at a time.
+- The "buenos vs. buenas" and "encantado vs. encantada" gender/number
+  quirks are flagged but explicitly deferred ("you'll see that pattern
+  again later") rather than explained in grammatical depth — day 1 for a
+  true beginner should not carry a grammar lecture.
+- The roleplay changes exactly one variable between repetitions (time of
+  day) so the student has to actually listen rather than recite from
+  memory, while everything else stays fixed as a scaffold.
+- Homework seeds the opening question of the next day's lesson (see
+  a1-day2-lesson.txt), so each session's close and the following
+  session's open form one continuous thread rather than resetting daily.

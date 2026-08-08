@@ -1,0 +1,428 @@
+{
+  "id": "C1-L4",
+  "title": "Register and Diplomacy",
+  "grammarNote": "This lesson focuses on pragmatic mitigation for delicate professional moments: indirect refusal openers ('me encantaría, pero...,' 'déjame ver qué puedo hacer,' 'está difícil'), the correction softener 'no es que... sino que...' (subjunctive in the rejected clause, indicative in the real one), and tentative framing with the imperfect or conditional ('quería preguntarle,' '¿le importaría si...?'). It also highlights deliberate 'tú'/'usted' switching as a social signal of formality or distance in professional Spanish.",
+  "phrases": [
+    {
+      "target": "Me encantaría ayudarle con eso, pero en este momento no contamos con los recursos.",
+      "native": "I'd love to help you with that, but right now we don't have the resources.",
+      "phonetic": "meh en-kan-tah-REE-ah ah-yoo-DAHR-leh kon EH-soh, PEH-roh en EHS-teh moh-MEN-toh noh kon-TAH-mos kon lohs reh-KOOR-sohs",
+      "syllables": [
+        "meh",
+        "en",
+        "kan",
+        "tah",
+        "REE",
+        "ah",
+        "ah",
+        "yoo",
+        "DAHR",
+        "leh",
+        "kon",
+        "EH",
+        "soh",
+        "PEH",
+        "roh",
+        "en",
+        "EHS",
+        "teh",
+        "moh",
+        "MEN",
+        "toh",
+        "noh",
+        "kon",
+        "TAH",
+        "mos",
+        "kon",
+        "lohs",
+        "reh",
+        "KOOR",
+        "sohs"
+      ],
+      "vocabularyIntro": "'Me encantaría..., pero...' softens a refusal by first affirming enthusiasm (conditional 'encantaría') before the actual 'no' — a standard indirect-refusal opener in professional Spanish.",
+      "exampleSentence": {
+        "target": "Me encantaría asistir a la reunión, pero tengo otro compromiso.",
+        "native": "I'd love to attend the meeting, but I have another commitment."
+      },
+      "grammarNote": "The conditional 'encantaría' (rather than the present 'encanta') makes the enthusiasm feel hypothetical/polite, cushioning the refusal that follows 'pero.'",
+      "memoryHook": "'Me encantaría' is the diplomatic 'yes, in theory' that always precedes a 'but no' in practice.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'd love to help you with that, but right now we don't have the resources.",
+          "answer": "Me encantaría ayudarle con eso, pero en este momento no contamos con los recursos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Me encantaría ayudarle con eso, ___ en este momento no contamos con los recursos.",
+          "answer": "pero"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Por qué no puede ayudar con eso en este momento?",
+          "answer": "Porque en este momento no cuenta con los recursos."
+        }
+      ]
+    },
+    {
+      "target": "Déjame ver qué puedo hacer y te confirmo antes del viernes.",
+      "native": "Let me see what I can do and I'll confirm with you before Friday.",
+      "phonetic": "DEH-hah-meh vehr keh PWEH-doh AH-sehr ee teh kon-fee-RMOH AHN-tes del VYEHR-nes",
+      "syllables": [
+        "DEH",
+        "hah",
+        "meh",
+        "vehr",
+        "keh",
+        "PWEH",
+        "doh",
+        "AH",
+        "sehr",
+        "ee",
+        "teh",
+        "kon",
+        "fee",
+        "RMOH",
+        "AHN",
+        "tes",
+        "del",
+        "VYEHR",
+        "nes"
+      ],
+      "vocabularyIntro": "'Déjame ver qué puedo hacer' ('let me see what I can do') buys time without committing — a classic stalling phrase that avoids an immediate yes or no.",
+      "exampleSentence": {
+        "target": "Déjame ver qué puedo hacer con el presupuesto y te aviso.",
+        "native": "Let me see what I can do about the budget and I'll let you know."
+      },
+      "grammarNote": "This phrase pairs an imperative ('déjame') with an indirect question ('qué puedo hacer') to sound cooperative while deferring a firm commitment.",
+      "memoryHook": "It's the verbal equivalent of 'I'll check and get back to you' — polite deferral, not a promise.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Let me see what I can do and I'll confirm with you before Friday.",
+          "answer": "Déjame ver qué puedo hacer y te confirmo antes del viernes."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Déjame ver qué puedo hacer y te ___ antes del viernes.",
+          "answer": "confirmo"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le dice para no comprometerse todavía?",
+          "answer": "Déjame ver qué puedo hacer y te confirmo antes del viernes."
+        }
+      ]
+    },
+    {
+      "target": "Con ese plazo, está difícil, pero vamos a intentarlo.",
+      "native": "With that deadline, it's tough, but we're going to try.",
+      "phonetic": "kon EH-seh PLAH-soh, es-TAH dee-FEE-seel, PEH-roh VAH-mos ah een-ten-TAHR-loh",
+      "syllables": [
+        "kon",
+        "EH",
+        "seh",
+        "PLAH",
+        "soh",
+        "es",
+        "TAH",
+        "dee",
+        "FEE",
+        "seel",
+        "PEH",
+        "roh",
+        "VAH",
+        "mos",
+        "ah",
+        "een",
+        "ten",
+        "TAHR",
+        "loh"
+      ],
+      "vocabularyIntro": "'Está difícil' ('it's tough / it's tricky') is a softer alternative to a flat 'no,' leaving the door open while signaling real doubt.",
+      "exampleSentence": {
+        "target": "Reducir el precio así, está difícil para nosotros.",
+        "native": "Lowering the price like that is tough for us."
+      },
+      "grammarNote": "Using 'estar' (temporary state) rather than 'ser' (inherent quality) frames the difficulty as situational, not absolute — implying it could change under different circumstances.",
+      "memoryHook": "'Está difícil' softly means 'probably not, but I won't say no outright.'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: With that deadline, it's tough, but we're going to try.",
+          "answer": "Con ese plazo, está difícil, pero vamos a intentarlo."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Con ese plazo, está ___, pero vamos a intentarlo.",
+          "answer": "difícil"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Cómo describe la posibilidad de cumplir con ese plazo?",
+          "answer": "Está difícil, pero van a intentarlo."
+        }
+      ]
+    },
+    {
+      "target": "No es que no quiera ayudar, sino que no tengo la autorización necesaria.",
+      "native": "It's not that I don't want to help, it's that I don't have the necessary authorization.",
+      "phonetic": "noh es keh noh kee-EH-rah ah-yoo-DAHR, SEE-noh keh noh TEHN-goh lah ah-oo-toh-ree-sah-see-OHN neh-seh-SAH-ryah",
+      "syllables": [
+        "noh",
+        "es",
+        "keh",
+        "noh",
+        "kee",
+        "EH",
+        "rah",
+        "ah",
+        "yoo",
+        "DAHR",
+        "SEE",
+        "noh",
+        "keh",
+        "noh",
+        "TEHN",
+        "goh",
+        "lah",
+        "ah",
+        "oo",
+        "toh",
+        "ree",
+        "sah",
+        "see",
+        "OHN",
+        "neh",
+        "seh",
+        "SAH",
+        "ryah"
+      ],
+      "vocabularyIntro": "'No es que... sino que...' ('it's not that... it's [rather] that...') corrects a possible misunderstanding by rejecting one explanation and offering the real one — very common in polite pushback.",
+      "exampleSentence": {
+        "target": "No es que el informe esté mal, sino que falta actualizar algunas cifras.",
+        "native": "It's not that the report is bad, it's that some figures need updating."
+      },
+      "grammarNote": "The clause after 'no es que' takes the subjunctive (quiera, esté) because it's being denied/rejected; the clause after 'sino que' takes the indicative because it states the actual fact.",
+      "memoryHook": "'No es que... sino que...' = 'not X, but rather Y' — reject the false reason, state the real one.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's not that I don't want to help, it's that I don't have the necessary authorization.",
+          "answer": "No es que no quiera ayudar, sino que no tengo la autorización necesaria."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "No es que no ___ ayudar, sino que no tengo la autorización necesaria.",
+          "answer": "quiera"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Por qué realmente no puede ayudar?",
+          "answer": "No es que no quiera ayudar, sino que no tiene la autorización necesaria."
+        }
+      ]
+    },
+    {
+      "target": "Quería preguntarle, ¿le importaría si movemos la entrega dos días?",
+      "native": "I wanted to ask you, would you mind if we moved the delivery two days?",
+      "phonetic": "keh-REE-ah preh-goon-TAHR-leh, leh eem-por-tah-REE-ah see moh-VEH-mos lah en-TREH-gah dohs DEE-ahs",
+      "syllables": [
+        "keh",
+        "REE",
+        "ah",
+        "preh",
+        "goon",
+        "TAHR",
+        "leh",
+        "leh",
+        "eem",
+        "por",
+        "tah",
+        "REE",
+        "ah",
+        "see",
+        "moh",
+        "VEH",
+        "mos",
+        "lah",
+        "en",
+        "TREH",
+        "gah",
+        "dohs",
+        "DEE",
+        "ahs"
+      ],
+      "vocabularyIntro": "'Quería preguntarle' (imperfect, not present 'quiero') and '¿le importaría si...?' (conditional) both use past/conditional forms to make a request sound gentler and less direct.",
+      "exampleSentence": {
+        "target": "¿Le importaría si le llamo mañana en lugar de hoy?",
+        "native": "Would you mind if I called you tomorrow instead of today?"
+      },
+      "grammarNote": "Using the imperfect ('quería') instead of the present ('quiero') to open a request is a politeness strategy in Spanish — it distances the speaker from directly imposing the request now.",
+      "memoryHook": "'Quería' (imperfect, softer) vs. 'quiero' (present, blunter) — the past tense here is really about politeness, not time.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I wanted to ask you, would you mind if we moved the delivery two days?",
+          "answer": "Quería preguntarle, ¿le importaría si movemos la entrega dos días?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Quería preguntarle, ¿le importaría ___ movemos la entrega dos días?",
+          "answer": "si"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué le pregunta con cortesía sobre la entrega?",
+          "answer": "Le pregunta si le importaría mover la entrega dos días."
+        }
+      ]
+    },
+    {
+      "target": "Si me permite, quisiera matizar ese punto antes de que sigamos, ¿le parece?",
+      "native": "If you'll allow me, I'd like to qualify that point before we continue, does that work for you?",
+      "phonetic": "see meh pehr-MEE-teh, kee-see-EH-rah mah-tee-SAHR EH-seh POON-toh AHN-tes deh keh SEE-gah-mos, leh pah-REH-seh",
+      "syllables": [
+        "see",
+        "meh",
+        "pehr",
+        "MEE",
+        "teh",
+        "kee",
+        "see",
+        "EH",
+        "rah",
+        "mah",
+        "tee",
+        "SAHR",
+        "EH",
+        "seh",
+        "POON",
+        "toh",
+        "AHN",
+        "tes",
+        "deh",
+        "keh",
+        "SEE",
+        "gah",
+        "mos",
+        "leh",
+        "pah",
+        "REH",
+        "seh"
+      ],
+      "vocabularyIntro": "'Si me permite' ('if you'll allow me') and 'quisiera matizar' ('I would like to nuance/qualify') soften a correction or disagreement so it lands as a refinement, not a challenge to authority.",
+      "exampleSentence": {
+        "target": "Si me permite, quisiera matizar lo que dijo mi colega.",
+        "native": "If you'll allow me, I'd like to qualify what my colleague said."
+      },
+      "grammarNote": "'Quisiera' (imperfect subjunctive used politely, like 'quería') is softer than 'quiero'; switching from 'tú' to 'usted' mid-conversation (or vice versa) can itself signal a shift toward more careful, formal footing.",
+      "memoryHook": "'Matizar' relates to 'matiz' (nuance/shade) — you're adding shades of gray to a black-and-white statement.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: If you'll allow me, I'd like to qualify that point before we continue, does that work for you?",
+          "answer": "Si me permite, quisiera matizar ese punto antes de que sigamos, ¿le parece?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Si me permite, quisiera ___ ese punto antes de que sigamos.",
+          "answer": "matizar"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué pide permiso para hacer antes de seguir?",
+          "answer": "Pide permiso para matizar ese punto."
+        }
+      ]
+    },
+    {
+      "target": "Entiendo su preocupación, y quiero ser lo más transparente posible.",
+      "native": "I understand your concern, and I want to be as transparent as possible.",
+      "phonetic": "en-tee-EN-doh soo preh-oh-koo-pah-see-OHN, ee kee-EH-roh sehr loh mahs trans-pah-REN-teh poh-SEE-bleh"
+    },
+    {
+      "target": "Lamentablemente, no vamos a poder cumplir con esa fecha original.",
+      "native": "Unfortunately, we're not going to be able to meet that original date.",
+      "phonetic": "lah-men-tah-bleh-MEN-teh, noh VAH-mos ah poh-DEHR koom-PLEER kon EH-sah FEH-chah oh-ree-hee-NAL"
+    },
+    {
+      "target": "¿Qué le parece si buscamos un punto medio en el precio?",
+      "native": "What do you think if we look for a middle ground on the price?",
+      "phonetic": "keh leh pah-REH-seh see boos-KAH-mos oon POON-toh MEH-dyoh en el PREH-syoh"
+    },
+    {
+      "target": "Le agradezco la confianza, y con gusto reviso su propuesta de nuevo.",
+      "native": "I appreciate your trust, and I'll gladly review your proposal again.",
+      "phonetic": "leh ah-grah-DEH-skoh lah kon-fee-AN-sah, ee kon GOOS-toh reh-VEE-soh soo proh-PWEHS-tah deh NWEH-voh"
+    },
+    {
+      "target": "Creo que hay margen para mejorar, especialmente en la comunicación con el cliente.",
+      "native": "I think there's room for improvement, especially in communication with the client.",
+      "phonetic": "KREH-oh keh ai MAR-hen PAH-rah meh-hoh-RAHR, es-peh-syal-MEN-teh en lah koh-moo-nee-kah-see-OHN kon el klee-EN-teh"
+    },
+    {
+      "target": "Con todo respeto, me gustaría proponer un enfoque distinto.",
+      "native": "With all due respect, I'd like to propose a different approach.",
+      "phonetic": "kon TOH-doh res-PEH-toh, meh goos-tah-REE-ah proh-poh-NEHR oon en-FOH-keh dees-TEEN-toh"
+    }
+  ],
+  "dialogue": {
+    "id": "C1-L4-D1",
+    "scenario": "A client pushes for an impossible deadline; the learner declines indirectly and proposes an alternative.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Necesitamos que el proyecto esté listo para el lunes, sin excepciones.",
+        "native": "We need the project ready by Monday, no exceptions."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "indirect_refusal",
+        "hints": [
+          "Me encantaría ayudarle con eso, pero en este momento no contamos con los recursos",
+          "Con ese plazo, está difícil, pero vamos a intentarlo"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Pero usted prometió que esto sería rápido. ¿No puede simplemente acelerar el trabajo?",
+        "native": "But you promised this would be quick. Can't you just speed up the work?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "reframe_with_no_es_que",
+        "hints": [
+          "No es que no quiera ayudar, sino que no tengo la autorización necesaria",
+          "Entiendo su preocupación, y quiero ser lo más transparente posible"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Entiendo, pero necesito una solución concreta hoy mismo.",
+        "native": "I understand, but I need a concrete solution today."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "tentative_alternative_proposal",
+        "hints": [
+          "Quería preguntarle, ¿le importaría si movemos la entrega dos días?",
+          "¿Qué le parece si buscamos un punto medio en el precio?"
+        ]
+      },
+      {
+        "speaker": "npc",
+        "line": "Está bien, lo puedo considerar. ¿Algo más antes de cerrar el trato?",
+        "native": "Alright, I can consider that. Anything else before we close the deal?"
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "close_with_softener",
+        "hints": [
+          "Si me permite, quisiera matizar ese punto antes de que sigamos, ¿le parece?",
+          "Déjame ver qué puedo hacer y te confirmo antes del viernes"
+        ]
+      }
+    ]
+  }
+}

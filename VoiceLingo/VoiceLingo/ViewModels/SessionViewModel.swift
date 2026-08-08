@@ -18,6 +18,7 @@ func sessionLog(_ message: String) {
 
 public enum SessionState: Equatable {
     case idle
+    case explaining
     case speakingPrompt
     case awaitingResponse
     case evaluating
@@ -75,9 +76,16 @@ public final class SessionViewModel: ObservableObject {
 
         Task {
             do {
-                let curriculum = try curriculumLoader.loadCurriculum(for: language)
-                guard let level = curriculum.levels.first(where: { $0.id == levelId }),
-                      let lesson = level.lessons.first(where: { $0.id == lessonId }) else {
+                let manifest = try curriculumLoader.loadManifest(for: language)
+                guard manifest.levels.contains(where: { $0.id == levelId }) else {
+                    statusMessage = "Lesson not found"
+                    isSessionActive = false
+                    return
+                }
+                let lesson: Lesson
+                do {
+                    lesson = try curriculumLoader.loadLesson(language: language, levelId: levelId, lessonId: lessonId)
+                } catch CurriculumLoader.CurriculumError.lessonNotFound {
                     statusMessage = "Lesson not found"
                     isSessionActive = false
                     return
@@ -86,8 +94,8 @@ public final class SessionViewModel: ObservableObject {
                 self.currentLesson = lesson
                 self.currentPhrases = lesson.phrases
                 self.currentPhrasIndex = 0
-                self.speechOutputService.setLocale(curriculum.voiceLocale)
-                self.speechRecognitionService.setLocale(curriculum.recognizerLocale)
+                self.speechOutputService.setLocale(manifest.voiceLocale)
+                self.speechRecognitionService.setLocale(manifest.recognizerLocale)
 
                 await MainActor.run {
                     self.phraseCount = "1/\(self.currentPhrases.count)"
@@ -134,7 +142,79 @@ public final class SessionViewModel: ObservableObject {
         sessionLog("[SPEAK] Phrase \(currentPhrasIndex + 1)/\(currentPhrases.count): \"Phrase \(currentPhrasIndex + 1). Listen and repeat.\"")
 
         speechOutputService.speak("Phrase \(currentPhrasIndex + 1). Listen and repeat.", locale: "en-US") { [weak self] in
-            Task { @MainActor [weak self] in self?.speakPhrase(phrase) }
+            Task { @MainActor [weak self] in self?.explainThenSpeak(phrase) }
+        }
+    }
+
+    private func explainThenSpeak(_ phrase: Phrase) {
+        guard let narrative = narrativeExplanationText(for: phrase) else {
+            speakPronunciationBreakdown(phrase)
+            return
+        }
+
+        currentState = .explaining
+        statusMessage = "Let's learn this phrase"
+        sessionLog("[SPEAK] [EXPLAIN] \"\(narrative)\"")
+        speechOutputService.speak(narrative, locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in self?.speakPronunciationBreakdown(phrase) }
+        }
+    }
+
+    private func narrativeExplanationText(for phrase: Phrase) -> String? {
+        var parts: [String] = []
+        if let intro = phrase.vocabularyIntro {
+            parts.append(intro)
+        }
+        if let grammar = phrase.grammarNote {
+            parts.append(grammar)
+        }
+        if let hook = phrase.memoryHook {
+            parts.append("Memory tip: \(hook)")
+        }
+        guard !parts.isEmpty else { return nil }
+        return parts.joined(separator: " ")
+    }
+
+    /// Speaks the actual target-language phrase slowly as the pronunciation breakdown,
+    /// rather than reading `phrase.syllables`/`phonetic` aloud — those are romanized hints
+    /// meant for on-screen display, and an en-US voice mangles them (e.g. "BWEH" gets spelled
+    /// out letter-by-letter instead of pronounced).
+    private func speakPronunciationBreakdown(_ phrase: Phrase) {
+        guard let syllables = phrase.syllables, !syllables.isEmpty else {
+            speakPhrase(phrase)
+            return
+        }
+
+        currentState = .explaining
+        statusMessage = "Let's break it down"
+        sessionLog("[SPEAK] [BREAKDOWN] slow pronunciation of \"\(phrase.target)\"")
+        speechOutputService.speak("Let's break it down.", locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in
+                self?.speechOutputService.speakSlowly(phrase.target) { [weak self] in
+                    Task { @MainActor [weak self] in self?.speakPhrase(phrase) }
+                }
+            }
+        }
+    }
+
+    private func speakExampleThenAdvance(_ phrase: Phrase) {
+        guard let example = phrase.exampleSentence else {
+            currentPhrasIndex += 1
+            startNextPhrase()
+            return
+        }
+
+        sessionLog("[SPEAK] [EXAMPLE] \"\(example.target)\" (\(example.native))")
+        speechOutputService.speak(example.target) { [weak self] in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                self.speechOutputService.speak(example.native, locale: "en-US") { [weak self] in
+                    Task { @MainActor [weak self] in
+                        self?.currentPhrasIndex += 1
+                        self?.startNextPhrase()
+                    }
+                }
+            }
         }
     }
 
@@ -199,10 +279,7 @@ public final class SessionViewModel: ObservableObject {
             sessionScore += 10
             sessionLog("[SPEAK] \"Correct! Well done.\"")
             speechOutputService.speak("Correct! Well done.", locale: "en-US") { [weak self] in
-                Task { @MainActor [weak self] in
-                    self?.currentPhrasIndex += 1
-                    self?.startNextPhrase()
-                }
+                Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
             }
         } else {
             statusMessage = "Try again"
@@ -224,10 +301,7 @@ public final class SessionViewModel: ObservableObject {
         speechOutputService.speak("The answer is.", locale: "en-US") { [weak self] in
             Task { @MainActor [weak self] in
                 self?.speechOutputService.speak(phrase.target) { [weak self] in
-                    Task { @MainActor [weak self] in
-                        self?.currentPhrasIndex += 1
-                        self?.startNextPhrase()
-                    }
+                    Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
                 }
             }
         }

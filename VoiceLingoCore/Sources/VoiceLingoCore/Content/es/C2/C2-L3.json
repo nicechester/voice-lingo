@@ -1,0 +1,263 @@
+{
+  "id": "C2-L3",
+  "title": "The Art of Debate",
+  "grammarNote": "This lesson covers the language of formal adversarial debate: conceding a point before pivoting to a rebuttal ('si bien... lo cierto es que', 'admito que... ahora bien'), granting a hypothetical without accepting its consequences ('aun cuando fuera así', 'por mucho que insista'), and attacking an argument's underlying premise rather than its conclusion. It also introduces formal turn-taking language like 'permítame terminar' and 'cedo la palabra'.",
+  "phrases": [
+    {
+      "target": "Buenas tardes a todos, bienvenidos a este debate.",
+      "native": "Good afternoon everyone, welcome to this debate.",
+      "phonetic": "BWEH-nahs TAR-des ah TOH-dohs, bee-en-veh-NEE-dohs ah ES-teh deh-BAH-teh"
+    },
+    {
+      "target": "Si bien el trabajo remoto ofrece flexibilidad, lo cierto es que también dificulta la colaboración.",
+      "native": "While remote work offers flexibility, the truth is it also makes collaboration harder.",
+      "phonetic": "see bee-EN el trah-BAH-hoh reh-MOH-toh oh-FREH-seh flek-see-bee-lee-DAHD, loh see-EHR-toh es keh tahm-bee-EHN dee-fee-KOOL-tah lah koh-lah-boh-rah-see-OHN",
+      "syllables": ["see", "bee", "EN", "el", "trah", "BAH", "hoh", "reh", "MOH", "toh", "oh", "FREH", "seh", "flek", "see", "bee", "lee", "DAHD", "loh", "see", "EHR", "toh", "es", "keh", "tahm", "bee", "EHN", "dee", "fee", "KOOL", "tah", "lah", "koh", "lah", "boh", "rah", "see", "OHN"],
+      "vocabularyIntro": "'Si bien... lo cierto es que...' is a formal concession-then-rebuttal pattern: you grant the other side's point after 'si bien', then pivot with 'lo cierto es que' to state what you actually believe.",
+      "exampleSentence": {
+        "target": "Si bien el plan tiene mérito, lo cierto es que falta financiamiento.",
+        "native": "While the plan has merit, the truth is it lacks funding."
+      },
+      "grammarNote": "'Si bien' functions like 'although' but is more formal; it's typically followed later in the sentence by a contrasting clause introduced by 'lo cierto es que' or simply 'pero'.",
+      "memoryHook": "Read 'si bien' as 'sure, granted...' and 'lo cierto es que' as 'but here's the real truth'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: While remote work offers flexibility, the truth is it also makes collaboration harder.",
+          "answer": "Si bien el trabajo remoto ofrece flexibilidad, lo cierto es que también dificulta la colaboración."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Si bien el trabajo remoto ofrece flexibilidad, lo ___ es que también dificulta la colaboración.",
+          "answer": "cierto"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué estructura usas para conceder un punto antes de contradecirlo formalmente?",
+          "answer": "Si bien... lo cierto es que..."
+        }
+      ]
+    },
+    {
+      "target": "Admito que hay beneficios, ahora bien, no podemos ignorar los costos.",
+      "native": "I admit there are benefits; now then, we cannot ignore the costs.",
+      "phonetic": "ahd-MEE-toh keh eye beh-neh-FEE-see-ohs, ah-OH-rah bee-EHN, no poh-DEH-mohs eeg-noh-RAR lohs KOHS-tohs",
+      "syllables": ["ahd", "MEE", "toh", "keh", "eye", "beh", "neh", "FEE", "see", "ohs", "ah", "OH", "rah", "bee", "EHN", "no", "poh", "DEH", "mohs", "eeg", "noh", "RAR", "lohs", "KOHS", "tohs"],
+      "vocabularyIntro": "'Admito que... ahora bien...' is another concession formula: 'admito que' grants a point plainly, and 'ahora bien' (literally 'now well') pivots the discussion toward a qualifying counterpoint.",
+      "exampleSentence": {
+        "target": "Admito que el plan es ambicioso, ahora bien, necesitamos más tiempo.",
+        "native": "I admit the plan is ambitious; now then, we need more time."
+      },
+      "grammarNote": "'Ahora bien' is a formal discourse connector, distinct from temporal 'ahora' (now) — it signals a shift in argument rather than a moment in time.",
+      "memoryHook": "Hear 'ahora bien' as pressing a mental pause button before adding a 'but, here's the catch'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I admit there are benefits; now then, we cannot ignore the costs.",
+          "answer": "Admito que hay beneficios, ahora bien, no podemos ignorar los costos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Admito que hay beneficios, ___ bien, no podemos ignorar los costos.",
+          "answer": "ahora"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué conector usas para pasar de una concesión a una salvedad?",
+          "answer": "Ahora bien"
+        }
+      ]
+    },
+    {
+      "target": "Permítame terminar mi idea, por favor.",
+      "native": "Please allow me to finish my thought.",
+      "phonetic": "pehr-MEE-tah-meh tehr-mee-NAR mee ee-DEH-ah, por fah-VOR"
+    },
+    {
+      "target": "Cedo la palabra a mi colega.",
+      "native": "I yield the floor to my colleague.",
+      "phonetic": "SEH-doh lah pah-LAH-brah ah mee koh-LEH-gah"
+    },
+    {
+      "target": "Aun cuando fuera así, eso no resuelve el problema principal.",
+      "native": "Even if that were so, that doesn't solve the main problem.",
+      "phonetic": "AH-oon KWAHN-doh FWEH-rah ah-SEE, EH-soh no reh-SWEHL-veh el proh-BLEH-mah preen-see-PAHL",
+      "syllables": ["AH", "oon", "KWAHN", "doh", "FWEH", "rah", "ah", "SEE", "EH", "soh", "no", "reh", "SWEHL", "veh", "el", "proh", "BLEH", "mah", "preen", "see", "PAHL"],
+      "vocabularyIntro": "'Aun cuando fuera así' (even if it were so) grants a hypothetical concession using the past subjunctive 'fuera' — you accept the premise purely hypothetically, only to show it still doesn't help the other side's case.",
+      "exampleSentence": {
+        "target": "Aun cuando fuera así, la propuesta seguiría siendo riesgosa.",
+        "native": "Even if that were so, the proposal would still be risky."
+      },
+      "grammarNote": "'Fuera' is the imperfect subjunctive of 'ser', used here in a hypothetical concessive clause introduced by 'aun cuando' (even if/even when).",
+      "memoryHook": "'Aun cuando fuera así' = 'even granting that, hypothetically' — you're not agreeing, just entertaining the idea.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Even if that were so, that doesn't solve the main problem.",
+          "answer": "Aun cuando fuera así, eso no resuelve el problema principal."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Aun cuando ___ así, eso no resuelve el problema principal.",
+          "answer": "fuera"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para conceder algo hipotéticamente sin realmente aceptarlo?",
+          "answer": "Aun cuando fuera así"
+        }
+      ]
+    },
+    {
+      "target": "Por mucho que insista, los datos no respaldan esa postura.",
+      "native": "No matter how much you insist, the data doesn't support that position.",
+      "phonetic": "por MOO-choh keh een-SEES-tah, lohs DAH-tohs no res-pahl-DAHN EH-sah pohs-TOO-rah",
+      "syllables": ["por", "MOO", "choh", "keh", "een", "SEES", "tah", "lohs", "DAH", "tohs", "no", "res", "pahl", "DAHN", "EH", "sah", "pohs", "TOO", "rah"],
+      "vocabularyIntro": "'Por mucho que + subjunctive' means 'no matter how much...' — it concedes the intensity of an action or attitude while denying that it changes the outcome.",
+      "exampleSentence": {
+        "target": "Por mucho que se queje, las reglas no van a cambiar.",
+        "native": "No matter how much he complains, the rules aren't going to change."
+      },
+      "grammarNote": "The verb after 'por mucho que' goes in the subjunctive ('insista', not 'insiste'), because the clause expresses a conceded hypothetical degree, not a stated fact.",
+      "memoryHook": "'Por mucho que' + subjunctive = 'however much...', a concession that refuses to budge the conclusion.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: No matter how much you insist, the data doesn't support that position.",
+          "answer": "Por mucho que insista, los datos no respaldan esa postura."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Por mucho que ___, los datos no respaldan esa postura.",
+          "answer": "insista"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué estructura usas para decir 'no importa cuánto...' seguido de subjuntivo?",
+          "answer": "Por mucho que"
+        }
+      ]
+    },
+    {
+      "target": "El problema no es la conclusión, sino el supuesto del que parte.",
+      "native": "The problem isn't the conclusion, but the assumption it starts from.",
+      "phonetic": "el proh-BLEH-mah no es lah kon-kloo-see-OHN, SEE-noh el soo-PWES-toh del keh PAR-teh",
+      "syllables": ["el", "proh", "BLEH", "mah", "no", "es", "lah", "kon", "kloo", "see", "OHN", "SEE", "noh", "el", "soo", "PWES", "toh", "del", "keh", "PAR", "teh"],
+      "vocabularyIntro": "This is a premise attack: instead of arguing against someone's final conclusion, you challenge the unstated assumption ('el supuesto') that the whole argument rests on — a more powerful debate move than attacking surface claims.",
+      "exampleSentence": {
+        "target": "El problema no es la cifra, sino el método con el que se calculó.",
+        "native": "The problem isn't the number, but the method used to calculate it."
+      },
+      "grammarNote": "'No es X, sino Y' contrasts two alternatives, rejecting the first and asserting the second — 'sino' (rather) is required instead of 'pero' because the first part is negated.",
+      "memoryHook": "Think of pulling out the foundation stone instead of arguing about the roof — attack the 'supuesto', not the conclusion.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: The problem isn't the conclusion, but the assumption it starts from.",
+          "answer": "El problema no es la conclusión, sino el supuesto del que parte."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "El problema no es la conclusión, ___ el supuesto del que parte.",
+          "answer": "sino"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué estrategia usas para cuestionar la base de un argumento en lugar de su conclusión?",
+          "answer": "Atacar el supuesto del que parte"
+        }
+      ]
+    },
+    {
+      "target": "Esa cifra proviene de un estudio poco confiable.",
+      "native": "That figure comes from an unreliable study.",
+      "phonetic": "EH-sah SEE-frah proh-vee-EH-neh deh oon es-TOO-dee-oh POH-koh kon-fee-AH-bleh"
+    },
+    {
+      "target": "Una cosa es preferir trabajar desde casa, y otra muy distinta es que sea productivo para todos.",
+      "native": "It's one thing to prefer working from home, and quite another for it to be productive for everyone.",
+      "phonetic": "OO-nah KOH-sah es preh-feh-REER trah-bah-HAR DES-deh KAH-sah, ee OH-trah mwee dees-TEEN-tah es keh SEH-ah proh-dook-TEE-voh PAH-rah TOH-dohs",
+      "syllables": ["OO", "nah", "KOH", "sah", "es", "preh", "feh", "REER", "trah", "bah", "HAR", "DES", "deh", "KAH", "sah", "ee", "OH", "trah", "mwee", "dees", "TEEN", "tah", "es", "keh", "SEH", "ah", "proh", "dook", "TEE", "voh", "PAH", "rah", "TOH", "dohs"],
+      "vocabularyIntro": "'Una cosa es... y otra muy distinta es...' (one thing is... and quite another is...) draws a sharp distinction between two ideas that might get conflated, a key move for precision in debate.",
+      "exampleSentence": {
+        "target": "Una cosa es tener una opinión, y otra muy distinta es tener razón.",
+        "native": "It's one thing to have an opinion, and quite another to be right."
+      },
+      "grammarNote": "The second clause often takes the subjunctive ('sea') when it expresses a subjective or debated outcome rather than an established fact.",
+      "memoryHook": "Picture holding up two objects side by side — 'una cosa' in one hand, 'otra muy distinta' in the other — to show they're not the same.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: It's one thing to prefer working from home, and quite another for it to be productive for everyone.",
+          "answer": "Una cosa es preferir trabajar desde casa, y otra muy distinta es que sea productivo para todos."
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Una cosa es preferir trabajar desde casa, y otra muy ___ es que sea productivo para todos.",
+          "answer": "distinta"
+        },
+        {
+          "type": "qa",
+          "prompt": "¿Qué frase usas para marcar que dos ideas no deben confundirse?",
+          "answer": "Una cosa es... y otra muy distinta es..."
+        }
+      ]
+    },
+    {
+      "target": "Coincidimos en que la flexibilidad importa.",
+      "native": "We agree that flexibility matters.",
+      "phonetic": "koh-een-see-DEE-mohs en keh lah flek-see-bee-lee-DAHD eem-POR-tah"
+    },
+    {
+      "target": "Con esa distinción, doy por concluido mi argumento.",
+      "native": "With that distinction, I consider my argument concluded.",
+      "phonetic": "kon EH-sah dees-teen-see-OHN, doy por kon-kloo-EE-doh mee ar-goo-MEHN-toh"
+    }
+  ],
+  "dialogue": {
+    "id": "C2-L3-D1",
+    "scenario": "You take part in a formal moderated debate on remote work versus office work.",
+    "turns": [
+      {
+        "speaker": "npc",
+        "line": "Buenas tardes a todos. El tema de hoy es el trabajo remoto contra el trabajo de oficina. Yo sostengo que el trabajo remoto reduce la productividad del equipo.",
+        "native": "Good afternoon everyone. Today's topic is remote work versus office work. I maintain that remote work reduces team productivity."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "concede_point",
+        "hints": ["Si bien el trabajo remoto ofrece flexibilidad, lo cierto es que también dificulta la colaboración.", "Admito que hay beneficios, ahora bien, no podemos ignorar los costos."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Esa cifra proviene de un estudio poco confiable, así que no cambia mi postura.",
+        "native": "That figure comes from an unreliable study, so it doesn't change my position."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "rebut_premise",
+        "hints": ["El problema no es la conclusión, sino el supuesto del que parte.", "Por mucho que insista, los datos no respaldan esa postura."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Aun así, muchas empresas han visto caer su rendimiento.",
+        "native": "Even so, many companies have seen their performance drop."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "draw_distinction",
+        "hints": ["Una cosa es preferir trabajar desde casa, y otra muy distinta es que sea productivo para todos.", "Aun cuando fuera así, eso no resuelve el problema principal."]
+      },
+      {
+        "speaker": "npc",
+        "line": "Con esa distinción, creo que hemos llegado a un buen punto para cerrar.",
+        "native": "With that distinction, I think we've reached a good point to close."
+      },
+      {
+        "speaker": "learner",
+        "expectedIntent": "close_argument",
+        "hints": ["Con esa distinción, doy por concluido mi argumento.", "Coincidimos en que la flexibilidad importa."]
+      }
+    ]
+  }
+}
