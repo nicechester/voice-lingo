@@ -226,6 +226,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "trade_refran",
+        "cue": "Trade back with a subverted version of a well-known saying.",
         "hints": ["El que madruga, Dios lo ayuda... pero el que no madruga, duerme mejor."]
       },
       {
@@ -236,6 +237,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "recognize_irony",
+        "cue": "Recognize the sarcasm, and tease them back.",
         "hints": ["Ajá, y yo me lo creo todo.", "Llegaste tarde otra vez, ¿no?"]
       },
       {
@@ -246,6 +248,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "tell_anecdote",
+        "cue": "Tell an anecdote, using 'resulta que...' and 'total que...' to time the twist.",
         "hints": ["Resulta que llegamos tarde, y total que ni siquiera nos dejaron entrar."]
       },
       {
@@ -256,6 +259,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "land_punchline",
+        "cue": "Land the punchline of your story.",
         "hints": ["Y ahí es cuando me dio la risa.", "Ese es el mejor chiste que he escuchado."]
       }
     ]

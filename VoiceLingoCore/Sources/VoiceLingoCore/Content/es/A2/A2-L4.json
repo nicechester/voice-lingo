@@ -176,6 +176,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_wake_time",
+        "cue": "Say what time you get up.",
         "hints": ["Me levanto a las seis de la mañana"]
       },
       {
@@ -186,6 +187,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_routine",
+        "cue": "Say you shower every day.",
         "hints": ["Me baño todos los días"]
       },
       {
@@ -196,6 +198,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_current_task",
+        "cue": "Say you're working on a project.",
         "hints": ["Estoy trabajando en un proyecto"]
       },
       {
@@ -206,6 +209,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "agree_meeting_time",
+        "cue": "Say what time you're planning to leave, to see if six works.",
         "hints": ["Voy a salir a las cinco y media"]
       }
     ]

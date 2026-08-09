@@ -180,6 +180,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "assign_task_cake",
+        "cue": "Ask them to bring the cake.",
         "hints": ["Te pido que traigas el pastel"]
       },
       {
@@ -190,6 +191,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "assign_task_drinks",
+        "cue": "Ask them to go get the drinks.",
         "hints": ["Te pido que vayas por las bebidas"]
       },
       {
@@ -200,6 +202,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_wish_attendance",
+        "cue": "Say you hope she can come.",
         "hints": ["Ojalá que ella pueda venir"]
       },
       {
@@ -210,6 +213,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_general_wish",
+        "cue": "Say you hope everything goes well.",
         "hints": ["Espero que todo salga bien"]
       }
     ]

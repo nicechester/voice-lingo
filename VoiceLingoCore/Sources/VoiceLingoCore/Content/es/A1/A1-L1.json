@@ -226,6 +226,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "greeting_response",
+        "cue": "Tell them you're doing well.",
         "hints": ["Estoy bien", "Estoy bien, gracias"]
       },
       {
@@ -236,6 +237,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "state_name",
+        "cue": "Say your name is Juan.",
         "hints": ["Me llamo Juan"]
       }
     ]

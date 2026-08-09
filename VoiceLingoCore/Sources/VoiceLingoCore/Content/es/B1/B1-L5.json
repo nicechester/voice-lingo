@@ -178,6 +178,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "relay_third_party_statement",
+        "cue": "Relay what Ana and Marta said about the plan.",
         "hints": ["Ana dijo que no podía venir a la fiesta", "Según Marta, el plan cambió a última hora"]
       },
       {
@@ -188,6 +189,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "relay_reported_request_or_question",
+        "cue": "Relay the question she asked you, and the request she made.",
         "hints": ["Me preguntó si quería ir al concierto con ella", "Me pidió que la ayudara con la mudanza"]
       },
       {
@@ -198,6 +200,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "give_opinion",
+        "cue": "Give your opinion on the plan.",
         "hints": ["Creo que es una buena idea ir todos juntos", "En mi opinión, deberíamos cambiar la fecha"]
       },
       {
@@ -208,6 +211,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_disagreement_or_condition",
+        "cue": "Say you don't fully agree, and that it depends on what the others say.",
         "hints": ["No estoy de acuerdo del todo con eso", "Depende de lo que digan los demás"]
       }
     ]

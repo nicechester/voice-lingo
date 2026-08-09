@@ -366,6 +366,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_regret_lack_of_review",
+        "cue": "Say you wish you'd reviewed the report, or that you should have consulted the team.",
         "hints": [
           "Ojalá hubiera revisado el informe antes de enviarlo",
           "Debí haber consultado con el equipo"
@@ -379,6 +380,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "state_third_conditional_alternative",
+        "cue": "Say what you would have done differently, had you known sooner.",
         "hints": [
           "Si hubiera sabido eso antes, habría actuado de otra manera",
           "De haber sabido los riesgos, no habríamos aprobado el proyecto"
@@ -392,6 +394,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "acknowledge_prior_event",
+        "cue": "Acknowledge that the client had already canceled by the time you found out.",
         "hints": [
           "Cuando llegamos a la reunión, el cliente ya había cancelado el contrato",
           "Nunca imaginé que el proyecto fracasaría de esa manera"
@@ -405,6 +408,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "accept_shared_responsibility",
+        "cue": "Say the mistake wasn't just yours, and propose documenting decisions going forward.",
         "hints": [
           "No fue solo mi culpa; todos deberíamos haber revisado los datos",
           "A partir de ahora, vamos a documentar cada decisión importante"

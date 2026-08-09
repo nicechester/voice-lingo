@@ -226,6 +226,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "concede_point",
+        "cue": "Concede their point, then pivot to your counterargument.",
         "hints": ["Si bien el trabajo remoto ofrece flexibilidad, lo cierto es que también dificulta la colaboración.", "Admito que hay beneficios, ahora bien, no podemos ignorar los costos."]
       },
       {
@@ -236,6 +237,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "rebut_premise",
+        "cue": "Rebut their objection by attacking its underlying premise, not just its conclusion.",
         "hints": ["El problema no es la conclusión, sino el supuesto del que parte.", "Por mucho que insista, los datos no respaldan esa postura."]
       },
       {
@@ -246,6 +248,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "draw_distinction",
+        "cue": "Draw a distinction between two things that shouldn't be conflated.",
         "hints": ["Una cosa es preferir trabajar desde casa, y otra muy distinta es que sea productivo para todos.", "Aun cuando fuera así, eso no resuelve el problema principal."]
       },
       {
@@ -256,6 +259,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "close_argument",
+        "cue": "Close your argument, and note where you agree.",
         "hints": ["Con esa distinción, doy por concluido mi argumento.", "Coincidimos en que la flexibilidad importa."]
       }
     ]

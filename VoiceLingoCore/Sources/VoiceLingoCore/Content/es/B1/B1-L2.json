@@ -184,6 +184,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "raise_reservation_problem",
+        "cue": "Tell the receptionist there's a problem with your reservation.",
         "hints": ["Me temo que hay un problema con mi reservación"]
       },
       {
@@ -194,6 +195,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "explain_missing_booking",
+        "cue": "Explain that your reservation isn't showing up in the system.",
         "hints": ["El problema es que no aparece mi reservación en el sistema"]
       },
       {
@@ -204,6 +206,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "request_alternative_room",
+        "cue": "Ask if they can offer you a similar room.",
         "hints": ["¿Podría ofrecerme una habitación similar?"]
       },
       {
@@ -214,6 +217,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "confirm_next_steps",
+        "cue": "Thank them for helping you with this.",
         "hints": ["Le agradecería mucho si me ayuda con esto"]
       }
     ]

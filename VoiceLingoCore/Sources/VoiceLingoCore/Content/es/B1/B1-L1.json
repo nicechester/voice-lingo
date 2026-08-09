@@ -208,6 +208,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_childhood_home",
+        "cue": "Say where you grew up.",
         "hints": ["Cuando era niño, vivía en un pueblo pequeño", "Crecí en un pueblo, pero ahora vivo en la ciudad"]
       },
       {
@@ -218,6 +219,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_habitual_custom",
+        "cue": "Describe a family custom from your childhood.",
         "hints": ["Íbamos todos los veranos a la casa de mis abuelos", "Todos los domingos comíamos en casa de la abuela"]
       },
       {
@@ -228,6 +230,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "recount_interrupting_event",
+        "cue": "Tell a short story about something that happened during those summers.",
         "hints": ["Mientras jugábamos en la calle, empezó a llover", "De repente, mi abuela nos llamó para cenar"]
       },
       {
@@ -238,6 +241,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "contrast_habit_with_single_event",
+        "cue": "Say that, unlike before, you only went once last summer.",
         "hints": ["Pero fui solo una vez el verano pasado"]
       }
     ]

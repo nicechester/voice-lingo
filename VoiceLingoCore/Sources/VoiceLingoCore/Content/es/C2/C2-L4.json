@@ -173,7 +173,7 @@
       "native": "Thank you so much for the invitation, but that day is difficult for me.",
       "phonetic": "MOO-chahs GRAH-see-ahs por lah een-vee-tah-see-OHN, PEH-roh seh meh kom-PLEE-kah EH-seh DEE-ah",
       "syllables": ["MOO", "chahs", "GRAH", "see", "ahs", "por", "lah", "een", "vee", "tah", "see", "OHN", "PEH", "roh", "seh", "meh", "kom", "PLEE", "kah", "EH", "seh", "DEE", "ah"],
-      "vocabularyIntro": "This is the culturally expected shape of a soft refusal in Mexican Spanish: gratitude first ('muchas gracias'), then a vague excuse ('se me complica') rather than a flat 'no' — declining while preserving the relationship.",
+      "vocabularyIntro": "This is the culturally expected shape of a soft refusal in Mexican Spanish: gratitude first ('muchas gracias'), then a vague excuse ('se me complica') rather than a flat 'no', declining while preserving the relationship.",
       "exampleSentence": {
         "target": "Muchas gracias por la invitación, pero se me complica llegar temprano.",
         "native": "Thank you so much for the invitation, but it's hard for me to arrive early."
@@ -226,6 +226,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "recognize_indirect_no",
+        "cue": "Recognize that 'deja lo checo' is really a soft no.",
         "hints": ["Deja lo checo.", "Está difícil."]
       },
       {
@@ -236,6 +237,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "soft_decline",
+        "cue": "Politely decline the invitation — thank them, then give a vague excuse.",
         "hints": ["Muchas gracias por la invitación, pero se me complica ese día.", "Mil gracias por pensar en mí."]
       },
       {
@@ -246,6 +248,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "leave_door_open",
+        "cue": "Leave the door open without fully committing.",
         "hints": ["Cualquier cosa, yo te aviso.", "Ojalá se pueda, ya te digo."]
       },
       {
@@ -256,6 +259,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "closing_pleasantry",
+        "cue": "Close with a warm pleasantry.",
         "hints": ["Más vale tarde que nunca.", "Mil gracias por pensar en mí."]
       }
     ]

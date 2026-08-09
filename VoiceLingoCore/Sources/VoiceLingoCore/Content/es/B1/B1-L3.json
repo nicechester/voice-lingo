@@ -178,6 +178,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_localized_pain",
+        "cue": "Describe what hurts, or what happened.",
         "hints": ["Me duele la cabeza desde hace tres días", "Se me torció el tobillo al bajar la escalera"]
       },
       {
@@ -188,6 +189,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "state_symptom_duration",
+        "cue": "Say how long you've had the fever and cough.",
         "hints": ["Llevo dos días con fiebre y tos"]
       },
       {
@@ -198,6 +200,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "mention_medication_allergy",
+        "cue": "Say you're allergic to penicillin.",
         "hints": ["Soy alérgico a la penicilina"]
       },
       {
@@ -208,6 +211,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "confirm_dosage",
+        "cue": "Confirm how you'll take the medication, and ask them to repeat the dosage if you need to.",
         "hints": ["Entonces tomo una pastilla en la mañana y otra en la noche", "¿Puede repetirme la dosis, por favor?"]
       }
     ]
