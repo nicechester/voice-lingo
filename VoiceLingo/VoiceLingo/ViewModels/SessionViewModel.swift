@@ -65,6 +65,13 @@ public final class SessionViewModel: ObservableObject {
 
     // MARK: - Public Methods
 
+    /// Attaches persistence dependencies once the view has access to the SwiftData
+    /// environment. Must be called before `startSession` so progress can be recorded.
+    public func attach(modelContext: ModelContext, userProgress: UserProgress?) {
+        self.modelContext = modelContext
+        self.userProgress = userProgress
+    }
+
     public func startSession(language: String, levelId: String, lessonId: String) {
         isSessionActive = true
         voiceCommandRouter.suspend()

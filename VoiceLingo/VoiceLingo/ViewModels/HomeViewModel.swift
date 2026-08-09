@@ -24,13 +24,6 @@ struct SessionLaunchParams: Hashable {
 
 @MainActor
 final class HomeViewModel: ObservableObject {
-    static let cefrOrder: [(id: String, title: String)] = [
-        ("A1", "Beginner"),
-        ("A2", "Elementary"),
-        ("B1", "Intermediate"),
-        ("B2", "Upper Intermediate")
-    ]
-
     @Published var levelItems: [LevelDisplayItem] = []
     @Published var activeSession: SessionLaunchParams?
     @Published var shouldShowLanguagePicker = false
@@ -53,51 +46,27 @@ final class HomeViewModel: ObservableObject {
             let manifest = try curriculumLoader.loadManifest(for: languageCode)
             var items: [LevelDisplayItem] = []
 
-            for (levelId, levelTitle) in Self.cefrOrder {
-                if let level = manifest.levels.first(where: { $0.id == levelId }) {
-                    let firstLessonId = level.lessons.first?.id
-                    let isUnlocked = progress?.unlockedLevels.contains(levelId) ?? false
-                    let scorePercent = Int((progress?.levelScores[levelId] ?? 0) * 100)
+            for level in manifest.levels {
+                let firstLessonId = level.lessons.first?.id
+                let isUnlocked = progress?.unlockedLevels.contains(level.id) ?? false
+                let scorePercent = Int((progress?.levelScores[level.id] ?? 0) * 100)
 
-                    let item = LevelDisplayItem(
-                        id: levelId,
-                        title: levelTitle,
-                        isUnlocked: isUnlocked,
-                        isContentAvailable: true,
-                        scorePercent: scorePercent,
-                        firstLessonId: firstLessonId
-                    )
-                    items.append(item)
-                } else {
-                    let item = LevelDisplayItem(
-                        id: levelId,
-                        title: levelTitle,
-                        isUnlocked: false,
-                        isContentAvailable: false,
-                        scorePercent: 0,
-                        firstLessonId: nil
-                    )
-                    items.append(item)
-                }
+                let item = LevelDisplayItem(
+                    id: level.id,
+                    title: level.title,
+                    isUnlocked: isUnlocked,
+                    isContentAvailable: true,
+                    scorePercent: scorePercent,
+                    firstLessonId: firstLessonId
+                )
+                items.append(item)
             }
 
             self.levelItems = items
             self.errorMessage = nil
         } catch {
             errorMessage = "Failed to load curriculum: \(error.localizedDescription)"
-            var items: [LevelDisplayItem] = []
-            for (levelId, levelTitle) in Self.cefrOrder {
-                let item = LevelDisplayItem(
-                    id: levelId,
-                    title: levelTitle,
-                    isUnlocked: false,
-                    isContentAvailable: false,
-                    scorePercent: 0,
-                    firstLessonId: nil
-                )
-                items.append(item)
-            }
-            self.levelItems = items
+            self.levelItems = []
         }
     }
 
