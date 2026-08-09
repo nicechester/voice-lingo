@@ -53,6 +53,13 @@ struct SessionView: View {
 
             Spacer()
 
+            // State indicator icon
+            stateIcon()
+                .font(.system(size: 80))
+                .frame(height: 120)
+
+            Spacer()
+
             Button(action: {
                 viewModel.repeatPhrase()
             }) {
@@ -89,6 +96,43 @@ struct SessionView: View {
         }
         .onDisappear {
             viewModel.stopSession()
+        }
+    }
+
+    @ViewBuilder
+    private func stateIcon() -> some View {
+        switch viewModel.currentState {
+        case .speakingPrompt, .explaining:
+            Image(systemName: "speaker.wave.2.fill")
+                .foregroundColor(.blue)
+
+        case .awaitingResponse:
+            Image(systemName: "mic.fill")
+                .foregroundColor(.red)
+
+        case .evaluating:
+            Image(systemName: "brain.head.profile")
+                .foregroundColor(.orange)
+
+        case .feedback:
+            if viewModel.lastResponseCorrect == true {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.green)
+            } else if viewModel.lastResponseCorrect == false {
+                Image(systemName: "questionmark.circle.fill")
+                    .foregroundColor(.red)
+            } else {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.gray)
+            }
+
+        case .sessionComplete:
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
+
+        default:
+            Image(systemName: "ellipsis")
+                .foregroundColor(.gray)
         }
     }
 }

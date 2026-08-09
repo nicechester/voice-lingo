@@ -2,6 +2,7 @@ import Foundation
 import Combine
 import SwiftData
 import OSLog
+import AVFoundation
 import VoiceLingoCore
 
 private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "VoiceLingo", category: "Session")
@@ -44,6 +45,7 @@ public final class SessionViewModel: ObservableObject {
     @Published public var phraseCount: String = "0/0"
     @Published public var sessionScore: Int = 0
     @Published public var isSessionActive: Bool = false
+    @Published public var lastResponseCorrect: Bool?
 
     private lazy var curriculumLoader = CurriculumLoader.shared
     private lazy var speechOutputService = SpeechOutputService.shared
@@ -60,6 +62,7 @@ public final class SessionViewModel: ObservableObject {
     private var modelContext: ModelContext?
     private var userProgress: UserProgress?
     private var composer: SpeechComposer?
+    private var dialogueRunner: DialogueRunner?
 
     public init(modelContext: ModelContext? = nil) {
         self.modelContext = modelContext
@@ -116,7 +119,7 @@ public final class SessionViewModel: ObservableObject {
 
                 await MainActor.run {
                     self.phraseCount = "1/\(self.currentPhrases.count)"
-                    self.startNextPhrase()
+                    self.playSessionIntro()
                 }
             } catch {
                 await MainActor.run {
@@ -146,25 +149,50 @@ public final class SessionViewModel: ObservableObject {
 
     // MARK: - Private Methods
 
+    private func configureAudioForPlayback() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playback, mode: .default, options: [.duckOthers])
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            sessionLog("[AUDIO] Failed to configure audio session: \(error)")
+        }
+    }
+
     private func speakVaried(
         _ act: SpeechAct,
         fallback: String,
         fallbackLocale: String = "en-US",
         slots: [String: String] = [:],
-        completion: (@Sendable () -> Void)? = nil
+        completion: (@Sendable () -> Void)? = nil,
+        suspendRouter: Bool = true
     ) {
         if let line = composer?.line(for: act, slots: slots) {
             sessionLog("[SPEAK] [VARIED:\(act)] \"\(line.text)\"")
-            speechOutputService.speak(line.text, locale: line.locale ?? fallbackLocale, completion: completion)
+            speechOutputService.speak(line.text, locale: line.locale ?? fallbackLocale, suspendRouter: suspendRouter, completion: completion)
         } else {
             sessionLog("[SPEAK] [FALLBACK:\(act)] \"\(fallback)\"")
-            speechOutputService.speak(fallback, locale: fallbackLocale, completion: completion)
+            speechOutputService.speak(fallback, locale: fallbackLocale, suspendRouter: suspendRouter, completion: completion)
+        }
+    }
+
+    private func playSessionIntro() {
+        currentState = .explaining
+        statusMessage = "Let's begin"
+        speechRecognitionService.stopRecognition()
+        speechOutputService.stop()
+        configureAudioForPlayback()
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 300_000_000)
+            self.speakVaried(.sessionOpen, fallback: "Let's get started.") { [weak self] in
+                Task { @MainActor [weak self] in self?.startNextPhrase() }
+            }
         }
     }
 
     private func startNextPhrase() {
         guard currentPhrasIndex < currentPhrases.count else {
-            completeSession()
+            beginDialoguePhase()
             return
         }
 
@@ -268,13 +296,11 @@ public final class SessionViewModel: ObservableObject {
     }
 
     private func awaitUserResponse(for phrase: Phrase) {
-        currentState = .awaitingResponse
         statusMessage = "Your turn"
         speakVaried(.learnerTurnCue, fallback: "Your turn.") { [weak self] in
             Task { @MainActor [weak self] in
                 guard let self else { return }
-                sessionLog("[LISTEN] Waiting 1s before opening mic...")
-                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                self.currentState = .awaitingResponse
                 sessionLog("[LISTEN] Mic open, waiting for speech (timeout: 7s)")
                 self.speechRecognitionService.recognize(timeout: 7.0) { [weak self] recognizedText in
                     Task { @MainActor in
@@ -292,8 +318,8 @@ public final class SessionViewModel: ObservableObject {
     }
 
     private func evaluateResponse(_ recognizedText: String, against phrase: Phrase) {
-        speechRecognitionService.stopRecognition()
         currentState = .evaluating
+        speechRecognitionService.stopRecognition()
         statusMessage = "Checking..."
         attemptCount += 1
         sessionLog("[EVAL] Attempt \(attemptCount): recognized=\"\(recognizedText)\" target=\"\(phrase.target)\"")
@@ -301,36 +327,50 @@ public final class SessionViewModel: ObservableObject {
         let isCorrect = pronunciationEvaluator.evaluate(recognized: recognizedText, target: phrase.target)
         sessionLog("[EVAL] Result: \(isCorrect ? "CORRECT" : "WRONG")")
         phraseScores[phrase.id] = (attempts: attemptCount, correct: isCorrect)
+        lastResponseCorrect = isCorrect
 
         let key = phrase.progressKey(inLesson: currentLessonId)
         userProgress?.recordPhrase(key, correct: isCorrect)
         try? modelContext?.save()
 
-        if isCorrect {
-            provideFeedback(correct: true, phrase: phrase)
-        } else if attemptCount < 3 {
-            provideFeedback(correct: false, phrase: phrase, attempt: attemptCount)
-        } else {
-            revealAnswer(phrase: phrase)
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 200_000_000)
+            if isCorrect {
+                self.provideFeedback(correct: true, phrase: phrase)
+            } else if self.attemptCount < 3 {
+                self.provideFeedback(correct: false, phrase: phrase, attempt: self.attemptCount)
+            } else {
+                self.revealAnswer(phrase: phrase)
+            }
         }
     }
 
     private func provideFeedback(correct: Bool, phrase: Phrase, attempt: Int = 0) {
-        currentState = .feedback
+        currentState = .speakingPrompt
 
         if correct {
             statusMessage = "Correct!"
             sessionScore += 10
-            speakVaried(.praise, fallback: "Correct! Well done.") { [weak self] in
-                Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
+            Task { @MainActor in
+                self.speechOutputService.stop()
+                self.configureAudioForPlayback()
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                self.speakVaried(.praise, fallback: "Correct! Well done.") { [weak self] in
+                    Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
+                }
             }
         } else {
             statusMessage = "Try again"
-            speakVaried(.gentleCorrection, fallback: "Not quite. Try again.") { [weak self] in
-                Task { @MainActor [weak self] in
-                    guard let self else { return }
-                    self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
-                        Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
+            Task { @MainActor in
+                self.speechOutputService.stop()
+                self.configureAudioForPlayback()
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                self.speakVaried(.gentleCorrection, fallback: "Not quite. Try again.") { [weak self] in
+                    Task { @MainActor [weak self] in
+                        guard let self else { return }
+                        self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
+                            Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
+                        }
                     }
                 }
             }
@@ -338,12 +378,17 @@ public final class SessionViewModel: ObservableObject {
     }
 
     private func revealAnswer(phrase: Phrase) {
-        currentState = .feedback
+        currentState = .speakingPrompt
         statusMessage = phrase.native
-        speakVaried(.revealAnswer, fallback: "The answer is.") { [weak self] in
-            Task { @MainActor [weak self] in
-                self?.speechOutputService.speak(phrase.target) { [weak self] in
-                    Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
+        Task { @MainActor in
+            self.speechOutputService.stop()
+            self.configureAudioForPlayback()
+            try? await Task.sleep(nanoseconds: 300_000_000)
+            self.speakVaried(.revealAnswer, fallback: "The answer is.") { [weak self] in
+                Task { @MainActor [weak self] in
+                    self?.speechOutputService.speak(phrase.target) { [weak self] in
+                        Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
+                    }
                 }
             }
         }
@@ -351,14 +396,20 @@ public final class SessionViewModel: ObservableObject {
 
     private func handleRecognitionError(_ error: Error, phrase: Phrase) {
         speechRecognitionService.stopRecognition()
+        currentState = .speakingPrompt
         attemptCount += 1
         statusMessage = "Didn't catch that"
+        speechOutputService.stop()
+        configureAudioForPlayback()
         speakVaried(.gentleCorrection, fallback: "Didn't catch that. Try again.") { [weak self] in
             Task { @MainActor [weak self] in
                 guard let self else { return }
                 if self.attemptCount < 3 {
                     self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
-                        Task { @MainActor [weak self] in self?.awaitUserResponse(for: phrase) }
+                        Task { @MainActor [weak self] in
+                            try? await Task.sleep(nanoseconds: 200_000_000)
+                            self?.awaitUserResponse(for: phrase)
+                        }
                     }
                 } else {
                     self.revealAnswer(phrase: phrase)
@@ -382,6 +433,159 @@ public final class SessionViewModel: ObservableObject {
             fallback: "Session complete. Your score is \(sessionScore).",
             slots: ["score": String(sessionScore)]
         )
+    }
+
+    private func beginDialoguePhase() {
+        guard let scenario = currentLesson?.dialogue else {
+            beginQuizPhase()
+            return
+        }
+
+        currentPhase = .dialogue
+        dialogueRunner = DialogueRunner(scenario: scenario)
+        guard let runner = dialogueRunner else { return }
+
+        let step = runner.start()
+        perform(step)
+    }
+
+    private func perform(_ step: DialogueStep) {
+        switch step {
+        case .introduceScenario(let text):
+            statusMessage = "Scenario"
+            currentState = .explaining
+            sessionLog("[SPEAK] [DIALOGUE:scenario] \"\(text)\"")
+            speakVaried(.dialogueIntro, fallback: text) { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self, let runner = self.dialogueRunner else { return }
+                    self.perform(runner.advance())
+                }
+            }
+
+        case .npcLine(let text, let native):
+            statusMessage = native ?? text
+            currentState = .speakingPrompt
+            sessionLog("[SPEAK] [DIALOGUE:npc] \"\(text)\" (\(native ?? ""))")
+            speechOutputService.speak(text) { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self, let runner = self.dialogueRunner else { return }
+                    self.perform(runner.advance())
+                }
+            }
+
+        case .awaitLearner(_, _, let cue, _):
+            statusMessage = "Your turn"
+            let cueFallback = cue ?? "Your turn."
+            sessionLog("[SPEAK] [DIALOGUE:learner-cue] \"\(cueFallback)\"")
+            speakVaried(.learnerTurnCue, fallback: cueFallback) { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self else { return }
+                    self.currentState = .awaitingResponse
+                    sessionLog("[LISTEN] Dialogue learner turn: mic open (7s)")
+                    self.speechRecognitionService.recognize(timeout: 7.0) { [weak self] recognizedText in
+                        Task { @MainActor in
+                            sessionLog("[LISTEN] Dialogue: recognized=\"\(recognizedText)\"")
+                            self?.handleDialogueSpeech(recognizedText)
+                        }
+                    } onError: { [weak self] error in
+                        Task { @MainActor in
+                            sessionLog("[LISTEN] Dialogue error: \(error.localizedDescription)")
+                            self?.handleDialogueSpeech("")
+                        }
+                    }
+                }
+            }
+
+        case .finished:
+            currentPhase = .quiz
+            beginQuizPhase()
+        }
+    }
+
+    private func handleDialogueSpeech(_ recognized: String) {
+        speechRecognitionService.stopRecognition()
+        guard let runner = dialogueRunner else { return }
+
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 200_000_000)
+            let outcome = runner.submit(recognized: recognized)
+            sessionLog("[DIALOGUE] Submit: recognized=\"\(recognized)\" outcome=\(outcome)")
+
+            switch outcome {
+        case .matched(let candidate):
+            sessionLog("[SPEAK] [DIALOGUE:praise] matched: \"\(candidate)\"")
+            speakVaried(.praise, fallback: "Correct!") { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self, let runner = self.dialogueRunner else { return }
+                    self.perform(runner.advance())
+                }
+            }
+
+        case .openAccepted(let recognized):
+            if let echoLine = self.composer?.echo(recognized: recognized) {
+                sessionLog("[SPEAK] [DIALOGUE:echo] \"\(echoLine.text)\"")
+                speechOutputService.speak(echoLine.text, locale: echoLine.locale ?? "es-MX") { [weak self] in
+                    Task { @MainActor [weak self] in
+                        guard let self, let runner = self.dialogueRunner else { return }
+                        self.perform(runner.advance())
+                    }
+                }
+            } else {
+                sessionLog("[SPEAK] [DIALOGUE:echo-fallback] no echo available")
+                Task { @MainActor [weak self] in
+                    guard let self, let runner = self.dialogueRunner else { return }
+                    self.perform(runner.advance())
+                }
+            }
+
+        case .retry(_, let modelAnswer):
+            statusMessage = "Try again"
+            sessionLog("[SPEAK] [DIALOGUE:retry] model=\"\(modelAnswer)\"")
+            speakVaried(.gentleCorrection, fallback: "Try again.") { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self else { return }
+                    self.speechOutputService.speakSlowly(modelAnswer) { [weak self] in
+                        Task { @MainActor [weak self] in
+                            guard let self else { return }
+                            try? await Task.sleep(nanoseconds: 200_000_000)
+                            sessionLog("[LISTEN] Dialogue retry: mic re-open (7s)")
+                            self.speechRecognitionService.recognize(timeout: 7.0) { [weak self] recognizedText in
+                                Task { @MainActor in
+                                    sessionLog("[LISTEN] Dialogue retry: recognized=\"\(recognizedText)\"")
+                                    self?.handleDialogueSpeech(recognizedText)
+                                }
+                            } onError: { [weak self] error in
+                                Task { @MainActor in
+                                    sessionLog("[LISTEN] Dialogue retry error: \(error.localizedDescription)")
+                                    self?.handleDialogueSpeech("")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        case .movedOn(let modelAnswer):
+            statusMessage = "Moving on"
+            sessionLog("[SPEAK] [DIALOGUE:moved-on] model=\"\(modelAnswer)\"")
+            speakVaried(.revealAnswer, fallback: "The answer is:") { [weak self] in
+                Task { @MainActor [weak self] in
+                    guard let self else { return }
+                    self.speechOutputService.speak(modelAnswer) { [weak self] in
+                        Task { @MainActor [weak self] in
+                            guard let self, let runner = self.dialogueRunner else { return }
+                            self.perform(runner.advance())
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+
+    private func beginQuizPhase() {
+        currentPhase = .quiz
+        sessionLog("[PHASE] Beginning quiz phase")
     }
 
     private func setupVoiceCommandHandling() {
