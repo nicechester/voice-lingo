@@ -59,6 +59,7 @@ public final class SessionViewModel: ObservableObject {
     private var phraseScores: [UUID: (attempts: Int, correct: Bool)] = [:]
     private var modelContext: ModelContext?
     private var userProgress: UserProgress?
+    private var composer: SpeechComposer?
 
     public init(modelContext: ModelContext? = nil) {
         self.modelContext = modelContext
@@ -107,6 +108,11 @@ public final class SessionViewModel: ObservableObject {
                 self.currentPhrasIndex = 0
                 self.speechOutputService.setLocale(manifest.voiceLocale)
                 self.speechRecognitionService.setLocale(manifest.recognizerLocale)
+                if let bank = self.curriculumLoader.loadSpeechBank(for: language) {
+                    self.composer = SpeechComposer(bank: bank)
+                } else {
+                    self.composer = nil
+                }
 
                 await MainActor.run {
                     self.phraseCount = "1/\(self.currentPhrases.count)"
@@ -140,6 +146,22 @@ public final class SessionViewModel: ObservableObject {
 
     // MARK: - Private Methods
 
+    private func speakVaried(
+        _ act: SpeechAct,
+        fallback: String,
+        fallbackLocale: String = "en-US",
+        slots: [String: String] = [:],
+        completion: (@Sendable () -> Void)? = nil
+    ) {
+        if let line = composer?.line(for: act, slots: slots) {
+            sessionLog("[SPEAK] [VARIED:\(act)] \"\(line.text)\"")
+            speechOutputService.speak(line.text, locale: line.locale ?? fallbackLocale, completion: completion)
+        } else {
+            sessionLog("[SPEAK] [FALLBACK:\(act)] \"\(fallback)\"")
+            speechOutputService.speak(fallback, locale: fallbackLocale, completion: completion)
+        }
+    }
+
     private func startNextPhrase() {
         guard currentPhrasIndex < currentPhrases.count else {
             completeSession()
@@ -158,6 +180,14 @@ public final class SessionViewModel: ObservableObject {
     }
 
     private func explainThenSpeak(_ phrase: Phrase) {
+        let key = phrase.progressKey(inLesson: currentLessonId)
+        let alreadyLearned = (userProgress?.phraseProgress(for: key)?.correctCount ?? 0) > 0
+
+        if alreadyLearned {
+            speakPronunciationBreakdown(phrase)
+            return
+        }
+
         guard let narrative = narrativeExplanationText(for: phrase) else {
             speakPronunciationBreakdown(phrase)
             return
@@ -240,8 +270,7 @@ public final class SessionViewModel: ObservableObject {
     private func awaitUserResponse(for phrase: Phrase) {
         currentState = .awaitingResponse
         statusMessage = "Your turn"
-        sessionLog("[SPEAK] \"Your turn.\"")
-        speechOutputService.speak("Your turn.", locale: "en-US") { [weak self] in
+        speakVaried(.learnerTurnCue, fallback: "Your turn.") { [weak self] in
             Task { @MainActor [weak self] in
                 guard let self else { return }
                 sessionLog("[LISTEN] Waiting 1s before opening mic...")
@@ -292,14 +321,12 @@ public final class SessionViewModel: ObservableObject {
         if correct {
             statusMessage = "Correct!"
             sessionScore += 10
-            sessionLog("[SPEAK] \"Correct! Well done.\"")
-            speechOutputService.speak("Correct! Well done.", locale: "en-US") { [weak self] in
+            speakVaried(.praise, fallback: "Correct! Well done.") { [weak self] in
                 Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
             }
         } else {
             statusMessage = "Try again"
-            sessionLog("[SPEAK] \"Not quite. Try again. \(phrase.target)\"")
-            speechOutputService.speak("Not quite. Try again.", locale: "en-US") { [weak self] in
+            speakVaried(.gentleCorrection, fallback: "Not quite. Try again.") { [weak self] in
                 Task { @MainActor [weak self] in
                     guard let self else { return }
                     self.speechOutputService.speakSlowly(phrase.target) { [weak self] in
@@ -313,7 +340,7 @@ public final class SessionViewModel: ObservableObject {
     private func revealAnswer(phrase: Phrase) {
         currentState = .feedback
         statusMessage = phrase.native
-        speechOutputService.speak("The answer is.", locale: "en-US") { [weak self] in
+        speakVaried(.revealAnswer, fallback: "The answer is.") { [weak self] in
             Task { @MainActor [weak self] in
                 self?.speechOutputService.speak(phrase.target) { [weak self] in
                     Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
@@ -326,8 +353,7 @@ public final class SessionViewModel: ObservableObject {
         speechRecognitionService.stopRecognition()
         attemptCount += 1
         statusMessage = "Didn't catch that"
-        sessionLog("[SPEAK] \"Didn't catch that. Try again. \(phrase.target)\" (attempt \(attemptCount)/3)")
-        speechOutputService.speak("Didn't catch that. Try again.", locale: "en-US") { [weak self] in
+        speakVaried(.gentleCorrection, fallback: "Didn't catch that. Try again.") { [weak self] in
             Task { @MainActor [weak self] in
                 guard let self else { return }
                 if self.attemptCount < 3 {
@@ -345,7 +371,17 @@ public final class SessionViewModel: ObservableObject {
         currentState = .sessionComplete
         statusMessage = "Session complete! Score: \(sessionScore)"
         isSessionActive = false
-        speechOutputService.speak("Session complete. Your score is \(sessionScore).")
+
+        let correctCount = phraseScores.values.filter { $0.correct }.count
+        let levelScore = Double(correctCount) / Double(max(phraseScores.count, 1))
+        userProgress?.updateLevelScore(currentLessonId.split(separator: "-").first.map(String.init) ?? "", score: levelScore)
+        try? modelContext?.save()
+
+        speakVaried(
+            .sessionClose,
+            fallback: "Session complete. Your score is \(sessionScore).",
+            slots: ["score": String(sessionScore)]
+        )
     }
 
     private func setupVoiceCommandHandling() {
@@ -362,7 +398,7 @@ public final class SessionViewModel: ObservableObject {
             case .stop:
                 self.speechOutputService.stop()
             case .help:
-                self.speechOutputService.speak("Say the phrase you hear. You have 3 attempts.")
+                self.speakVaried(.learnerTurnCue, fallback: "Say the phrase you hear. You have 3 attempts.")
             default:
                 break
             }
