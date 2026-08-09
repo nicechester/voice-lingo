@@ -52,6 +52,8 @@ public final class SessionViewModel: ObservableObject {
     private lazy var voiceCommandRouter = VoiceCommandRouter.shared
 
     private var currentLesson: Lesson?
+    private var currentLessonId: String = ""
+    private var sessionStartedAt: Date?
     private var currentPhrasIndex: Int = 0
     private var currentPhrases: [Phrase] = []
     private var phraseScores: [UUID: (attempts: Int, correct: Bool)] = [:]
@@ -76,10 +78,12 @@ public final class SessionViewModel: ObservableObject {
         isSessionActive = true
         voiceCommandRouter.suspend()
         currentState = .idle
-        currentPhase = .warmup
+        currentPhase = .newContent
         sessionScore = 0
         phraseScores.removeAll()
         statusMessage = "Loading lesson..."
+        currentLessonId = lessonId
+        sessionStartedAt = Date()
 
         Task {
             do {
@@ -268,6 +272,10 @@ public final class SessionViewModel: ObservableObject {
         let isCorrect = pronunciationEvaluator.evaluate(recognized: recognizedText, target: phrase.target)
         sessionLog("[EVAL] Result: \(isCorrect ? "CORRECT" : "WRONG")")
         phraseScores[phrase.id] = (attempts: attemptCount, correct: isCorrect)
+
+        let key = phrase.progressKey(inLesson: currentLessonId)
+        userProgress?.recordPhrase(key, correct: isCorrect)
+        try? modelContext?.save()
 
         if isCorrect {
             provideFeedback(correct: true, phrase: phrase)
