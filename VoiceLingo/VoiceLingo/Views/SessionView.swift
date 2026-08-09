@@ -18,6 +18,7 @@ struct SessionView: View {
     let lessonId: String
 
     @StateObject private var viewModel: SessionViewModel
+    @Query private var progressRecords: [UserProgress]
 
     init(languageCode: String, levelId: String, lessonId: String) {
         self.languageCode = languageCode
@@ -82,6 +83,8 @@ struct SessionView: View {
             if !active && viewModel.currentState == .sessionComplete { dismiss() }
         }
         .task {
+            viewModel.attach(modelContext: modelContext,
+                             userProgress: progressRecords.first { $0.languageCode == languageCode })
             viewModel.startSession(language: languageCode, levelId: levelId, lessonId: lessonId)
         }
         .onDisappear {
