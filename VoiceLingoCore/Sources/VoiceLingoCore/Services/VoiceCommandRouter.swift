@@ -125,7 +125,11 @@ public final class VoiceCommandRouter: @unchecked Sendable {
             .folding(options: .diacriticInsensitive, locale: .current)
 
         let commands: [VoiceCommand] = [.startLesson, .review, .continue, .changeLanguage, .repeat, .help, .skip, .stop]
-        let aliases: [String: VoiceCommand] = ["start listening": .startLesson]
+        let aliases: [String: VoiceCommand] = [
+            "start listening": .startLesson,
+            "start": .startLesson,
+            "lesson": .startLesson
+        ]
 
         for command in commands {
             if normalized.contains(command.normalized()) || command.normalized().contains(normalized) {
