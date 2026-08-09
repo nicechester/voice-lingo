@@ -176,6 +176,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_price_mango",
+        "cue": "Ask how much this mango costs.",
         "hints": ["¿Cuánto cuesta este mango?"]
       },
       {
@@ -186,6 +187,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "order_mangoes",
+        "cue": "Say you want a kilo of mangoes.",
         "hints": ["Quiero un kilo de mangos"]
       },
       {
@@ -196,6 +198,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_price_tomatoes",
+        "cue": "Ask how much these tomatoes cost.",
         "hints": ["¿Cuánto cuestan estos tomates?"]
       },
       {
@@ -206,6 +209,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "request_half_kilo",
+        "cue": "Ask if they can give you half a kilo.",
         "hints": ["¿Me puede dar medio kilo?"]
       },
       {
@@ -216,6 +220,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "pay_and_get_change",
+        "cue": "Hand over five hundred pesos and ask for your change.",
         "hints": ["Aquí tiene quinientos pesos", "¿Me da el cambio, por favor?"]
       }
     ]

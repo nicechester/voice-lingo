@@ -201,6 +201,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_location",
+        "cue": "Ask where the Museum of Anthropology is.",
         "hints": ["¿Dónde queda el Museo de Antropología?"]
       },
       {
@@ -211,6 +212,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "confirm_route",
+        "cue": "Repeat back the directions: straight two blocks, then turn right.",
         "hints": ["Siga derecho dos cuadras", "Dé vuelta a la derecha"]
       },
       {
@@ -221,6 +223,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "confirm_route_continued",
+        "cue": "Repeat back the rest: cross the street, then take bus number ten.",
         "hints": ["Cruce la calle con cuidado", "Tome el camión número diez"]
       },
       {
@@ -231,6 +234,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_distance_time",
+        "cue": "Ask if it's far, and how long it takes by bus.",
         "hints": ["¿Está lejos de aquí?", "¿Cuánto se hace en camión?"]
       }
     ]

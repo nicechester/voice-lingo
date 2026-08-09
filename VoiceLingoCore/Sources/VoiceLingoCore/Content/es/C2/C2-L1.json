@@ -226,6 +226,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "open_toast",
+        "cue": "Open your toast — say you'd like to say a few words.",
         "hints": ["Quiero decir unas palabras.", "No cabe duda de que hoy es un día especial."]
       },
       {
@@ -236,6 +237,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "recover_with_flourish",
+        "cue": "Recover from the heckle with a rhetorical flourish about how far you've come.",
         "hints": ["¿Quién no recuerda tu primer día aquí?", "Difícil fue el camino, pero aquí estamos."]
       },
       {
@@ -246,6 +248,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "affirm_commitment",
+        "cue": "Affirm your commitment, whatever the challenge.",
         "hints": ["Sea cual sea el reto, siempre supiste enfrentarlo.", "Pase lo que pase, contarás con nuestro apoyo."]
       },
       {
@@ -256,6 +259,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "closing_toast",
+        "cue": "Close the toast — dismiss any doubters and propose a toast to the future.",
         "hints": ["Haya quien lo dude, pero tu legado es innegable.", "Brindemos por la amistad, por el esfuerzo y por el futuro."]
       }
     ]

@@ -326,6 +326,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "request_clarification",
+        "cue": "Politely ask them to repeat what they said.",
         "hints": [
           "¿Mande? No escuché bien lo que dijiste",
           "Perdón, no te entendí bien esa palabra que usaste"
@@ -339,6 +340,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "offer_mx_equivalent",
+        "cue": "Offer the Mexican equivalent of the word they used.",
         "hints": [
           "Aquí en México le decimos chamba al trabajo",
           "Ando buscando chamba desde hace dos meses"
@@ -352,6 +354,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "clarify_understanding",
+        "cue": "Acknowledge that every country has its own way of saying things, then say you'll call them shortly.",
         "hints": [
           "Cada país tiene su propia manera de decir las cosas",
           "Ahorita te marco, dame tantito para terminar esto"
@@ -365,6 +368,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "agree_with_mx_flavor",
+        "cue": "Agree to grab coffee, using the Mexican diminutive for it.",
         "hints": [
           "¿Nos tomamos un cafecito antes de la llamada?",
           "Sale y vale, nos vemos a las diez entonces"

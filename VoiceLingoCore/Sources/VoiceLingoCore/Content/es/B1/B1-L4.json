@@ -178,6 +178,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_work_experience",
+        "cue": "Describe your work experience.",
         "hints": ["He trabajado en marketing durante cinco años", "Hace tres años que trabajo en atención al cliente"]
       },
       {
@@ -188,6 +189,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "give_concrete_past_example",
+        "cue": "Give a specific example of a big project you led.",
         "hints": ["El año pasado lideré un proyecto muy grande"]
       },
       {
@@ -198,6 +200,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "describe_strengths_weaknesses",
+        "cue": "Describe your greatest strength and your greatest weakness.",
         "hints": ["Mi mayor fortaleza es la comunicación con clientes", "Creo que mi mayor debilidad es la impaciencia"]
       },
       {
@@ -208,6 +211,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_about_team",
+        "cue": "Ask what the team you'd be working with is like.",
         "hints": ["¿Cómo es el equipo con el que trabajaría?"]
       }
     ]

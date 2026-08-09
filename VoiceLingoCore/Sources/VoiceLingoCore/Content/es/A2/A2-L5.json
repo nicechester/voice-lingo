@@ -201,6 +201,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "narrate_event_1",
+        "cue": "Say where you went last weekend.",
         "hints": ["El fin de semana pasado fui a la playa"]
       },
       {
@@ -211,6 +212,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "narrate_event_2",
+        "cue": "Say what you did first when you arrived.",
         "hints": ["Primero desayuné con mi familia"]
       },
       {
@@ -221,6 +223,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "narrate_event_3",
+        "cue": "Say what you did next, then what you ate.",
         "hints": ["Luego hice unas compras", "Después comí tacos con mis amigos"]
       },
       {
@@ -231,6 +234,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "narrate_conclusion",
+        "cue": "Say how you felt at the end, then ask them what they did.",
         "hints": ["Al final estuve muy cansado", "¿Y tú, qué hiciste?"]
       },
       {

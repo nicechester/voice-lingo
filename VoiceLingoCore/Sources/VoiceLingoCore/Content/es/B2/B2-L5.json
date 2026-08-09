@@ -180,6 +180,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "informal_greeting",
+        "cue": "Greet them casually — ask what's up.",
         "hints": ["¿Qué onda?"]
       },
       {
@@ -190,6 +191,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "react_surprise",
+        "cue": "React with surprise — 'no way, seriously?'",
         "hints": ["No manches, ¿en serio?"]
       },
       {
@@ -200,6 +202,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "agree_to_plan",
+        "cue": "Agree to meet up again in a bit.",
         "hints": ["Sale, nos vemos ahorita"]
       },
       {
@@ -210,6 +213,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "excuse_oneself",
+        "cue": "Say you have to go now, and you'll talk later.",
         "hints": ["Ya me tengo que ir, al rato platicamos"]
       }
     ]

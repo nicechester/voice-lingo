@@ -180,6 +180,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_doubt_timing",
+        "cue": "Say you don't think the launch will be on time.",
         "hints": ["No creo que el lanzamiento sea a tiempo"]
       },
       {
@@ -190,6 +191,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_certainty_effort",
+        "cue": "Say you think everything's going to work out.",
         "hints": ["Creo que todo va a funcionar"]
       },
       {
@@ -200,6 +202,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "express_doubt_client",
+        "cue": "Say you doubt the client will sign today.",
         "hints": ["Dudo que el cliente firme hoy"]
       },
       {
@@ -210,6 +213,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "propose_contingency",
+        "cue": "Suggest preparing a backup plan just in case.",
         "hints": ["Preparemos un plan B por si acaso"]
       }
     ]

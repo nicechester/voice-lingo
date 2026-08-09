@@ -176,6 +176,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "present_proposal",
+        "cue": "Propose working from home two days a week.",
         "hints": ["Propongo que trabajemos desde casa dos días"]
       },
       {
@@ -186,6 +187,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "concede_point",
+        "cue": "Acknowledge the concern, then point out the upside — it saves commute time.",
         "hints": ["Aunque es caro, ahorra tiempo de traslado"]
       },
       {
@@ -196,6 +198,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "rebut_objection",
+        "cue": "Acknowledge their point, then offer another option.",
         "hints": ["Entiendo tu punto; sin embargo, hay otra opción"]
       },
       {
@@ -206,6 +209,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "propose_followup",
+        "cue": "Suggest reviewing the results in a month.",
         "hints": ["Podríamos revisar esto en un mes"]
       }
     ]

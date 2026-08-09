@@ -379,6 +379,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "indirect_refusal",
+        "cue": "Decline indirectly — say you'd love to help, but explain why you can't right now.",
         "hints": [
           "Me encantaría ayudarle con eso, pero en este momento no contamos con los recursos",
           "Con ese plazo, está difícil, pero vamos a intentarlo"
@@ -392,6 +393,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "reframe_with_no_es_que",
+        "cue": "Reframe the refusal using 'it's not that... it's that...'",
         "hints": [
           "No es que no quiera ayudar, sino que no tengo la autorización necesaria",
           "Entiendo su preocupación, y quiero ser lo más transparente posible"
@@ -405,6 +407,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "tentative_alternative_proposal",
+        "cue": "Tentatively propose an alternative, softened as a question.",
         "hints": [
           "Quería preguntarle, ¿le importaría si movemos la entrega dos días?",
           "¿Qué le parece si buscamos un punto medio en el precio?"
@@ -418,6 +421,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "close_with_softener",
+        "cue": "Close politely, offering to follow up before a specific day.",
         "hints": [
           "Si me permite, quisiera matizar ese punto antes de que sigamos, ¿le parece?",
           "Déjame ver qué puedo hacer y te confirmo antes del viernes"

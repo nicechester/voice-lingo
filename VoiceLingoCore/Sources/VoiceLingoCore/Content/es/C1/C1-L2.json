@@ -404,6 +404,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "open_with_signpost",
+        "cue": "Open your briefing by signposting your first and second points.",
         "hints": [
           "En primer lugar, quiero hablarles sobre el desempeño del último trimestre",
           "En segundo lugar, analizaremos los principales desafíos que enfrentamos"
@@ -417,6 +418,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "state_result_despite_obstacle",
+        "cue": "State a result you achieved despite an obstacle.",
         "hints": [
           "A pesar de que los costos aumentaron, logramos mantenernos dentro del presupuesto",
           "El proyecto con el que trabajamos el año pasado generó excelentes resultados"
@@ -430,6 +432,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "explain_cause_with_lo_cual",
+        "cue": "Explain what caused the drop, using 'lo cual' to comment on it.",
         "hints": [
           "El cliente canceló el pedido, lo cual afectó nuestros ingresos del trimestre",
           "Lo interesante es que las ventas crecieron justo en la región con menos inversión"
@@ -443,6 +446,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "close_with_conditional_recommendation",
+        "cue": "Close with your recommendation and a condition attached.",
         "hints": [
           "Podemos avanzar con el lanzamiento, siempre y cuando el equipo legal apruebe el contrato",
           "En resumen, cerramos el trimestre con resultados sólidos y buenas perspectivas"

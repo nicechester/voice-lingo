@@ -394,6 +394,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "cite_statistic",
+        "cue": "Cite a specific statistic from the data.",
         "hints": [
           "El uso de inteligencia artificial en la industria aumentó un doce por ciento este año",
           "Se estima que la mitad de los trabajadores necesitará capacitarse de nuevo"
@@ -407,6 +408,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "state_impersonal_projection",
+        "cue": "State a projection about the future, framed impersonally.",
         "hints": [
           "Se prevé que la automatización afecte a uno de cada cinco empleos en la próxima década",
           "A largo plazo, se espera que los costos se reduzcan en torno a un veinte por ciento"
@@ -420,6 +422,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "qualify_claim",
+        "cue": "Qualify the previous claim — note that it varies by region or sector.",
         "hints": [
           "Cabe señalar que estos datos varían mucho según la región",
           "Este sector fue uno de los más afectados por la crisis"
@@ -433,6 +436,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "close_with_caution",
+        "cue": "Close with a note of caution alongside the positive data.",
         "hints": [
           "Aunque los datos son alentadores, es necesario seguir monitoreando la situación",
           "Los expertos coinciden en que la brecha digital sigue creciendo"

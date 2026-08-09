@@ -176,6 +176,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "ask_clarifying_question",
+        "cue": "Ask what they would do in your place.",
         "hints": ["¿Qué harías tú en mi lugar?"]
       },
       {
@@ -186,6 +187,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "give_advice",
+        "cue": "Give advice — tell them what you'd do if you were them.",
         "hints": ["Yo que tú, hablaría con tu jefe"]
       },
       {
@@ -196,6 +198,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "share_personal_hypothetical",
+        "cue": "Say what you would do if you had more free time.",
         "hints": ["Si tuviera más tiempo, viajaría más"]
       },
       {
@@ -206,6 +209,7 @@
       {
         "speaker": "learner",
         "expectedIntent": "offer_final_advice",
+        "cue": "Give one final piece of advice.",
         "hints": ["En tu lugar, no aceptaría esa oferta"]
       }
     ]
