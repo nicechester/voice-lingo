@@ -46,12 +46,62 @@
     {
       "target": "¿Cómo estás?",
       "native": "How are you? (informal)",
-      "phonetic": "KOH-moh es-TAHS"
+      "phonetic": "KOH-moh es-TAHS",
+      "syllables": ["KOH", "moh", "es", "TAHS"],
+      "vocabularyIntro": "'¿Cómo estás?' is the standard informal way to ask how someone is doing; use it with friends, family, and peers.",
+      "exampleSentence": {
+        "target": "¿Cómo estás hoy?",
+        "native": "How are you today?"
+      },
+      "grammarNote": "'Estás' is the informal tú form of estar; the formal usted equivalent is '¿Cómo está?' — the tú form always ends in -ás.",
+      "memoryHook": "Cómo estás is your casual check-in — the everyday way to ask 'how's it going?'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: How are you?",
+          "answer": "¿Cómo estás?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Cómo ___?",
+          "answer": "estás"
+        },
+        {
+          "type": "qa",
+          "prompt": "Quieres preguntarle a un amigo cómo se siente. ¿Qué le preguntas?",
+          "answer": "¿Cómo estás?"
+        }
+      ]
     },
     {
       "target": "Estoy bien",
       "native": "I am well",
-      "phonetic": "es-TOY bee-EN"
+      "phonetic": "es-TOY bee-EN",
+      "syllables": ["es", "TOY", "bee", "EN"],
+      "vocabularyIntro": "'Estoy bien' is the standard reply to '¿Cómo estás?', using estar for a temporary state or feeling rather than a permanent trait.",
+      "exampleSentence": {
+        "target": "Estoy bien, un poco cansado.",
+        "native": "I'm well, a little tired."
+      },
+      "grammarNote": "'Estoy' comes from estar (temporary states/feelings), not ser (permanent traits) — use estar whenever you're describing how you feel right now.",
+      "memoryHook": "Estoy bien pairs 'I am' with 'well' — the simplest possible status update.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I am well",
+          "answer": "Estoy bien"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ bien.",
+          "answer": "Estoy"
+        },
+        {
+          "type": "qa",
+          "prompt": "Un amigo te pregunta cómo estás y te sientes bien. ¿Qué le respondes?",
+          "answer": "Estoy bien"
+        }
+      ]
     },
     {
       "target": "Estoy bien, gracias",
@@ -66,7 +116,32 @@
     {
       "target": "Mucho gusto",
       "native": "Nice to meet you / Pleased to meet you",
-      "phonetic": "MOO-choh GOOS-toh"
+      "phonetic": "MOO-choh GOOS-toh",
+      "syllables": ["MOO", "choh", "GOOS", "toh"],
+      "vocabularyIntro": "'Mucho gusto' literally means 'much pleasure' — the standard fixed phrase said right after meeting someone for the first time.",
+      "exampleSentence": {
+        "target": "Mucho gusto, soy Ana.",
+        "native": "Nice to meet you, I'm Ana."
+      },
+      "grammarNote": "'Mucho gusto' is a fixed exclamation and doesn't conjugate — it stays exactly the same regardless of who's speaking or being addressed.",
+      "memoryHook": "Mucho gusto = 'much pleasure' — imagine a warm handshake the moment you say it.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Nice to meet you",
+          "answer": "Mucho gusto"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ gusto.",
+          "answer": "Mucho"
+        },
+        {
+          "type": "qa",
+          "prompt": "Acabas de conocer a alguien nuevo. ¿Qué le dices?",
+          "answer": "Mucho gusto"
+        }
+      ]
     },
     {
       "target": "Encantado",
@@ -81,12 +156,62 @@
     {
       "target": "¿Cuál es tu nombre?",
       "native": "What is your name? (informal)",
-      "phonetic": "KWAL es too NOHM-breh"
+      "phonetic": "KWAL es too NOHM-breh",
+      "syllables": ["KWAL", "es", "too", "NOHM", "breh"],
+      "vocabularyIntro": "'¿Cuál es tu nombre?' is the direct, informal way to ask someone's name; 'tu' (your, informal) matches the tú register used throughout this lesson.",
+      "exampleSentence": {
+        "target": "Hola, ¿cuál es tu nombre?",
+        "native": "Hi, what is your name?"
+      },
+      "grammarNote": "'Cuál' (which/what) is used here rather than 'qué' because you're selecting from a set of possible names, not asking for a definition.",
+      "memoryHook": "Cuál es tu nombre — picture pointing at a name tag and asking 'which one is yours?'",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: What is your name?",
+          "answer": "¿Cuál es tu nombre?"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "¿Cuál es tu ___?",
+          "answer": "nombre"
+        },
+        {
+          "type": "qa",
+          "prompt": "Quieres saber el nombre de alguien que acabas de conocer. ¿Qué le preguntas?",
+          "answer": "¿Cuál es tu nombre?"
+        }
+      ]
     },
     {
       "target": "Me llamo Juan",
       "native": "My name is Juan",
-      "phonetic": "meh YAH-moh HWAN"
+      "phonetic": "meh YAH-moh HWAN",
+      "syllables": ["meh", "YAH", "moh", "HWAN"],
+      "vocabularyIntro": "'Me llamo...' (literally 'I call myself...') is the standard reflexive way to state your name, more common in everyday speech than 'Mi nombre es...'",
+      "exampleSentence": {
+        "target": "Me llamo Juan, mucho gusto.",
+        "native": "My name is Juan, nice to meet you."
+      },
+      "grammarNote": "'Llamarse' is reflexive: me llamo, te llamas, se llama — the pronoun 'me' shows the calling happens to yourself.",
+      "memoryHook": "Me llamo = 'I call myself' — you're literally introducing yourself by name.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: My name is Juan",
+          "answer": "Me llamo Juan"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ llamo Juan.",
+          "answer": "Me"
+        },
+        {
+          "type": "qa",
+          "prompt": "Alguien te pregunta tu nombre y te llamas Juan. ¿Qué respondes?",
+          "answer": "Me llamo Juan"
+        }
+      ]
     }
   ],
   "dialogue": {

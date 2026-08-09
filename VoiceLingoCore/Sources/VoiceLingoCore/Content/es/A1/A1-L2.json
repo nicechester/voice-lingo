@@ -6,12 +6,62 @@
     {
       "target": "Por favor",
       "native": "Please",
-      "phonetic": "por fah-VOR"
+      "phonetic": "por fah-VOR",
+      "syllables": ["por", "fah", "VOR"],
+      "vocabularyIntro": "'Por favor' (please) softens any request and should be used often — Spanish speakers use it more frequently than English speakers use 'please'.",
+      "exampleSentence": {
+        "target": "Un café, por favor.",
+        "native": "A coffee, please."
+      },
+      "grammarNote": "'Por favor' can go at the beginning or end of a sentence with no change in meaning; placing it at the end is slightly more common in casual speech.",
+      "memoryHook": "Por favor — think 'for a favor' — you're literally asking for a small favor.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Please",
+          "answer": "Por favor"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "Un café, por ___.",
+          "answer": "favor"
+        },
+        {
+          "type": "qa",
+          "prompt": "Quieres pedir algo educadamente. ¿Qué palabra agregas?",
+          "answer": "Por favor"
+        }
+      ]
     },
     {
       "target": "Gracias",
       "native": "Thank you",
-      "phonetic": "GRAH-see-as"
+      "phonetic": "GRAH-see-as",
+      "syllables": ["GRAH", "see", "as"],
+      "vocabularyIntro": "'Gracias' is the single most common way to say thank you in Spanish, appropriate in any register from casual to formal.",
+      "exampleSentence": {
+        "target": "Gracias por tu ayuda.",
+        "native": "Thank you for your help."
+      },
+      "grammarNote": "'Gracias' is plural in form (it comes from 'grace/graces') but functions as a fixed exclamation — it never changes regardless of context.",
+      "memoryHook": "Gracias shares its root with the English word 'gracious'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Thank you",
+          "answer": "Gracias"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ por tu ayuda.",
+          "answer": "Gracias"
+        },
+        {
+          "type": "qa",
+          "prompt": "Alguien te ayuda con algo. ¿Qué le dices?",
+          "answer": "Gracias"
+        }
+      ]
     },
     {
       "target": "Muchas gracias",
@@ -31,7 +81,32 @@
     {
       "target": "Disculpe",
       "native": "Excuse me (formal) / Pardon me",
-      "phonetic": "dees-KOOL-peh"
+      "phonetic": "dees-KOOL-peh",
+      "syllables": ["dees", "KOOL", "peh"],
+      "vocabularyIntro": "'Disculpe' is the formal usted command used to politely get someone's attention or apologize briefly — common with strangers, servers, or in professional settings.",
+      "exampleSentence": {
+        "target": "Disculpe, ¿dónde está el baño?",
+        "native": "Excuse me, where is the bathroom?"
+      },
+      "grammarNote": "'Disculpe' is the usted imperative of disculpar; its informal tú counterpart is 'disculpa' — choose based on how you'd address the person.",
+      "memoryHook": "Disculpe shares its root with 'culpa' (fault) — you're softly claiming a bit of blame just to get someone's attention.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Excuse me",
+          "answer": "Disculpe"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___, ¿dónde está el baño?",
+          "answer": "Disculpe"
+        },
+        {
+          "type": "qa",
+          "prompt": "Necesitas la atención de un desconocido de manera formal. ¿Qué dices?",
+          "answer": "Disculpe"
+        }
+      ]
     },
     {
       "target": "Disculpa",
@@ -41,12 +116,62 @@
     {
       "target": "Lo siento",
       "native": "I'm sorry",
-      "phonetic": "loh see-EN-toh"
+      "phonetic": "loh see-EN-toh",
+      "syllables": ["loh", "see", "EN", "toh"],
+      "vocabularyIntro": "'Lo siento' (literally 'I feel it') is the standard way to apologize for something more serious than a minor bump — use 'disculpe'/'disculpa' for a brief attention-getting excuse instead.",
+      "exampleSentence": {
+        "target": "Lo siento, llegué tarde.",
+        "native": "I'm sorry, I arrived late."
+      },
+      "grammarNote": "'Siento' comes from sentir (to feel); 'lo' stands in for the thing you regret, so the phrase literally means 'I feel it'.",
+      "memoryHook": "Lo siento — 'I feel it' — a genuine expression of regret, not just a quick pardon.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: I'm sorry",
+          "answer": "Lo siento"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___ siento, llegué tarde.",
+          "answer": "Lo"
+        },
+        {
+          "type": "qa",
+          "prompt": "Llegaste tarde a una cita y quieres disculparte. ¿Qué dices?",
+          "answer": "Lo siento"
+        }
+      ]
     },
     {
       "target": "Adiós",
       "native": "Goodbye",
-      "phonetic": "ah-dee-OHS"
+      "phonetic": "ah-dee-OHS",
+      "syllables": ["ah", "dee", "OHS"],
+      "vocabularyIntro": "'Adiós' is a definitive goodbye, often used when you won't see the person again soon — 'hasta luego' is more common for a casual, see-you-later parting.",
+      "exampleSentence": {
+        "target": "Adiós, que tengas buen día.",
+        "native": "Goodbye, have a good day."
+      },
+      "grammarNote": "'Adiós' literally combines 'a' (to) and 'Dios' (God) — historically a blessing, though today it's simply the standard word for 'goodbye'.",
+      "memoryHook": "Adiós — 'a Dios' — a farewell with old religious roots, now just everyday 'bye'.",
+      "practiceItems": [
+        {
+          "type": "translation",
+          "prompt": "Translate: Goodbye",
+          "answer": "Adiós"
+        },
+        {
+          "type": "fillBlank",
+          "prompt": "___, que tengas buen día.",
+          "answer": "Adiós"
+        },
+        {
+          "type": "qa",
+          "prompt": "Te vas y no sabes cuándo verás a la otra persona de nuevo. ¿Qué le dices?",
+          "answer": "Adiós"
+        }
+      ]
     },
     {
       "target": "Hasta luego",

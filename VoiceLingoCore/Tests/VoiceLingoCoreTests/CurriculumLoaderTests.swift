@@ -111,12 +111,19 @@ final class CurriculumLoaderTests: XCTestCase {
             XCTAssertFalse(phrase.target.isEmpty)
             XCTAssertFalse(phrase.native.isEmpty)
             XCTAssertFalse(phrase.phonetic.isEmpty)
-
-            // Optional new fields should be nil for A1-L2
-            XCTAssertNil(phrase.exampleSentence)
-            XCTAssertNil(phrase.syllables)
-            XCTAssertNil(phrase.grammarNote)
         }
+
+        // A1-L2 is now partially enriched (see the content-gap fix for A1's
+        // near-zero enrichment vs. A2-C2). "Hasta luego" is deliberately left
+        // bare so this test still proves the optional new fields decode fine
+        // as nil when absent from the JSON.
+        guard let bare = phrases.first(where: { $0.target == "Hasta luego" }) else {
+            XCTFail("Hasta luego phrase not found")
+            return
+        }
+        XCTAssertNil(bare.exampleSentence)
+        XCTAssertNil(bare.syllables)
+        XCTAssertNil(bare.grammarNote)
     }
 
     func testLessonCaching() throws {
