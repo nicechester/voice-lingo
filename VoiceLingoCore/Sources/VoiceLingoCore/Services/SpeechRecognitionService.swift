@@ -12,6 +12,8 @@ public final class SpeechRecognitionService: @unchecked Sendable {
     private var currentLocale: String = "es-MX"
     private var lastRecognizedText: String = ""
     private var isTapInstalled = false
+    private var speechDetectedCallback: (@Sendable () -> Void)?
+    private var hasFiredSpeechDetected = false
     public init() {
         requestMicrophonePermission()
     }
@@ -38,7 +40,7 @@ public final class SpeechRecognitionService: @unchecked Sendable {
         }
     }
 
-    public func recognize(timeout: TimeInterval = 5.0, onResult: @escaping @Sendable (String) -> Void, onError: @escaping @Sendable (Error) -> Void) {
+    public func recognize(timeout: TimeInterval = 5.0, onResult: @escaping @Sendable (String) -> Void, onError: @escaping @Sendable (Error) -> Void, onSpeechDetected: (@Sendable () -> Void)? = nil) {
         guard let speechRecognizer = speechRecognizer, speechRecognizer.isAvailable else {
             onError(SpeechRecognitionError.recognizerUnavailable)
             return
@@ -46,6 +48,8 @@ public final class SpeechRecognitionService: @unchecked Sendable {
 
         stopRecognition()
         lastRecognizedText = ""
+        hasFiredSpeechDetected = false
+        speechDetectedCallback = onSpeechDetected
 
         var finished = false
         func finish(result: String?, error: Error?) {
@@ -83,6 +87,10 @@ public final class SpeechRecognitionService: @unchecked Sendable {
             recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
                 if let result {
                     self.lastRecognizedText = result.bestTranscription.formattedString
+                    if !self.hasFiredSpeechDetected && !self.lastRecognizedText.isEmpty {
+                        self.hasFiredSpeechDetected = true
+                        DispatchQueue.main.async { self.speechDetectedCallback?() }
+                    }
                     if result.isFinal {
                         finish(result: self.lastRecognizedText, error: nil)
                     }
@@ -118,6 +126,8 @@ public final class SpeechRecognitionService: @unchecked Sendable {
         if audioEngine.isRunning {
             audioEngine.stop()
         }
+        speechDetectedCallback = nil
+        hasFiredSpeechDetected = false
     }
 
     public func cancelRecognition() {
