@@ -425,7 +425,7 @@ public final class SessionViewModel: ObservableObject {
 
     private func beginDialoguePhase() {
         guard let scenario = currentLesson?.dialogue else {
-            beginQuizPhase()
+            completeSession()
             return
         }
 
@@ -485,8 +485,7 @@ public final class SessionViewModel: ObservableObject {
             }
 
         case .finished:
-            currentPhase = .quiz
-            beginQuizPhase()
+            completeSession()
         }
     }
 
@@ -569,11 +568,6 @@ public final class SessionViewModel: ObservableObject {
             }
             }
         }
-    }
-
-    private func beginQuizPhase() {
-        currentPhase = .quiz
-        sessionLog("[PHASE] Beginning quiz phase")
     }
 
     private func setupVoiceCommandHandling() {
