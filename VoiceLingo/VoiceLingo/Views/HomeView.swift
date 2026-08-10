@@ -98,20 +98,23 @@ struct HomeView: View {
 
                 // Voice command feedback popup
                 if let feedback = viewModel.voiceCommandFeedback {
-                    VStack {
+                    VStack(spacing: 0) {
                         Text(feedback)
                             .font(.headline)
+                            .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.black.opacity(0.8))
-                            .cornerRadius(8)
+                            .cornerRadius(12)
                             .padding()
 
                         Spacer()
                     }
-                    .transition(.opacity.combined(with: .scale))
+                    .transition(.scale.combined(with: .opacity))
+                    .animation(.easeInOut(duration: 0.3), value: viewModel.voiceCommandFeedback)
                 }
             }
+            .animation(.easeInOut(duration: 0.3), value: viewModel.voiceCommandFeedback)
         }
     }
 }
