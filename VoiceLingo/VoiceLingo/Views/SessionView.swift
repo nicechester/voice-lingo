@@ -33,14 +33,16 @@ struct SessionView: View {
                 .font(.title2)
                 .padding()
 
-            HStack(spacing: 20) {
-                Text("Phrase:")
-                    .font(.headline)
-                Text(viewModel.phraseCount)
-                    .font(.headline)
-                    .foregroundColor(.blue)
+            if viewModel.currentPhase == .newContent || viewModel.currentPhase == .warmup {
+                HStack(spacing: 20) {
+                    Text("Phrase:")
+                        .font(.headline)
+                    Text(viewModel.phraseCount)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                }
+                .padding()
             }
-            .padding()
 
             HStack(spacing: 20) {
                 Text("Score:")

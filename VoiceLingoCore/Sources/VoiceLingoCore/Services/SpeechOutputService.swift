@@ -13,6 +13,17 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
     override init() {
         super.init()
         synthesizer.delegate = self
+        setupAudioSession()
+    }
+
+    private func setupAudioSession() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker])
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            NSLog("[SpeechOutput] Audio session setup failed: \(error)")
+        }
     }
 
     public func setLocale(_ locale: String) {
@@ -25,9 +36,23 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
         self.pitchMultiplier = max(0.5, min(2.0, pitch))
     }
 
+    private func selectVoice(for locale: String) -> AVSpeechSynthesisVoice? {
+        let premiumIdentifiers: [String: String] = [
+            "en-US": "com.apple.voice.premium.en-US.Zoe",
+            "es-ES": "com.apple.voice.premium.es-ES.Monica"
+        ]
+
+        if let premiumId = premiumIdentifiers[locale],
+           let premiumVoice = AVSpeechSynthesisVoice(identifier: premiumId) {
+            return premiumVoice
+        }
+
+        return AVSpeechSynthesisVoice(language: locale)
+    }
+
     public func speak(_ text: String, locale: String? = nil, suspendRouter: Bool = true, completion: (@Sendable () -> Void)? = nil) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: locale ?? currentLocale)
+        utterance.voice = selectVoice(for: locale ?? currentLocale)
         utterance.rate = speechRate
         utterance.pitchMultiplier = pitchMultiplier
         if suspendRouter { VoiceCommandRouter.shared.suspend() }
@@ -37,7 +62,7 @@ public final class SpeechOutputService: NSObject, AVSpeechSynthesizerDelegate, @
 
     public func speakSlowly(_ text: String, locale: String? = nil, suspendRouter: Bool = true, completion: (@Sendable () -> Void)? = nil) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: locale ?? currentLocale)
+        utterance.voice = selectVoice(for: locale ?? currentLocale)
         utterance.rate = max(0.1, speechRate * 0.6)
         utterance.pitchMultiplier = pitchMultiplier
         if suspendRouter { VoiceCommandRouter.shared.suspend() }
