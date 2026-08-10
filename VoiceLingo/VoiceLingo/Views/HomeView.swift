@@ -95,6 +95,22 @@ struct HomeView: View {
                     viewModel.stopVoiceCommands()
                     viewModel.setActive(false)
                 }
+
+                // Voice command feedback popup
+                if let feedback = viewModel.voiceCommandFeedback {
+                    VStack {
+                        Text(feedback)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.black.opacity(0.8))
+                            .cornerRadius(8)
+                            .padding()
+
+                        Spacer()
+                    }
+                    .transition(.opacity.combined(with: .scale))
+                }
             }
         }
     }

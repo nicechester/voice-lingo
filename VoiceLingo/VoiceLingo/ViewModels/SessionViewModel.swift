@@ -2,7 +2,7 @@ import Foundation
 import Combine
 import SwiftData
 import OSLog
-import AVFoundation
+import UIKit
 import VoiceLingoCore
 
 private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "VoiceLingo", category: "Session")
@@ -81,6 +81,7 @@ public final class SessionViewModel: ObservableObject {
     public func startSession(language: String, levelId: String, lessonId: String) {
         isSessionActive = true
         voiceCommandRouter.suspend()
+        UIApplication.shared.isIdleTimerDisabled = true
         currentState = .idle
         currentPhase = .newContent
         sessionScore = 0
@@ -144,20 +145,11 @@ public final class SessionViewModel: ObservableObject {
         speechOutputService.stop()
         speechRecognitionService.stopRecognition()
         voiceCommandRouter.resume()
+        UIApplication.shared.isIdleTimerDisabled = false
         statusMessage = "Session ended"
     }
 
     // MARK: - Private Methods
-
-    private func configureAudioForPlayback() {
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playback, mode: .default, options: [.duckOthers])
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        } catch {
-            sessionLog("[AUDIO] Failed to configure audio session: \(error)")
-        }
-    }
 
     private func speakVaried(
         _ act: SpeechAct,
@@ -181,7 +173,6 @@ public final class SessionViewModel: ObservableObject {
         statusMessage = "Let's begin"
         speechRecognitionService.stopRecognition()
         speechOutputService.stop()
-        configureAudioForPlayback()
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 300_000_000)
             self.speakVaried(.sessionOpen, fallback: "Let's get started.") { [weak self] in
@@ -353,7 +344,6 @@ public final class SessionViewModel: ObservableObject {
             sessionScore += 10
             Task { @MainActor in
                 self.speechOutputService.stop()
-                self.configureAudioForPlayback()
                 try? await Task.sleep(nanoseconds: 300_000_000)
                 self.speakVaried(.praise, fallback: "Correct! Well done.") { [weak self] in
                     Task { @MainActor [weak self] in self?.speakExampleThenAdvance(phrase) }
@@ -363,7 +353,6 @@ public final class SessionViewModel: ObservableObject {
             statusMessage = "Try again"
             Task { @MainActor in
                 self.speechOutputService.stop()
-                self.configureAudioForPlayback()
                 try? await Task.sleep(nanoseconds: 300_000_000)
                 self.speakVaried(.gentleCorrection, fallback: "Not quite. Try again.") { [weak self] in
                     Task { @MainActor [weak self] in
@@ -382,7 +371,6 @@ public final class SessionViewModel: ObservableObject {
         statusMessage = phrase.native
         Task { @MainActor in
             self.speechOutputService.stop()
-            self.configureAudioForPlayback()
             try? await Task.sleep(nanoseconds: 300_000_000)
             self.speakVaried(.revealAnswer, fallback: "The answer is.") { [weak self] in
                 Task { @MainActor [weak self] in
@@ -400,7 +388,6 @@ public final class SessionViewModel: ObservableObject {
         attemptCount += 1
         statusMessage = "Didn't catch that"
         speechOutputService.stop()
-        configureAudioForPlayback()
         speakVaried(.gentleCorrection, fallback: "Didn't catch that. Try again.") { [weak self] in
             Task { @MainActor [weak self] in
                 guard let self else { return }
@@ -422,6 +409,7 @@ public final class SessionViewModel: ObservableObject {
         currentState = .sessionComplete
         statusMessage = "Session complete! Score: \(sessionScore)"
         isSessionActive = false
+        UIApplication.shared.isIdleTimerDisabled = false
 
         let correctCount = phraseScores.values.filter { $0.correct }.count
         let levelScore = Double(correctCount) / Double(max(phraseScores.count, 1))

@@ -28,6 +28,7 @@ final class HomeViewModel: ObservableObject {
     @Published var activeSession: SessionLaunchParams?
     @Published var shouldShowLanguagePicker = false
     @Published var errorMessage: String?
+    @Published var voiceCommandFeedback: String?
 
     private var isActive = false
     private var isListeningActive = false
@@ -82,8 +83,10 @@ final class HomeViewModel: ObservableObject {
 
             switch command {
             case .startLesson, .review:
+                self.showFeedback("Starting lesson...")
                 self.handleStartLessonOrReview()
             case .changeLanguage:
+                self.showFeedback("Changing language...")
                 self.shouldShowLanguagePicker = true
                 self.speechOutputService.speak("Choose your language")
             case .continue, .repeat, .help, .skip, .stop:
@@ -149,5 +152,12 @@ final class HomeViewModel: ObservableObject {
 
     func setActive(_ active: Bool) {
         isActive = active
+    }
+
+    private func showFeedback(_ message: String) {
+        voiceCommandFeedback = message
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.voiceCommandFeedback = nil
+        }
     }
 }
