@@ -425,7 +425,7 @@ public final class SessionViewModel: ObservableObject {
 
     private func beginDialoguePhase() {
         guard let scenario = currentLesson?.dialogue else {
-            completeSession()
+            beginQuizPhase()
             return
         }
 
@@ -485,7 +485,8 @@ public final class SessionViewModel: ObservableObject {
             }
 
         case .finished:
-            completeSession()
+            currentPhase = .quiz
+            beginQuizPhase()
         }
     }
 
@@ -567,6 +568,17 @@ public final class SessionViewModel: ObservableObject {
                 }
             }
             }
+        }
+    }
+
+    private func beginQuizPhase() {
+        currentPhase = .quiz
+        sessionLog("[PHASE] Beginning quiz phase (placeholder)")
+        // TODO: Implement quiz phase (issue #46)
+        // For now, immediately complete session
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 500_000_000)
+            self.completeSession()
         }
     }
 
