@@ -63,6 +63,10 @@ public final class SessionViewModel: ObservableObject {
     private var userProgress: UserProgress?
     private var composer: SpeechComposer?
     private var dialogueRunner: DialogueRunner?
+    private var quizItems: [QuizItem] = []
+    private var quizIndex: Int = 0
+    private var hasAnnouncedTime: Bool = false
+    private var targetLanguageLocale: String = "es-MX"  // Default, will be set on session start
 
     public init(modelContext: ModelContext? = nil) {
         self.modelContext = modelContext
@@ -110,6 +114,7 @@ public final class SessionViewModel: ObservableObject {
                 self.currentLesson = lesson
                 self.currentPhrases = lesson.phrases
                 self.currentPhrasIndex = 0
+                self.targetLanguageLocale = manifest.voiceLocale
                 self.speechOutputService.setLocale(manifest.voiceLocale)
                 self.speechRecognitionService.setLocale(manifest.recognizerLocale)
                 if let bank = self.curriculumLoader.loadSpeechBank(for: language) {
@@ -573,12 +578,187 @@ public final class SessionViewModel: ObservableObject {
 
     private func beginQuizPhase() {
         currentPhase = .quiz
-        sessionLog("[PHASE] Beginning quiz phase (placeholder)")
-        // TODO: Implement quiz phase (issue #46)
-        // For now, immediately complete session
+        quizIndex = 0
+        hasAnnouncedTime = false
+
+        // Build quiz from practiceItems in currentPhrases (up to 5 items)
+        let reviewStates = buildReviewStates()
+        quizItems = QuizRunner.buildQuiz(
+            phrases: currentPhrases,
+            lessonId: currentLessonId,
+            reviewStates: reviewStates,
+            maxItems: 5
+        )
+
+        sessionLog("[PHASE] Beginning quiz phase with \(quizItems.count) items")
+
+        if quizItems.isEmpty {
+            sessionLog("[QUIZ] No practice items; skipping to summary")
+            Task { @MainActor [weak self] in
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                self?.beginSummary()
+            }
+        } else {
+            Task { @MainActor [weak self] in
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                self?.askQuizItem()
+            }
+        }
+    }
+
+    private func buildReviewStates() -> [String: ReviewState] {
+        var states: [String: ReviewState] = [:]
+        guard let progress = userProgress else { return states }
+
+        for phrase in currentPhrases {
+            let key = phrase.progressKey(inLesson: currentLessonId)
+            if let progress = progress.phraseProgress(for: key) {
+                let state = ReviewState(
+                    phraseKey: key,
+                    correctCount: progress.correctCount,
+                    incorrectCount: progress.incorrectCount,
+                    isDue: progress.isDue
+                )
+                states[key] = state
+            }
+        }
+        return states
+    }
+
+    private func askQuizItem() {
+        guard quizIndex < quizItems.count else {
+            announceTimeIfNeeded()
+            return
+        }
+
+        let item = quizItems[quizIndex]
+        let questionNumber = quizIndex + 1
+        let totalQuestions = quizItems.count
+
+        statusMessage = "Question \(questionNumber)/\(totalQuestions)"
+        currentState = .speakingPrompt
+        sessionLog("[QUIZ] Question \(questionNumber)/\(totalQuestions): \(item.type)")
+
+        // Speak question intro
+        let introText = "Question \(questionNumber) of \(totalQuestions)."
+        speechOutputService.speak(introText, locale: "en-US") { [weak self] in
+            Task { @MainActor [weak self] in
+                guard let self else { return }
+                // Speak the prompt in the appropriate locale
+                let promptLocale = item.promptLocale == .native ? "en-US" : self.targetLanguageLocale
+                sessionLog("[SPEAK] [QUIZ:prompt] \"\(item.spokenPrompt)\" locale=\(promptLocale)")
+                self.speechOutputService.speak(item.spokenPrompt, locale: promptLocale) { [weak self] in
+                    Task { @MainActor [weak self] in
+                        self?.listenForQuizAnswer(item)
+                    }
+                }
+            }
+        }
+    }
+
+    private func listenForQuizAnswer(_ item: QuizItem) {
+        statusMessage = "Your answer"
+        currentState = .awaitingResponse
+        sessionLog("[LISTEN] Quiz: mic open, waiting for speech (timeout: 7s)")
+
+        speechRecognitionService.recognize(timeout: 7.0) { [weak self] recognizedText in
+            Task { @MainActor in
+                sessionLog("[LISTEN] Quiz: recognized=\"\(recognizedText)\"")
+                self?.gradeQuizAnswer(recognizedText, item: item)
+            }
+        } onError: { [weak self] error in
+            Task { @MainActor in
+                sessionLog("[LISTEN] Quiz error: \(error.localizedDescription)")
+                self?.gradeQuizAnswer("", item: item)
+            }
+        }
+    }
+
+    private func gradeQuizAnswer(_ recognizedText: String, item: QuizItem) {
+        currentState = .evaluating
+        speechRecognitionService.stopRecognition()
+        statusMessage = "Checking..."
+
+        let isCorrect = QuizRunner.grade(recognized: recognizedText, item: item)
+        sessionLog("[QUIZ:EVAL] recognized=\"\(recognizedText)\" answer=\"\(item.answer)\" result=\(isCorrect ? "CORRECT" : "WRONG")")
+        lastResponseCorrect = isCorrect
+
+        // Record the quiz answer
+        userProgress?.recordPhrase(item.phraseKey, correct: isCorrect)
+        try? modelContext?.save()
+
+        // Announce result and advance
         Task { @MainActor in
-            try? await Task.sleep(nanoseconds: 500_000_000)
-            self.completeSession()
+            try? await Task.sleep(nanoseconds: 200_000_000)
+            if isCorrect {
+                self.sessionScore += 10
+                self.currentState = .feedback
+                self.statusMessage = "Correct!"
+                self.speakVaried(.praise, fallback: "Correct!") { [weak self] in
+                    Task { @MainActor [weak self] in
+                        self?.advanceQuiz()
+                    }
+                }
+            } else {
+                self.currentState = .feedback
+                self.statusMessage = "Incorrect"
+                self.speakVaried(.gentleCorrection, fallback: "Incorrect.") { [weak self] in
+                    Task { @MainActor [weak self] in
+                        // Reveal answer
+                        self?.speechOutputService.speak("The answer is: \(item.answer)") { [weak self] in
+                            Task { @MainActor [weak self] in
+                                self?.advanceQuiz()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private func advanceQuiz() {
+        quizIndex += 1
+        announceTimeIfNeeded()
+    }
+
+    private func announceTimeIfNeeded() {
+        guard !hasAnnouncedTime && quizIndex >= 3 else {
+            if quizIndex < quizItems.count {
+                askQuizItem()
+            } else {
+                beginSummary()
+            }
+            return
+        }
+
+        hasAnnouncedTime = true
+        statusMessage = "Time check"
+        currentState = .explaining
+        sessionLog("[QUIZ] Announcing time after question \(quizIndex)")
+
+        speakVaried(.timeRemaining, fallback: "You're about ten minutes in. Let's continue.") { [weak self] in
+            Task { @MainActor [weak self] in
+                if self?.quizIndex ?? 0 < self?.quizItems.count ?? 0 {
+                    self?.askQuizItem()
+                } else {
+                    self?.beginSummary()
+                }
+            }
+        }
+    }
+
+    private func beginSummary() {
+        currentPhase = .summary
+        currentState = .speakingPrompt
+        statusMessage = "Session summary"
+        sessionLog("[PHASE] Beginning summary phase")
+
+        let message = "Your session is complete. You scored \(sessionScore) points. Well done!"
+
+        speakVaried(.sessionClose, fallback: message, slots: ["score": String(sessionScore)]) { [weak self] in
+            Task { @MainActor [weak self] in
+                self?.completeSession()
+            }
         }
     }
 

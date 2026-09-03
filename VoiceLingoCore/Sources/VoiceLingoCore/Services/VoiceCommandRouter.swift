@@ -37,6 +37,7 @@ public final class VoiceCommandRouter: @unchecked Sendable {
 
     private let speechRecognitionService = SpeechRecognitionService()
     private var commandCallbacks: [(VoiceCommand) -> Void] = []
+    private var speechDetectedCallbacks: [@Sendable () -> Void] = []
     private var isListening = false
     private var isSuspended = false
     private var currentLocale: String = "es-MX"
@@ -51,9 +52,10 @@ public final class VoiceCommandRouter: @unchecked Sendable {
         currentLocale = locale
     }
 
-    public func startListening(onCommand: @escaping (VoiceCommand) -> Void) {
+    public func startListening(onCommand: @escaping (VoiceCommand) -> Void, onSpeechDetected: @escaping @Sendable () -> Void = {}) {
         callbackLock.lock()
         commandCallbacks.append(onCommand)
+        speechDetectedCallbacks.append(onSpeechDetected)
         callbackLock.unlock()
 
         if isListening {
@@ -95,11 +97,19 @@ public final class VoiceCommandRouter: @unchecked Sendable {
     private func listenForCommands() {
         guard isListening, !isSuspended else { return }
 
-        speechRecognitionService.recognize(timeout: 10.0) { [weak self] (recognizedText: String) in
+        callbackLock.lock()
+        let callbacks = speechDetectedCallbacks
+        callbackLock.unlock()
+
+        let onSpeechDetected: @Sendable () -> Void = {
+            for callback in callbacks { callback() }
+        }
+
+        speechRecognitionService.recognize(timeout: 10.0, onResult: { [weak self] (recognizedText: String) in
             guard let self = self else { return }
             routerLog("Recognized: \"\(recognizedText)\"")
             self.processRecognizedText(recognizedText)
-        } onError: { [weak self] (error: Error) in
+        }, onError: { [weak self] (error: Error) in
             guard let self = self else { return }
             let nsError = error as NSError
             if nsError.code != 1110 {
@@ -116,7 +126,7 @@ public final class VoiceCommandRouter: @unchecked Sendable {
             } else {
                 self.scheduleNextListen(delay: delay)
             }
-        }
+        }, onSpeechDetected: onSpeechDetected)
     }
 
     private func processRecognizedText(_ text: String) {

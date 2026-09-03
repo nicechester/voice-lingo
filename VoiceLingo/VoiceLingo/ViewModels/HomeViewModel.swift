@@ -78,7 +78,7 @@ final class HomeViewModel: ObservableObject {
             Language.supportedLanguages.first(where: { $0.code == languageCode })?.recognizerLocale ?? "es-MX"
         )
 
-        let callback: (VoiceCommand) -> Void = { [weak self] command in
+        let commandCallback: (VoiceCommand) -> Void = { [weak self] command in
             guard let self = self, self.isActive else { return }
 
             switch command {
@@ -94,7 +94,11 @@ final class HomeViewModel: ObservableObject {
             }
         }
 
-        self.voiceCommandCallbackId = callback
+        let speechDetectedCallback: () -> Void = { [weak self] in
+            self?.showFeedback("Listening...")
+        }
+
+        self.voiceCommandCallbackId = commandCallback
         isListeningActive = true
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
@@ -105,7 +109,7 @@ final class HomeViewModel: ObservableObject {
                     self.speechOutputService.speak("What would you like to do today? Say start lesson to begin.", locale: "en-US", suspendRouter: false) { [weak self] in
                         guard let self else { return }
                         Task { @MainActor in
-                            self.voiceCommandRouter.startListening(onCommand: callback)
+                            self.voiceCommandRouter.startListening(onCommand: commandCallback, onSpeechDetected: speechDetectedCallback)
                         }
                     }
                 }
